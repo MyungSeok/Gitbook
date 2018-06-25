@@ -204,5 +204,90 @@ arrayObj.forEach(function callback(currentValue[, index[, array]]) {
 * thisArg
   * `callback`을 실행할 때 `this`로 사용되는 값 \(기본값은 window 객체\)
 
+## Sort
 
+`sort()` 메서드는 배열의 요소를 적절한 위치에 정렬하고 배열을 반환합니다.  
+기본 정렬 순서는 _**유니 코드 포인트**_에 따릅니다.
+
+```javascript
+arrayObj.sort([compareFunction])
+```
+
+* compareFunction
+  * 정렬 순서를 정의하는 함수를 지정합니다. \(미 지정시 기본 정렬 순서에 따름\)
+
+{% tabs %}
+{% tab title="문자 정렬" %}
+```javascript
+var fruit = ['orange', 'apple', 'banana'];
+
+console.log(fruit.sort());
+// ['apple', 'banana', 'orange']
+```
+{% endtab %}
+
+{% tab title="숫자 정렬" %}
+```javascript
+var score = [4, 11, 2, 10, 3, 1];
+
+// ASCII 문자 순서로 정렬되어 숫자의 크기대로 나오지 않음
+// [1, 10, 11, 2, 3, 4]
+score.sort();
+
+// 오름차순 정렬
+// [1, 2, 3, 4, 10, 11]
+score.sort(function () {
+    return a - b;
+
+});
+
+// 내림차순 정렬
+// [11, 10, 4, 3, 2, 1] 
+score.sort(function () {
+    return b - a;
+});
+
+```
+{% endtab %}
+
+{% tab title="객체 정렬" %}
+```javascript
+var student = {
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic' },
+  { name: 'Zeros', value: 37 }
+};
+
+// value 기준으로 정렬
+student.sort(function (a, b) {
+  if (a.value > b.value) {
+    return 1;
+  }
+  if (a.value < b.value) {
+    return -1;
+  }
+  // a must be equal to b
+  return 0;
+});
+
+// name 기준으로 정렬
+student.sort(function(a, b) {
+  var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+
+  // 이름이 같을 경우
+  return 0;
+});
+```
+{% endtab %}
+{% endtabs %}
 
