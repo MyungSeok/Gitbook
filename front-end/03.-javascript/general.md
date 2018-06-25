@@ -103,5 +103,21 @@ jQuery18305806868467951786_1366340807385({"key":"value"});
 
 자바스크립트 내에 변수 선언시에 선언자 \(`var`\) 가 없으면 _**암묵적 전역**_ 으로 인해 전역 프로퍼티로 등록 된다.
 
+```javascript
+var a = 0;
+b = 2;
+(function () {
+    c = 3;
+}());
+
+delete a;
+delete b;
+delete c;
+
+console.log(typeof a);        // number
+console.log(typeof b);        // undefined
+console.log(typeof c);        // undefined
+```
+
 
 
