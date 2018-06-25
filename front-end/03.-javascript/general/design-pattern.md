@@ -88,5 +88,47 @@ console.log(HTMLChanger.contents);    // undefined
 function volume(l, w, h) {
     return l * w * h;
 }
+
+function curry(fn) {
+    var arity = fn.length;
+    
+    return (function resolver() {
+        var memory = Array.prototype.slice.call(arguments);
+        
+        return function () {
+            var local = memory.slice();
+            
+            Array.prototype.push.apply(local, arguments);
+            
+            var next = (local.length >= arity? fn : resolver);
+            
+            return next.apply(null, local);
+        };
+    }());
+}
 ```
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+var curried = curry(volume),
+    length = curried(2),
+    lengthAndWidth = length(3);
+    
+console.log(lengthAndWidth(4));
+```
+{% endtab %}
+
+{% tab title="Case 2" %}
+```javascript
+var _curried = curry(volume);
+
+console.log(_curried(2)(3)(4));
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+`Case 2` 가 10배정도 빠름
+{% endhint %}
 
