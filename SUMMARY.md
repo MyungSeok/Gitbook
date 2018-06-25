@@ -10,6 +10,7 @@
       * [DOM](front-end/03.-javascript/ecma-script-5/dom.md)
       * [Function](front-end/03.-javascript/ecma-script-5/function/README.md)
         * [Array](front-end/03.-javascript/ecma-script-5/function/array.md)
+        * [Object](front-end/03.-javascript/ecma-script-5/function/object.md)
       * [Operator](front-end/03.-javascript/ecma-script-5/operator.md)
       * [Library](front-end/03.-javascript/ecma-script-5/library.md)
     * [ECMA Script 6](front-end/03.-javascript/ecma-script-6.md)
