@@ -101,12 +101,39 @@ typeof 피연산자
 ```
 
 | 타입 | 결과 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Undefined | "undefined" |
 | Null | "object" |
 | String | "string" |
 | Number | "number" |
+| Array | "object" |
 | Boolean | "boolean" |
 | Function Object | "function" |
 | other Object | "object" |
+
+{% tabs %}
+{% tab title="Example 1" %}
+```javascript
+console.log(typeof 100)                  // number
+console.log(typeof '100')                // string
+console.log(typeof 'abc')                // string
+console.log(typeof [])                   // object
+console.log(typeof undefined)            // number
+console.log(typeof function foo() {})    // function
+```
+{% endtab %}
+{% endtabs %}
+
+## Delete
+
+`delete` 연산자는 오브젝트의 속성을 삭제한다.
+
+```javascript
+delete object[.property]
+```
+
+* object
+  * 오브젝트의 이름 또는 오브젝트의 표현식
+* property
+  * 삭제하고자 하는 속성
 
