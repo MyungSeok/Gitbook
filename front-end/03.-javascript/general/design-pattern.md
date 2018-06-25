@@ -80,3 +80,13 @@ console.log(HTMLChanger.contents);    // undefined
 {% endtab %}
 {% endtabs %}
 
+## 커링 \(Currying\)
+
+여러개의 인자를 받는 함수가 있을 경우 일부의 인자만 받는 함수를 만드는 기법
+
+```javascript
+function volume(l, w, h) {
+    return l * w * h;
+}
+```
+
