@@ -1,2 +1,2 @@
-# ECMA Script 5
+# 02. ECMA Script 5
 

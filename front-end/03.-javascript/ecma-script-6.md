@@ -1,2 +1,2 @@
-# ECMA Script 6
+# 03. ECMA Script 6
 
