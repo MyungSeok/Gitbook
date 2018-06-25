@@ -48,7 +48,7 @@ private void doGet(HttpServletRequest request, HttpServleteResponse response) th
 {% endtab %}
 
 {% tab title="Case 2" %}
-#### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구
+#### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하
 
 #### Client
 
@@ -74,36 +74,27 @@ myCallback({"message":"You got an AJAX response via JSONP from another site!"});
 {% endtab %}
 
 {% tab title="Case 3" %}
-#### ㅓ
+#### jsonpCallback 옵션 없이 사용하기
 
 #### Client
 
 ```javascript
-$.getJSON('/jsonp.json?callback=?', function (data) {
-    console.log('success: ', data);
+$.ajax({
+  url: "/jsonp.json",
+  dataType: 'jsonp',
+  success: function(data) {
+    console.log('성공 - ', data);
+  },
+  error: function(xhr) {
+    console.log('실패 - ', xhr);
+  }
 });
 ```
 
 #### Server
 
 ```java
-private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException { 
-    request.setCharacterEncoding("UTF-8");
-    response.setCharacterEncoding("UTF-8");
-          
-    String id = request.getParameter("id");
-    String callBack = request.getParameter("callback");
-  
-    JSONObject obj = new JSONObject();
-    obj.put("result", id);
-    obj.put("go", "테스트");
-          
-    PrintWriter out = response.getWriter();
-    out.write(callBack + "(" + obj.toString() + ")");
-    System.out.println(callBack + "(" + obj.toString() + ")");
-    out.flush();
-    out.close();
-}
+jQuery18305806868467951786_1366340807385({"key":"value"});
 ```
 {% endtab %}
 {% endtabs %}
