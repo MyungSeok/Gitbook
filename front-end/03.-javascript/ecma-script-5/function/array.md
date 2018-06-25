@@ -242,7 +242,6 @@ score.sort();
 // [1, 2, 3, 4, 10, 11]
 score.sort(function () {
     return a - b;
-
 });
 
 // 내림차순 정렬
