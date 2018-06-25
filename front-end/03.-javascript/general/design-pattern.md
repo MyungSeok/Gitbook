@@ -80,9 +80,11 @@ console.log(HTMLChanger.contents);    // undefined
 {% endtab %}
 {% endtabs %}
 
-## 커링 \(Currying\)
+## 커링
 
 여러개의 인자를 받는 함수가 있을 경우 일부의 인자만 받는 함수를 만드는 기법
+
+#### Currying Example
 
 ```javascript
 function volume(l, w, h) {
@@ -108,27 +110,46 @@ function curry(fn) {
 }
 ```
 
-{% tabs %}
-{% tab title="Case 1" %}
+####  Case 1
+
 ```javascript
-var curried = curry(volume),
-    length = curried(2),
-    lengthAndWidth = length(3);
-    
+var curried = curry(volume),    
+    length = curried(2),    
+    lengthAndWidth = length(3);    
+
 console.log(lengthAndWidth(4));
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
+#### Case 2
+
 ```javascript
 var _curried = curry(volume);
-
 console.log(_curried(2)(3)(4));
 ```
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
 `Case 2` 가 10배정도 빠름
 {% endhint %}
+
+## 메모이제이션 
+
+이전에 연산된 결과를 저장하고 사용하는 패턴   
+메모리 상에 임시 저장값을 저장하여 사용할 수 있어 시간 복잡도를 많이 줄인다.
+
+#### 일반적인 피보나치 로직
+
+```javascript
+var count = 0;
+
+var fibonacci = function (n) {
+    count++;
+    return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+for (var i = 0; i <= 10; i++) {
+    console.log(i + ' = ' + fibonacci(i));
+}
+
+console.log('count = ', count);
+```
 
