@@ -75,5 +75,38 @@ var obj = new C();
 console.log(obj instanceof C);    // true
 ```
 {% endtab %}
+
+{% tab title="Example 2" %}
+```javascript
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+var auto = new Car('Honda', 'Accord', 1998);
+
+console.log(auto instanceof Car);  // true
+
+console.log(auto instanceof Object);  // true
+```
+{% endtab %}
 {% endtabs %}
+
+## Typeof
+
+`typeof` 연산자는 피연산자 타입을 가르키는 문자열을 반환합니다.
+
+```javascript
+typeof 피연산자
+```
+
+| 타입 | 결과 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Undefined | "undefined" |
+| Null | "object" |
+| String | "string" |
+| Number | "number" |
+| Boolean | "boolean" |
+| Function Object | "function" |
+| other Object | "object" |
 
