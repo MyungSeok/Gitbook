@@ -77,6 +77,10 @@ console.log(arrayObj);
 {% endtab %}
 {% endtabs %}
 
+{% hint style="danger" %}
+이 메소드는 배열의 길이를 변하게 합니다.
+{% endhint %}
+
 ## Map
 
 `map()` 메소드는 배열내의 모든 요소에 대하여 제공된 함수\(callback\)를 호출하고, 그 결과를 모아서 _**새로운 배열을 반환**_ 합니다.
@@ -180,7 +184,7 @@ console.log(filtered);
 {% endtabs %}
 
 {% hint style="danger" %}
-이 메소드는 배열의 요소를 변하게 합니다.
+이 메소드는 배열의 길이를 변하게 합니다.
 {% endhint %}
 
 ## ForEach
