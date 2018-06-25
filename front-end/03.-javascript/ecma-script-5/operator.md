@@ -42,5 +42,38 @@ console.log('length' in color2);    // false
 
 `String` 생성자로 만들어진 문자열을 명시할 수 있지만 _**문자열 리터럴은 명시할 수 없다**_
 {% endtab %}
+
+{% tab title="Example 3" %}
+```javascript
+console.log('toString' in {});     // true
+```
+
+프로토타입 체인에 의하여 접근 가능한 속성은 `true` 를 반환합니다.
+{% endtab %}
+{% endtabs %}
+
+## InstanceOf
+
+`instanceof` 연산자는 생성자의 `prototype` 속성과 묶인 프로토타입을 가진 오브젝트인지 확인합니다.
+
+```javascript
+object instanceof constructor
+```
+
+* object
+  * 테스트 대상인 오브젝트
+* constructor
+  * 테스트할 함수 \(프로토타입 오브젝트\)
+
+{% tabs %}
+{% tab title="Example 1" %}
+```javascript
+function C() {};
+
+var obj = new C();
+
+console.log(obj instanceof C);    // true
+```
+{% endtab %}
 {% endtabs %}
 
