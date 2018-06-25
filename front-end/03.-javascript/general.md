@@ -119,5 +119,7 @@ console.log(typeof b);        // undefined
 console.log(typeof c);        // undefined
 ```
 
-
+{% hint style="info" %}
+프로퍼티는 `delete` 연산자로 삭제 가능
+{% endhint %}
 
