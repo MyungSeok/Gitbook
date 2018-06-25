@@ -153,3 +153,52 @@ for (var i = 0; i <= 10; i++) {
 console.log('count = ', count);
 ```
 
+#### 메모이제이션을 사용한 피보나치 로직 1
+
+```javascript
+var fibonacci = function () {
+    var memo = [0, 1];
+    var count = 0;
+    var fib = function (n) {
+        count++;
+
+        var result = meno[n];
+
+        if (typeof result !== 'number') {
+            result = fib(n - 1) + fib(n - 2);
+            memo[n] = result;
+        }
+        return result;
+    };
+    return fib;
+}
+
+for (var i = 0; i <= 10; i++) {
+    console.log(i, ' = ', fibonacci(i));
+}
+
+console.log('count : ', count);
+```
+
+#### 메모이제이션을 사용한 피보나치 로직 2
+
+```javascript
+var factorial = (function () {
+    var save = {};
+    var fact = function (number) {
+        if (number > 0) {
+            var saved = save[number - 1] || fact(number - 1);
+            var result = number * saved;
+            save[number] = result;
+            console.log(saved, result);
+            return result;
+        } else {
+            return 1;
+        }
+    }
+    return fact;
+}());
+
+factorial(7);
+```
+
