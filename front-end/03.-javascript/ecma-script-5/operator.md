@@ -4,7 +4,7 @@ description: 자바스크립트의 연산자 및 표현식을 정의합니다.
 
 # Operator & Expression
 
-## In
+## in
 
 `in` 연산자는 명시된 속성이 객체에 존재하면 `true` 를 반환합니다.
 
@@ -52,7 +52,7 @@ console.log('toString' in {});     // true
 {% endtab %}
 {% endtabs %}
 
-## InstanceOf
+## instanceof
 
 `instanceof` 연산자는 생성자의 `prototype` 속성과 묶인 프로토타입을 가진 오브젝트인지 확인합니다.
 
@@ -92,7 +92,7 @@ console.log(auto instanceof Object);  // true
 {% endtab %}
 {% endtabs %}
 
-## Typeof
+## typeof
 
 `typeof` 연산자는 피연산자 타입을 가르키는 문자열을 반환합니다.
 
@@ -124,7 +124,7 @@ console.log(typeof function foo() {})    // function
 {% endtab %}
 {% endtabs %}
 
-## Delete
+## delete
 
 `delete` 연산자는 오브젝트의 속성을 삭제한다.
 
