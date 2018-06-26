@@ -2,5 +2,5 @@
 description: Document Object Model
 ---
 
-# DOM
+# Document
 
