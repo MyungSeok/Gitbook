@@ -28,5 +28,53 @@ var successCallback = function () {
 xhr.onreadystatechange = successCallback;
 ```
 
-### \#3 요청 \(Request\) 와 응답 \(Response\) 을 정의
+### \#3 요청 \(Request\) 와 응답 \(Response\) 을 정의 
+
+```javascript
+xhr.open('GET', '/json', true);
+xhr.send(null);
+```
+
+* `open`  Parameter
+  * method
+    * GET, POST, HEAD
+    * _**대문자**_ 로 표기하는 것을 권한다 \(일부 브라우저에서는 비 동작할 수 있음\)
+  * url
+    * 요청할 서버의 경로를 입력한다.
+  * async
+    * 수행 방식을 결정한다 \(동기 / 비 동기\)
+* `send` Parameter
+  * POST 방식으로 요구 한 경우 서버로 보낼 데이터를 정의한다
+  * `json` , `soap` 혹은 쿼리 스트링으로 표현 가능
+
+{% hint style="info" %}
+POST 로 통신할 경우 요청 \(request\) MINE type을 설정 해야 합니다.  
+예를 들면 `send` 를 호출하기 전에 아래와 같은 형태로 `send` 로 보낼 쿼리를 이용해야 한다.
+{% endhint %}
+
+```javascript
+xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');
+```
+
+### \#4 응답 데이터 처리 
+
+데이터 요청 \(request\) 하였을때의 응답 \(response\) 처리를 해야 한다.
+
+응답에 사용되는 `callback` 함수에서 `XMLHttpRequest` 객체는 `readyState` 다음과 같은 응답 요구 상태값을 가진다.
+
+`readyState` 가 가질 수 있는 응답 상태 값
+
+* 0 \(uninitialized\)
+  * 객체가 막 생성되었다.
+  * `open` 메소드가 수행 되지 않았다.
+* 1 \(loading\)
+  * `send` 메소드가 수행 되지 않았다.
+* 2 \(loaded\)
+  * `send` 메소드가 수행 되었지만 요청 헤더를 사용할 수 없다.
+* 3 \(interactive\)
+  * 일부 데이터만 수신한 상태이며, 상태 및 응답 헤더는 사용가
+* 4 \(complete\)
+  * 요청한 데이터를 전부 받은 상태이다.
+
+
 
