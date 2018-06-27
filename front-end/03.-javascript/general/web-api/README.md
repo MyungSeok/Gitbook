@@ -76,5 +76,8 @@ xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');
 * 4 \(complete\)
   * 요청한 데이터를 전부 받은 상태이다.
 
+동일하게  `XMLHttpRequest` 객체는 `state` 다음과 같은 상태값을 가진다.
 
+* 200
+* 201
 
