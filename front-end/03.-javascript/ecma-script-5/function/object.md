@@ -6,19 +6,27 @@ description: 자바스크립트의 객체 생성자
 
 ## assign
 
+### Description 
+
 `assign()` 메소드는 열거할 수 있는 하나의 이상의 소스 오브젝트의 프로퍼티들을 복사합니다.
+
+### Syntax 
 
 ```javascript
 Object.assign(target [, sources]) 
 ```
+
+#### Parameter
 
 * target
   * 타겟 오브젝트
 * sources
   * 하나 이상의 소스 오브젝트
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 var obj = {a: 1};
 var cp_obj = Object.assign({}, obj);
@@ -28,7 +36,7 @@ console.log(cp_obj);
 ```
 {% endtab %}
 
-{% tab title="Example 2" %}
+{% tab title="Case 2" %}
 ```javascript
 var obj1 = { a: 1 };
 var obj2 = { b: 2 };
@@ -44,7 +52,7 @@ console.log(obj1);
 ```
 {% endtab %}
 
-{% tab title="Example 3" %}
+{% tab title="Case 3" %}
 ```javascript
 var obj1 = { a: 1, b: 1, c: 1 };
 var obj2 = { b: 2, c: 2 };
@@ -60,17 +68,25 @@ console.log(obj);
 
 ## hasOwnProperty
 
+### Description
+
 `hasOwnProperty()` 메소드는 객체가 특정 프로퍼티를 가지고 있는지 확인 합니다.
+
+### Syntax
 
 ```text
 Object.hasOwnProperty(prop)
 ```
 
+#### Parameter
+
 * prop
   * 확인 하려는 프로퍼티 명칭
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 var obj = new Object();
 obj.prop = 'exists';
@@ -81,7 +97,7 @@ obj.hasOwnProperty('prop'); // false
 ```
 {% endtab %}
 
-{% tab title="Example 2" %}
+{% tab title="Case 2" %}
 ```javascript
 var obj = new Object();
 obj.prop = 'exists';
@@ -94,7 +110,7 @@ obj.hasOwnProperty('hasOwnProperty'); // false
 ```
 {% endtab %}
 
-{% tab title="Example 3" %}
+{% tab title="Case 3" %}
 ```javascript
 var obj = {
   hasOwnProperty: function() {
