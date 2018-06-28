@@ -5,7 +5,7 @@
 서버와의 비동기 데이터 통신을 하기 위해서 `XMLHttpRequest` 객체를 할 수 있다.  
 기존의 자바스크립트의 `ajax` 을 사용하는 것과 동일하다.
 
-### \#1 HTTP Request 생성 
+### 1. HTTP Request 생성 
 
 모든 브라우저에서 사용 가능한 인스턴스를 생성한다.
 
@@ -18,7 +18,7 @@ if (window.XMLHttpRequest) {
 }
 ```
 
-### \#2 응답 데이터를 처리할 `callback` 함수를 정의
+### 2. 응답 데이터를 처리할 `callback` 함수를 정의
 
 ```javascript
 var successCallback = function () {
@@ -28,7 +28,7 @@ var successCallback = function () {
 xhr.onreadystatechange = successCallback;
 ```
 
-### \#3 요청 \(Request\) 와 응답 \(Response\) 을 정의 
+### 3. 요청 \(Request\) 와 응답 \(Response\) 을 정의 
 
 ```javascript
 xhr.open('GET', '/json', true);
@@ -56,7 +56,7 @@ POST 로 통신할 경우 요청 \(request\) MINE type을 설정 해야 합니�
 xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');
 ```
 
-### \#4 응답 데이터 처리 
+### 4. 응답 데이터 처리 
 
 데이터 요청 \(request\) 하였을때의 응답 \(response\) 처리를 해야 한다.
 
@@ -96,4 +96,47 @@ var successCallback = function () {
     }
 }
 ```
+
+### 5. 최종 완료 코드
+
+```javascript
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/json', true);
+xhr.onreadystatechange = function (obj) {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        /* 성공 코드 */
+    } else {
+        /* 실패 코드 */
+    }
+};
+req.send(null);
+```
+
+### \# 프로그래스 모니터링 
+
+`XMLHttpRequest` 가 지원하는 `nsIJSXMLHttpRequest` 인터페이스는 요청이 처리되는 동안 발생되는 이벤트가 수신 가능하며 주기적인 진행상태 알림 및 에러 알림 등을 확인 가능 하다
+
+```javascript
+var onProgress = function (e) {
+    var percent = (e.position / e.totalSize) * 100;
+    ...
+}
+
+var onError = function (e) {
+    console.log('Error ', e.target.status, ' occurred while receving the document'); 
+}
+
+...
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', '/json', true);
+xhr.onprogress = onProgress;
+xhr.onload = onLoad;
+xhr.onerror = onError;
+xhr.send(null);
+```
+
+`onprogress` 의 속성인 `position` 과 `totalSize` 는 받은 데이터가 몇 바이트인지, 전체 데이터 크기가 몇 바이트인지 각각 나타냅니다.
+
+모든 이벤트는 그에 대응하는 `XMLHttpRequest` 를 `target` 속성으로 가지고 있습니다.
 
