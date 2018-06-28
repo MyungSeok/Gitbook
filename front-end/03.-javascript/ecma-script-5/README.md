@@ -1,6 +1,6 @@
 ---
-description: 자바스크립트의 ECMA
+description: 자바스크립트의 표준 내장 객체
 ---
 
-# 02. ECMA Script 5
+# 02. References
 

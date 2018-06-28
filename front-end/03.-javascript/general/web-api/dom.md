@@ -1,6 +1,6 @@
 ---
-description: Document Object Model
+description: 문서 객체 모델 (Document Object Model)
 ---
 
-# Document
+# DOM
 
