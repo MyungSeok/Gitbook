@@ -26,5 +26,6 @@
   * [03. Network](back-end/03.-network.md)
   * [04. RDBMS](back-end/04.-rdbms.md)
   * [05. Framework](back-end/05.-framework.md)
-  * [06. DevOps](back-end/06.-devops.md)
+  * [06. DevOps](back-end/06.-devops/README.md)
+    * [Docker](back-end/06.-devops/docker.md)
 
