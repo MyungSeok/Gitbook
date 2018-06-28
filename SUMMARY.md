@@ -15,6 +15,7 @@
         * [Array](front-end/03.-javascript/ecma-script-5/function/array.md)
         * [Object](front-end/03.-javascript/ecma-script-5/function/object.md)
       * [Operator & Expression](front-end/03.-javascript/ecma-script-5/operator.md)
+      * [Global Object](front-end/03.-javascript/ecma-script-5/global-object.md)
     * [03. ECMA Script 6](front-end/03.-javascript/ecma-script-6.md)
     * [04. Performance](front-end/03.-javascript/04.-performance.md)
   * [04. Framework](front-end/04.-framework.md)

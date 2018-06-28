@@ -1,4 +1,18 @@
+---
+description: 표준 웹 기술
+---
+
 # 01. General
+
+## 일급객체 \(First-Class Object\)
+
+자바스크립트는 일급객체 \(First-Class Object\) 입니다.  
+일급 객체 \(First-Class Object\) 는 다음과 같은 특징을 갖습니다.
+
+* 일급 객체는 _**변수에 저장 가능**_ 해야 한다.
+* 일급 객체는 _**함수의 파라미터로 전달**_할 수 있어야 한다.
+* 일급 객체는 _**함수의 반환값으로 사용**_할 수 있어야 한다.
+* 일급 객체는 _**자료구조에 저장**_할 수 있어야 한다.
 
 ## JSONP
 
@@ -6,7 +20,7 @@
 script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트를 로드할 수 있다는 것**_ 에서 착안   
 `<script>` 태그는 SOP 정책에 속하지 않기 때문에 jsonp \(json width padding\) 이 사용됨
 
-![Ajax&#xC640; jsonp&#xC758; &#xBE44;&#xAD50;](../../../.gitbook/assets/undefined.tiff)
+![](../../../.gitbook/assets/undefined%20%283%29.tiff)
 
 {% hint style="warning" %}
 JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사용이 가능
@@ -159,5 +173,35 @@ console.log(rect instanceof Shape);
 rect.move(1, 1);
 ```
 
+## 호이스팅 \(Hoisting\)
 
+자바스크립트 엔진이 실행 컨텍스트를 생성하면서 scope 를 정의할 때 기술된 순서에 상관없이 _**선언부에 대한 처리 해석의 우선순위를 최우선으로 끌어올려 먼저 해석**_ 하는 것   
+이는 다음과 같은 특징을 갖는다.
+
+* 변수의 정의가 그 범위에 따라 _**선언과 할당으로 분리**_ 한다.
+* 선언과 할당이 분리되며 에러를 야기시킬 수 있다.
+* ES6 에서는 호이스팅의 지원이 없어졌다.
+* 기존 ES5 에서는 호이스팅이 있어 해당 값을 선언 후 호출하면 undefined 로 나온다.
+
+#### 예제 코드 
+
+```javascript
+var value = 'outer scope';
+(function () {
+    console.log(value);        // undefined
+    var value = 'inner scope';
+});
+```
+
+위 코드는 아래와 같이 해석 된다.
+
+```javascript
+var value = 'outer scope';
+(function () {
+    var value;
+
+    console.log(value);        // undefined    
+    var value = 'inner scope';
+});
+```
 
