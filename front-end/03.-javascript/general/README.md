@@ -205,3 +205,35 @@ var value = 'outer scope';
 });
 ```
 
+## 익명 함수 \(Anonymouse Function\)
+
+함수의 선언이 아닌 _**함수 표현식을 이용하는 방법**_ 이며 즉시 실행 구문을 만들때 많이 사용된다.
+
+익명 함수는 동적으로 할당되는 유효범위를 가지기 때문에 _**강제적인 유효범위를 설정 하는 경우에도 사용**_ 된다.
+
+```javascript
+(function () {
+    var value = 'Hello World';
+}());
+
+console.log(value);     // ReferenceError: value is not defined
+```
+
+## 즉시 실행 구문 \(IIFE : Immediately-Invoked Function Expression\)
+
+익명 함수 \(Anonymouse Function\) 를 이용하여 _**바로 실행 가능한 함수 표현식을 이용**_ 하여 만들어 내는 구문
+
+#### 익명 함수 표현식 
+
+```javascript
+(function () {
+    /* 실행코드 */ 
+}());
+```
+
+
+
+
+
+
+

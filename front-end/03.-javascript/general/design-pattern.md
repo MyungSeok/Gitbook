@@ -43,6 +43,8 @@ var module2 = {}
 
 ## 모듈 패턴
 
+### 기본 모듈 패턴 
+
 `public` 과 `private` 의 접근 권한을 가능하게 한다.
 
 ```javascript
@@ -79,6 +81,45 @@ console.log(HTMLChanger.contents);    // undefined
 ```
 {% endtab %}
 {% endtabs %}
+
+### 권장 모듈 패턴
+
+1. Module Scope 내에서 사용할 변수 작성
+2. Utility Method 작성 
+3. DOM 조작 메소드 작성
+4. Event Handler 작성
+5. Public Method 작성
+
+```javascript
+var module = (function () {
+    // 1. Module Scope 내에서 사용할 변수 작성
+    var scopeVal = {},
+        utilMethod,
+        manipulateDOM,
+        eventHandler,
+        initModule;
+    
+    // 2. Utility Method 작성
+    utilMethod = function () {
+        /* 실행 코드 */
+    };
+    
+    // 3. DOM 조작 메소드 작성
+    manipulateDOM = function () {
+        /* 실행 코드 */
+    }
+    
+    // 4. Event Handler 작성
+    eventHandler = function () {
+        /* 실행 코드 */
+    }
+    
+    // 5. Public Method 작성 
+    return {
+        init: initMethod
+    };
+}());
+```
 
 ## 커링
 
