@@ -22,7 +22,7 @@ if (window.XMLHttpRequest) {
 
 ```javascript
 var successCallback = function () {
-    // 서버에서 받은 응답을 프로세
+    // 서버에서 받은 응답을 프로세싱 
 }
 
 xhr.onreadystatechange = successCallback;
@@ -72,12 +72,28 @@ xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');
 * 2 \(loaded\)
   * `send` 메소드가 수행 되었지만 요청 헤더를 사용할 수 없다.
 * 3 \(interactive\)
-  * 일부 데이터만 수신한 상태이며, 상태 및 응답 헤더는 사용가
+  * 일부 데이터만 수신한 상태이며, 상태 및 응답 헤더는 사용가능
+  * 요청 수행중
 * 4 \(complete\)
   * 요청한 데이터를 전부 받은 상태이다.
+  * 요청 및 응답이 완료됨 
 
 동일하게  `XMLHttpRequest` 객체는 `state` 다음과 같은 상태값을 가진다.
 
 * 200
-* 201
+  * 정상
+* 403
+  * 권한 부족 혹은 접근 금지
+* 404
+  * 페이지를 찾을 수 없음
+
+```javascript
+var successCallback = function () {
+    if (xhr.readState === 4 && xhr.status === 200) {
+        console.log('Success');    
+    } else {
+        console.log('Failed');
+    }
+}
+```
 
