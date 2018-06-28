@@ -6,11 +6,17 @@ description: 자바스크립트의 배열 객체
 
 ## slice
 
+### Description
+
 배열의 일정 부분을 반환 합니다.
+
+### Syntax
 
 ```javascript
 arrayObj.slice(start, [end])
 ```
+
+#### Parameter
 
 * arrayObj
   * **Array** 객체 
@@ -19,29 +25,31 @@ arrayObj.slice(start, [end])
 * end
   * arrayObject 에 대한 지정된 부분의 끝
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(1)
 // ['e', 'l', 'l', 'o']
 ```
 {% endtab %}
 
-{% tab title=" Example 2" %}
+{% tab title="Case 2" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(1, 4)
 // ['e', 'l', 'l']
 ```
 {% endtab %}
 
-{% tab title="Example 3" %}
+{% tab title="Case 3" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(0, -1)
 // ['H', 'e', 'l', 'l']
 ```
 {% endtab %}
 
-{% tab title="Example 4" %}
+{% tab title="Case 4" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(-1, 0)
 // []
@@ -55,14 +63,20 @@ arrayObj.slice(start, [end])
 
 ## shift
 
+### Description
+
 배열의 첫번째 요소를 제거하고, 제거된 요소를 반환합니다.
+
+### Syntax
 
 ```javascript
 arrayObj.shift()
 ```
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 var arrayObj = ['H', 'e', 'l', 'l', 'o'];
 
@@ -83,13 +97,19 @@ console.log(arrayObj);
 
 ## map
 
+### Description
+
 `map()` 메소드는 배열내의 모든 요소에 대하여 제공된 함수\(callback\)를 호출하고, 그 결과를 모아서 _**새로운 배열을 반환**_ 합니다.
+
+### Syntax
 
 ```javascript
 var newAry = arrayObj.map(function callback(currentValue[, index[, array]]) {
     // newAry 의 새 요소를 반환
 }[, thisArg]);
 ```
+
+#### Parameter
 
 * callback
   * 새로운 배열 요소를 생성하는 함수
@@ -102,8 +122,10 @@ var newAry = arrayObj.map(function callback(currentValue[, index[, array]]) {
 * thisArg
   * `callback`을 실행할 때 `this`로 사용되는 값 \(기본값은 window 객체\)
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
@@ -116,7 +138,7 @@ console.log(roots);
 ```
 {% endtab %}
 
-{% tab title="Example 2" %}
+{% tab title="Case 2" %}
 ```javascript
 var numbers = [1, 4, 9];
 var doubles = numbers.map(function (num) {
@@ -128,7 +150,7 @@ console.log(doubles);
 ```
 {% endtab %}
 
-{% tab title="Example 3" %}
+{% tab title="Case 3" %}
 ```javascript
 var mapAry = [{key: 1, value, 10}, {key: 2, value: 20}, {key: 3, value: 30}];
 var new_mapAry = mapAry.map(function (obj) {
@@ -149,13 +171,19 @@ console.log(new_mapAry);
 
 ## filter
 
+### Description
+
 `filter()` 메소드는 배열내의 모든 요소에 대하여 제공된 테스트 함수\(callback\)를 호출하고, 그 결과를 모아서 _**새로운 배열을 반환**_ 합니다.
+
+### Syntax
 
 ```javascript
 var newAry = arrayObj.filter(function callback(currentValue[, index[, array]]) {
     // 반환형이 boolean 값 true 이면 값이 유지, false 이면 값 삭제
 }[, thisArg]);
 ```
+
+#### Parameter
 
 * callback
   * 새로운 배열 요소를 생성하는 함수
@@ -168,8 +196,10 @@ var newAry = arrayObj.filter(function callback(currentValue[, index[, array]]) {
 * thisArg
   * `callback`을 실행할 때 `this`로 사용되는 값 \(기본값은 window 객체\)
 
+### Example
+
 {% tabs %}
-{% tab title="Example 1" %}
+{% tab title="Case 1" %}
 ```javascript
 function isBigEnough(value) {
     return value >= 10;
@@ -189,13 +219,19 @@ console.log(filtered);
 
 ## forEach
 
+### Description
+
 `forEach()` 메소드는 배열 요소마다 한 번씩 제공된 함수\(callback\) 함수를 호출해서 사용합니다.
+
+### Syntax
 
 ```javascript
 arrayObj.forEach(function callback(currentValue[, index[, array]]) {
     // 반환형 없이 각 요소마다 함수를 실행
 }[, thisArg]);
 ```
+
+#### Parameter
 
 * callback
   * 새로운 배열 요소를 생성하는 함수
@@ -210,15 +246,23 @@ arrayObj.forEach(function callback(currentValue[, index[, array]]) {
 
 ## sort
 
+### Description
+
 `sort()` 메서드는 배열의 요소를 적절한 위치에 정렬하고 배열을 반환합니다.  
 기본 정렬 순서는 _**유니 코드 포인트**_에 따릅니다.
+
+### Syntax
 
 ```javascript
 arrayObj.sort([compareFunction])
 ```
 
+#### Parameter
+
 * compareFunction
   * 정렬 순서를 정의하는 함수를 지정합니다. \(미 지정시 기본 정렬 순서에 따름\)
+
+### Example
 
 {% tabs %}
 {% tab title="문자 정렬" %}
