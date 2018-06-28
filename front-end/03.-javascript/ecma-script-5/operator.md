@@ -16,7 +16,7 @@ description: 자바스크립트의 연산자 및 표현식을 정의합니다.
 속성 in 객체명
 ```
 
-#### Parameter 
+#### Parameters 
 
 * 속성
   * 속성의 이름이나 배열의 인덱스를 뜻하는 문자열 또는 수의 값입니다.
@@ -72,7 +72,7 @@ console.log('toString' in {});     // true
 object instanceof constructor
 ```
 
-#### Parameter
+#### Parameters
 
 * object
   * 테스트 대상인 오브젝트
@@ -158,7 +158,7 @@ console.log(typeof function foo() {})    // function
 delete object[.property]
 ```
 
-#### Parameter
+#### Parameters
 
 * object
   * 오브젝트의 이름 또는 오브젝트의 표현식
