@@ -21,3 +21,18 @@ _**이미지는 변하지 않으며 \(Immutable\) 특성을 가진다.
 
 ![](../../.gitbook/assets/image%20%281%29.png)
 
+{% hint style="info" %}
+**참고 자료**
+
+* [초보를 위한 도커 안내서](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html) 
+* [가장 빨리 만나는 Docker](http://pyrasis.com/docker.html)
+{% endhint %}
+
+ 
+
+
+
+
+
+
+
