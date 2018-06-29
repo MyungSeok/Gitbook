@@ -27,5 +27,6 @@
   * [04. RDBMS](back-end/04.-rdbms.md)
   * [05. Framework](back-end/05.-framework.md)
   * [06. DevOps](back-end/06.-devops/README.md)
-    * [Docker](back-end/06.-devops/docker.md)
+    * [Docker](back-end/06.-devops/docker/README.md)
+      * [CLI](back-end/06.-devops/docker/cli.md)
 
