@@ -97,7 +97,7 @@ $ docker attach CONTAINER
 ### 컨테이너 내부 명령 실행 
 
 ```bash
-$ docker exec COMMAND [ARG...]
+$ docker exec CONTAINER COMMAND [ARG...]
 ```
 
 ### 컨테이너 삭제 
