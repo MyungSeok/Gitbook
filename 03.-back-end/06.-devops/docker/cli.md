@@ -13,7 +13,7 @@ $ docker version
 ### 정보 확인
 
 ```bash
-$ docker info
+$ docker info 
 ```
 
 ## Image
