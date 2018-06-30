@@ -1,7 +1,3 @@
----
-description: 표준 웹 기술
----
-
 # 01. General
 
 ## 일급객체 \(First-Class Object\)

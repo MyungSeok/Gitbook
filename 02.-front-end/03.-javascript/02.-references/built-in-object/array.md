@@ -1,7 +1,3 @@
----
-description: 자바스크립트의 배열 객체
----
-
 # Array
 
 ## slice

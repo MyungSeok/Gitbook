@@ -1,7 +1,3 @@
----
-description: 자바스크립트의 전역 객체
----
-
 # Global Object
 
 ## Null
