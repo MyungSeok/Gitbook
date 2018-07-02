@@ -2,7 +2,7 @@
 
 ## Version
 
-### 버전 확인
+### 버전 확인 \(version\)
 
 ```bash
 $ docker version
@@ -10,7 +10,7 @@ $ docker --version
 $ docker version
 ```
 
-### 정보 확인
+### 정보 확인 \(info\)
 
 ```bash
 $ docker info 
@@ -18,25 +18,25 @@ $ docker info
 
 ## Image
 
-### 이미지 찾기
+### 이미지 찾기 \(search\)
 
 ```bash
 $ docker search IMAGE
 ```
 
-### 이미지 다운
+### 이미지 다운 \(pull\)
 
 ```bash
 $ docker pull IMAGE[:TAG]
 ```
 
-### 이미지 목록
+### 이미지 목록 \(ls\)
 
 ```bash
 $ docker image ls
 ```
 
-### 이미지 삭제 
+### 이미지 삭제 \(rmi\)
 
 ```bash
 $ docker rmi IMAGE[:TAG]
@@ -44,7 +44,7 @@ $ docker rmi IMAGE[:TAG]
 
 ## Container
 
-### 컨테이너 생성 
+### 컨테이너 생성 \(run\)
 
 ```bash
 $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
@@ -53,14 +53,12 @@ $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 {% tabs %}
 {% tab title="Case 1" %}
 ```bash
-$ docker run -it --name ubuntu_container ubuntu /bin/bash
+$ docker run -i -t -d -p 80:80 --name ubuntu_container ubuntu /bin/bash
 ```
 
 ubuntu 이미지를 컨테이너로 생성
 
 * ubuntu 이미지를 컨테이너로 생성 
-* `--name` 
-  * 컨테이너의 이름을 지정 
 * `-i`\(interactive\) 
   * 표준 입력\(stdin\)을 활성화 
   * 컨테이너와 연결\(attach\)되어 있지 않더라도 표준 입력을 유지합니다. 
@@ -72,11 +70,16 @@ ubuntu 이미지를 컨테이너로 생성
 * `-d` \(detached\) 
   * 데몬 모드 
   * 컨테이너가 백그라운드로 동작 된다
+* `-p` \(port\)
+  * 컨테이너 포트 포워딩
+  * \[HOST\_PORT\] : \[CONTAINER\_PORT\]
+* `--name` 
+  * 컨테이너의 이름을 지정 
 * `/bin/bash` 쉘을 이용하여 입출력을 할 수 있다.
 {% endtab %}
 {% endtabs %}
 
-### 컨테이너 목록 
+### 컨테이너 목록 \(ls\)
 
 ```bash
 $ docker container ls [option]       # running
@@ -84,25 +87,25 @@ $ docker container ls --all          # all
 $ docker container ls -aq            # all and quite mode 
 ```
 
-### 컨테이너 기동 
+### 컨테이너 기동 \(start\)
 
 ```bash
 $ docker start CONTAINER
 ```
 
-### 컨테이너 재시작 
+### 컨테이너 재시작 \(restart\)
 
 ```bash
 $ docker restart CONTAINER
 ```
 
-### 컨테이너 접속 
+### 컨테이너 접속 \(attach\)
 
 ```bash
 $ docker attach CONTAINER
 ```
 
-### 컨테이너 내부 명령 실행 
+### 컨테이너 내부 명령 실행 \(exec\)
 
 ```bash
 $ docker exec CONTAINER COMMAND [ARG...]
@@ -123,7 +126,7 @@ CONTAINER 이름을 가진 컨테이너에 `/bin/bash` 쉘을 사용한다.
 {% endtab %}
 {% endtabs %}
 
-### 컨테이너 삭제 
+### 컨테이너 삭제 \(rm\)
 
 ```bash
 $ docker rm CONTAINER

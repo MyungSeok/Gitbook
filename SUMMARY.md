@@ -24,6 +24,8 @@
   * [01. Java](03.-back-end/01.-java.md)
   * [02. Server](03.-back-end/02.-server/README.md)
     * [Linux](03.-back-end/02.-server/linux.md)
+    * [NGINX](03.-back-end/02.-server/nginx/README.md)
+      * [CLI](03.-back-end/02.-server/nginx/cli.md)
   * [03. Network](03.-back-end/03.-network.md)
   * [04. RDBMS](03.-back-end/04.-rdbms.md)
   * [05. Framework](03.-back-end/05.-framework.md)
