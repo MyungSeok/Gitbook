@@ -1,8 +1,10 @@
-# 03. Network
+---
+description: HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 프로토콜
+---
 
-## HTTP
+# HTTP
 
-HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 _**프로토콜**_
+## HTTP Header
 
 ### Request Header
 
@@ -39,4 +41,16 @@ HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 _**프�
   * 현재 일시를 GMT 형식으로 지정
 * Server
   * 웹 서버 정보 
+
+## Timeout
+
+### Connection Timeout
+
+Connection 을 구성하는데 소요되는 시간
+
+### Read Timeout
+
+Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
+
+
 
