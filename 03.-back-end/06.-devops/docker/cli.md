@@ -13,7 +13,7 @@ $ docker version
 ### 정보 확인 \(info\)
 
 ```bash
-$ docker info 
+$ docker info
 ```
 
 ## Image
@@ -50,8 +50,6 @@ $ docker rmi IMAGE[:TAG]
 $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 ```
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```bash
 $ docker run -i -t -d -p 80:80 --name ubuntu_container ubuntu /bin/bash
 ```
@@ -76,15 +74,13 @@ ubuntu 이미지를 컨테이너로 생성
 * `--name` 
   * 컨테이너의 이름을 지정 
 * `/bin/bash` 쉘을 이용하여 입출력을 할 수 있다.
-{% endtab %}
-{% endtabs %}
 
 ### 컨테이너 목록 \(ls\)
 
 ```bash
 $ docker container ls [option]       # running
 $ docker container ls --all          # all
-$ docker container ls -aq            # all and quite mode 
+$ docker container ls -aq            # all and quite mode
 ```
 
 ### 컨테이너 기동 \(start\)
@@ -131,5 +127,4 @@ CONTAINER 이름을 가진 컨테이너에 `/bin/bash` 쉘을 사용한다.
 ```bash
 $ docker rm CONTAINER
 ```
-
 
