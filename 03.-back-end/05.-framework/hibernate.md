@@ -1,7 +1,3 @@
----
-description: ORM Framework
----
-
 # Hibernate
 
 ## ORM \(Object Relational Mapping\)

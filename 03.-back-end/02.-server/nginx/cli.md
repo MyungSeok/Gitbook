@@ -1,7 +1,3 @@
----
-description: Command Line Interface
----
-
 # CLI
 
 ## Installation
