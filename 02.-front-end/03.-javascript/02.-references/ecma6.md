@@ -170,6 +170,22 @@ var custom = [1, 2, ...org, 5];    // [1, 2, 3, 4, 5]
 {% endtab %}
 {% endtabs %}
 
+### Expression
+
+* 스프레드 연산자로 배열 & 객체 복제. 
+
+```javascript
+var array = [1, 2, 3];
+
+var cloneArray = [...array];
+console.log(cloneArray);    // [1, 2, 3]
+
+var obj = {a: 10, b: 20};
+
+var cloneObj = {...obj};
+console.log(cloneObj);    // {a: 10, b: 20}
+```
+
 ## Rest Parameter
 
 나머지 매개변수 \(rest parameter\) 구문에 나머지 인수들도 정의해 나타냅니다.
@@ -226,5 +242,64 @@ function sortArguments() {
 console.log(sortRestArgs(5, 3, 7, 1));        // [1, 3, 5, 7]
 
 console.log(sortArguments(5, 3, 7, 1));        // TypeError
+```
+
+## Destructuring Syntax
+
+구조분해 문법은 ES6 에서 사용되는 변수의 선언 방식입니다.
+
+### Expression
+
+* 특정 객체의 값을 꺼내오는 방법
+
+{% tabs %}
+{% tab title="ECMA 5" %}
+```javascript
+var josh = {
+  language: 'javascript',
+  position: 'front-end',
+  area: 'pangyo',
+  hobby: 'singing',
+  age: '102'
+};
+
+var language = josh.language;
+var position = josh.position;
+var area = josh.area;
+var hobby = josh.hobby;
+var age = josh.age;
+```
+{% endtab %}
+
+{% tab title="ECMA 6" %}
+```javascript
+var josh = {
+  language: 'javascript',
+  position: 'front-end',
+  area: 'pangyo',
+  hobby: 'singing',
+  age: '102'
+};
+
+var { language, position, area, hobby, age } = josh;
+
+console.log(language); // javascript
+console.log(position); // front-end
+console.log(area); // pangyo
+console.log(hobby); // singing
+console.log(age); // 102
+```
+{% endtab %}
+{% endtabs %}
+
+* 함수의 적용
+
+```javascript
+var context = {
+    commit: actionName => console.log(actionName + ' has been committed!!')
+};
+
+var {commit} = context;
+commit('addProducts');     // addProducts has been committed !!
 ```
 
