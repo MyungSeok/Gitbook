@@ -336,7 +336,42 @@ student.sort(function(a, b) {
 
 ## indexOf
 
+### Description
+
+`indexOf` 메서드는 배열에서 지정된 요소를 찾을 수있는 첫 번째 인덱스를 반환하고 존재하지 않으면 `-1`을 반환합니다.
+
+### Syntax
+
+```javascript
+arrayObj.indexOf(element)
+```
+
+#### Parameter
+
+* arrayObj
+  * 배열 객체
+* element
+  * 찾을 요소
+
+### Example
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+var a = [2, 9, 9]; 
+a.indexOf(2); // 0 
+a.indexOf(7); // -1
+
+if (a.indexOf(7) === -1) {
+  // 요소가 배열에 존재하지 않습니다.
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Polyfill
+
+* IE 8 이하 지원 안함 
 
 ```javascript
 var indexOf = Array.prototype.indexOf || (function (prop, s) {
