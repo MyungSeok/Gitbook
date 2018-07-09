@@ -25,5 +25,25 @@ $ telnet IP [PORT]
 $ telnet DOMAIN [PORT]
 ```
 
+## service
 
+리눅스 상에 서비스로 등록되어 있는 목록을 가져온다.
+
+```bash
+# service --status-all
+```
+
+리눅스 상에 서비스를 기동 혹은 중지 시킨다.
+
+```bash
+# service SERVICE_NAME start
+```
+
+```bash
+# service SERVICE_NAME restart
+```
+
+```bash
+# service SERVICE_NAME stop
+```
 
