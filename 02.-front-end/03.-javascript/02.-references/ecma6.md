@@ -1,4 +1,4 @@
-# ECMA6
+# ECMA 6
 
 ## arrows
 
@@ -31,12 +31,26 @@
 param1 => {
     return param1 + 1
 }
+
+// 매개변수가 없을경우
+() => {
+    console.log('Hello World');
+}
 ```
 {% endtab %}
 
 {% tab title="Case 2" %}
 ```javascript
-가 하나 이상
+var list = [2, 4, 6, 8];
+
+// Expression Block 사용 안함 (표현식의 결과가 반환됨)
+var odd = list.map(value => value + 1); // [3, 5, 7, 9]
+
+// Expression Block 사용 (블럭 내부만 실행, 반환값을 위해서는 return 표현식을 명시해야 함)
+list.forEach(v => {
+    console.log(v);
+});
+
 ```
 {% endtab %}
 {% endtabs %}
