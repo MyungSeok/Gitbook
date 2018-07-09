@@ -303,3 +303,18 @@ var {commit} = context;
 commit('addProducts');     // addProducts has been committed !!
 ```
 
+## Export Syntax
+
+지정된 파일에서 객체 \(함수, 오브젝트, 원시타입\) 을 `export` 하는데 사용된다.
+
+### Syntax
+
+```javascript
+// Named Exports
+export { myFunction };              // 함수 exports
+export const foo = Math.sqrt(2);    // 상수 exports
+
+// Default Exports (스크립트에서 유일하게 한번 사용)
+export default myFunctionOrClass;
+```
+
