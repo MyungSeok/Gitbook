@@ -1,6 +1,6 @@
 # ECMA 6
 
-## arrows
+## Arrows
 
 ### Description
 
@@ -140,5 +140,91 @@ function callLog(msg = 'TEST_LOG') {
 }
 
 callLog(undefined)     // TEST_LOG
+```
+
+## Spread Operator 
+
+2개 이상의 인수를 나열하는 방식
+
+### Syntax
+
+```javascript
+// 함수 호출용
+myFunction(...args);
+
+// 배열 리터럴용
+[...args, 5, 6, 7];
+
+// 비 구조화용
+[a, b, ...args] = [1, 2, 3, 4, 5];
+```
+
+### Example
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+var org = [3, 4];
+var custom = [1, 2, ...org, 5];    // [1, 2, 3, 4, 5]
+```
+{% endtab %}
+{% endtabs %}
+
+## Rest Parameter
+
+나머지 매개변수 \(rest parameter\) 구문에 나머지 인수들도 정의해 나타냅니다.
+
+### Syntax
+
+```javascript
+function (a, b, ...theArgs) {
+    // statements
+}
+```
+
+### Example 
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+function foo(...Args) {
+    console.log(Args.length);
+}
+
+foo();           // 0
+foo(5);          // 2
+foo(5, 7, 9);    // 3
+```
+{% endtab %}
+
+{% tab title="Case 2" %}
+```javascript
+function foo(arg1, ...Args) {
+    return Args.map(function (elem) {
+        return arg1 * elem
+    });
+}
+
+console.log(foo(2, 1, 2, 3));    // [2, 4, 6]
+```
+{% endtab %}
+{% endtabs %}
+
+### Expression
+
+* `arguments` 객체가 아닌 `Array` 객체의 `method` 사용이 가능하다.
+
+```javascript
+function sortRestArgs(...Args) {
+    return Args.sort();
+}
+
+function sortArguments() {
+    return arguments.sort();
+}
+
+console.log(sortRestArgs(5, 3, 7, 1));        // [1, 3, 5, 7]
+
+console.log(sortArguments(5, 3, 7, 1));        // TypeError
 ```
 
