@@ -17,6 +17,7 @@
         * [Function](02.-front-end/03.-javascript/02.-references/built-in-object/function.md)
       * [Operator & Expression](02.-front-end/03.-javascript/02.-references/operator-and-expression.md)
       * [Global Object](02.-front-end/03.-javascript/02.-references/global-object.md)
+      * [ECMA6](02.-front-end/03.-javascript/02.-references/ecma6.md)
     * [03. Performance](02.-front-end/03.-javascript/04.-performance.md)
   * [04. Framework](02.-front-end/04.-framework/README.md)
     * [React](02.-front-end/04.-framework/react/README.md)
