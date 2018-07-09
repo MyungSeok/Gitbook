@@ -77,3 +77,68 @@ var Foo = () => {};
 var foo = new Foo();    // TypeError : Foo is not a constructor
 ```
 
+## Default Parameter
+
+### Description
+
+함수의 매개변수의 기본값이 설정 가능합니다.
+
+### Syntax
+
+```javascript
+function func_name([param1[= defaultValue1][, ... , paramN[= defaultValueN]]]) {
+    statements
+}
+```
+
+#### Parameters 
+
+* func\_name
+  * 함수명 
+* param1, param2
+  * 파라메터 명
+* defaultValue1, defaultValue2
+  * 파라메터 기본값
+* statements
+  * 함수의 내용
+
+### Example 
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+function add(a, b = 1) {
+    return a * b;
+}
+
+console.log(add(5)) // 5
+```
+{% endtab %}
+{% endtabs %}
+
+### Expression
+
+* 함수에도 적용 가능하다. 
+
+```javascript
+function callLog(msg = defaultMsg()) {
+    return console.log(mes);
+}
+
+function defaultMsg() {
+    return 'TEST_LOG';
+}
+
+callLog()     // TEST_LOG
+```
+
+* `undefined` 전달 시 
+
+```javascript
+function callLog(msg = 'TEST_LOG') {
+    return console.log(mes);
+}
+
+callLog(undefined)     // TEST_LOG
+```
+
