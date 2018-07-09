@@ -334,5 +334,17 @@ student.sort(function(a, b) {
 {% endtab %}
 {% endtabs %}
 
+## indexOf
 
+### Polyfill
+
+```javascript
+var indexOf = Array.prototype.indexOf || (function (prop, s) {
+  for (var i = (s || 0); i < this.length; i++) {
+    if (this[i] === prop) { return i; };
+  }
+
+  return -1;
+});
+```
 
