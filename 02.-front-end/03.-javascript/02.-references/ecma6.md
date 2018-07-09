@@ -55,3 +55,25 @@ list.forEach(v => {
 {% endtab %}
 {% endtabs %}
 
+### Expression
+
+* 선언 컨텍스트의 밖의 `this` 값을 가진다.
+  * `this` 가 바인딩 되지 않는다.
+
+```javascript
+function foo() {
+    this.value = 0;
+    
+    setInterval(() => {
+        console.log(this.value);    // 0
+    }, 1000);
+}
+```
+
+* 생성자 \(constructor\) 로 사용될수 없다. \(new 연산자 사용 불가\)
+
+```javascript
+var Foo = () => {};
+var foo = new Foo();    // TypeError : Foo is not a constructor
+```
+
