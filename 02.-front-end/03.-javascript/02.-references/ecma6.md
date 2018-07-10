@@ -53,6 +53,14 @@ list.forEach(v => {
 
 ```
 {% endtab %}
+
+{% tab title="Case 3" %}
+```javascript
+// 객체 리터럴 반환
+var func = () => ({ foo: 1 });
+console.log(func());    // {foo: 1}
+```
+{% endtab %}
 {% endtabs %}
 
 ### Expression
