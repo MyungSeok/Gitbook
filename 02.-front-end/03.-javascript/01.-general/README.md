@@ -201,6 +201,22 @@ var value = 'outer scope';
 });
 ```
 
+## 함수의 선언과 표현식
+
+```javascript
+// 함수 선언식
+function foo() {
+    // statement
+}
+
+// 함수 표현식
+var foo = function () { 
+    // statement
+}
+```
+
+> _**함수의 선언식은 호이스팅에 영향**_ 을 받지만, 함수의 표현식은 호이스팅에 영향을 받지 않는다.
+
 ## 익명 함수 \(Anonymouse Function\)
 
 함수의 선언이 아닌 _**함수 표현식을 이용하는 방법**_ 이며 즉시 실행 구문을 만들때 많이 사용된다.
