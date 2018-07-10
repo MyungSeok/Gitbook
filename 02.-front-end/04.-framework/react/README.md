@@ -1,4 +1,4 @@
-# React
+# React JS
 
 {% hint style="info" %}
 참고 자료 
