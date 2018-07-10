@@ -1,10 +1,42 @@
 # Array
 
+## concat
+
+### Description
+
+`concat` 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 _**새로운 배열을 반환**_ 합니다. 
+
+### Syntax
+
+```javascript
+arrayObj1.concat(arrayObj2)
+```
+
+#### Parameter
+
+* arrayObj1, arrayObj2
+  * **Array** 객체 
+
+### Example
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+['H', 'e', 'l', 'l', 'o'].concat(['W', 'o', 'r', 'l', 'd']);
+// ['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd']
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+이 메소드는 새로운 배열 객체를 반환 합니다.
+{% endhint %}
+
 ## slice
 
 ### Description
 
-배열의 일정 부분을 반환 합니다.
+특정 배열의 `start` 와 `end` 인덱스의 _**새로운 배열 객체를 반환**_ 합니다.
 
 ### Syntax
 
@@ -53,8 +85,8 @@ arrayObj.slice(start, [end])
 {% endtab %}
 {% endtabs %}
 
-{% hint style="danger" %}
-이 메소드는 배열의 길이를 변하게 합니다.
+{% hint style="info" %}
+이 메소드는 새로운 배열 객체를 반환 합니다.
 {% endhint %}
 
 ## shift
@@ -161,8 +193,8 @@ console.log(new_mapAry);
 {% endtab %}
 {% endtabs %}
 
-{% hint style="danger" %}
-이 메소드는 배열의 요소를 변하게 합니다.
+{% hint style="info" %}
+이 메소드는 새로운 배열 객체를 반환 합니다.
 {% endhint %}
 
 ## filter
@@ -209,8 +241,8 @@ console.log(filtered);
 {% endtab %}
 {% endtabs %}
 
-{% hint style="danger" %}
-이 메소드는 배열의 길이를 변하게 합니다.
+{% hint style="info" %}
+이 메소드는 새로운 배열 객체를 반환 합니다.
 {% endhint %}
 
 ## forEach
