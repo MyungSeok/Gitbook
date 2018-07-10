@@ -1,5 +1,9 @@
 # Angular JS
 
+## Browser Support
+
+![https://angular.io/guide/browser-support](../../.gitbook/assets/2018-07-10-12.39.20%20%281%29.png)
+
 ## 2 Way Binding
 
 Angular 1에서 많은 인기를 얻었던 특징중에 `ng-model` 지시자 \(directive\) 를 이용한 양방향 데이터 바인딩 \(two-way binding\) 이다.  
