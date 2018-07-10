@@ -117,10 +117,27 @@ console.log(arrayObj);
 // ['e', 'l', 'l', 'o']
 ```
 {% endtab %}
+
+{% tab title="Case 2" %}
+`while` 구문 수행시 첫번째 요소를 제거하면서 빈 배열이 나올때까지 반복문을 수행한다.
+
+```javascript
+var names = ["Andrew", "Edward", "Paul", "Chris" ,"John"];
+
+while( (i = names.shift()) !== undefined ) {
+    console.log(i);
+}
+// Andrew, Edward, Paul, Chris, John
+```
+{% endtab %}
 {% endtabs %}
 
 {% hint style="danger" %}
 이 메소드는 배열의 길이를 변하게 합니다.
+{% endhint %}
+
+{% hint style="info" %}
+배열의 마지막 요소를 제거하는건 **`pop`** 메소드 이다.
 {% endhint %}
 
 ## map
