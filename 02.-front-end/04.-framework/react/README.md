@@ -19,6 +19,12 @@ es6 문법과 jsx 를 혼용하기 때문에 아래와 같은 lint 설정을 추
 }
 ```
 
+## React Development Tools
+
+크롬 확장프로그램 \(Chrome Extension\) 에서 해당 플러그인을 설치한다.
+
+![React Development Tools](../../../.gitbook/assets/image%20%281%29.png)
+
 {% hint style="info" %}
 참고 자료 
 
