@@ -128,3 +128,19 @@ CONTAINER 이름을 가진 컨테이너에 `/bin/bash` 쉘을 사용한다.
 $ docker rm CONTAINER
 ```
 
+### 컨테이너 파일 복사 \(cp\)
+
+```bash
+$ docker cp CONTAINER:CONTAINER_FILE_PATH HOST_FILE_PATH
+```
+
+{% tabs %}
+{% tab title="Case 1" %}
+```bash
+$ docker cp ubuntu:/etc/nginx/nginx.conf ./
+```
+
+`ubuntu` 내에 있는 `nginx.conf` 파일을 지정된 로컬 호스트 경로로 복사한다.
+{% endtab %}
+{% endtabs %}
+
