@@ -47,3 +47,63 @@ $ telnet DOMAIN [PORT]
 # service SERVICE_NAME stop
 ```
 
+## netstat
+
+포트별 서비스 목록
+
+```bash
+# netstat -atlpvn
+
+# netstat -tnlp
+```
+
+#### State
+
+* `LISTENING` 
+  * 서비스 대기중
+* `ESTABLISHED` 
+  * 다른 컴퓨터와 연결된 상태
+* `CLOSED` 
+  * 연결이 종료되어 있는 상태 
+* `TIME WAIT` 
+  * 연결은 종료 되었지만 당분간은 소켓은 열어놓은 상태 
+
+#### Options
+
+* `-a`  `--all` 
+  * 모든 소켓을 보기
+* `-c` `--continuous` 
+  * 현재의 실행 명령을 매 초마다 실행
+* `-e` `--extend` 
+  * 확장 정보 추가
+* `-g` `--groups` 
+  * 멀티캐스트에 대한 그룹별 정보를 보여줌 \(IPv4/IPv6\)
+* `-i` `--interface` 
+  * 인터페이스별 통계값 
+* `-n` `--numberic` 
+  * 도메인을 주소를 읽지 않고 숫자로 출력한다.
+  * 아래 3개의 명령어가 합쳐진 형태이다.
+    * `--numberic-hosts` : 호스트 부분을 IP 로 출력
+    * `--numberic-ports` : 포트 부분을 숫자로 출력
+    * `--numberic-users` : 유저 부분을 숫자로 출력 \(UID\)
+* `-o` `--timers` 
+  * 연결 대기 시간 표기 
+* `-p` `--program` 
+  *  PID 와 사용중인 프로그램명을 표시 
+* `-r` `--route` 
+  * 라우팅 테이블 보기 
+* `-s` `--statistics` 
+  * 프로토콜 요약 정보 
+* `-t` `--tcp` 
+  * TCP 프로토콜 보기 
+* `-u` `--udp` 
+  * UDP 프로토콜 보기 
+* `-v` 
+  * 버전 보기 
+* `-w` `--row` 
+  * RAW 프로토콜 보기 
+* `-A` 
+  * 프로토콜별 보기 
+* `-M` 
+  * 마스커 레이딩 정보 표시 
+
