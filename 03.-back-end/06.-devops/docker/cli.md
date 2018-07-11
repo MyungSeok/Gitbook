@@ -130,8 +130,16 @@ $ docker rm CONTAINER
 
 ### 컨테이너 파일 복사 \(cp\)
 
+#### 컨테이너 -&gt; 호스트
+
 ```bash
 $ docker cp CONTAINER:CONTAINER_FILE_PATH HOST_FILE_PATH
+```
+
+#### 호스트 -&gt; 컨테이너 
+
+```bash
+$ docker cp HOST_FILE_PATH CONTAINER:CONTAINER_FILE_PATH
 ```
 
 {% tabs %}
