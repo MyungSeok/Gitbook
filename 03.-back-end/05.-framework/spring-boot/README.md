@@ -4,7 +4,7 @@
 
 ### start.sh
 
-앱을 시작하고 해당 PID를 파일에 저장한다.
+앱을 시작하고 해당 _**PID**_ 를 파일에 저장한다.
 
 ```bash
 #!/bin/bash
@@ -13,7 +13,7 @@ java -jar myapp.jar & echo $! > ./pid.file &
 
 ### stop.sh
 
-저장된 PID 를 사용하여 앱을 중지 한다.
+저장된 _**PID**_ 를 사용하여 앱을 중지 한다.
 
 ```bash
 #!/bin/bash
