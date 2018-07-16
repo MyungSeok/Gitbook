@@ -59,13 +59,13 @@ $ telnet DOMAIN [PORT]
 
 #### State
 
-* `LISTENING` 
+* **LISTENING** 
   * 서비스 대기중
-* `ESTABLISHED` 
+* **ESTABLISHED** 
   * 다른 컴퓨터와 연결된 상태
-* `CLOSED` 
+* **CLOSED** 
   * 연결이 종료되어 있는 상태 
-* `TIME WAIT` 
+* **TIME WAIT** 
   * 연결은 종료 되었지만 당분간은 소켓은 열어놓은 상태 
 
 #### Options
