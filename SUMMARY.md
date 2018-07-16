@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Programming Notes](README.md)
-* [01. General](01.-general.md)
+* [01. General](01.-general/README.md)
+  * [IDE](01.-general/ide.md)
 * [02. Front End](02.-front-end/README.md)
   * [01. HTML](02.-front-end/01.-html.md)
   * [02. CSS](02.-front-end/02.-css.md)
