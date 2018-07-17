@@ -1,18 +1,16 @@
----
-description: >-
-  라우팅은 요청 URI 및 특정한 HTTP 요청 메소드 (GET, POST, PUT, DELETE) 인 특정 엔드포인트 에 대한 클라이언트
-  요청에 대해 애플리케이션이 응답하는 방법을 결정 하는것
----
+# Express
 
-# Route
+## Route
 
-## Syntax
+라우팅은 요청 URI 및 특정한 HTTP 요청 메소드 \(GET, POST, PUT, DELETE\) 인 특정 엔드포인트 에 대한 클라이언트 요청에 대해 애플리케이션이 응답하는 방법을 결정 하는것
+
+### Syntax
 
 ```javascript
 app.METHOD(PATH, HANDLER)
 ```
 
-### Parameter
+#### Parameter
 
 * app
   * `express` 의 인스턴스 
@@ -23,7 +21,7 @@ app.METHOD(PATH, HANDLER)
 * HANDLER
   * 라우트가 일치할 때 실행되는 함수
 
-### Example
+#### Example
 
 각 요청에 따른 라우트를 정의하고 이에 응답한다.
 
@@ -36,7 +34,7 @@ app.get('/', function(req, res) {
 });
 ```
 
-## Method
+### Method
 
 대표적인 Express 라우팅 메소드는 다음과 같다.
 
@@ -74,7 +72,7 @@ app.delete('/user', function (req, res) {
 {% endtab %}
 {% endtabs %}
 
-### Route Chain
+#### Route Chain
 
 app.route\(\) 을 이용하면 라우트 경로에 대한 체이닝 핸들러를 작성 할 수 있다.
 
@@ -100,7 +98,7 @@ app.route('/book')
   });
 ```
 
-### Route Moduler
+#### Route Moduler
 
 모듈식 마운팅이 가능한 핸들러의 작성 
 
@@ -139,11 +137,11 @@ Express 는 HTTP 메소드에 해당하는 다음과 같은 라우팅 메소드�
 `get`, `post`, `put`, `head`, `delete`, `options`, `trace`, `copy`, `lock`, `mkcol`, `move`, `purge`, `propfind`, `proppatch`, `unlock`, `report`, `mkactivity`, `checkout`, `merge`, `m-search`, `notify`, `subscribe`, `unsubscribe`, `patch`, `search`및 `connect`.
 {% endhint %}
 
-## Path 
+### Path 
 
 URI 경로는 문자열 혹은 정규식의 패턴에도 적용된다.
 
-### Character Pattern
+#### Character Pattern
 
 {% tabs %}
 {% tab title="Case 1" %}
@@ -183,7 +181,7 @@ app.get('/ab(cd)?e', function(req, res) {
 {% endtab %}
 {% endtabs %}
 
-### Regular Expression 
+#### Regular Expression 
 
 {% tabs %}
 {% tab title="Case 1" %}
@@ -206,7 +204,7 @@ app.get(/.*fly$/, function(req, res) {
 {% endtab %}
 {% endtabs %}
 
-## Response
+#### Response
 
 응답 오브젝트에 대한 메소드는 응답을 클라이언트에 전송하고 요청 및 응답의 주기를 종료할 수 있다.  
 _**라우트 핸들러로부터 다음 메소드중 하나라도 호출되지 않는 경우 클라이언트 요청은 정지된 채로 방치**_ 된다. 
