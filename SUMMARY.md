@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Programming Notes](README.md)
+* [Sudal's Note](README.md)
 * [01. General](01.-general/README.md)
   * [IDE](01.-general/ide.md)
 * [02. Front End](02.-front-end/README.md)
