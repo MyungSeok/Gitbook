@@ -48,5 +48,31 @@ Connection 을 구성하는데 소요되는 시간
 
 Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
 
+## MIME
 
+서버가 클라이언트에게 전송되는 문서에 대한 유형을 지칭하는 타입
+
+### Syntax
+
+```markup
+[파일의종류]/[파일타입]
+```
+
+### Type List
+
+* text
+  * 텍스트 파일 
+  * text/plain, text/html, text/css, text/javascript
+* multipart
+  * 이미지 파일 \(비디오 제외\)
+  * audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav
+* audio
+  * 오디오 파일
+  * audio/midi, audio/mpeg, audio/webm, audio/ogg, audio/wav
+* video
+  * 비디오 파일
+  * video/webm, video/ogg
+* application
+  * 모든 바이너리 타입
+  * application/octet-stream, application/pkcs12, application/vnd.mspowerpoint, application/xhtml+xml, application/xml,  application/pdf
 
