@@ -89,7 +89,15 @@ app.route('/book')
   .put(function(req, res) {
     res.send('Update the book');
   });
+```
 
+`all()` 메소드를 통해 모든 응답의 대응도 가능.
+
+```javascript
+app.route('/book')
+  .all(function(req, res) {
+    res.send('Get a random book');
+  });
 ```
 
 ### Route Moduler
