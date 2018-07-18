@@ -2,6 +2,8 @@
 
 ## Linux Deploy Shell Script
 
+리눅스 환경에서 쉽게 관리를 위해 _**Shell Script**_ 형태로 만들어 두어 관리한다.
+
 ### start.sh
 
 앱을 시작하고 해당 _**PID**_ 를 파일에 저장한다.
