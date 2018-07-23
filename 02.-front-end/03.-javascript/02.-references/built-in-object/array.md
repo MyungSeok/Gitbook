@@ -140,6 +140,42 @@ while( (i = names.shift()) !== undefined ) {
 배열의 마지막 요소를 제거하는건 **`pop`** 메소드 이다.
 {% endhint %}
 
+## unshift
+
+### Description
+
+새로운 요소를 배열의 앞쪽에 추가한다.  
+return 값은 새로운 요소가 추가된 배열이다.
+
+### Syntax
+
+```javascript
+arrayObj.unshift([element1[, ...[, elementN]]])
+```
+
+### Example
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+var arrayObj = ['1', '2'];
+
+arrayObj.unshift(0);
+// arr is [0, 1, 2]
+
+arrayObj.unshift(-2, -1); 
+// arr is [-2, -1, 0, 1, 2]
+
+arrayObj.unshift([-3]); 
+// arr is [[-3], -2, -1, 0, 1, 2]
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="danger" %}
+이 메소드는 배열의 길이를 변하게 합니다.
+{% endhint %}
+
 ## map
 
 ### Description
