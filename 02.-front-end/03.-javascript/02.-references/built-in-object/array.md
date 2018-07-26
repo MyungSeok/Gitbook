@@ -468,3 +468,11 @@ var indexOf = Array.prototype.indexOf || (function (prop, s) {
 });
 ```
 
+```javascript
+if (indexOf.call(arrayObj, value) > -1) {
+    console.log('value is contain');
+} else {
+    console.log('value is not contain');
+}
+```
+
