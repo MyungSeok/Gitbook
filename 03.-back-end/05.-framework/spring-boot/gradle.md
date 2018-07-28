@@ -2,6 +2,12 @@
 
 ## Gradle 설치
 
+### Mac
+
+```bash
+# brew gradle
+```
+
 ### Ubuntu
 
 ```bash
@@ -14,9 +20,5 @@
 # gradle build
 ```
 
-## Gradle 실행
 
-```bash
-# gradle bootRun
-```
 

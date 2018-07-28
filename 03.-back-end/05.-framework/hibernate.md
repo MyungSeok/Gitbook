@@ -1,3 +1,7 @@
+---
+description: Boss 에서 개발한 ORM (Object Relational Mapping) 프레임워크 이다.
+---
+
 # Hibernate
 
 ## ORM \(Object Relational Mapping\)
@@ -20,7 +24,5 @@ ORM 의 표준 기술로 `Hibernate`, `OpenJPA`, `EclipseLink`, `TopLink` `Essen
   * 객체지향을 이해하고 개발 해야 하는 만큼 러닝커브가 높다.
   * 성능상의 문제가 있을수 있다.
 
-## Hibernate 란?
 
-Boss 에서 개발한 _**ORM \(Object Relational Mapping\) 프레임워크**_ 이다.
 
