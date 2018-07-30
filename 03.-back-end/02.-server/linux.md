@@ -13,6 +13,33 @@ $ nslookup IP
 $ nslookup DOMAIN
 ```
 
+## dig
+
+DIG \(Domain Information Groper\) 는 nslookup 과 동일한 기능이지만 더욱 상세한 출력이 가능합니다.
+
+### 특정 도메인 확인
+
+```bash
+$ dig google.com
+```
+
+### 특정 네임서버를 통한 도메인 확인 
+
+```bash
+$ dig @8.8.8.8 google.com
+```
+
+### 도메인 추적 확인 
+
+```bash
+$ dig google.com +trace
+```
+
+{% hint style="info" %}
+**참고 자료**   
+[https://www.codns.com/b/B05-110](https://www.codns.com/b/B05-110)
+{% endhint %}
+
 ## telnet
 
 _**서버 네트워크가 살아있는지 확인하는 용도로 많이 사용**_ 한다.
