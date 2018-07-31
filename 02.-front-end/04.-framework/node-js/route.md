@@ -221,3 +221,17 @@ _**라우트 핸들러로부터 다음 메소드중 하나라도 호출되지 �
 | [res.sendFile](http://expressjs.com/ko/4x/api.html#res.sendFile) | 파일을 옥텟 스트림의 형태로 전송합니다. |
 | [res.sendStatus\(\)](http://expressjs.com/ko/4x/api.html#res.sendStatus) | 응답 상태 코드를 설정한 후 해당 코드를 문자열로 표현한 내용을 응답 본문으로서 전송합니다. |
 
+```javascript
+const router = express.Router();
+
+// 클라이언트가 루트 경로로 진입하면 /index 경로로 리다이렉트 시킨다.
+router.all('/', (req, res) => {
+  res.redirect('/index');
+});
+
+// 모든 경로를 index 로 랜더링 한다.
+router.all('*', (req, res) => {
+  res.render('index');
+});
+```
+
