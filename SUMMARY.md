@@ -44,4 +44,5 @@
     * [Docker](03.-back-end/06.-devops/docker/README.md)
       * [CLI](03.-back-end/06.-devops/docker/cli.md)
     * [Kubernetes](03.-back-end/06.-devops/kubernetes.md)
+    * [Git](03.-back-end/06.-devops/git.md)
 
