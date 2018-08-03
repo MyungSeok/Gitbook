@@ -62,5 +62,33 @@ func.call(thisArg, [argsArray];
 * argsArray
   *  대상 함수를 호출할 때 바인딩된 함수에 제공되는 인수의 배열
 
- 
+## addEventListener
+
+### Description
+
+이벤트 타겟에서 사용할 리스너를 등록합니다. 
+
+### Syntax
+
+```javascript
+target.addEventListener(type, listener [, useCapture]);
+```
+
+#### Parameter
+
+* target
+  * 
+* type
+  * 등록할 이벤트 타입 
+  * `click` `mousedown` `mouseup` `keyup` `keydown` `keypress`  등등...
+* listener
+  * 특정 타입의 이벤트가 발생할 때 받을 객체
+  * 반드시 `function` 타입 
+* useCapture
+  * 이벤트 캡쳐링/버블링 유무 
+
+{% hint style="info" %}
+**참고 자료**   
+[http://sculove.github.io/blog/2016/12/29/addEventListener-passive/](http://sculove.github.io/blog/2016/12/29/addEventListener-passive/)
+{% endhint %}
 

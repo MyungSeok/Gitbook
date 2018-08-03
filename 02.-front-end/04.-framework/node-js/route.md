@@ -210,7 +210,7 @@ app.get(/.*fly$/, function(req, res) {
 _**라우트 핸들러로부터 다음 메소드중 하나라도 호출되지 않는 경우 클라이언트 요청은 정지된 채로 방치**_ 된다. 
 
 | 메소드 | 설명 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | [res.download\(\)](http://expressjs.com/ko/4x/api.html#res.download) | 파일이 다운로드되도록 프롬프트합니다. |
 | [res.end\(\)](http://expressjs.com/ko/4x/api.html#res.end) | 응답 프로세스를 종료합니다. |
 | [res.json\(\)](http://expressjs.com/ko/4x/api.html#res.json) | JSON 응답을 전송합니다. |

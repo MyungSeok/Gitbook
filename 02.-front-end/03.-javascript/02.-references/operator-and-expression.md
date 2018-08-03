@@ -111,7 +111,7 @@ console.log(auto instanceof Object);  // true
 `typeof` 연산자는 피연산자 타입을 가르키는 문자열을 반환합니다.
 
 | 타입 | 결과 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | Undefined | "undefined" |
 | Null | "object" |
 | String | "string" |
