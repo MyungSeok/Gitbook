@@ -7,7 +7,7 @@ var blankPattern = /^\s+|\s+$/g;
 
 console.log('   '.replace(blankPattern, ''));     // ""
 
-console.log(blankPattern.test(''));             // false 
+console.log(blankPattern.test(''));              // false 
 console.log(blankPattern.test('  '));             // true 
 ```
 
