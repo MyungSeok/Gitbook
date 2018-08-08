@@ -246,6 +246,19 @@ console.log(new_mapAry);
 {% endtab %}
 {% endtabs %}
 
+### 지정된 사이즈로 임의의 배열 생성 
+
+```javascript
+var SIZE = 10;
+var getRandomNumber = function (min, max, floor) { /* 랜덤 값 제조 */ };
+
+var newArray = Array
+    .apply(null, {length: SIZE})
+    .map(Function.call, function () {
+        return getRandomNumber(MIN, MAX)
+    });
+```
+
 {% hint style="info" %}
 이 메소드는 새로운 배열 객체를 반환 합니다.
 {% endhint %}
