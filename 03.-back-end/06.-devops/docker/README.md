@@ -15,7 +15,7 @@ _**이미지는 변하지 않으며 \(Immutable\) 특성을 가진다.
 컨테이너는 이미지를 실행한 상태로 추가되거나 변경되는 값은 컨테이너에 저장된다.**_
 {% endhint %}
 
-![](../../../.gitbook/assets/image%20%284%29.png)
+![](../../../.gitbook/assets/image%20%285%29.png)
 
 {% hint style="info" %}
 **참고 자료**
