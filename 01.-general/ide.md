@@ -2,6 +2,19 @@
 
 ## VSCode 
 
+### extension package
+
+* BreadCrumb in StatusBar
+  * 선택 파일 경로 노출 
+* GitLens
+  * 선택 행 깃 커밋 보여주기
+* One Dark Pro
+  * 에디터 테마
+* vscode-icons
+  * 에디터 아이콘 
+* Material Icon Theme
+  * 에디터 아이콘 
+
 ### usersetting.json
 
 ```javascript
@@ -27,9 +40,11 @@
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
     "workbench.colorTheme": "One Dark Pro Vivid",
-    "eslint.options": {
-        "configFile": "/Users/rrest/wemakeprice/workspace/.eslintrc"
-    }
+    "breadcrumbs.enabled": true
+//    필요할때 사용     
+//    "eslint.options": {
+//        "configFile": "/Users/rrest/wemakeprice/workspace/.eslintrc"
+//    }
 }
 ```
 
