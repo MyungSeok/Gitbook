@@ -430,6 +430,42 @@ student.sort(function(a, b) {
 });
 ```
 {% endtab %}
+
+{% tab title="중복 제거" %}
+#### 기존순서는 그대로 두고 중복 제거 
+
+```javascript
+var names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
+
+var uniq = names.reduce(function (a, b){
+	if (a.indexOf(b) < 0 ) a.push(b);
+	return a;
+},[]);
+
+console.log(uniq, names) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
+
+// 한 줄로 표현
+return names.reduce(function(a,b){if(a.indexOf(b)<0)a.push(b);return a;},[]);
+```
+
+#### 
+
+#### 기존순서는 그대로 두고 중복 제거
+
+```javascript
+var uniq = names.slice() // 정렬하기 전에 복사본을 만든다.
+	.sort(function (a, b){
+		return a - b;
+	})
+	.reduce(function (a, b){
+		if (a.slice(-1)[0] !== b) a.push(b); // slice(-1)[0] 을 통해 마지막 아이템을 가져온다.
+		return a;
+	},[]); //a가 시작될 때를 위한 비어있는 배열
+
+// 한 줄로 표현
+return names.slice().sort(function(a,b){return a - b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
+```
+{% endtab %}
 {% endtabs %}
 
 ## indexOf
