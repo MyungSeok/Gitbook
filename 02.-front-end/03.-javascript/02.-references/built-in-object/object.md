@@ -1,5 +1,31 @@
 # Object
 
+## Object Keys Length
+
+### Description
+
+`object` 타입의 데이터 중에 키의 갯수를 구한다.
+
+### Syntax
+
+```javascript
+Object.keys(obj).length
+```
+
+#### Example
+
+{% tabs %}
+{% tab title="Case 1" %}
+```javascript
+var obj = {a: 1, b: 2: c: 3};
+
+var size = Object.keys(obj).length; 
+
+console.log(size); // 3
+```
+{% endtab %}
+{% endtabs %}
+
 ## assign
 
 ### Description 
