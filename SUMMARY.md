@@ -46,5 +46,5 @@
       * [CLI](03.-back-end/06.-devops/docker/cli.md)
     * [Kubernetes](03.-back-end/06.-devops/kubernetes.md)
     * [Git](03.-back-end/06.-devops/git.md)
-* [04. Big Data](04.-big-data.md)
+  * [07. Big Data](03.-back-end/04.-big-data.md)
 
