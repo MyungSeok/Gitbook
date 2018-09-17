@@ -135,6 +135,8 @@ console.log(typeof c);        // undefined
 
 ## 상속 \(Inheritance\)
 
+### 프로토 타입을 이용한 확장 
+
 자바스크립트에는 자바와 달리 `class` 가 존재하지 않아 `prototype` 을 사용하여 class 를 구현합니다.
 
 #### 상속 Class 생성 
@@ -167,6 +169,29 @@ console.log(rect instanceof Rectangle);
 console.log(rect instanceof Shape);
 
 rect.move(1, 1);
+```
+
+{% hint style="danger" %}
+_**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
+{% endhint %}
+
+### `Object.create()` 를 이용한 메소드 상속 
+
+```javascript
+var parent = {
+    num: 2, 
+    increase: function () {
+        return (this.num + 1);
+    }
+}
+
+console.log(parent.increase());     // 3
+
+var child = Object.create(parent);
+
+child.num = 12;
+
+console.log(child.increase());    // 13
 ```
 
 ## 호이스팅 \(Hoisting\)
