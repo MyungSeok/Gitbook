@@ -4,7 +4,7 @@
 
 ### 머지 정렬 \(Merge Sort\)
 
-정렬하려는 배열을 반으로 나눠 최소의 파티션으로 나누고 재귀를 통해 정렬
+정렬하려는 배열을 반으로 나눠 최소의 파티션으로 나누고 정렬한 후 머지하면서 정렬
 
 {% tabs %}
 {% tab title="Javascript" %}
@@ -64,10 +64,16 @@ MergeSort.prototype = (function () {
     sort: sort
   };
 }());
+```
 
+```javascript
+console.log(new MergeSort(arr));
+```
+
+```javascript
 var ms = new MergeSort();
 
-console.log(ms.sort(1));
+console.log(ms.sort(arr));
 ```
 {% endtab %}
 {% endtabs %}
