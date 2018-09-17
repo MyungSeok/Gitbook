@@ -228,12 +228,22 @@ var value = 'outer scope';
 
 ## 함수의 선언과 표현식
 
+### 함수 선언식 \(Function Declarations / Function Statement\)
+
+_**실행 가능한 상태가 아니며**_  함수의 정의를 나타내는 `Statement` 으로 _**코드 해석에 따른 수행 경과가 존재 하지 않는다.**_
+
 ```javascript
 // 함수 선언식
 function foo() {
     // statement
 }
+```
 
+### 함수 표현식 \(Function Expressions / Function Literal\)
+
+_**실행 가능한 상태 코드**_ 로 해석되어 지거나 혹은 _**변수나 데이터 구조에 할당**_ 되어 있음을 의미한다.
+
+```javascript
 // 함수 표현식
 var foo = function () { 
     // statement
