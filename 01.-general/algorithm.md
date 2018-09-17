@@ -2,6 +2,76 @@
 
 ## Sort
 
+### 머지 정렬 \(Merge Sort\)
+
+정렬하려는 배열을 반으로 나눠 최소의 파티션으로 나누고 재귀를 통해 정렬
+
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+var arr = [6, 3, 8, 4, 1, 9, 2, 5, 7, 0];
+
+function MergeSort(arr) {
+  this.arr = null;
+
+  if (arr instanceof Array) {
+    this.arr = arr;
+    return this.sort(arr);
+  }
+}
+
+MergeSort.prototype = (function () {
+  function sort(arr) {
+    if (typeof arr === 'undefined' || !(arr instanceof Array)) {
+      if (!(this.arr instanceof Array)) {
+        throw new Error('Array object is not exist');
+      }
+      arr = this.arr;
+    }
+
+    if (arr.length === 1) {
+      return arr;
+    }
+
+    var mid = Math.floor(arr.length / 2),
+      left = arr.slice(0, mid),
+      right = arr.slice(mid);
+
+    return merge(sort(left), sort(right));
+  }
+
+  function merge(left, right) {
+    var answer = [], 
+      leftLength = left.length, 
+      rightLength = right.length,
+      leftIdx = 0, 
+      rightIdx = 0;
+
+    while (leftIdx < leftLength && rightIdx < rightLength) {
+      if (left[leftIdx] < right[rightIdx]) {
+        answer.push(left[leftIdx]);
+        leftIdx++;
+      } else {
+        answer.push(right[rightIdx]);
+        rightIdx++;
+      }
+    }
+
+    return answer.concat(left.slice(leftIdx), right.slice(rightIdx));
+  }
+
+  return {
+    sort: sort
+  };
+}());
+
+var ms = new MergeSort();
+
+console.log(ms.sort(1));
+```
+{% endtab %}
+{% endtabs %}
+
 ### 버블 \(Bubble\)
 
 왼쪽 끝에서 부터 인접하는 두 항목의 값을 비교하여 서로 위치를 교환하는 정렬 방법 
