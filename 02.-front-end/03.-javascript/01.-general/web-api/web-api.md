@@ -1,4 +1,4 @@
-# Web API
+# Window
 
 ## SetTimeout
 
