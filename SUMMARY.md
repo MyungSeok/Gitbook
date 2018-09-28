@@ -39,7 +39,7 @@
   * [04. Database](03.-back-end/04.-rdbms/README.md)
     * [01.Redis](03.-back-end/04.-rdbms/01.redis.md)
   * [05. Framework](03.-back-end/05.-framework/README.md)
-    * [Spring Boot](03.-back-end/05.-framework/spring-boot/README.md)
+    * [Spring](03.-back-end/05.-framework/spring-boot/README.md)
       * [Gradle](03.-back-end/05.-framework/spring-boot/gradle.md)
     * [Hibernate](03.-back-end/05.-framework/hibernate.md)
   * [06. DevOps](03.-back-end/06.-devops/README.md)
