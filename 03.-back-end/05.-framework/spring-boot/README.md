@@ -1,6 +1,6 @@
 # Spring
 
-## AOP
+## AOP \(Aspect Oriented Programming : 관전 지향 프로그래밍\)
 
 ## DI \(Dependency Injection : 의존성 주입\)
 
