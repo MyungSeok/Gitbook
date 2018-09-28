@@ -33,3 +33,7 @@ kill $(cat ./pid.file)
 # gradle bootRun
 ```
 
+## Spring Bean Life Cycle 
+
+
+

@@ -2,9 +2,17 @@
 
 ## Sort
 
+### 퀵 정렬 \(Quick Sort\)
+
+정렬중에서 가장 빠른 정렬로 보통 시간 복잡도은 nlogn 이며 최악의경우 n^2 으로 시간복잡도가 소요된다.
+
 ### 머지 정렬 \(Merge Sort\)
 
 정렬하려는 배열을 반으로 나눠 최소의 파티션으로 나누고 정렬한 후 머지하면서 정렬
+
+{% hint style="danger" %}
+시간 복잡도는 nlogn 으로 퀵 정렬과 달리 _**별도의 저장공간이 필요**_ 하다.
+{% endhint %}
 
 {% tabs %}
 {% tab title="Javascript" %}
