@@ -1,6 +1,12 @@
 # Spring
 
-## AOP \(Aspect Oriented Programming : 관전 지향 프로그래밍\)
+## AOP \(Aspect Oriented Programming : 관점 지향 프로그래밍\)
+
+_**어플리케이션 전체에 사용되는 기능을 재사용 하도록 지원**_ 하도록 도와주는 것 
+
+종단\(?\) 횡단\(?\)
+
+
 
 ## DI \(Dependency Injection : 의존성 주입\)
 
