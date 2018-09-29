@@ -194,14 +194,23 @@ child.num = 12;
 console.log(child.increase());    // 13
 ```
 
+## 자료형 \(변수형\) 에 대한 차이점 
+
+ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음과 같은 차이점을 가진다.
+
+|  | var | let | const |
+| :--- | :--- | :--- | :--- |
+| 유효범위 | function scope | block scope | block scope |
+| 재할당 | O | O | X |
+
 ## 호이스팅 \(Hoisting\)
 
 자바스크립트 엔진이 실행 컨텍스트를 생성하면서 scope 를 정의할 때 기술된 순서에 상관없이 _**선언부에 대한 처리 해석의 우선순위를 최우선으로 끌어올려 먼저 해석**_ 하는 것   
 이는 다음과 같은 특징을 갖는다.
 
-* 변수의 정의가 그 범위에 따라 _**선언과 할당으로 분리**_ 한다.s
+* 변수의 정의가 그 범위에 따라 _**선언과 할당으로 분리**_ 한다.
 * 선언과 할당이 분리되며 에러를 야기시킬 수 있다.
-* ES6 에서는 호이스팅의 지원이 없어졌다.
+* ES6 에서는 호이스팅의 지원이 없어졌다. \(ES5 식의 호이스팅 / TDZ 관점\)
 * 기존 ES5 에서는 호이스팅이 있어 해당 값을 선언 후 호출하면 undefined 로 나온다.
 
 #### 예제 코드 
@@ -230,7 +239,7 @@ var value = 'outer scope';
 {% endtab %}
 
 {% tab title="ES6" %}
-`var` 에 비해 `const/let` 은 TDZ 에 의해서 `ReferenceError` 가 발생한다.
+`var` 에 비해 `const/let` 은 _**TDZ**_ 에 의해서 `ReferenceError` 가 발생한다.
 
 ```javascript
 const value = 'outer scope';
@@ -241,9 +250,10 @@ const value = 'outer scope';
 }());
 ```
 
-초기화가 되지 않는 객체 들을 참조 할 수 없다. \(호이스팅이 되지 않는것은 아님\)
-
-> TDZ \(Temporal Dead Zone\)
+> **TDZ \(Temporal Dead Zone\) ?**
+>
+> 초기화 \(선언\) 가 되지 않는 객체들을 참조 할 수 없다.  
+> \(호이스팅이 되지 않는것은 아님 - ES5 처럼 undefined 로 선 할당이 안됨\)
 {% endtab %}
 {% endtabs %}
 
