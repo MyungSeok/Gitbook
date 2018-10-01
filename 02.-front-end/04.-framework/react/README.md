@@ -23,7 +23,7 @@ es6 문법과 jsx 를 혼용하기 때문에 아래와 같은 lint 설정을 추
 
 손쉬운 디버그 환경을 위하여 _**크롬 확장프로그램**_ \(Chrome Extension\) 에서 해당 플러그인을 설치한다.
 
-![React Development Tools](../../../.gitbook/assets/image%20%284%29.png)
+![React Development Tools](../../../.gitbook/assets/image%20%285%29.png)
 
 {% hint style="info" %}
 참고 자료 
