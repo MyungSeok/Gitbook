@@ -1,6 +1,4 @@
-# Algorithm
-
-## Sort
+# Sort
 
 ### 퀵 정렬 \(Quick Sort\)
 
@@ -10,12 +8,10 @@
 
 정렬하려는 배열을 반으로 나눠 최소의 파티션으로 나누고 정렬한 후 머지하면서 정렬
 
-{% hint style="danger" %}
-시간 복잡도는 nlogn 으로 퀵 정렬과 달리 _**별도의 저장공간이 필요**_ 하다.
-{% endhint %}
+> 시간 복잡도는 `nlogn` 으로 퀵 정렬과 달리 _**별도의 저장공간이 필요**_ 하다.
 
-{% tabs %}
-{% tab title="Javascript" %}
+#### Example
+
 ```javascript
 var arr = [6, 3, 8, 4, 1, 9, 2, 5, 7, 0];
 
@@ -83,8 +79,6 @@ var ms = new MergeSort();
 
 console.log(ms.sort(arr));
 ```
-{% endtab %}
-{% endtabs %}
 
 ### 버블 \(Bubble\)
 
