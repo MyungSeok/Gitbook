@@ -24,6 +24,24 @@ JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사�
 
 {% tabs %}
 {% tab title="Case 1" %}
+#### 스크립트 태그 삽입으로 callback 함수 jsonp 구현하기
+
+```javascript
+var callback = '_callback_jsonp_' + Math.round(10000 * Math.random());
+
+var script = document.createElement('script');
+script.src = 'http://localhost:8080/getJSON.json?callback=' + callback;
+document.body.appendChild(script);
+
+window[callback] = function (data) {
+    delete window[callback];
+    
+    /* 콜백 실행 로직 */ 
+}
+```
+{% endtab %}
+
+{% tab title="Case 2" %}
 #### 요청 URL 뒤에 callback 파라메터 추가하여 jsonp 요청 구현하기
 
 #### Client
@@ -57,8 +75,8 @@ private void doGet(HttpServletRequest request, HttpServleteResponse response) th
 ```
 {% endtab %}
 
-{% tab title="Case 2" %}
-#### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하
+{% tab title="Case 3" %}
+#### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하기
 
 #### Client
 
@@ -83,7 +101,7 @@ myCallback({"message":"You got an AJAX response via JSONP from another site!"});
 ```
 {% endtab %}
 
-{% tab title="Case 3" %}
+{% tab title="Case 4" %}
 #### jsonpCallback 옵션 없이 사용하기
 
 #### Client
@@ -108,6 +126,18 @@ jQuery18305806868467951786_1366340807385({"key":"value"});
 ```
 {% endtab %}
 {% endtabs %}
+
+`jsonp` 로 전달 받는 응답데이터는 다음과 같다.
+
+```javascript
+_callback_jsonp_({
+  "code": 1,
+  "message": "success",
+  "result_set": {}
+});
+```
+
+> 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조
 
 ## 암묵적 전역
 
