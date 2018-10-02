@@ -25,8 +25,6 @@ description: 자바스크립트의 연산자 및 표현식을 정의합니다.
 
 ### Example 
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var arrayObj = ['a', 'b', 'c'];
 
@@ -36,9 +34,7 @@ console.log(0 in arrayObj);    // true
 console.log('a' in arrayObj);    // false
 console.log('length' in arrayObj);    // true
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var color1 = new String('green');
 console.log('length' in color1);    // true
@@ -49,16 +45,12 @@ console.log('length' in color2);    // false
 ```
 
 `String` 생성자로 만들어진 문자열을 명시할 수 있지만 _**문자열 리터럴은 명시할 수 없다**_
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 console.log('toString' in {});     // true
 ```
 
 프로토타입 체인에 의하여 접근 가능한 속성은 `true` 를 반환합니다.
-{% endtab %}
-{% endtabs %}
 
 ## instanceof
 
@@ -81,8 +73,6 @@ object instanceof constructor
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 function C() {};
 
@@ -90,9 +80,7 @@ var obj = new C();
 
 console.log(obj instanceof C);    // true
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 function Car(make, model, year) {
   this.make = make;
@@ -105,8 +93,6 @@ console.log(auto instanceof Car);  // true
 
 console.log(auto instanceof Object);  // true
 ```
-{% endtab %}
-{% endtabs %}
 
 ## typeof
 
@@ -133,8 +119,6 @@ typeof 피연산자
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 console.log(typeof 100)                  // number
 console.log(typeof '100')                // string
@@ -143,8 +127,6 @@ console.log(typeof [])                   // object
 console.log(typeof undefined)            // number
 console.log(typeof function foo() {})    // function
 ```
-{% endtab %}
-{% endtabs %}
 
 ## delete
 
@@ -167,8 +149,6 @@ delete object[.property]
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var Employee = {
     age: 28, 
@@ -182,14 +162,10 @@ console.log(delete Employee.age);      // true
 // 해당 프로퍼티가 존재하지 않아 true를 리턴합니다.
 console.log(delete Employee.salary);   // true
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="warning" %}
 `delete`연산자의 사용시 유의사항.
 
 * 존재하지 않는 속성을 삭제하려고 하면 아무 작업 없이 `true`를 반환
 * 오브젝트에 프로토타입 체인과 같은 속성이 있다면 `delete`로 삭제 후에 프로토타입 체인 프로퍼티 사용가능
 * `var`로 선언된 프로퍼티는 삭제 불가
-{% endhint %}
 
