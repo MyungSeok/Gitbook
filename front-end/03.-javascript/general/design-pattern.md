@@ -168,9 +168,7 @@ var _curried = curry(volume);
 console.log(_curried(2)(3)(4));
 ```
 
-{% hint style="info" %}
-`Case 2` 가 10배정도 빠름
-{% endhint %}
+> `Case 2` 가 10배정도 빠름
 
 ## 메모이제이션 
 

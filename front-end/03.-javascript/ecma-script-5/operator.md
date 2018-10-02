@@ -185,11 +185,9 @@ console.log(delete Employee.salary);   // true
 {% endtab %}
 {% endtabs %}
 
-{% hint style="warning" %}
 `delete`연산자의 사용시 유의사항.
 
 * 존재하지 않는 속성을 삭제하려고 하면 아무 작업 없이 `true`를 반환
 * 오브젝트에 프로토타입 체인과 같은 속성이 있다면 `delete`로 삭제 후에 프로토타입 체인 프로퍼티 사용가능
 * `var`로 선언된 프로퍼티는 삭제 불가
-{% endhint %}
 
