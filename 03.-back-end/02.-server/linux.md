@@ -35,10 +35,8 @@ $ dig @8.8.8.8 google.com
 $ dig google.com +trace
 ```
 
-{% hint style="info" %}
 **참고 자료**   
 [https://www.codns.com/b/B05-110](https://www.codns.com/b/B05-110)
-{% endhint %}
 
 ## telnet
 

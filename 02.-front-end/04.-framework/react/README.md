@@ -25,7 +25,6 @@ es6 문법과 jsx 를 혼용하기 때문에 아래와 같은 lint 설정을 추
 
 ![React Development Tools](../../../.gitbook/assets/image%20%285%29.png)
 
-{% hint style="info" %}
 참고 자료 
 
 * React 
@@ -34,7 +33,6 @@ es6 문법과 jsx 를 혼용하기 때문에 아래와 같은 lint 설정을 추
   * [https://velopert.com/3613](https://velopert.com/3613)
 * Redux
   * [https://deminoth.github.io/redux/](https://deminoth.github.io/redux/)
-{% endhint %}
 
 
 

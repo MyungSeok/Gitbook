@@ -18,12 +18,8 @@ script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트�
 
 ![](../../../.gitbook/assets/undefined%20%282%29.tiff)
 
-{% hint style="warning" %}
-JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사용이 가능
-{% endhint %}
+> JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사용이 가능
 
-{% tabs %}
-{% tab title="Case 1" %}
 #### 스크립트 태그 삽입으로 callback 함수 jsonp 구현하기
 
 ```javascript
@@ -39,9 +35,7 @@ window[callback] = function (data) {
     /* 콜백 실행 로직 */ 
 }
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 #### 요청 URL 뒤에 callback 파라메터 추가하여 jsonp 요청 구현하기
 
 #### Client
@@ -73,9 +67,7 @@ private void doGet(HttpServletRequest request, HttpServleteResponse response) th
     out.close();
 }
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 #### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하기
 
 #### Client
@@ -99,9 +91,7 @@ $.ajax({
 ```java
 myCallback({"message":"You got an AJAX response via JSONP from another site!"});
 ```
-{% endtab %}
 
-{% tab title="Case 4" %}
 #### jsonpCallback 옵션 없이 사용하기
 
 #### Client
@@ -124,8 +114,6 @@ $.ajax({
 ```java
 jQuery18305806868467951786_1366340807385({"key":"value"});
 ```
-{% endtab %}
-{% endtabs %}
 
 `jsonp` 로 전달 받는 응답데이터는 다음과 같다.
 
@@ -159,9 +147,7 @@ console.log(typeof b);        // undefined
 console.log(typeof c);        // undefined
 ```
 
-{% hint style="info" %}
-프로퍼티는 `delete` 연산자로 삭제 가능
-{% endhint %}
+> 프로퍼티는 `delete` 연산자로 삭제 가능
 
 ## 상속 \(Inheritance\)
 
@@ -201,9 +187,7 @@ console.log(rect instanceof Shape);
 rect.move(1, 1);
 ```
 
-{% hint style="danger" %}
-_**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
-{% endhint %}
+> _**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
 
 ### `Object.create()` 를 이용한 메소드 상속 
 
@@ -245,8 +229,6 @@ ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음
 
 #### 예제 코드 
 
-{% tabs %}
-{% tab title="ES5 " %}
 ```javascript
 var value = 'outer scope';
 (function () {
@@ -266,9 +248,7 @@ var value = 'outer scope';
     var value = 'inner scope';
 });
 ```
-{% endtab %}
 
-{% tab title="ES6" %}
 `var` 에 비해 `const/let` 은 _**TDZ**_ 에 의해서 `ReferenceError` 가 발생한다.
 
 ```javascript
@@ -284,8 +264,6 @@ const value = 'outer scope';
 >
 > 초기화 \(선언\) 가 되지 않는 객체들을 참조 할 수 없다.  
 > \(호이스팅이 되지 않는것은 아님 - ES5 처럼 undefined 로 선 할당이 안됨\)
-{% endtab %}
-{% endtabs %}
 
 ## 함수의 선언과 표현식
 

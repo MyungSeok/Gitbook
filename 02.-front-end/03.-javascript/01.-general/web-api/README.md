@@ -47,10 +47,8 @@ xhr.send(null);
   * POST 방식으로 요구 한 경우 서버로 보낼 데이터를 정의한다
   * `json` , `soap` 혹은 쿼리 스트링으로 표현 가능
 
-{% hint style="info" %}
-POST 로 통신할 경우 요청 \(request\) MINE type을 설정 해야 합니다.  
-예를 들면 `send` 를 호출하기 전에 아래와 같은 형태로 `send` 로 보낼 쿼리를 이용해야 한다.
-{% endhint %}
+> POST 로 통신할 경우 요청 \(request\) MINE type을 설정 해야 합니다.  
+> 예를 들면 `send` 를 호출하기 전에 아래와 같은 형태로 `send` 로 보낼 쿼리를 이용해야 한다.
 
 ```javascript
 xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');

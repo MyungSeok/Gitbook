@@ -25,8 +25,6 @@ _**자바스크립트 엔진이 일정시간 대기하였다가 UI 큐에 작업
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var timeoutId;
 
@@ -42,8 +40,6 @@ function cancleTimer() {
     window.clearTimeout(timeoutId);
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 지정된 시간 이후에 UI 작업 큐에 추가되기 때문에 실제로 언제 실행 되는지는 알 수 없다.
 
@@ -71,8 +67,6 @@ function cancleTimer() {
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var intervalID;
 
@@ -88,8 +82,6 @@ function cancleTimer() {
     window.clearInterval(intervalId);
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ## RequestAnimationFrame
 

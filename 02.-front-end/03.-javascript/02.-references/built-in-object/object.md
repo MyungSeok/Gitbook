@@ -14,8 +14,6 @@ Object.keys(obj).length
 
 #### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var obj = {a: 1, b: 2: c: 3};
 
@@ -23,8 +21,6 @@ var size = Object.keys(obj).length;
 
 console.log(size); // 3
 ```
-{% endtab %}
-{% endtabs %}
 
 ## assign
 
@@ -47,8 +43,6 @@ Object.assign(target [, sources])
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var obj = {a: 1};
 var cp_obj = Object.assign({}, obj);
@@ -56,9 +50,7 @@ var cp_obj = Object.assign({}, obj);
 console.log(cp_obj);
 // {a: 1}
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var obj1 = { a: 1 };
 var obj2 = { b: 2 };
@@ -72,9 +64,7 @@ console.log(obj);
 console.log(obj1);  
 // { a: 1, b: 2, c: 3 }, 타겟 오브젝트, 그 자체도 변화합니다.
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 var obj1 = { a: 1, b: 1, c: 1 };
 var obj2 = { b: 2, c: 2 };
@@ -85,8 +75,6 @@ var obj = Object.assign({}, obj1, obj2, obj3);
 console.log(obj); 
 // { a: 1, b: 2, c: 3 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Polyfill
 
@@ -135,8 +123,6 @@ Object.hasOwnProperty(prop)
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var obj = new Object();
 obj.prop = 'exists';
@@ -145,9 +131,7 @@ obj.hasOwnProperty('prop'); // true
 delete obj.prop();
 obj.hasOwnProperty('prop'); // false
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var obj = new Object();
 obj.prop = 'exists';
@@ -158,9 +142,7 @@ obj.hasOwnProperty('prop'); // true
 obj.hasOwnProperty('toString'); // false
 obj.hasOwnProperty('hasOwnProperty'); // false
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 var obj = {
   hasOwnProperty: function() {
@@ -175,8 +157,6 @@ foo.hasOwnProperty('bar'); // false
 
 Object.prototype.hasOwnProperty.call(foo, 'bar'); // true
 ```
-{% endtab %}
-{% endtabs %}
 
 
 

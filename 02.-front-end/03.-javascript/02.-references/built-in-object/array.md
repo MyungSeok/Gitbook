@@ -19,18 +19,12 @@ arrayObj1.concat(arrayObj2)
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].concat(['W', 'o', 'r', 'l', 'd']);
 // ['H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd']
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
-이 메소드는 새로운 배열 객체를 반환 합니다.
-{% endhint %}
+> 이 메소드는 새로운 배열 객체를 반환 합니다.
 
 ## slice
 
@@ -55,39 +49,27 @@ arrayObj.slice(start, [end])
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(1)
 // ['e', 'l', 'l', 'o']
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(1, 4)
 // ['e', 'l', 'l']
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(0, -1)
 // ['H', 'e', 'l', 'l']
 ```
-{% endtab %}
 
-{% tab title="Case 4" %}
 ```javascript
 ['H', 'e', 'l', 'l', 'o'].slice(-1, 0)
 // []
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
-이 메소드는 새로운 배열 객체를 반환 합니다.
-{% endhint %}
+> 이 메소드는 새로운 배열 객체를 반환 합니다.
 
 ## shift
 
@@ -103,8 +85,6 @@ arrayObj.shift()
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var arrayObj = ['H', 'e', 'l', 'l', 'o'];
 
@@ -116,9 +96,7 @@ console.log(shifted);
 console.log(arrayObj);
 // ['e', 'l', 'l', 'o']
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 `while` 구문 수행시 첫번째 요소를 제거하면서 빈 배열이 나올때까지 반복문을 수행한다.
 
 ```javascript
@@ -129,16 +107,10 @@ while( (i = names.shift()) !== undefined ) {
 }
 // Andrew, Edward, Paul, Chris, John
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="danger" %}
-이 메소드는 배열의 길이를 변하게 합니다.
-{% endhint %}
+> 이 메소드는 배열의 길이를 변하게 합니다.
 
-{% hint style="info" %}
-배열의 마지막 요소를 제거하는건 **`pop`** 메소드 이다.
-{% endhint %}
+> 배열의 마지막 요소를 제거하는건 **`pop`** 메소드 이다.
 
 ## unshift
 
@@ -155,8 +127,6 @@ arrayObj.unshift([element1[, ...[, elementN]]])
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var arrayObj = ['1', '2'];
 
@@ -169,12 +139,8 @@ arrayObj.unshift(-2, -1);
 arrayObj.unshift([-3]); 
 // arr is [[-3], -2, -1, 0, 1, 2]
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="danger" %}
-이 메소드는 배열의 길이를 변하게 합니다.
-{% endhint %}
+> 이 메소드는 배열의 길이를 변하게 합니다.
 
 ## map
 
@@ -205,8 +171,6 @@ var newAry = arrayObj.map(function callback(currentValue[, index[, array]]) {
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
@@ -217,9 +181,7 @@ console.log(numbers);
 console.log(roots);
 // [1, 2, 3]
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var numbers = [1, 4, 9];
 var doubles = numbers.map(function (num) {
@@ -229,9 +191,7 @@ var doubles = numbers.map(function (num) {
 console.log(doubles);
 // [2, 8, 18]
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 var mapAry = [{key: 1, value, 10}, {key: 2, value: 20}, {key: 3, value: 30}];
 var new_mapAry = mapAry.map(function (obj) {
@@ -243,8 +203,6 @@ var new_mapAry = mapAry.map(function (obj) {
 console.log(new_mapAry);
 // [{1:10}, {2:20}, {3:30}]
 ```
-{% endtab %}
-{% endtabs %}
 
 ### 지정된 사이즈로 임의의 배열 생성 
 
@@ -259,9 +217,7 @@ var newArray = Array
     });
 ```
 
-{% hint style="info" %}
-이 메소드는 새로운 배열 객체를 반환 합니다.
-{% endhint %}
+> 이 메소드는 새로운 배열 객체를 반환 합니다.
 
 ## filter
 
@@ -292,8 +248,6 @@ var newAry = arrayObj.filter(function callback(currentValue[, index[, array]]) {
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 function isBigEnough(value) {
     return value >= 10;
@@ -304,12 +258,8 @@ var filterd = [12, 5, 8, 130, 44].filter(isBigEnough);
 console.log(filtered);
 // [12, 130, 44]
 ```
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
-이 메소드는 새로운 배열 객체를 반환 합니다.
-{% endhint %}
+> 이 메소드는 새로운 배열 객체를 반환 합니다.
 
 ## forEach
 
@@ -358,17 +308,13 @@ arrayObj.sort([compareFunction])
 
 ### Example
 
-{% tabs %}
-{% tab title="문자 정렬" %}
 ```javascript
 var fruit = ['orange', 'apple', 'banana'];
 
 console.log(fruit.sort());
 // ['apple', 'banana', 'orange']
 ```
-{% endtab %}
 
-{% tab title="숫자 정렬" %}
 ```javascript
 var score = [4, 11, 2, 10, 3, 1];
 
@@ -389,9 +335,7 @@ score.sort(function () {
 });
 
 ```
-{% endtab %}
 
-{% tab title="객체 정렬" %}
 ```javascript
 var student = {
   { name: 'Edward', value: 21 },
@@ -429,9 +373,7 @@ student.sort(function(a, b) {
   return 0;
 });
 ```
-{% endtab %}
 
-{% tab title="중복 제거" %}
 #### 기존순서는 그대로 두고 중복 제거 
 
 ```javascript
@@ -465,8 +407,6 @@ var uniq = names.slice() // 정렬하기 전에 복사본을 만든다.
 // 한 줄로 표현
 return names.slice().sort(function(a,b){return a - b}).reduce(function(a,b){if (a.slice(-1)[0] !== b) a.push(b);return a;},[]);
 ```
-{% endtab %}
-{% endtabs %}
 
 ## indexOf
 
@@ -489,8 +429,6 @@ arrayObj.indexOf(element)
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var a = [2, 9, 9]; 
 a.indexOf(2); // 0 
@@ -500,8 +438,6 @@ if (a.indexOf(7) === -1) {
   // 요소가 배열에 존재하지 않습니다.
 }
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Polyfill
 

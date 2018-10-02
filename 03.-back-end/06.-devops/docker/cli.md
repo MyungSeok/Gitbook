@@ -107,20 +107,14 @@ $ docker attach CONTAINER
 $ docker exec CONTAINER COMMAND [ARG...]
 ```
 
-{% hint style="info" %}
-Docker 를 컨테이너로 진입 후 exit 명령어로 컨테이너를 빠져 나오면 컨테이너가 종료되기 때문에 이에 대해 사용한다.
-{% endhint %}
+> Docker 를 컨테이너로 진입 후 exit 명령어로 컨테이너를 빠져 나오면 컨테이너가 종료되기 때문에 이에 대해 사용한다.
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```bash
 $ docker exec -it CONTAINER /bin/bash
 ```
 
 CONTAINER 이름을 가진 컨테이너에 `/bin/bash` 쉘을 사용한다.  
 `exit` 명령어로 Shell \(컨테이너\) 을 빠져 나와도 컨테이너가 종료되지 않는다.
-{% endtab %}
-{% endtabs %}
 
 ### 컨테이너 삭제 \(rm\)
 
@@ -142,13 +136,9 @@ $ docker cp CONTAINER:CONTAINER_FILE_PATH HOST_FILE_PATH
 $ docker cp HOST_FILE_PATH CONTAINER:CONTAINER_FILE_PATH
 ```
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```bash
 $ docker cp ubuntu:/etc/nginx/nginx.conf ./
 ```
 
 `ubuntu` 내에 있는 `nginx.conf` 파일을 지정된 로컬 호스트 경로로 복사한다.
-{% endtab %}
-{% endtabs %}
 

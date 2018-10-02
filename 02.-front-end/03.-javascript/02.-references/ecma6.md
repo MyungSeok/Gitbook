@@ -19,8 +19,6 @@
 
 ### Example 
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 // 매개변수가 하나 이상있는 경우는 괄호가 필요
 (param1, param2) => {
@@ -37,9 +35,7 @@ param1 => {
     console.log('Hello World');
 }
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var list = [2, 4, 6, 8];
 
@@ -52,16 +48,12 @@ list.forEach(v => {
 });
 
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 // 객체 리터럴 반환
 var func = () => ({ foo: 1 });
 console.log(func());    // {foo: 1}
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Expression
 
@@ -112,8 +104,6 @@ function func_name([param1[= defaultValue1][, ... , paramN[= defaultValueN]]]) {
 
 ### Example 
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 function add(a, b = 1) {
     return a * b;
@@ -121,8 +111,6 @@ function add(a, b = 1) {
 
 console.log(add(5)) // 5
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Expression
 
@@ -169,14 +157,10 @@ myFunction(...args);
 
 ### Example
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 var org = [3, 4];
 var custom = [1, 2, ...org, 5];    // [1, 2, 3, 4, 5]
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Expression
 
@@ -208,8 +192,6 @@ function (a, b, ...theArgs) {
 
 ### Example 
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 function foo(...Args) {
     console.log(Args.length);
@@ -219,9 +201,7 @@ foo();           // 0
 foo(5);          // 2
 foo(5, 7, 9);    // 3
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 function foo(arg1, ...Args) {
     return Args.map(function (elem) {
@@ -231,8 +211,6 @@ function foo(arg1, ...Args) {
 
 console.log(foo(2, 1, 2, 3));    // [2, 4, 6]
 ```
-{% endtab %}
-{% endtabs %}
 
 ### Expression
 
@@ -260,8 +238,6 @@ console.log(sortArguments(5, 3, 7, 1));        // TypeError
 
 * 특정 객체의 값을 꺼내오는 방법
 
-{% tabs %}
-{% tab title="ECMA 5" %}
 ```javascript
 var josh = {
   language: 'javascript',
@@ -277,9 +253,7 @@ var area = josh.area;
 var hobby = josh.hobby;
 var age = josh.age;
 ```
-{% endtab %}
 
-{% tab title="ECMA 6" %}
 ```javascript
 var josh = {
   language: 'javascript',
@@ -297,8 +271,6 @@ console.log(area); // pangyo
 console.log(hobby); // singing
 console.log(age); // 102
 ```
-{% endtab %}
-{% endtabs %}
 
 * 함수의 적용
 

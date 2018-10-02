@@ -86,8 +86,7 @@ HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별
 
 ### 차이점
 
-{% tabs %}
-{% tab title="Cookie" %}
+### Cookie
 클라이언트에 저장되는 키와 값이 들어있는 작은 데이터 파일 \(하나당 4KB 이하\)
 
 이름, 값, 만료날짜 \(쿠키의 저장시간\), 경로정보 등이 포함되어 있다.
@@ -96,27 +95,21 @@ HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별
 
 > HTTP 전송시에 요청 헤더에 쿠키 값이 들어 있어 쿠키의 자료량 \(데이터 사이즈\) 이 큰 경우  
 > _**오버헤드로 인한 웹서버 에러가 발생**_ 할 수 있다.
-{% endtab %}
 
-{% tab title="Session" %}
+### Session
 서버에서 사용하는 클라이언트 인증 정보이다.
 
 서버는 접속 클라이언트 별로 세션을 생성해서 세션의 해당하는 쿠키 \(Session ID\) 를 클라이언트에게 생성하게 하고 이 클라이언트는 서버에 접속할 때마다 해당 쿠키의 값 \(Session ID\) 을 서버에 전송하여 세션을 유지하게 한다.
-{% endtab %}
 
-{% tab title="Cache" %}
+### Cache
 정적 자원들을 안정적으로 서비스하기 위해 데이터를 미리 저장해두고 제공하는 방식
 
 프록시 \(Proxy\) 서버에서 제공
-{% endtab %}
-{% endtabs %}
 
-{% hint style="info" %}
 **참고 자료**   
 [http://blog.kurien.co.kr/544](http://blog.kurien.co.kr/544)  
 [http://brownbears.tistory.com/34](http://brownbears.tistory.com/34)  
 [http://asfirstalways.tistory.com/68](http://asfirstalways.tistory.com/68)
-{% endhint %}
 
 
 

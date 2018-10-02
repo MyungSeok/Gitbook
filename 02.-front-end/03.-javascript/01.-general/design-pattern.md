@@ -4,8 +4,7 @@
 
 지역/전역 객체를 선언하여 그 안에 값을 삽입하여 사용하는 것
 
-{% tabs %}
-{% tab title="권장 패턴" %}
+### 권장 패턴
 ```javascript
 var App = App || {};
 App.Parent = function () {};
@@ -19,9 +18,8 @@ App.module = {
     module_2: {}
 };
 ```
-{% endtab %}
 
-{% tab title="안티 패턴" %}
+### 안티 패턴
 ```javascript
 function Parent() {} 
 function Child() {} 
@@ -34,8 +32,6 @@ module.data = {a : 1, b : 2};
 
 var module2 = {}
 ```
-{% endtab %}
-{% endtabs %}
 
 ## 모듈 패턴
 
@@ -53,8 +49,6 @@ var module2 = {}
 }());
 ```
 
-{% tabs %}
-{% tab title="Example 1" %}
 ```javascript
 var HTMLChanger = (function() {
     var contents = 'contents';
@@ -75,8 +69,6 @@ var HTMLChanger = (function() {
 HTMLChanger.callChangeHTML();         // 'contents'
 console.log(HTMLChanger.contents);    // undefined
 ```
-{% endtab %}
-{% endtabs %}
 
 ### 권장 모듈 패턴
 
@@ -164,9 +156,7 @@ var _curried = curry(volume);
 console.log(_curried(2)(3)(4));
 ```
 
-{% hint style="info" %}
-`Case 2` 가 10배정도 빠름
-{% endhint %}
+> `Case 2` 가 10배정도 빠름
 
 ## 메모이제이션 
 

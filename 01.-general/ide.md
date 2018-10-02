@@ -1,19 +1,19 @@
 # IDE
 
-## VSCode 
+## VSCode
 
 ### extension package
 
 * BreadCrumb in StatusBar
-  * 선택 파일 경로 노출 
+  * 선택 파일 경로 노출
 * GitLens
   * 선택 행 깃 커밋 보여주기
 * One Dark Pro
   * 에디터 테마
 * vscode-icons
-  * 에디터 아이콘 
+  * 에디터 아이콘
 * Material Icon Theme
-  * 에디터 아이콘 
+  * 에디터 아이콘
 
 ### usersetting.json
 

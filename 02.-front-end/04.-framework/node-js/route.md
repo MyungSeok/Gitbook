@@ -38,39 +38,29 @@ app.get('/', function(req, res) {
 
 대표적인 Express 라우팅 메소드는 다음과 같다.
 
-{% tabs %}
-{% tab title="GET" %}
 ```javascript
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 ```
-{% endtab %}
 
-{% tab title="POST" %}
 ```javascript
 app.post('/', function (req, res) {
   res.send('Got a POST request');
 });
 ```
-{% endtab %}
 
-{% tab title="PUT" %}
 ```javascript
 app.put('/user', function (req, res) {
   res.send('Got a PUT request at /user');
 });
 ```
-{% endtab %}
 
-{% tab title="DELETE" %}
 ```javascript
 app.delete('/user', function (req, res) {
   res.send('Got a DELETE request at /user');
 });
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Route Chain
 
@@ -131,11 +121,9 @@ app.use('/birds', birds);
 
 `/birds` 및 `/birds/about` 에 대한 요청을 처리 가능하며 해당 라우트에 대한 특정 미들웨어 함수인 timeLog 를 호출
 
-{% hint style="info" %}
-Express 는 HTTP 메소드에 해당하는 다음과 같은 라우팅 메소드를 지원한다.
+> Express 는 HTTP 메소드에 해당하는 다음과 같은 라우팅 메소드를 지원한다.
 
-`get`, `post`, `put`, `head`, `delete`, `options`, `trace`, `copy`, `lock`, `mkcol`, `move`, `purge`, `propfind`, `proppatch`, `unlock`, `report`, `mkactivity`, `checkout`, `merge`, `m-search`, `notify`, `subscribe`, `unsubscribe`, `patch`, `search`및 `connect`.
-{% endhint %}
+> `get`, `post`, `put`, `head`, `delete`, `options`, `trace`, `copy`, `lock`, `mkcol`, `move`, `purge`, `propfind`, `proppatch`, `unlock`, `report`, `mkactivity`, `checkout`, `merge`, `m-search`, `notify`, `subscribe`, `unsubscribe`, `patch`, `search`및 `connect`.
 
 ### Path 
 
@@ -143,57 +131,43 @@ URI 경로는 문자열 혹은 정규식의 패턴에도 적용된다.
 
 #### Character Pattern
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 // acd, abcd
 app.get('/ab?cd', function(req, res) {
   res.send('ab?cd');
 });
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 // abcd, abbcd, abbbcd
 app.get('/ab+cd', function(req, res) {
   res.send('ab+cd');
 });
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 // abcd, abxcd, abRABDOMcd, ab123cd
 app.get('/ab*cd', function(req, res) {
   res.send('ab*cd');
 });
 ```
-{% endtab %}
 
-{% tab title="Case 4" %}
 ```javascript
 // /abe, /abcde
 app.get('/ab(cd)?e', function(req, res) {
  res.send('ab(cd)?e');
 });
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Regular Expression 
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```javascript
 // a 가 포함된 모든 항목과 일치 
 app.get(/a/, function(req, res) {
   res.send('/a/');
 });
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 // butterfly, dragonfly 과는 일치 
 // butterflyman, dragonfly man 과는 불일치 
@@ -201,8 +175,6 @@ app.get(/.*fly$/, function(req, res) {
   res.send('/.*fly$/');
 });
 ```
-{% endtab %}
-{% endtabs %}
 
 #### Response
 

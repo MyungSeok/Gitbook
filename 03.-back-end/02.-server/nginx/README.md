@@ -11,9 +11,7 @@
 
 _**/etc/nginx/sites-available/default**_ 경로를 다음과 같이 수정한다.
 
-{% hint style="danger" %}
-이전 파일은 백업 한다.
-{% endhint %}
+> 이전 파일은 백업 한다.
 
 ```bash
 server {
