@@ -897,19 +897,19 @@
                                 
                                 <h1 id="ecma-6">ECMA 6</h1>
 <h2 id="arrows">Arrows</h2>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p>&#xD654;&#xC0B4;&#xD45C; &#xD568;&#xC218; &#xD45C;&#xD604;&#xC2DD;&#xC740; &#xCD95;&#xC57D;&#xD615; &#xD568;&#xC218; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript">(param1, param2, ... , paramN) =&gt; { statements }
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h5 id="parameters">Parameters</h5>
 <ul>
 <li>statements<ul>
 <li>&#xD568;&#xC218;&#xC758; &#xB0B4;&#xC6A9;</li>
 </ul>
 </li>
 </ul>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xAC00; &#xD558;&#xB098; &#xC774;&#xC0C1;&#xC788;&#xB294; &#xACBD;&#xC6B0;&#xB294; &#xAD04;&#xD638;&#xAC00; &#xD544;&#xC694;</span>
 (param1, param2) =&gt; {
     <span class="hljs-keyword">return</span> param1 + param2
@@ -939,7 +939,7 @@ list.forEach(v =&gt; {
 <span class="hljs-keyword">var</span> func = () =&gt; ({ foo: <span class="hljs-number">1</span> });
 <span class="hljs-built_in">console</span>.log(func());    <span class="hljs-comment">// {foo: 1}</span>
 </code></pre>
-<h3 id="expression">Expression</h3>
+<h4 id="expression">Expression</h4>
 <ul>
 <li>&#xC120;&#xC5B8; &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xC758; &#xBC16;&#xC758; <code>this</code> &#xAC12;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.<ul>
 <li><code>this</code> &#xAC00; &#xBC14;&#xC778;&#xB529; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
@@ -961,14 +961,14 @@ list.forEach(v =&gt; {
 <span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">new</span> Foo();    <span class="hljs-comment">// TypeError : Foo is not a constructor</span>
 </code></pre>
 <h2 id="default-parameter">Default Parameter</h2>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p>&#xD568;&#xC218;&#xC758; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xAE30;&#xBCF8;&#xAC12;&#xC774; &#xC124;&#xC815; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func_name</span>(<span class="hljs-params">[param1[= defaultValue1][, ... , paramN[= defaultValueN]]]</span>) </span>{
     statements
 }
 </code></pre>
-<h4 id="parameters">Parameters</h4>
+<h5 id="parameters">Parameters</h5>
 <ul>
 <li>func_name<ul>
 <li>&#xD568;&#xC218;&#xBA85; </li>
@@ -987,14 +987,14 @@ list.forEach(v =&gt; {
 </ul>
 </li>
 </ul>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b = 1</span>) </span>{
     <span class="hljs-keyword">return</span> a * b;
 }
 
 <span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 5</span>
 </code></pre>
-<h3 id="expression">Expression</h3>
+<h4 id="expression">Expression</h4>
 <ul>
 <li>&#xD568;&#xC218;&#xC5D0;&#xB3C4; &#xC801;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. </li>
 </ul>
@@ -1019,7 +1019,7 @@ callLog(<span class="hljs-literal">undefined</span>)     <span class="hljs-comme
 </code></pre>
 <h2 id="spread-operator">Spread Operator</h2>
 <p>2&#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xC778;&#xC218;&#xB97C; &#xB098;&#xC5F4;&#xD558;&#xB294; &#xBC29;&#xC2DD;</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xD568;&#xC218; &#xD638;&#xCD9C;&#xC6A9;</span>
 myFunction(...args);
 
@@ -1029,11 +1029,11 @@ myFunction(...args);
 <span class="hljs-comment">// &#xBE44; &#xAD6C;&#xC870;&#xD654;&#xC6A9;</span>
 [a, b, ...args] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
 </code></pre>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> org = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 <span class="hljs-keyword">var</span> custom = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ...org, <span class="hljs-number">5</span>];    <span class="hljs-comment">// [1, 2, 3, 4, 5]</span>
 </code></pre>
-<h3 id="expression">Expression</h3>
+<h4 id="expression">Expression</h4>
 <ul>
 <li>&#xC2A4;&#xD504;&#xB808;&#xB4DC; &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xBC30;&#xC5F4; &amp; &#xAC1D;&#xCCB4; &#xBCF5;&#xC81C;. </li>
 </ul>
@@ -1049,12 +1049,12 @@ myFunction(...args);
 </code></pre>
 <h2 id="rest-parameter">Rest Parameter</h2>
 <p>&#xB098;&#xBA38;&#xC9C0; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218; (rest parameter) &#xAD6C;&#xBB38;&#xC5D0; &#xB098;&#xBA38;&#xC9C0; &#xC778;&#xC218;&#xB4E4;&#xB3C4; &#xC815;&#xC758;&#xD574; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b, ...theArgs</span>) </span>{
     <span class="hljs-comment">// statements</span>
 }
 </code></pre>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params">...Args</span>) </span>{
     <span class="hljs-built_in">console</span>.log(Args.length);
 }
@@ -1071,7 +1071,7 @@ foo(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <spa
 
 <span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>));    <span class="hljs-comment">// [2, 4, 6]</span>
 </code></pre>
-<h3 id="expression">Expression</h3>
+<h4 id="expression">Expression</h4>
 <ul>
 <li><code>arguments</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2CC; <code>Array</code> &#xAC1D;&#xCCB4;&#xC758; <code>method</code> &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</li>
 </ul>
@@ -1089,7 +1089,7 @@ foo(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <spa
 </code></pre>
 <h2 id="destructuring-syntax">Destructuring Syntax</h2>
 <p>&#xAD6C;&#xC870;&#xBD84;&#xD574; &#xBB38;&#xBC95;&#xC740; ES6 &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218;&#xC758; &#xC120;&#xC5B8; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<h3 id="expression">Expression</h3>
+<h4 id="expression">Expression</h4>
 <ul>
 <li>&#xD2B9;&#xC815; &#xAC1D;&#xCCB4;&#xC758; &#xAC12;&#xC744; &#xAEBC;&#xB0B4;&#xC624;&#xB294; &#xBC29;&#xBC95;</li>
 </ul>
@@ -1135,7 +1135,7 @@ commit(<span class="hljs-string">&apos;addProducts&apos;</span>);     <span clas
 </code></pre>
 <h2 id="export-syntax">Export Syntax</h2>
 <p>&#xC9C0;&#xC815;&#xB41C; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xAC1D;&#xCCB4; (&#xD568;&#xC218;, &#xC624;&#xBE0C;&#xC81D;&#xD2B8;, &#xC6D0;&#xC2DC;&#xD0C0;&#xC785;) &#xC744; <code>export</code> &#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Named Exports</span>
 <span class="hljs-keyword">export</span> { myFunction };              <span class="hljs-comment">// &#xD568;&#xC218; exports</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> foo = <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">2</span>);    <span class="hljs-comment">// &#xC0C1;&#xC218; exports</span>
@@ -1186,7 +1186,7 @@ commit(<span class="hljs-string">&apos;addProducts&apos;</span>);     <span clas
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"next":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"02.-front-end/03.-javascript/04.-performance.md","ref":"02.-front-end/03.-javascript/04.-performance.md","articles":[]},"previous":{"title":"Global Object","level":"1.3.3.2.3","depth":4,"path":"02.-front-end/03.-javascript/02.-references/global-object.md","ref":"02.-front-end/03.-javascript/02.-references/global-object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout"],"pluginsConfig":{"bootstrap-callout":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6.md","mtime":"2018-10-02T03:05:25.698Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T09:47:06.881Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"next":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"02.-front-end/03.-javascript/04.-performance.md","ref":"02.-front-end/03.-javascript/04.-performance.md","articles":[]},"previous":{"title":"Global Object","level":"1.3.3.2.3","depth":4,"path":"02.-front-end/03.-javascript/02.-references/global-object.md","ref":"02.-front-end/03.-javascript/02.-references/global-object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout"],"pluginsConfig":{"bootstrap-callout":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6.md","mtime":"2018-10-02T15:58:22.472Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T16:10:29.357Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>

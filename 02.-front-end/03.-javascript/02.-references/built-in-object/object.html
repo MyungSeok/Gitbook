@@ -897,12 +897,12 @@
                                 
                                 <h1 id="object">Object</h1>
 <h2 id="object-keys-length">Object Keys Length</h2>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p><code>object</code> &#xD0C0;&#xC785;&#xC758; &#xB370;&#xC774;&#xD130; &#xC911;&#xC5D0; &#xD0A4;&#xC758; &#xAC2F;&#xC218;&#xB97C; &#xAD6C;&#xD55C;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.keys(obj).length
 </code></pre>
-<h4 id="example">Example</h4>
+<h4 id="example-1--js---es5">Example #1 : JS - ES5</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> obj = {a: <span class="hljs-number">1</span>, b: <span class="hljs-number">2</span>: c: <span class="hljs-number">3</span>};
 
 <span class="hljs-keyword">var</span> size = <span class="hljs-built_in">Object</span>.keys(obj).length; 
@@ -910,12 +910,12 @@
 <span class="hljs-built_in">console</span>.log(size); <span class="hljs-comment">// 3</span>
 </code></pre>
 <h2 id="assign">assign</h2>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p><code>assign()</code> &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xC5F4;&#xAC70;&#xD560; &#xC218; &#xC788;&#xB294; &#xD558;&#xB098;&#xC758; &#xC774;&#xC0C1;&#xC758; &#xC18C;&#xC2A4; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;&#xC758; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB4E4;&#xC744; &#xBCF5;&#xC0AC;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.assign(target [, sources])
 </code></pre>
-<h4 id="parameter">Parameter</h4>
+<h5 id="parameter">Parameter</h5>
 <ul>
 <li>target<ul>
 <li>&#xD0C0;&#xAC9F; &#xC624;&#xBE0C;&#xC81D;&#xD2B8;</li>
@@ -926,7 +926,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> obj = {a: <span class="hljs-number">1</span>};
 <span class="hljs-keyword">var</span> cp_obj = <span class="hljs-built_in">Object</span>.assign({}, obj);
 
@@ -954,7 +954,7 @@
 <span class="hljs-built_in">console</span>.log(obj); 
 <span class="hljs-comment">// { a: 1, b: 2, c: 3 }</span>
 </code></pre>
-<h3 id="polyfill">Polyfill</h3>
+<h4 id="polyfill">Polyfill</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Object</span>.assign != <span class="hljs-string">&apos;function&apos;</span>) {
   (<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
     <span class="hljs-built_in">Object</span>.assign = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target</span>) </span>{
@@ -980,19 +980,19 @@
 }
 </code></pre>
 <h2 id="hasownproperty">hasOwnProperty</h2>
-<h3 id="description">Description</h3>
+<h4 id="description">Description</h4>
 <p><code>hasOwnProperty()</code> &#xBA54;&#xC18C;&#xB4DC;&#xB294; &#xAC1D;&#xCCB4;&#xAC00; &#xD2B9;&#xC815; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294;&#xC9C0; &#xD655;&#xC778; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<h3 id="syntax">Syntax</h3>
+<h4 id="syntax">Syntax</h4>
 <pre><code class="lang-text">Object.hasOwnProperty(prop)
 </code></pre>
-<h4 id="parameter">Parameter</h4>
+<h5 id="parameter">Parameter</h5>
 <ul>
 <li>prop<ul>
 <li>&#xD655;&#xC778; &#xD558;&#xB824;&#xB294; &#xD504;&#xB85C;&#xD37C;&#xD2F0; &#xBA85;&#xCE6D;</li>
 </ul>
 </li>
 </ul>
-<h3 id="example">Example</h3>
+<h4 id="example">Example</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
 obj.prop = <span class="hljs-string">&apos;exists&apos;</span>;
 
@@ -1065,7 +1065,7 @@ foo.hasOwnProperty(<span class="hljs-string">&apos;bar&apos;</span>); <span clas
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Object","level":"1.3.3.2.1.2","depth":5,"next":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"previous":{"title":"Array","level":"1.3.3.2.1.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout"],"pluginsConfig":{"bootstrap-callout":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/built-in-object/object.md","mtime":"2018-10-02T03:01:39.410Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T09:47:06.881Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Object","level":"1.3.3.2.1.2","depth":5,"next":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"previous":{"title":"Array","level":"1.3.3.2.1.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout"],"pluginsConfig":{"bootstrap-callout":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/built-in-object/object.md","mtime":"2018-10-02T15:55:31.334Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T16:10:29.357Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
