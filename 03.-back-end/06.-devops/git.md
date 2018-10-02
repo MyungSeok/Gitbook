@@ -50,12 +50,16 @@ The key's randomart image is:
 #### Syntax
 
 ```bash
-$ git revert COMMIT 
+$ git revert {COMMIT_NUMBER} 
 ```
 
 ### Merge Commit Revert
 
+일반적인 리버트로는 불가능 하다.
+
+`-m 1` 옵션을 넣어 줘야 한다.
+
 ```bash
-$ git revert -m 1 COMMIT 
+$ git revert -m 1 {COMMIT_NUMBER} 
 ```
 
