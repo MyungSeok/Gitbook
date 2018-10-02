@@ -4,13 +4,13 @@
 
 라우팅은 요청 URI 및 특정한 HTTP 요청 메소드 \(GET, POST, PUT, DELETE\) 인 특정 엔드포인트 에 대한 클라이언트 요청에 대해 애플리케이션이 응답하는 방법을 결정 하는것
 
-### Syntax
+#### Syntax
 
 ```javascript
 app.METHOD(PATH, HANDLER)
 ```
 
-#### Parameter
+##### Parameter
 
 * app
   * `express` 의 인스턴스 
@@ -34,7 +34,7 @@ app.get('/', function(req, res) {
 });
 ```
 
-### Method
+#### Method
 
 대표적인 Express 라우팅 메소드는 다음과 같다.
 
@@ -125,7 +125,7 @@ app.use('/birds', birds);
 
 > `get`, `post`, `put`, `head`, `delete`, `options`, `trace`, `copy`, `lock`, `mkcol`, `move`, `purge`, `propfind`, `proppatch`, `unlock`, `report`, `mkactivity`, `checkout`, `merge`, `m-search`, `notify`, `subscribe`, `unsubscribe`, `patch`, `search`및 `connect`.
 
-### Path 
+#### Path 
 
 URI 경로는 문자열 혹은 정규식의 패턴에도 적용된다.
 

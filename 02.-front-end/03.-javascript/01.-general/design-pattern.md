@@ -4,7 +4,8 @@
 
 지역/전역 객체를 선언하여 그 안에 값을 삽입하여 사용하는 것
 
-### 권장 패턴
+#### 권장 패턴
+
 ```javascript
 var App = App || {};
 App.Parent = function () {};
@@ -19,7 +20,8 @@ App.module = {
 };
 ```
 
-### 안티 패턴
+#### 안티 패턴
+
 ```javascript
 function Parent() {} 
 function Child() {} 
@@ -35,7 +37,7 @@ var module2 = {}
 
 ## 모듈 패턴
 
-### 기본 모듈 패턴 
+#### 기본 모듈 패턴 
 
 `public` 과 `private` 의 접근 권한을 가능하게 한다.
 
@@ -70,7 +72,7 @@ HTMLChanger.callChangeHTML();         // 'contents'
 console.log(HTMLChanger.contents);    // undefined
 ```
 
-### 권장 모듈 패턴
+#### 권장 모듈 패턴
 
 1. Module Scope 내에서 사용할 변수 작성
 2. Utility Method 작성 
@@ -139,7 +141,7 @@ function curry(fn) {
 }
 ```
 
-####  Case 1
+#### Example #1 : JS - ES5
 
 ```javascript
 var curried = curry(volume),    
@@ -149,7 +151,7 @@ var curried = curry(volume),
 console.log(lengthAndWidth(4));
 ```
 
-#### Case 2
+#### Example #2 : JS - ES5
 
 ```javascript
 var _curried = curry(volume);
@@ -228,4 +230,3 @@ var factorial = (function () {
 
 factorial(7);
 ```
-

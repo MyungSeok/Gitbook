@@ -2,22 +2,22 @@
 
 ## Arrows
 
-### Description
+#### Description
 
 화살표 함수 표현식은 축약형 함수 입니다.
 
-### Syntax
+#### Syntax
 
 ```javascript
 (param1, param2, ... , paramN) => { statements }
 ```
 
-#### Parameters 
+##### Parameters 
 
 * statements
   * 함수의 내용
 
-### Example 
+#### Example 
 
 ```javascript
 // 매개변수가 하나 이상있는 경우는 괄호가 필요
@@ -55,7 +55,7 @@ var func = () => ({ foo: 1 });
 console.log(func());    // {foo: 1}
 ```
 
-### Expression
+#### Expression
 
 * 선언 컨텍스트의 밖의 `this` 값을 가진다.
   * `this` 가 바인딩 되지 않는다.
@@ -79,11 +79,11 @@ var foo = new Foo();    // TypeError : Foo is not a constructor
 
 ## Default Parameter
 
-### Description
+#### Description
 
 함수의 매개변수의 기본값이 설정 가능합니다.
 
-### Syntax
+#### Syntax
 
 ```javascript
 function func_name([param1[= defaultValue1][, ... , paramN[= defaultValueN]]]) {
@@ -91,7 +91,7 @@ function func_name([param1[= defaultValue1][, ... , paramN[= defaultValueN]]]) {
 }
 ```
 
-#### Parameters 
+##### Parameters 
 
 * func\_name
   * 함수명 
@@ -102,7 +102,7 @@ function func_name([param1[= defaultValue1][, ... , paramN[= defaultValueN]]]) {
 * statements
   * 함수의 내용
 
-### Example 
+#### Example 
 
 ```javascript
 function add(a, b = 1) {
@@ -112,7 +112,7 @@ function add(a, b = 1) {
 console.log(add(5)) // 5
 ```
 
-### Expression
+#### Expression
 
 * 함수에도 적용 가능하다. 
 
@@ -142,7 +142,7 @@ callLog(undefined)     // TEST_LOG
 
 2개 이상의 인수를 나열하는 방식
 
-### Syntax
+#### Syntax
 
 ```javascript
 // 함수 호출용
@@ -155,14 +155,14 @@ myFunction(...args);
 [a, b, ...args] = [1, 2, 3, 4, 5];
 ```
 
-### Example
+#### Example
 
 ```javascript
 var org = [3, 4];
 var custom = [1, 2, ...org, 5];    // [1, 2, 3, 4, 5]
 ```
 
-### Expression
+#### Expression
 
 * 스프레드 연산자로 배열 & 객체 복제. 
 
@@ -182,7 +182,7 @@ console.log(cloneObj);    // {a: 10, b: 20}
 
 나머지 매개변수 \(rest parameter\) 구문에 나머지 인수들도 정의해 나타냅니다.
 
-### Syntax
+#### Syntax
 
 ```javascript
 function (a, b, ...theArgs) {
@@ -190,7 +190,7 @@ function (a, b, ...theArgs) {
 }
 ```
 
-### Example 
+#### Example 
 
 ```javascript
 function foo(...Args) {
@@ -212,7 +212,7 @@ function foo(arg1, ...Args) {
 console.log(foo(2, 1, 2, 3));    // [2, 4, 6]
 ```
 
-### Expression
+#### Expression
 
 * `arguments` 객체가 아닌 `Array` 객체의 `method` 사용이 가능하다.
 
@@ -234,7 +234,7 @@ console.log(sortArguments(5, 3, 7, 1));        // TypeError
 
 구조분해 문법은 ES6 에서 사용되는 변수의 선언 방식입니다.
 
-### Expression
+#### Expression
 
 * 특정 객체의 값을 꺼내오는 방법
 
@@ -287,7 +287,7 @@ commit('addProducts');     // addProducts has been committed !!
 
 지정된 파일에서 객체 \(함수, 오브젝트, 원시타입\) 을 `export` 하는데 사용된다.
 
-### Syntax
+#### Syntax
 
 ```javascript
 // Named Exports

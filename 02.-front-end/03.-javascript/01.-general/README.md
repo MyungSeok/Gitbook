@@ -38,7 +38,7 @@ window[callback] = function (data) {
 
 #### 요청 URL 뒤에 callback 파라메터 추가하여 jsonp 요청 구현하기
 
-#### Client
+##### Client
 
 ```javascript
 $.getJSON('/jsonp.json?callback=?', function (data) {
@@ -46,7 +46,7 @@ $.getJSON('/jsonp.json?callback=?', function (data) {
 });
 ```
 
-#### Server
+##### Server
 
 ```java
 private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException { 
@@ -70,7 +70,7 @@ private void doGet(HttpServletRequest request, HttpServleteResponse response) th
 
 #### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하기
 
-#### Client
+##### Client
 
 ```javascript
 $.ajax({
@@ -86,7 +86,7 @@ $.ajax({
 });
 ```
 
-#### Server
+##### Server
 
 ```java
 myCallback({"message":"You got an AJAX response via JSONP from another site!"});
@@ -94,7 +94,7 @@ myCallback({"message":"You got an AJAX response via JSONP from another site!"});
 
 #### jsonpCallback 옵션 없이 사용하기
 
-#### Client
+##### Client
 
 ```javascript
 $.ajax({
@@ -109,7 +109,7 @@ $.ajax({
 });
 ```
 
-#### Server
+##### Server
 
 ```java
 jQuery18305806868467951786_1366340807385({"key":"value"});
@@ -151,11 +151,13 @@ console.log(typeof c);        // undefined
 
 ## 상속 \(Inheritance\)
 
-### 프로토 타입을 이용한 확장 
+#### 프로토 타입을 이용한 확장 
 
 자바스크립트에는 자바와 달리 `class` 가 존재하지 않아 `prototype` 을 사용하여 class 를 구현합니다.
 
 #### 상속 Class 생성 
+
+#### Example #1 : JS - ES5
 
 ```javascript
 function Shape() {
@@ -178,6 +180,8 @@ Rectangle.prototype.constructor = Rectangle;
 
 #### 상속 객체 생성
 
+#### Example #1 : JS - ES5
+
 ```javascript
 var rect = new Rectangle();
 
@@ -189,7 +193,9 @@ rect.move(1, 1);
 
 > _**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
 
-### `Object.create()` 를 이용한 메소드 상속 
+#### `Object.create()` 를 이용한 메소드 상속 
+
+#### Example #1 : JS - ES5
 
 ```javascript
 var parent = {
@@ -229,6 +235,8 @@ ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음
 
 #### 예제 코드 
 
+#### Example #1 : JS - ES5
+
 ```javascript
 var value = 'outer scope';
 (function () {
@@ -267,9 +275,11 @@ const value = 'outer scope';
 
 ## 함수의 선언과 표현식
 
-### 함수 선언식 \(Function Declarations / Function Statement\)
+#### 함수 선언식 \(Function Declarations / Function Statement\)
 
 _**실행 가능한 상태가 아니며**_  함수의 정의를 나타내는 `Statement` 으로 _**코드 해석에 따른 수행 경과가 존재 하지 않는다.**_
+
+#### Example #1 : JS - ES5
 
 ```javascript
 // 함수 선언식
@@ -278,9 +288,11 @@ function foo() {
 }
 ```
 
-### 함수 표현식 \(Function Expressions / Function Literal\)
+#### 함수 표현식 \(Function Expressions / Function Literal\)
 
 _**실행 가능한 상태 코드**_ 로 해석되어 지거나 혹은 _**변수나 데이터 구조에 할당**_ 되어 있음을 의미한다.
+
+#### Example #1 : JS - ES5
 
 ```javascript
 // 함수 표현식
@@ -297,6 +309,8 @@ var foo = function () {
 
 익명 함수는 동적으로 할당되는 유효범위를 가지기 때문에 _**강제적인 유효범위를 설정 하는 경우에도 사용**_ 된다.
 
+#### Example #1 : JS - ES5
+
 ```javascript
 (function () {
     var value = 'Hello World';
@@ -309,7 +323,7 @@ console.log(value);     // ReferenceError: value is not defined
 
 익명 함수 \(Anonymouse Function\) 를 이용하여 _**바로 실행 가능한 함수 표현식을 이용**_ 하여 만들어 내는 구문
 
-#### 익명 함수 표현식 
+#### Example #1 : JS - ES5
 
 ```javascript
 (function () {

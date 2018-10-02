@@ -2,7 +2,7 @@
 
 ## VSCode
 
-### extension package
+#### extension package
 
 * BreadCrumb in StatusBar
   * 선택 파일 경로 노출
@@ -15,7 +15,7 @@
 * Material Icon Theme
   * 에디터 아이콘
 
-### usersetting.json
+#### usersetting.json
 
 ```javascript
 {
@@ -48,7 +48,7 @@
 }
 ```
 
-### .eslintrc
+#### .eslintrc
 
 ```javascript
 {

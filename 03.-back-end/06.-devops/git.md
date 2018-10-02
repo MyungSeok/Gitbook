@@ -47,7 +47,7 @@ The key's randomart image is:
 
 ## Revert
 
-### Syntax
+#### Syntax
 
 ```bash
 $ git revert COMMIT 

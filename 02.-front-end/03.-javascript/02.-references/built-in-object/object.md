@@ -2,17 +2,17 @@
 
 ## Object Keys Length
 
-### Description
+#### Description
 
 `object` 타입의 데이터 중에 키의 갯수를 구한다.
 
-### Syntax
+#### Syntax
 
 ```javascript
 Object.keys(obj).length
 ```
 
-#### Example
+#### Example #1 : JS - ES5
 
 ```javascript
 var obj = {a: 1, b: 2: c: 3};
@@ -24,24 +24,24 @@ console.log(size); // 3
 
 ## assign
 
-### Description 
+#### Description 
 
 `assign()` 메소드는 열거할 수 있는 하나의 이상의 소스 오브젝트의 프로퍼티들을 복사합니다.
 
-### Syntax 
+#### Syntax 
 
 ```javascript
 Object.assign(target [, sources]) 
 ```
 
-#### Parameter
+##### Parameter
 
 * target
   * 타겟 오브젝트
 * sources
   * 하나 이상의 소스 오브젝트
 
-### Example
+#### Example
 
 ```javascript
 var obj = {a: 1};
@@ -76,7 +76,7 @@ console.log(obj);
 // { a: 1, b: 2, c: 3 }
 ```
 
-### Polyfill
+#### Polyfill
 
 ```javascript
 if (typeof Object.assign != 'function') {
@@ -106,22 +106,22 @@ if (typeof Object.assign != 'function') {
 
 ## hasOwnProperty
 
-### Description
+#### Description
 
 `hasOwnProperty()` 메소드는 객체가 특정 프로퍼티를 가지고 있는지 확인 합니다.
 
-### Syntax
+#### Syntax
 
 ```text
 Object.hasOwnProperty(prop)
 ```
 
-#### Parameter
+##### Parameter
 
 * prop
   * 확인 하려는 프로퍼티 명칭
 
-### Example
+#### Example
 
 ```javascript
 var obj = new Object();

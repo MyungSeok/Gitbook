@@ -8,7 +8,7 @@ _**관심의 분리 \(Seperation of Concerns\) 를 통하여 핵심 관심 사�
 
 ![](../../../.gitbook/assets/image%20%283%29.png)
 
-### 장점
+#### 장점
 
 * 중복되는 코드 제거
 * 효율적인 유지보수
@@ -62,7 +62,7 @@ _**Bean**_ 들은 _**싱글턴 패턴의 특징**_ 을 가진다.
 
 ## Spring Boot 기동 
 
-### Linux Deploy Shell Script
+#### Linux Deploy Shell Script
 
 리눅스 환경에서 쉽게 관리를 위해 _**Shell Script**_ 형태로 만들어 두어 관리한다.
 
@@ -87,7 +87,7 @@ kill $(cat ./pid.file)
 > 참고 경로   
 > [https://code.i-harness.com/ko/q/195154c](https://code.i-harness.com/ko/q/195154c)
 
-### Gradle 로 Spring Boot 기동 
+#### Gradle 로 Spring Boot 기동 
 
 ```bash
 # gradle bootRun
