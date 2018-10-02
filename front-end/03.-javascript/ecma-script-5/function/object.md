@@ -85,9 +85,7 @@ obj.hasOwnProperty('prop'); // true
 delete obj.prop();
 obj.hasOwnProperty('prop'); // false
 ```
-{% endtab %}
 
-{% tab title="Case 2" %}
 ```javascript
 var obj = new Object();
 obj.prop = 'exists';
@@ -98,9 +96,7 @@ obj.hasOwnProperty('prop'); // true
 obj.hasOwnProperty('toString'); // false
 obj.hasOwnProperty('hasOwnProperty'); // false
 ```
-{% endtab %}
 
-{% tab title="Case 3" %}
 ```javascript
 var obj = {
   hasOwnProperty: function() {
