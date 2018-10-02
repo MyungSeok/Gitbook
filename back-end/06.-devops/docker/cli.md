@@ -54,8 +54,6 @@ $ docker rmi IMAGE[:TAG]
 $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 ```
 
-{% tabs %}
-{% tab title="Case 1" %}
 ```bash
 $ docker run -it --name ubuntu_container ubuntu /bin/bash
 ```
@@ -65,8 +63,6 @@ ubuntu 이미지를 컨테이너로 생성
 * ubuntu 이미지를 컨테이너로 생성 
 * `--name` 옵션을 사용하여 ubuntu\_container 로 이름을 지정 
 * `-i`\(interactive\) `-t`\(Pseudo-tty\) 옵션을 사용하며 `/bin/bash` 쉘을 이용하여 입출력을 할 수 있다.
-{% endtab %}
-{% endtabs %}
 
 ### 컨테이너 목록 
 
