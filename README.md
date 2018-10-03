@@ -2,9 +2,14 @@
 
 # CLI
 ```bash
+# Build
 $ gitbook install
 
+# Local Server
 $ gitbook serve
+
+# Remote Static Publish
+./publish_gitbook.sh
 ```
 
 # Statement
