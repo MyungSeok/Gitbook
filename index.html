@@ -12,12 +12,17 @@
         
         
     
+    
     <link rel="stylesheet" href="gitbook/style.css">
 
     
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-bootstrap-callout/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
@@ -48,6 +53,9 @@
         
     
         
+    
+
+
     
 
         
@@ -893,7 +901,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sudals-note-&#xC758;-statement">Sudal&apos;s Note &#xC758; Statement</h1>
+                                <h1 id="sudals-note">Sudal&apos;s Note</h1>
+<h1 id="cli">CLI</h1>
+<pre><code class="lang-bash">$ gitbook install
+
+$ gitbook serve
+</code></pre>
+<h1 id="statement">Statement</h1>
 <h1 id="&#xC81C;&#xBAA9;">&#xC81C;&#xBAA9;</h1>
 <h2 id="&#xBD84;&#xB958;">&#xBD84;&#xB958;</h2>
 <h4 id="&#xC911;&#xBD84;&#xB958;">&#xC911;&#xBD84;&#xB958;</h4>
@@ -925,6 +939,7 @@
 
   };
 </code></pre>
+<h2 id="bootstrap-callout">bootstrap-callout</h2>
 <div class="callout callout-primary"><h4 id="primary">Primary</h4><div><p>description</p></div></div>
 <h2 id=""> </h2>
 <div class="callout callout-success"><h4 id="success">Success</h4><div><p>description</p></div></div>
@@ -934,6 +949,125 @@
 <div class="callout callout-warning"><h4 id="warning">Warning</h4><div><p>description</p></div></div>
 <h2 id=""> </h2>
 <div class="callout callout-info"><h4 id="info">Info</h4><div><p>description</p></div></div>
+<h2 id="mermaid">mermaid</h2>
+<div class="mermaid">
+graph TD;
+  A--&gt;B;
+  A--&gt;C;
+  B--&gt;D;
+  C--&gt;D;
+</div>
+
+<div class="mermaid">
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br>prevail...
+    John--&gt;Alice: Great!
+    John-&gt;Bob: How about you?
+    Bob--&gt;John: Jolly good!
+</div>
+
+<div class="mermaid">
+  gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram functionality to mermaid
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d
+    section Critical tasks
+    Completed task in the critical line :crit, done, 2014-01-06,24h
+    Implement parser and jison          :crit, done, after des1, 2d
+    Create tests for parser             :crit, active, 3d
+    Future task in critical line        :crit, 5d
+    Create tests for renderer           :2d
+    Add to mermaid                      :1d
+</div>
+
+<div class="mermaid">
+  sequenceDiagram
+    Alice -&gt;&gt; Bob: Hello Bob, how are you?
+    Bob--&gt;&gt;John: How about you John?
+    Bob--x Alice: I am good thanks!
+    Bob-x John: I am good thanks!
+    Note right of John: Bob thinks a long<br>long time, so long<br>that the text does<br>not fit on a row.
+
+    Bob--&gt;Alice: Checking with John...
+    Alice-&gt;John: Yes... John, how are you?
+</div>
+
+<div class="mermaid">
+  graph LR
+    A[Square Rect] -- Link text --&gt; B((Circle))
+    A --&gt; C(Round Rect)
+    B --&gt; D{Rhombus}
+    C --&gt; D
+</div>
+
+<div class="mermaid">
+  graph TB
+    sq[Square shape] --&gt; ci((Circle shape))
+
+    subgraph A subgraph
+        od&gt;Odd shape]-- Two line<br>edge comment --&gt; ro
+        di{Diamond with <br> line break} -.-&gt; ro(Rounded<br>square<br>shape)
+        di==&gt;ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --&gt; od3&gt;Really long text with linebreak<br>in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --&gt; f(,.?!+-*&#x632;)
+
+    cyr[Cyrillic]--&gt;cyr2((Circle shape &#x41D;&#x430;&#x447;&#x430;&#x43B;&#x43E;));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+</div>
+
+<div class="mermaid">
+  sequenceDiagram
+    loop Daily query
+        Alice-&gt;&gt;Bob: Hello Bob, how are you?
+        alt is sick
+            Bob-&gt;&gt;Alice: Not so good :(
+        else is well
+            Bob-&gt;&gt;Alice: Feeling fresh like a daisy
+        end
+
+        opt Extra response
+            Bob-&gt;&gt;Alice: Thanks for asking
+        end
+    end
+</div>
+
+<div class="mermaid">
+  sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br>prevail...
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</div>
+
+<blockquote>
+<p><strong>Reference Url</strong>
+<a href="https://mermaidjs.github.io/" target="_blank">https://mermaidjs.github.io/</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -973,14 +1107,19 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Sudal's Note","level":"1.1","depth":1,"next":{"title":"01. General","level":"1.2","depth":1,"path":"01.-general/README.md","ref":"01.-general/README.md","articles":[{"title":"IDE","level":"1.2.1","depth":2,"path":"01.-general/ide.md","ref":"01.-general/ide.md","articles":[]},{"title":"Algorithm","level":"1.2.2","depth":2,"path":"01.-general/algorithm/README.md","ref":"01.-general/algorithm/README.md","articles":[{"title":"Sort","level":"1.2.2.1","depth":3,"path":"01.-general/algorithm/sort.md","ref":"01.-general/algorithm/sort.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout"],"pluginsConfig":{"bootstrap-callout":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-10-02T16:18:43.846Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-02T16:21:43.278Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Sudal's Note","level":"1.1","depth":1,"next":{"title":"01. General","level":"1.2","depth":1,"path":"01.-general/README.md","ref":"01.-general/README.md","articles":[{"title":"IDE","level":"1.2.1","depth":2,"path":"01.-general/ide.md","ref":"01.-general/ide.md","articles":[]},{"title":"Algorithm","level":"1.2.2","depth":2,"path":"01.-general/algorithm/README.md","ref":"01.-general/algorithm/README.md","articles":[{"title":"Sort","level":"1.2.2.1","depth":3,"path":"01.-general/algorithm/sort.md","ref":"01.-general/algorithm/sort.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout","mermaid-gb3"],"pluginsConfig":{"bootstrap-callout":{},"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2018-10-03T04:55:55.996Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-03T04:58:47.201Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
@@ -1006,6 +1145,8 @@
         <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
