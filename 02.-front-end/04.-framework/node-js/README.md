@@ -3,12 +3,13 @@
 ## HTTP 트랜잭션
 
 #### 서버 생성 
+
 모든 `node` 웹 서버 어플리케이션은 웹 서버 객체를 만들어야 합니다.  
 이때 `createServer` 를 이용합니다.
 
 ```javascript
 const http = require('http');
-const server = http.createServer((req, res) => {
+const server = http.createServer((request, response) => {
   // Work Process
 });
 ```
@@ -76,14 +77,52 @@ request.on('data', (chunk) => {
 });
 ```
 
+#### 오류의 관한 처리
 
+`request` 스트림에서 오류가 발생하면 `error` 이벤트가 발행하면서 오류를 전달한다.  
+별도의 이벤트 리스너가 등록되어 있지 않다면 오류를 뱉으면서 Node.js 를 종료시킨다.
 
+```javascript
+request.on('error', (err) => {
+  console.error(err.stack);
+});
+```
 
+#### HTTP 요청 코드 정리
+```javascript
+const http = require('http');
 
+http.createServer((request, response) => {
+  const {headers, method, url} = request;
+  
+  let body = [];
 
+  request.on('error', (err) => {
+    console.error(err.stack);
+  }).on('data', (chunk) => {
+    body.push(chunk);
+  }).on('end', () => {
+    body = Buffer.concat(body).toString();
 
+    /**
+     *  헤더, 메서드, 요청경로, 바디 등을 가지게 되었으며 
+     *  이 요청에 응답하는 작업을 수행할 수 있습니다.
+     */
+  })
+}).listen(8080);
+```
 
+> 이 코드는 요청 받을 수 있지만 요청한 디바이스(클라이언트) 에 응답 하는 로직이 없기 때문에 타임아웃이 걸릴것 입니다.
 
+#### 응답 상태 코드 
+
+별도의 설정이 없으면 HTTP 응답 코드는 200 으로 고정 됩니다.  
+상태 코드를 변경 하려면 `statusCode` 프로퍼티를 설정해야 합니다.
+
+```javascript
+// 리소스를 찾을수 없음 
+response.statusCode = 404;
+```
 
 
 
