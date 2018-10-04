@@ -60,30 +60,46 @@ $ if ! [ -f ~/Library/KeyBindings/DefaultkeyBinding.dict ]; then mkdir -p ~/Libr
   };
 ```
 
-## bootstrap-callout
+## callouts
 
-> #### primary::Primary
+> #### Info::Info
 > description
 
-## 
+##  
 
-> #### success::Success
-> description
-  
-## 
+> #### Note::Note
 
-> #### danger::Danger
-> description
+##  
 
-## 
+> #### Tag::Tag
 
-> #### warning::Warning
-> description
+##  
 
-## 
+> #### Comment::Comment
 
-> #### info::Info
-> description
+##  
+
+> #### Hint::Hint
+
+##  
+
+> #### Success::Success
+
+##  
+
+> #### Warning::Warning
+
+##  
+
+> #### Caution::Caution
+
+##  
+
+> #### Danger::Danger
+
+##  
+
+> #### Quote::Quote
 
 ## mermaid
 
