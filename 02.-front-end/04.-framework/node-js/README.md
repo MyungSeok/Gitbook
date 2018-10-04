@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 서버로 오는 모든 HTTP 요청 마다 `createServer` 에 전달된 함수가 한번씩 호출된다.  
 `createServer` 가 반환한 `Server` 객체는 `EventEmitter` 이고 `server` 객체를 생성하고 리스너를 추가하는 축약 문법이다.
 
-> EventEmitter 이란 ?  
+> `EventEmitter` 이란 ?  
 > 이벤트 모듈의 의해 정의 되며 새로운 이벤트가 추가되거나 삭제될 때 이벤트를 내보냅니다.
 
 ```javascript
