@@ -26,11 +26,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-plus/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -898,7 +902,7 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
@@ -914,7 +918,7 @@
 </code></pre>
 <p>&#xC11C;&#xBC84;&#xB85C; &#xC624;&#xB294; &#xBAA8;&#xB4E0; HTTP &#xC694;&#xCCAD; &#xB9C8;&#xB2E4; <code>createServer</code> &#xC5D0; &#xC804;&#xB2EC;&#xB41C; &#xD568;&#xC218;&#xAC00; &#xD55C;&#xBC88;&#xC529; &#xD638;&#xCD9C;&#xB41C;&#xB2E4;.<br><code>createServer</code> &#xAC00; &#xBC18;&#xD658;&#xD55C; <code>Server</code> &#xAC1D;&#xCCB4;&#xB294; <code>EventEmitter</code> &#xC774;&#xACE0; <code>server</code> &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xCD95;&#xC57D; &#xBB38;&#xBC95;&#xC774;&#xB2E4;.</p>
 <blockquote>
-<p>EventEmitter &#xC774;&#xB780; ?<br>&#xC774;&#xBCA4;&#xD2B8; &#xBAA8;&#xB4C8;&#xC758; &#xC758;&#xD574; &#xC815;&#xC758; &#xB418;&#xBA70; &#xC0C8;&#xB85C;&#xC6B4; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xCD94;&#xAC00;&#xB418;&#xAC70;&#xB098; &#xC0AD;&#xC81C;&#xB420; &#xB54C; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xB0B4;&#xBCF4;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
+<p><code>EventEmitter</code> &#xC774;&#xB780; ?<br>&#xC774;&#xBCA4;&#xD2B8; &#xBAA8;&#xB4C8;&#xC758; &#xC758;&#xD574; &#xC815;&#xC758; &#xB418;&#xBA70; &#xC0C8;&#xB85C;&#xC6B4; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xCD94;&#xAC00;&#xB418;&#xAC70;&#xB098; &#xC0AD;&#xC81C;&#xB420; &#xB54C; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xB0B4;&#xBCF4;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
 </blockquote>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
 <span class="hljs-keyword">const</span> server = http.createServer();
@@ -1003,7 +1007,7 @@ request.on(<span class="hljs-string">&apos;data&apos;</span>, (chunk) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Node JS","level":"1.3.4.1","depth":3,"next":{"title":"Express","level":"1.3.4.1.1","depth":4,"path":"02.-front-end/04.-framework/node-js/express.md","ref":"02.-front-end/04.-framework/node-js/express.md","articles":[]},"previous":{"title":"04. Framework","level":"1.3.4","depth":2,"path":"02.-front-end/04.-framework/README.md","ref":"02.-front-end/04.-framework/README.md","articles":[{"title":"Node JS","level":"1.3.4.1","depth":3,"path":"02.-front-end/04.-framework/node-js/README.md","ref":"02.-front-end/04.-framework/node-js/README.md","articles":[{"title":"Express","level":"1.3.4.1.1","depth":4,"path":"02.-front-end/04.-framework/node-js/express.md","ref":"02.-front-end/04.-framework/node-js/express.md","articles":[]}]},{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"02.-front-end/04.-framework/angular-js.md","ref":"02.-front-end/04.-framework/angular-js.md","articles":[]},{"title":"React JS","level":"1.3.4.3","depth":3,"path":"02.-front-end/04.-framework/react/README.md","ref":"02.-front-end/04.-framework/react/README.md","articles":[{"title":"Redux","level":"1.3.4.3.1","depth":4,"path":"02.-front-end/04.-framework/react/redux.md","ref":"02.-front-end/04.-framework/react/redux.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout","mermaid-gb3"],"pluginsConfig":{"bootstrap-callout":{},"mermaid-gb3":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/04.-framework/node-js/README.md","mtime":"2018-10-04T07:42:19.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-04T07:45:51.584Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node JS","level":"1.3.4.1","depth":3,"next":{"title":"Express","level":"1.3.4.1.1","depth":4,"path":"02.-front-end/04.-framework/node-js/express.md","ref":"02.-front-end/04.-framework/node-js/express.md","articles":[]},"previous":{"title":"04. Framework","level":"1.3.4","depth":2,"path":"02.-front-end/04.-framework/README.md","ref":"02.-front-end/04.-framework/README.md","articles":[{"title":"Node JS","level":"1.3.4.1","depth":3,"path":"02.-front-end/04.-framework/node-js/README.md","ref":"02.-front-end/04.-framework/node-js/README.md","articles":[{"title":"Express","level":"1.3.4.1.1","depth":4,"path":"02.-front-end/04.-framework/node-js/express.md","ref":"02.-front-end/04.-framework/node-js/express.md","articles":[]}]},{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"02.-front-end/04.-framework/angular-js.md","ref":"02.-front-end/04.-framework/angular-js.md","articles":[]},{"title":"React JS","level":"1.3.4.3","depth":3,"path":"02.-front-end/04.-framework/react/README.md","ref":"02.-front-end/04.-framework/react/README.md","articles":[{"title":"Redux","level":"1.3.4.3.1","depth":4,"path":"02.-front-end/04.-framework/react/redux.md","ref":"02.-front-end/04.-framework/react/redux.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["bootstrap-callout","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"bootstrap-callout":{},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/04.-framework/node-js/README.md","mtime":"2018-10-04T07:47:23.404Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-04T07:57:08.962Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1018,19 +1022,15 @@ request.on(<span class="hljs-string">&apos;data&apos;</span>, (chunk) =&gt; {
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../../../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
