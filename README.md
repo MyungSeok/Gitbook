@@ -12,6 +12,17 @@ $ gitbook serve
 ./publish_gitbook.sh
 ```
 
+# Tip
+
+### 맥 백쿼트(`) 만들기
+
+1. 스크립트 실행
+```bash
+$ if ! [ -f ~/Library/KeyBindings/DefaultkeyBinding.dict ]; then mkdir -p ~/Library/KeyBindings && echo '{"₩" = ("insertText:", "\`");}' > ~/Library/KeyBindings/DefaultkeyBinding.dict; fi
+```
+
+2. 어플리케이션 재 실행 (재부팅)
+
 # Statement
 
 # 제목 
