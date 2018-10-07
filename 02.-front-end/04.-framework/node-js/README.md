@@ -124,7 +124,27 @@ http.createServer((request, response) => {
 response.statusCode = 404;
 ```
 
+#### 응답 헤더 설정
 
+setHeader 메서드로 헤더를 설정 한다.
+
+```javascript
+response.setHeader('Content-Type', 'application/json');
+response.setHeader('X-Powered-By', 'bacon');
+```
+
+> 헤더 설정 프로퍼티의 대/소문자는 구분이 없다.
+
+#### 명시적 헤더 데이터 전송
+
+`writeHead` 메소드를 이용하여 명시적으로 헤더 작성이 가능하다.
+
+```javascript
+response.writeHead(200, {
+  'Content-Type': 'application/json',
+  'X-Powered-By': 'bacon'
+});
+```
 
 > Reference URL 
 > 

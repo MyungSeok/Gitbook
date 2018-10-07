@@ -22,7 +22,7 @@
       * [Operator & Expression](02.-front-end/03.-javascript/02.-references/operator-and-expression.md)
       * [Global Object](02.-front-end/03.-javascript/02.-references/global-object.md)
       * [ECMA 6](02.-front-end/03.-javascript/02.-references/ecma6.md)
-    * [03. Performance](02.-front-end/03.-javascript/04.-performance.md)
+    * [03. Performance](02.-front-end/03.-javascript/03.-performance.md)
   * [04. Framework](02.-front-end/04.-framework/README.md)
     * [Node JS](02.-front-end/04.-framework/node-js/README.md)
       * [Express](02.-front-end/04.-framework/node-js/express.md)
