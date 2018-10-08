@@ -4,16 +4,16 @@
 
 라우팅은 요청 URI 및 특정한 HTTP 요청 메소드 \(GET, POST, PUT, DELETE\) 인 특정 엔드포인트 에 대한 클라이언트 요청에 대해 애플리케이션이 응답하는 방법을 결정 하는것
 
-#### Syntax
+### Syntax
 
 ```javascript
 app.METHOD(PATH, HANDLER)
 ```
 
-##### Parameter
+#### Parameter
 
 * app
-  * `express` 의 인스턴스 
+  * `express` 의 인스턴스
 * METHOD
   * HTTP 요청 메소드
 * PATH
@@ -62,7 +62,7 @@ app.delete('/user', function (req, res) {
 });
 ```
 
-#### Route Chain
+### Route Chain
 
 app.route\(\) 을 이용하면 라우트 경로에 대한 체이닝 핸들러를 작성 할 수 있다.
 
@@ -88,7 +88,7 @@ app.route('/book')
   });
 ```
 
-#### Route Moduler
+### Route Moduler
 
 모듈식 마운팅이 가능한 핸들러의 작성 
 
@@ -125,7 +125,7 @@ app.use('/birds', birds);
 
 > `get`, `post`, `put`, `head`, `delete`, `options`, `trace`, `copy`, `lock`, `mkcol`, `move`, `purge`, `propfind`, `proppatch`, `unlock`, `report`, `mkactivity`, `checkout`, `merge`, `m-search`, `notify`, `subscribe`, `unsubscribe`, `patch`, `search`및 `connect`.
 
-#### Path 
+### Path
 
 URI 경로는 문자열 혹은 정규식의 패턴에도 적용된다.
 
@@ -176,7 +176,7 @@ app.get(/.*fly$/, function(req, res) {
 });
 ```
 
-#### Response
+### Response
 
 응답 오브젝트에 대한 메소드는 응답을 클라이언트에 전송하고 요청 및 응답의 주기를 종료할 수 있다.  
 _**라우트 핸들러로부터 다음 메소드중 하나라도 호출되지 않는 경우 클라이언트 요청은 정지된 채로 방치**_ 된다. 

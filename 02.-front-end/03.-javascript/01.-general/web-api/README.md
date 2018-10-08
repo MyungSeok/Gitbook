@@ -103,11 +103,12 @@ xhr.open('GET', '/json', true);
 xhr.onreadystatechange = function (obj) {
     if (xhr.readyState === 4 && xhr.status === 200) {
         /* 성공 코드 */
+        var responseObj = JSON.stringify(xhr.responseText);
     } else {
         /* 실패 코드 */
     }
 };
-req.send(null);
+xhr.send(null);
 ```
 
 #### 프로그래스 모니터링 

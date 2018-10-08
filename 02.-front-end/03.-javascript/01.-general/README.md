@@ -31,8 +31,8 @@ document.body.appendChild(script);
 
 window[callback] = function (data) {
     delete window[callback];
-    
-    /* 콜백 실행 로직 */ 
+
+    /* 콜백 실행 로직 */
 }
 ```
 
@@ -52,14 +52,14 @@ $.getJSON('/jsonp.json?callback=?', function (data) {
 private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException { 
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
-          
+
     String id = request.getParameter("id");
     String callBack = request.getParameter("callback");
   
     JSONObject obj = new JSONObject();
     obj.put("result", id);
     obj.put("go", "테스트");
-          
+
     PrintWriter out = response.getWriter();
     out.write(callBack + "(" + obj.toString() + ")");
     System.out.println(callBack + "(" + obj.toString() + ")");
@@ -126,6 +126,11 @@ _callback_jsonp_({
 ```
 
 > 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조
+
+## 
+
+> CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.
+> 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
 
 ## 암묵적 전역
 
