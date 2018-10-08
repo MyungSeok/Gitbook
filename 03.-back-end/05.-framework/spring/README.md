@@ -54,13 +54,12 @@ _**Bean**_ 들은 _**싱글턴 패턴의 특징**_ 을 가진다.
 
 제어의 흐름을 사용자가 컨트롤 하는것이 아닌 _**스프링에게 맏겨 작업을 처리**_하게 된다.
 
-## Spring Bean Life Cycle 
+## Spring Bean Life Cycle
 
+> Reference  
+> http://javaslave.tistory.com/48
 
-
-
-
-## Spring Boot 기동 
+## Spring Boot 기동
 
 #### Linux Deploy Shell Script
 
