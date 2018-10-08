@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Built-in Object · GitBook</title>
+        <title>Symbol & Iterator & Generator · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="자바스크립트의 함수 객체를 정의합니다.">
+        <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
         
         
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="array.html" />
+    <link rel="next" href="../../03.-performance.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -327,9 +327,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.3.2.1" data-path="./">
+        <li class="chapter " data-level="1.3.3.2.1" data-path="../built-in-object/">
             
-                <a href="./">
+                <a href="../built-in-object/">
             
                     
                     Built-in Object
@@ -341,9 +341,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.3.2.1.1" data-path="array.html">
+        <li class="chapter " data-level="1.3.3.2.1.1" data-path="../built-in-object/array.html">
             
-                <a href="array.html">
+                <a href="../built-in-object/array.html">
             
                     
                     Array
@@ -354,9 +354,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.2.1.2" data-path="object.html">
+        <li class="chapter " data-level="1.3.3.2.1.2" data-path="../built-in-object/object.html">
             
-                <a href="object.html">
+                <a href="../built-in-object/object.html">
             
                     
                     Object
@@ -367,9 +367,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.2.1.3" data-path="function.html">
+        <li class="chapter " data-level="1.3.3.2.1.3" data-path="../built-in-object/function.html">
             
-                <a href="function.html">
+                <a href="../built-in-object/function.html">
             
                     
                     Function
@@ -411,9 +411,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.2.4" data-path="../ecma6/">
+        <li class="chapter " data-level="1.3.3.2.4" data-path="./">
             
-                <a href="../ecma6/">
+                <a href="./">
             
                     
                     ECMA 6
@@ -425,9 +425,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.3.2.4.1" data-path="../ecma6/symbol-iterator-generator.html">
+        <li class="chapter active" data-level="1.3.3.2.4.1" data-path="symbol-iterator-generator.html">
             
-                <a href="../ecma6/symbol-iterator-generator.html">
+                <a href="symbol-iterator-generator.html">
             
                     
                     Symbol & Iterator & Generator
@@ -924,7 +924,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../../.." >Built-in Object</a>
+        <a href="../../../.." >Symbol & Iterator & Generator</a>
     </h1>
 </div>
 
@@ -939,7 +939,123 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="built-in-object">Built-in Object</h1>
+                                <h1 id="symbol--iterator--generator">Symbol &amp; Iterator &amp; Generator</h1>
+<h2 id="symbol">Symbol</h2>
+<p>ES6 &#xC5D0;&#xC11C; &#xB098;&#xC628; &#xC6D0;&#xC2DC; &#xB370;&#xC774;&#xD130;&#xD615; (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank">Primitive DataType</a>) &#xC758; &#xC77C;&#xC885;&#xC73C;&#xB85C; &#xAC1D;&#xCCB4;&#xC5D0; <code>Unique</code> &#xD55C; &#xC18D;&#xC131;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xB2E4;&#xB978; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC640; &#xCDA9;&#xB3D9;&#xC744; &#xD53C;&#xD558;&#xAE30; &#xC704;&#xD568;&#xC774;&#xB2E4;.</p>
+<ul>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Object</li>
+<li><em><strong>Symbol</strong></em></li>
+</ul>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Symbol</span>([description]);
+</code></pre>
+<h4 id="parameter">Parameter</h4>
+<ul>
+<li>description<ul>
+<li>&#xC120;&#xD0DD;&#xC801; (Optional) &#xBB38;&#xC790;&#xC5F4;&#xB85C; &#xB514;&#xBC84;&#xAE45;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC124;&#xBA85;&#xC774;&#xB2E4;.</li>
+<li>&#xC790;&#xCCB4;&#xC801;&#xC73C;&#xB85C; &#xC2EC;&#xBCFC;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB294; &#xC6A9;&#xB3C4;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C; </li>
+</ul>
+</li>
+</ul>
+<h3 id="description">Description</h3>
+<p>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC0C8; &#xC6D0;&#xC2DC; &#xC2EC;&#xBCFC;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xB824;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xC120;&#xD0DD;&#xC801; &#xBB38;&#xC790;&#xC5F4;&#xACFC; &#xD568;&#xAED8; <code>Symbol()</code> &#xC744; &#xC4F0;&#xBA74; &#xB41C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sym1 = <span class="hljs-built_in">Symbol</span>();
+<span class="hljs-keyword">var</span> sym2 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>);
+<span class="hljs-keyword">var</span> sym3 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>);
+</code></pre>
+<p>&#xB9E4;&#xBC88; &#xC0C8;&#xB85C;&#xC6B4; &#xC2EC;&#xBCFC;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC544;&#xB798; &#xAC19;&#xC774;&#xC740; &#xC870;&#xAC74;&#xC740; &#xC131;&#xB9BD;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>) === <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>))      <span class="hljs-comment">// false</span>
+</code></pre>
+<p><code>new</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC774;&#xC6A9;&#xD55C; &#xBB38;&#xBC95;&#xC740; <code>TypeError</code> &#xB97C; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sym = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Symbol</span>();     <span class="hljs-comment">// TypeError</span>
+</code></pre>
+<p>&#xBC18;&#xB4DC;&#xC2DC; &#xC2EC;&#xBCFC; &#xB798;&#xD37C; &#xAC1D;&#xCCB4; &#xC0DD;&#xC131;&#xC774; &#xD544;&#xC694;&#xD558;&#xBA74; Object() &#xD568;&#xC218;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sym = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>);
+<span class="hljs-keyword">typeof</span> sym;               <span class="hljs-comment">// &quot;symbol&quot;</span>
+<span class="hljs-keyword">var</span> symObj = <span class="hljs-built_in">Object</span>(sym);
+<span class="hljs-keyword">typeof</span> symObj;            <span class="hljs-comment">// &quot;object&quot;</span>
+</code></pre>
+<h3 id="&#xC2EC;&#xBCFC;&#xC758;-&#xC0DD;&#xC131;">&#xC2EC;&#xBCFC;&#xC758; &#xC0DD;&#xC131;</h3>
+<p>&#xC2EC;&#xBCFC;&#xC758; &#xC0DD;&#xC131;&#xC740; &#xB2E4;&#xC74C; 3&#xAC00;&#xC9C0; &#xBC29;&#xBC95;&#xC774; &#xC788;&#xB2E4;.</p>
+<h4 id="&#xACE0;&#xC720;&#xD55C;-&#xC2EC;&#xBCFC;-&#xC0DD;&#xC131;">&#xACE0;&#xC720;&#xD55C; &#xC2EC;&#xBCFC; &#xC0DD;&#xC131;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sym = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>);
+</code></pre>
+<h4 id="&#xC2EC;&#xBCFC;-&#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC;&#xC5D0;&#xC11C;-&#xCC3E;&#xC544;&#xC11C;-&#xBCF5;&#xC0AC;">&#xC2EC;&#xBCFC; &#xB808;&#xC9C0;&#xC2A4;&#xD2B8;&#xB9AC;&#xC5D0;&#xC11C; &#xCC3E;&#xC544;&#xC11C; &#xBCF5;&#xC0AC;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> sym = <span class="hljs-built_in">Symbol</span>.for(<span class="hljs-string">&apos;foo&apos;</span>);
+</code></pre>
+<h4 id="&#xBBF8;&#xB9AC;-&#xC815;&#xC758;&#xB41C;-&#xC0C1;&#xC6A9;-&#xC2EC;&#xBCFC;-&#xC0AC;&#xC6A9;">&#xBBF8;&#xB9AC; &#xC815;&#xC758;&#xB41C; &#xC0C1;&#xC6A9; &#xC2EC;&#xBCFC; &#xC0AC;&#xC6A9;</h4>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Symbol</span>.iterator
+</code></pre>
+<p>&#xC0C1;&#xC6A9;&#xC2EC;&#xBCFC;&#xC740; &#xD2B9;&#xBCC4;&#xD55C; &#xC6A9;&#xB3C4;&#xB97C; &#xC704;&#xD574;&#xC11C; &#xB9CC;&#xB4E4;&#xC5B4; &#xB193;&#xC740; &#xC2EC;&#xBCFC;&#xC774;&#xBA70; &#xB300;&#xD45C;&#xC801;&#xC778; &#xC0C1;&#xC6A9; &#xC2EC;&#xBCFC;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<ul>
+<li>Symbol.iterator<ul>
+<li>&#xC774;&#xD130;&#xB7EC;&#xBE14;&#xD55C; &#xAC1D;&#xCCB4;&#xB97C; &#xC815;&#xC758;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC2EC;&#xBCFC;</li>
+</ul>
+</li>
+<li>Symbol.hasInstance<ul>
+<li><a href="../operator-and-expression.html"><code>instanceof</code></a> &#xB97C; &#xD655;&#xC7A5;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xC2EC;&#xBCFC;</li>
+</ul>
+</li>
+<li>Symbol.match<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match" target="_blank"><code>String.prototype.match</code></a> &#xBA54;&#xC18C;&#xB4DC;&#xC758; &#xD655;&#xC7A5;</li>
+</ul>
+</li>
+</ul>
+<h2 id="iterator">Iterator</h2>
+<p>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xBC18;&#xBCF5;&#xBB38;&#xC758; <code>for loop</code> &#xB294; &#xB2E4;&#xC74C; &#xBA87;&#xAC00;&#xC9C0;&#xB85C; &#xB098;&#xB25C;&#xB2E4;.</p>
+<ul>
+<li>for<ul>
+<li>&#xAC00;&#xC7A5; &#xAE30;&#xBCF8;&#xC801;&#xC778; <code>for loop</code></li>
+</ul>
+</li>
+<li>forEach<ul>
+<li>&#xBC30;&#xC5F4;&#xC744; &#xC21C;&#xD68C;&#xD558;&#xBA70; <code>value</code> &#xC640; <code>index</code> &#xB97C; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB85C; &#xC804;&#xB2EC;&#xD55C;&#xB2E4;.</li>
+<li><code>break</code>, <code>return</code> &#xC73C;&#xB85C; &#xB8E8;&#xD504;&#xB97C; &#xC911;&#xB2E8;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</li>
+</ul>
+</li>
+<li>for in<ul>
+<li>&#xBC30;&#xC5F4;&#xC758; &#xC778;&#xB371;&#xC2A4;&#xB9CC; &#xC21C;&#xD658; &#xD558;&#xB294;&#xAC83;&#xC774; &#xC544;&#xB2CC; &#xD504;&#xB85C;&#xD1A0;&#xD0C0;&#xC785; &#xCCB4;&#xC778;&#xC744; &#xD3EC;&#xD568;&#xD55C; &#xBAA8;&#xB4E0; &#xC18D;&#xC131;&#xC744; &#xC21C;&#xD68C;&#xD55C;&#xB2E4;.</li>
+<li><em><strong>&#xBC30;&#xC5F4;&#xBCF4;&#xB2E4;&#xB294; &#xAC1D;&#xCCB4;&#xB97C; &#xC21C;&#xD68C;</strong></em> &#xD558;&#xAE30; &#xC704;&#xD574; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xB8E8;&#xD504;&#xC774;&#xB2E4;.</li>
+</ul>
+</li>
+<li>for of<ul>
+<li><code>for in</code> &#xC73C;&#xB85C; &#xBC30;&#xC5F4;&#xC744; &#xC21C;&#xD68C;&#xD560; &#xB54C; &#xC0DD;&#xAE30;&#xB294; &#xBB38;&#xC81C;&#xC810;&#xB4E4;&#xC744; &#xD574;&#xC18C;&#xD558;&#xC600;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>for of</code> &#xB294; <em><strong>&#xC21C;&#xD68C;&#xAC00;&#xB2A5;&#xD55C; (iterable) &#xAC1D;&#xCCB4;&#xB97C; &#xC0C1;&#xB300;&#xB85C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</strong></em> &#xD558;&#xB2E4;.</p>
+</blockquote>
+<p>&#xC21C;&#xD68C;&#xAC00;&#xB2A5;&#xD55C; (Iterable) &#xD55C; &#xAC1D;&#xCCB4;&#xB294; <em><strong><code>Symbol.iterator</code> &#xC2EC;&#xBCFC;&#xC744; &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC73C;&#xBA70; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4;&#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xAC1D;&#xCCB4;</strong></em> &#xB97C; &#xB73B;&#xD55C;&#xB2E4;.<br>&#xD574;&#xB2F9; &#xC2A4;&#xD329;&#xC744; <em><strong>&#xC774;&#xD130;&#xB7EC;&#xBE14; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;</strong></em> &#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA70; <em><strong>&#xD574;&#xB2F9; &#xC2A4;&#xD329;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xAC1D;&#xCCB4;&#xB97C; &#xC774;&#xD130;&#xB7EC;&#xBE14; &#xAC1D;&#xCCB4;</strong></em> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<h3 id="iterator-object">Iterator Object</h3>
+<h4 id="iterator-spec">Iterator Spec</h4>
+<ul>
+<li><code>next()</code> &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xACE0; &#xC788;&#xB2E4;.</li>
+<li><code>done</code> &#xACFC; <code>value</code> &#xC18D;&#xC131;&#xC744; &#xAC00;&#xC9C4; &#xAC1D;&#xCCB4;&#xB97C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</li>
+</ul>
+<h4 id="example">Example</h4>
+<p>&#xC601;&#xC6D0;&#xD788; <code>0</code> &#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; Iterator</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> zeroIterator = {
+  [<span class="hljs-built_in">Symbol</span>.iterator]: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }, 
+  next: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {done: <span class="hljs-literal">false</span>, value: <span class="hljs-number">0</span>};
+  }
+}
+</code></pre>
+<blockquote>
+<p>Reference<br><a href="http://www.bsidesoft.com/?p=2913" target="_blank">http://www.bsidesoft.com/?p=2913</a><br><a href="https://youtu.be/CY_2mFxQwzc" target="_blank">https://youtu.be/CY_2mFxQwzc</a></p>
+</blockquote>
+<h2 id="generator">Generator</h2>
+<blockquote>
+<p>Reference<br><a href="https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997" target="_blank">https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -967,12 +1083,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 02. References">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: ECMA 6">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="array.html" class="navigation navigation-next " aria-label="Next page: Array">
+                <a href="../../03.-performance.html" class="navigation navigation-next " aria-label="Next page: 03. Performance">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -983,7 +1099,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"자바스크립트의 함수 객체를 정의합니다.","title":"Built-in Object","level":"1.3.3.2.1","depth":4,"next":{"title":"Array","level":"1.3.3.2.1.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","articles":[]},"previous":{"title":"02. References","level":"1.3.3.2","depth":3,"path":"02.-front-end/03.-javascript/02.-references/README.md","ref":"02.-front-end/03.-javascript/02.-references/README.md","articles":[{"title":"Built-in Object","level":"1.3.3.2.1","depth":4,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/README.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/README.md","articles":[{"title":"Array","level":"1.3.3.2.1.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/array.md","articles":[]},{"title":"Object","level":"1.3.3.2.1.2","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/object.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/object.md","articles":[]},{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]}]},{"title":"Operator & Expression","level":"1.3.3.2.2","depth":4,"path":"02.-front-end/03.-javascript/02.-references/operator-and-expression.md","ref":"02.-front-end/03.-javascript/02.-references/operator-and-expression.md","articles":[]},{"title":"Global Object","level":"1.3.3.2.3","depth":4,"path":"02.-front-end/03.-javascript/02.-references/global-object.md","ref":"02.-front-end/03.-javascript/02.-references/global-object.md","articles":[]},{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","articles":[{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","articles":[]}]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/built-in-object/README.md","mtime":"2018-10-04T00:52:53.622Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T09:51:12.379Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"next":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"02.-front-end/03.-javascript/03.-performance.md","ref":"02.-front-end/03.-javascript/03.-performance.md","articles":[]},"previous":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","articles":[{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","mtime":"2018-10-08T09:50:02.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T09:51:12.379Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

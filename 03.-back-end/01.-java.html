@@ -411,9 +411,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.2.4" data-path="../02.-front-end/03.-javascript/02.-references/ecma6.html">
+        <li class="chapter " data-level="1.3.3.2.4" data-path="../02.-front-end/03.-javascript/02.-references/ecma6/">
             
-                <a href="../02.-front-end/03.-javascript/02.-references/ecma6.html">
+                <a href="../02.-front-end/03.-javascript/02.-references/ecma6/">
             
                     
                     ECMA 6
@@ -421,6 +421,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.2.4.1" data-path="../02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.html">
+            
+                <a href="../02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.html">
+            
+                    
+                    Symbol & Iterator & Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -475,7 +494,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.4.1.1" data-path="../02.-front-end/04.-framework/node-js/express.html">
+        <li class="chapter " data-level="1.3.4.1.1" data-path="../02.-front-end/04.-framework/node-js/http-transection.html">
+            
+                <a href="../02.-front-end/04.-framework/node-js/http-transection.html">
+            
+                    
+                    HTTP Transection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.1.2" data-path="../02.-front-end/04.-framework/node-js/express.html">
             
                 <a href="../02.-front-end/04.-framework/node-js/express.html">
             
@@ -717,9 +749,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1" data-path="05.-framework/spring-boot/">
+        <li class="chapter " data-level="1.4.5.1" data-path="05.-framework/spring/">
             
-                <a href="05.-framework/spring-boot/">
+                <a href="05.-framework/spring/">
             
                     
                     Spring
@@ -731,9 +763,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1.1" data-path="05.-framework/spring-boot/gradle.html">
+        <li class="chapter " data-level="1.4.5.1.1" data-path="05.-framework/spring/gradle.html">
             
-                <a href="05.-framework/spring-boot/gradle.html">
+                <a href="05.-framework/spring/gradle.html">
             
                     
                     Gradle
@@ -915,7 +947,7 @@
 <p><code>stringBuilder</code> &#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5;&#xD55C; &#xBB38;&#xC790;&#xC5F4;&#xB85C; synchronization &#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
 <p><code>stringBuffer</code> &#xB294; <em><strong>&#xBA40;&#xD2F0;&#xC4F0;&#xB808;&#xB4DC; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC548;&#xC815;&#xC801;</strong></em> &#xC774;&#xB2E4;.</p>
 <h2 id="log4j">Log4j</h2>
-<h4 id="log-level">Log Level</h4>
+<h3 id="log-level">Log Level</h3>
 <ol>
 <li>TRACE<ul>
 <li>&#xD574;&#xB2F9;&#xB418;&#xB294; &#xB0B4;&#xC6A9;&#xC5D0; &#xB300;&#xD55C; &#xACBD;&#xB85C;&#xCD94;&#xC801;&#xC744; &#xC704;&#xD574; &#xC0AC;&#xC6A9;</li>
@@ -946,7 +978,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="layout">Layout</h4>
+<h3 id="layout">Layout</h3>
 <ul>
 <li>%d : &#xB85C;&#xADF8;&#xC758; &#xAE30;&#xB85D;&#xC2DC;&#xAC04;&#xC744; &#xCD9C;&#xB825;</li>
 <li>%p : &#xB85C;&#xAE45;&#xC758; &#xB808;&#xBCA8;&#xC744; &#xCD9C;&#xB825;</li>
@@ -964,11 +996,93 @@
 <li>%x : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; Thread&#xC640; &#xAD00;&#xB828;&#xB41C; NDC(Nested diagnostic context)&#xB97C; &#xCD9C;&#xB825;</li>
 <li>%X : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; Thread&#xC640; &#xAD00;&#xB828;&#xB41C; MDC(Mapped diagnostic context)&#xB97C; &#xCD9C;&#xB825;</li>
 </ul>
-<h4 id="sample">Sample</h4>
+<h3 id="sample">Sample</h3>
 <pre><code class="lang-java">[%d{yyyy-MM-dd HH:mm}] %<span class="hljs-number">5</span>p (%F:%L) %M: %m%n
 </code></pre>
 <pre><code class="lang-java">[%d{HH:mm:ss}] %-<span class="hljs-number">5</span>p %C{<span class="hljs-number">1</span>}.%M(%F:%L) - %m%n
 </code></pre>
+<h2 id="collection">Collection</h2>
+<p><code>Collection</code> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC0C1;&#xC18D; &#xBC1B;&#xC740; &#xAD6C;&#xD604;&#xCCB4; <code>List</code> &#xC640; <code>Set</code> &#xC744; &#xAE30;&#xC900;&#xC73C;&#xB85C; &#xB098;&#xB25C;&#xB2E4;.</p>
+<div class="mermaid">
+  graph LR
+  A[&quot;Collection&quot;] --&gt; B[&quot;List&quot;]
+  B --&gt; D[&quot;Linked List&quot;]
+  B --&gt; E[&quot;Stack&quot;]
+  B --&gt; F[&quot;Array List&quot;]
+  B --&gt; G[&quot;Vector&quot;]
+  A --&gt; C[&quot;SET&quot;]
+  C --&gt; H[&quot;Hash Set&quot;]
+  C --&gt; I[&quot;Sorted Set&quot;]
+  I --&gt; J[&quot;Tree Set&quot;]
+</div>
+
+<h3 id="list">List</h3>
+<p>&#xC21C;&#xC11C;&#xAC00; &#xC788;&#xB294; <code>Collectaion</code> (&#xC0BD;&#xC785;&#xB41C; &#xC21C;&#xC11C;)<br>Data &#xB97C; &#xC911;&#xBCF5;&#xD574;&#xC11C; &#xD3EC;&#xD568;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>Linked List</li>
+<li>Stack<ul>
+<li>&#xD6C4;&#xC785;&#xC120;&#xCD9C; (LIFO : Last-In First-Out) &#xAD6C;&#xC870;&#xB85C; &#xB418;&#xC5B4; &#xC788;&#xB2E4;.</li>
+</ul>
+</li>
+<li>ArrayList<ul>
+<li>&#xB3D9;&#xAE30;&#xD654;&#xB97C; &#xBCF4;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li>&#xBC30;&#xC5F4;&#xC758; &#xB3D9;&#xC801; &#xBA54;&#xBAA8;&#xB9AC; &#xC99D;&#xAC00; &#xAE30;&#xB2A5;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xD074;&#xB798;&#xC2A4;</li>
+</ul>
+</li>
+<li>Vector  <ul>
+<li>&#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xB3D9;&#xAE30;&#xD654;&#xB97C; &#xBCF4;&#xC7A5;&#xD574; &#xC900;&#xB2E4;.</li>
+<li>ArrayList &#xC758; &#xB3D9;&#xAE30;&#xD654;&#xAC00; &#xBCF4;&#xC7A5;&#xB418;&#xB3C4;&#xB85D; &#xCD5C;&#xC801;&#xD654;&#xD55C; &#xD074;&#xB798;&#xC2A4;</li>
+<li>JDK 5.0 &#xC774;&#xD6C4;&#xBD80;&#xD130; Auto Boxing / UnBoxing &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;</li>
+</ul>
+</li>
+<li>Tree Set<ul>
+<li>&#xC815;&#xB82C; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0; (&#xB370;&#xC774;&#xD130;&#xB4E4;&#xC774; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC624;&#xB984;&#xCC28;&#xC21C;&#xC73C;&#xB85C; &#xC815;&#xB82C;)</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>AutoBoxing
+&#xAE30;&#xBCF8; &#xB370;&#xC774;&#xD130; &#xD0C0;&#xC785;&#xC744; Wrapper &#xD074;&#xB798;&#xC2A4;&#xD615;&#xC758; &#xAC1D;&#xCCB4;&#xB85C; &#xC790;&#xB3D9; &#xBCC0;&#xD658;&#xD574;&#xC8FC;&#xB294; &#xAE30;&#xB2A5;</p>
+</blockquote>
+<h3 id="set">Set</h3>
+<p>&#xC9D1;&#xD569;&#xC801;&#xC778; &#xAC1C;&#xB150;&#xC758; Collection<br>&#xC21C;&#xC11C;&#xC758; &#xC758;&#xBBF8;&#xAC00; &#xC5C6;&#xB2E4;.<br>Data &#xB97C; &#xC911;&#xBCF5;&#xD574;&#xC11C; &#xD3EC;&#xD568;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<ul>
+<li>Hash Set<ul>
+<li>Hash &#xAE30;&#xBC95;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC; Set &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xACE0; &#xC788;&#xB2E4;.</li>
+</ul>
+</li>
+<li>Sorted Set<ul>
+<li>&#xC815;&#xB82C; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;&#xD568;</li>
+</ul>
+</li>
+</ul>
+<h2 id="map">Map</h2>
+<p><code>Key</code> &#xC640; <code>Value</code> &#xC758; &#xD615;&#xD0DC;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>HashMap<ul>
+<li>&#xB3D9;&#xAE30;&#xD654; &#xBCF4;&#xC7A5;&#xC774; &#xC548;&#xB41C;&#xB2E4;.</li>
+</ul>
+</li>
+<li>Hashtable<ul>
+<li>&#xB3D9;&#xAE30;&#xD654; &#xBCF4;&#xC7A5;&#xC774; &#xB41C;&#xB2E4;. (&#xBA40;&#xD2F0;&#xC2A4;&#xB808;&#xB4DC; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC548;&#xC815;&#xC801;)</li>
+</ul>
+</li>
+<li>TreeMap<ul>
+<li>&#xC815;&#xB82C; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;&#xD568;</li>
+</ul>
+</li>
+</ul>
+<div class="mermaid">
+  graph LR
+  A[&quot;Map&quot;] --&gt; B[&quot;HashMap&quot;]
+  A --&gt; C[&quot;Hashtable&quot;]
+  A --&gt; D[&quot;Sorted Map&quot;]
+  D --&gt; E[&quot;Tree Map&quot;]
+</div>
+
+<blockquote>
+<p>Reference<br><a href="http://withwani.tistory.com/150" target="_blank">http://withwani.tistory.com/150</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -1012,7 +1126,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. Java","level":"1.4.1","depth":2,"next":{"title":"02. Server","level":"1.4.2","depth":2,"path":"03.-back-end/02.-server/README.md","ref":"03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"03.-back-end/02.-server/nginx/README.md","ref":"03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]}]}]},"previous":{"title":"03. Back End","level":"1.4","depth":1,"path":"03.-back-end/README.md","ref":"03.-back-end/README.md","articles":[{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java.md","ref":"03.-back-end/01.-java.md","articles":[]},{"title":"02. Server","level":"1.4.2","depth":2,"path":"03.-back-end/02.-server/README.md","ref":"03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"03.-back-end/02.-server/nginx/README.md","ref":"03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]}]}]},{"title":"03. Network","level":"1.4.3","depth":2,"path":"03.-back-end/03.-network/README.md","ref":"03.-back-end/03.-network/README.md","articles":[{"title":"HTTP","level":"1.4.3.1","depth":3,"path":"03.-back-end/03.-network/http.md","ref":"03.-back-end/03.-network/http.md","articles":[]}]},{"title":"04. Database","level":"1.4.4","depth":2,"path":"03.-back-end/04.-rdbms/README.md","ref":"03.-back-end/04.-rdbms/README.md","articles":[{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"03.-back-end/04.-rdbms/01.redis.md","ref":"03.-back-end/04.-rdbms/01.redis.md","articles":[]}]},{"title":"05. Framework","level":"1.4.5","depth":2,"path":"03.-back-end/05.-framework/README.md","ref":"03.-back-end/05.-framework/README.md","articles":[{"title":"Spring","level":"1.4.5.1","depth":3,"path":"03.-back-end/05.-framework/spring-boot/README.md","ref":"03.-back-end/05.-framework/spring-boot/README.md","articles":[{"title":"Gradle","level":"1.4.5.1.1","depth":4,"path":"03.-back-end/05.-framework/spring-boot/gradle.md","ref":"03.-back-end/05.-framework/spring-boot/gradle.md","articles":[]}]},{"title":"Hibernate","level":"1.4.5.2","depth":3,"path":"03.-back-end/05.-framework/hibernate.md","ref":"03.-back-end/05.-framework/hibernate.md","articles":[]}]},{"title":"06. DevOps","level":"1.4.6","depth":2,"path":"03.-back-end/06.-devops/README.md","ref":"03.-back-end/06.-devops/README.md","articles":[{"title":"Docker","level":"1.4.6.1","depth":3,"path":"03.-back-end/06.-devops/docker/README.md","ref":"03.-back-end/06.-devops/docker/README.md","articles":[{"title":"CLI","level":"1.4.6.1.1","depth":4,"path":"03.-back-end/06.-devops/docker/cli.md","ref":"03.-back-end/06.-devops/docker/cli.md","articles":[]}]},{"title":"Kubernetes","level":"1.4.6.2","depth":3,"path":"03.-back-end/06.-devops/kubernetes.md","ref":"03.-back-end/06.-devops/kubernetes.md","articles":[]},{"title":"Git","level":"1.4.6.3","depth":3,"path":"03.-back-end/06.-devops/git.md","ref":"03.-back-end/06.-devops/git.md","articles":[]}]},{"title":"07. Big Data","level":"1.4.7","depth":2,"path":"03.-back-end/04.-big-data.md","ref":"03.-back-end/04.-big-data.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java.md","mtime":"2018-10-07T10:32:07.776Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-07T17:28:42.918Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. Java","level":"1.4.1","depth":2,"next":{"title":"02. Server","level":"1.4.2","depth":2,"path":"03.-back-end/02.-server/README.md","ref":"03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"03.-back-end/02.-server/nginx/README.md","ref":"03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]}]}]},"previous":{"title":"03. Back End","level":"1.4","depth":1,"path":"03.-back-end/README.md","ref":"03.-back-end/README.md","articles":[{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java.md","ref":"03.-back-end/01.-java.md","articles":[]},{"title":"02. Server","level":"1.4.2","depth":2,"path":"03.-back-end/02.-server/README.md","ref":"03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"03.-back-end/02.-server/nginx/README.md","ref":"03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]}]}]},{"title":"03. Network","level":"1.4.3","depth":2,"path":"03.-back-end/03.-network/README.md","ref":"03.-back-end/03.-network/README.md","articles":[{"title":"HTTP","level":"1.4.3.1","depth":3,"path":"03.-back-end/03.-network/http.md","ref":"03.-back-end/03.-network/http.md","articles":[]}]},{"title":"04. Database","level":"1.4.4","depth":2,"path":"03.-back-end/04.-rdbms/README.md","ref":"03.-back-end/04.-rdbms/README.md","articles":[{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"03.-back-end/04.-rdbms/01.redis.md","ref":"03.-back-end/04.-rdbms/01.redis.md","articles":[]}]},{"title":"05. Framework","level":"1.4.5","depth":2,"path":"03.-back-end/05.-framework/README.md","ref":"03.-back-end/05.-framework/README.md","articles":[{"title":"Spring","level":"1.4.5.1","depth":3,"path":"03.-back-end/05.-framework/spring/README.md","ref":"03.-back-end/05.-framework/spring/README.md","articles":[{"title":"Gradle","level":"1.4.5.1.1","depth":4,"path":"03.-back-end/05.-framework/spring/gradle.md","ref":"03.-back-end/05.-framework/spring/gradle.md","articles":[]}]},{"title":"Hibernate","level":"1.4.5.2","depth":3,"path":"03.-back-end/05.-framework/hibernate.md","ref":"03.-back-end/05.-framework/hibernate.md","articles":[]}]},{"title":"06. DevOps","level":"1.4.6","depth":2,"path":"03.-back-end/06.-devops/README.md","ref":"03.-back-end/06.-devops/README.md","articles":[{"title":"Docker","level":"1.4.6.1","depth":3,"path":"03.-back-end/06.-devops/docker/README.md","ref":"03.-back-end/06.-devops/docker/README.md","articles":[{"title":"CLI","level":"1.4.6.1.1","depth":4,"path":"03.-back-end/06.-devops/docker/cli.md","ref":"03.-back-end/06.-devops/docker/cli.md","articles":[]}]},{"title":"Kubernetes","level":"1.4.6.2","depth":3,"path":"03.-back-end/06.-devops/kubernetes.md","ref":"03.-back-end/06.-devops/kubernetes.md","articles":[]},{"title":"Git","level":"1.4.6.3","depth":3,"path":"03.-back-end/06.-devops/git.md","ref":"03.-back-end/06.-devops/git.md","articles":[]}]},{"title":"07. Big Data","level":"1.4.7","depth":2,"path":"03.-back-end/04.-big-data.md","ref":"03.-back-end/04.-big-data.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java.md","mtime":"2018-10-08T08:23:13.939Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T09:51:12.379Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
