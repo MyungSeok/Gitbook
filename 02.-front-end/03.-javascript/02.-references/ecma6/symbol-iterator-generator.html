@@ -1006,7 +1006,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="iterator">Iterator</h2>
+<h2 id="iterable--iterator">Iterable &amp; Iterator</h2>
 <p>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; &#xBC18;&#xBCF5;&#xBB38;&#xC758; <code>for loop</code> &#xB294; &#xB2E4;&#xC74C; &#xBA87;&#xAC00;&#xC9C0;&#xB85C; &#xB098;&#xB25C;&#xB2E4;.</p>
 <ul>
 <li>for<ul>
@@ -1032,25 +1032,60 @@
 <p><code>for of</code> &#xB294; <em><strong>&#xC21C;&#xD68C;&#xAC00;&#xB2A5;&#xD55C; (iterable) &#xAC1D;&#xCCB4;&#xB97C; &#xC0C1;&#xB300;&#xB85C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</strong></em> &#xD558;&#xB2E4;.</p>
 </blockquote>
 <p>&#xC21C;&#xD68C;&#xAC00;&#xB2A5;&#xD55C; (Iterable) &#xD55C; &#xAC1D;&#xCCB4;&#xB294; <em><strong><code>Symbol.iterator</code> &#xC2EC;&#xBCFC;&#xC744; &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC73C;&#xBA70; &#xC774;&#xD130;&#xB808;&#xC774;&#xD130; &#xAC1D;&#xCCB4;&#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xAC1D;&#xCCB4;</strong></em> &#xB97C; &#xB73B;&#xD55C;&#xB2E4;.<br>&#xD574;&#xB2F9; &#xC2A4;&#xD329;&#xC744; <em><strong>&#xC774;&#xD130;&#xB7EC;&#xBE14; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;</strong></em> &#xC774;&#xB77C;&#xACE0; &#xD558;&#xBA70; <em><strong>&#xD574;&#xB2F9; &#xC2A4;&#xD329;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xAC1D;&#xCCB4;&#xB97C; &#xC774;&#xD130;&#xB7EC;&#xBE14; &#xAC1D;&#xCCB4;</strong></em> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
-<h3 id="iterator-object">Iterator Object</h3>
+<h3 id="iterator-interface">Iterator Interface</h3>
+<p><em><strong>TC39</strong></em> &#xC5D0;&#xC11C; &#xC815;&#xC758;&#xD55C; <em><strong>Iterator Interface</strong></em> &#xC815;&#xC758;&#xB97C; &#xB530;&#xB978; <code>Object</code> &#xB85C;&#xC368; &#xB0B4;&#xC751;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
 <h4 id="iterator-spec">Iterator Spec</h4>
 <ul>
-<li><code>next()</code> &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xACE0; &#xC788;&#xB2E4;.</li>
-<li><code>done</code> &#xACFC; <code>value</code> &#xC18D;&#xC131;&#xC744; &#xAC00;&#xC9C4; &#xAC1D;&#xCCB4;&#xB97C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</li>
+<li><code>next</code> &#xB77C;&#xB294; &#xD0A4;&#xB97C; &#xAC16;&#xACE0; &#xC788;&#xC73C;&#xBA70; &#xAC12;&#xC73C;&#xB85C; &#xC778;&#xC790;&#xB97C; &#xBC1B;&#xC9C0; &#xC54A;&#xACE0; <em><strong>Iterator Result Object</strong></em> &#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xAC00; &#xC628;&#xB2E4;.</li>
+<li><em><strong>Iterator Result Object</strong></em> &#xB294; <code>value</code> &#xC640; <code>done</code> &#xC774;&#xB77C;&#xB294; &#xD0A4;&#xB97C; &#xAC16;&#xACE0; &#xC788;&#xB2E4;.<ul>
+<li><code>value</code> &#xB294; &#xC2E4;&#xC81C; &#xAC12;&#xC744; &#xC758;&#xBBF8;</li>
+<li><code>done</code> &#xB294; &#xACC4;&#xC18D; &#xBC18;&#xBCF5; &#xD560; &#xC218; &#xC788;&#xB294;&#xC9C0; &#xB530;&#xB978; <code>boolean</code> &#xAC12;</li>
 </ul>
-<h4 id="example">Example</h4>
+</li>
+</ul>
 <p>&#xC601;&#xC6D0;&#xD788; <code>0</code> &#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; Iterator</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> zeroIterator = {
-  [<span class="hljs-built_in">Symbol</span>.iterator]: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
-  }, 
+<pre><code class="lang-javascript">{
   next: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">return</span> {done: <span class="hljs-literal">false</span>, value: <span class="hljs-number">0</span>};
+    <span class="hljs-keyword">return</span> {
+      value: <span class="hljs-number">0</span>,
+      done: <span class="hljs-literal">false</span>
+    };
+  }
+}
+</code></pre>
+<pre><code class="lang-javascript">{
+  data: [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]
+  next: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      done: <span class="hljs-keyword">this</span>.data.length === <span class="hljs-number">0</span>,
+      value: <span class="hljs-keyword">this</span>.data.pop()
+    };
   }
 }
 </code></pre>
 <blockquote>
-<p>Reference<br><a href="http://www.bsidesoft.com/?p=2913" target="_blank">http://www.bsidesoft.com/?p=2913</a><br><a href="https://youtu.be/CY_2mFxQwzc" target="_blank">https://youtu.be/CY_2mFxQwzc</a></p>
+<p>ECMA6 &#xC5D0;&#xC11C;&#xB294; <em><strong>&#xAC1D;&#xCCB4; &#xB9AC;&#xD130;&#xB7F4; &#xC791;&#xC131; &#xC21C;&#xC11C;&#xC5D0; &#xB530;&#xB77C; &#xD30C;&#xC2F1;</strong></em> &#xD55C;&#xB2E4;.  </p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xBA74; &#xC704; &#xCF54;&#xB4DC;&#xC758; <code>done</code> &#xACFC; <code>value</code> &#xC911;&#xC5D0;&#xC11C; <code>done</code> &#xC774; &#xBA3C;&#xC800; &#xC791;&#xC131;&#xB418;&#xC5B4; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; <code>done</code> &#xC744; &#xBA3C;&#xC800; &#xD30C;&#xC2F1;&#xD55C;&#xB2E4;.<br>ECMA5 &#xC5D0;&#xC11C;&#xB294; <code>done</code> &#xC774;&#xB4E0; <code>value</code> &#xB4E0; &#xC5B4;&#xB290;&#xAC83;&#xC744; &#xBA3C;&#xC800; &#xD30C;&#xC2F1;&#xD560;&#xC9C0; &#xBCF4;&#xC7A5;&#xC774; &#xC548;&#xB428;</p>
+</blockquote>
+<h3 id="iterable-object">Iterable Object</h3>
+<p><code>Symbol.iterator</code> &#xC758; &#xD0A4;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xAC1D;&#xCCB4;&#xB85C;&#xC368; &#xB2E4;&#xC74C; &#xC2A4;&#xD399;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xAC1D;&#xCCB4;&#xC774;&#xB2E4;.</p>
+<h4 id="iterable-spec">Iterable Spec</h4>
+<ul>
+<li><code>Symbol.iterator</code> &#xC758; &#xD0A4;&#xB97C; &#xAC16;&#xACE0; &#xC788;&#xB2E4;.</li>
+<li>&#xAC12;&#xC73C;&#xB85C; &#xC778;&#xC790;&#xB97C; &#xBC1B;&#xC9C0; &#xC54A;&#xACE0; <em><strong>Iterator Object</strong></em> &#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xAC00; &#xC628;&#xB2E4;.</li>
+</ul>
+<pre><code class="lang-javascript">{
+  [<span class="hljs-built_in">Symbol</span>.iterator]: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      next: <span class="hljs-function"><span class="hljs-keyword">function</span> </span>{
+        <span class="hljs-keyword">return</span> { value: <span class="hljs-number">1</span>, done: <span class="hljs-literal">false</span> };
+      }
+    };
+  }
+}
+</code></pre>
+<blockquote>
+<p>Reference<br><a href="http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface" target="_blank">ECMA-262 - Iterable Interface</a><br><a href="http://www.bsidesoft.com/?p=2913" target="_blank">GDG 2016 &#xBC1C;&#xD45C;&#xC790;&#xB8CC;</a><br><a href="https://youtu.be/CY_2mFxQwzc" target="_blank">GDG DevFest Seoul 2016 - Iterable &amp; Iterator</a></p>
 </blockquote>
 <h2 id="generator">Generator</h2>
 <blockquote>
@@ -1099,7 +1134,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"next":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"02.-front-end/03.-javascript/03.-performance.md","ref":"02.-front-end/03.-javascript/03.-performance.md","articles":[]},"previous":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","articles":[{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","mtime":"2018-10-08T09:50:02.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-08T09:51:12.379Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"next":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"02.-front-end/03.-javascript/03.-performance.md","ref":"02.-front-end/03.-javascript/03.-performance.md","articles":[]},"previous":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","articles":[{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","mtime":"2018-10-10T02:55:33.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-10T03:11:09.055Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
