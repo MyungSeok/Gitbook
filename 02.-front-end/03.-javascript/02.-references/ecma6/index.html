@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="symbol-iterator-generator.html" />
+    <link rel="next" href="symbol.html" />
     
     
     <link rel="prev" href="../global-object.html" />
@@ -425,12 +425,38 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.3.2.4.1" data-path="symbol-iterator-generator.html">
+        <li class="chapter " data-level="1.3.3.2.4.1" data-path="symbol.html">
             
-                <a href="symbol-iterator-generator.html">
+                <a href="symbol.html">
             
                     
-                    Symbol & Iterator & Generator
+                    Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.4.2" data-path="iterator.html">
+            
+                <a href="iterator.html">
+            
+                    
+                    Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2.4.3" data-path="generator.html">
+            
+                <a href="generator.html">
+            
+                    
+                    Generator
             
                 </a>
             
@@ -940,20 +966,39 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="ecma-6">ECMA 6</h1>
+<p><a href="http://www.ecma-international.org" target="_blank">ECMA</a> &#xC0B0;&#xD558; Task Group &#xC911;&#xC5D0; &#xD558;&#xB098;&#xC758; ECMA-262 (TC39) &#xC5D0;&#xC11C; &#xC720;&#xC9C0; &#xBC0F; &#xAC1C;&#xC120;&#xAD00;&#xB9AC; &#xB418;&#xB294; &#xBD80;&#xBD84;&#xC774;&#xB2E4;.<br>ECMA Script &#xC640; &#xD638;&#xD658; &#xBC0F; &#xD655;&#xC7A5;&#xB418;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC; &#xD45C;&#xC900;&#xC758; &#xAC1C;&#xBC1C;&#xC774;&#xB2E4;.<br>ISO &#xBC0F; IEC JTC &#xB4F1;&#xC758; &#xD45C;&#xC900;&#xC744; &#xAC8C;&#xC2DC;&#xD55C;&#xB2E4;.</p>
+<p><em><strong><code>ECMAScript</code> 6&#xBC88;&#xC9F8; &#xD45C;&#xC900; &#xC5D0;&#xB514;&#xC158;</strong></em> &#xC73C;&#xB85C; &#xB9CE;&#xC740; &#xBD80;&#xBD84;&#xC774; &#xAC1C;&#xC120; &#xBC0F; &#xCD94;&#xAC00; &#xB418;&#xC5C8;&#xB2E4;.</p>
+<h2 id="function">Function</h2>
+<p>&#xAE30;&#xC874; &#xD568;&#xC218; &#xC120;&#xC5B8;&#xC2DD; (ES5) &#xC5D0;&#xC11C; &#xBCC0;&#xACBD;&#xB41C; &#xC810;</p>
+<h3 id="example-1--es5">Example #1 : ES5</h3>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">/* statement */</span>
+}
+</code></pre>
+<h3 id="example-2--es6">Example #2 : ES6</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> obj = {
+  foo() {
+    <span class="hljs-comment">/* statement */</span>
+  },
+  poo: () =&gt; {
+    <span class="hljs-comment">/* statement */</span>
+  }
+}
+</code></pre>
+<p><code>obj.foo</code> &#xACFC; <code>obj.poo</code> &#xB294; &#xB3D9;&#xC77C;&#xD55C; &#xAE30;&#xB2A5;&#xC744; &#xD55C;&#xB2E4;.</p>
 <h2 id="arrows">Arrows</h2>
-<h4 id="description">Description</h4>
 <p>&#xD654;&#xC0B4;&#xD45C; &#xD568;&#xC218; &#xD45C;&#xD604;&#xC2DD;&#xC740; &#xCD95;&#xC57D;&#xD615; &#xD568;&#xC218; &#xC785;&#xB2C8;&#xB2E4;.</p>
-<h4 id="syntax">Syntax</h4>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript">(param1, param2, ... , paramN) =&gt; { statements }
 </code></pre>
-<h5 id="parameters">Parameters</h5>
+<h4 id="parameters">Parameters</h4>
 <ul>
 <li>statements<ul>
 <li>&#xD568;&#xC218;&#xC758; &#xB0B4;&#xC6A9;</li>
 </ul>
 </li>
 </ul>
-<h4 id="example">Example</h4>
+<h3 id="example-1--es6">Example #1 : ES6</h3>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xAC00; &#xD558;&#xB098; &#xC774;&#xC0C1;&#xC788;&#xB294; &#xACBD;&#xC6B0;&#xB294; &#xAD04;&#xD638;&#xAC00; &#xD544;&#xC694;</span>
 (param1, param2) =&gt; {
     <span class="hljs-keyword">return</span> param1 + param2
@@ -969,6 +1014,7 @@ param1 =&gt; {
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Hello World&apos;</span>);
 }
 </code></pre>
+<h3 id="example-2--es6">Example #2 : ES6</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> list = [<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>];
 
 <span class="hljs-comment">// Expression Block &#xC0AC;&#xC6A9; &#xC548;&#xD568; (&#xD45C;&#xD604;&#xC2DD;&#xC758; &#xACB0;&#xACFC;&#xAC00; &#xBC18;&#xD658;&#xB428;)</span>
@@ -979,11 +1025,12 @@ list.forEach(v =&gt; {
     <span class="hljs-built_in">console</span>.log(v);
 });
 </code></pre>
+<h3 id="example-3--es6">Example #3 : ES6</h3>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xAC1D;&#xCCB4; &#xB9AC;&#xD130;&#xB7F4; &#xBC18;&#xD658;</span>
 <span class="hljs-keyword">var</span> func = () =&gt; ({ foo: <span class="hljs-number">1</span> });
 <span class="hljs-built_in">console</span>.log(func());    <span class="hljs-comment">// {foo: 1}</span>
 </code></pre>
-<h4 id="expression">Expression</h4>
+<h3 id="expression">Expression</h3>
 <ul>
 <li>&#xC120;&#xC5B8; &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xC758; &#xBC16;&#xC758; <code>this</code> &#xAC12;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.<ul>
 <li><code>this</code> &#xAC00; &#xBC14;&#xC778;&#xB529; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
@@ -1005,14 +1052,14 @@ list.forEach(v =&gt; {
 <span class="hljs-keyword">var</span> foo = <span class="hljs-keyword">new</span> Foo();    <span class="hljs-comment">// TypeError : Foo is not a constructor</span>
 </code></pre>
 <h2 id="default-parameter">Default Parameter</h2>
-<h4 id="description">Description</h4>
+<h3 id="description">Description</h3>
 <p>&#xD568;&#xC218;&#xC758; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xAE30;&#xBCF8;&#xAC12;&#xC774; &#xC124;&#xC815; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<h4 id="syntax">Syntax</h4>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func_name</span>(<span class="hljs-params">[param1[= defaultValue1][, ... , paramN[= defaultValueN]]]</span>) </span>{
     statements
 }
 </code></pre>
-<h5 id="parameters">Parameters</h5>
+<h4 id="parameters">Parameters</h4>
 <ul>
 <li>func_name<ul>
 <li>&#xD568;&#xC218;&#xBA85; </li>
@@ -1031,16 +1078,16 @@ list.forEach(v =&gt; {
 </ul>
 </li>
 </ul>
-<h4 id="example">Example</h4>
+<h3 id="example-1--es6">Example #1 : ES6</h3>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">a, b = 1</span>) </span>{
     <span class="hljs-keyword">return</span> a * b;
 }
 
 <span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">5</span>)) <span class="hljs-comment">// 5</span>
 </code></pre>
-<h4 id="expression">Expression</h4>
+<h3 id="expression">Expression</h3>
 <ul>
-<li>&#xD568;&#xC218;&#xC5D0;&#xB3C4; &#xC801;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;. </li>
+<li>&#xD568;&#xC218;&#xC5D0;&#xB3C4; &#xC801;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</li>
 </ul>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">callLog</span>(<span class="hljs-params">msg = defaultMsg(</span>)) </span>{
     <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.log(mes);
@@ -1063,7 +1110,7 @@ callLog(<span class="hljs-literal">undefined</span>)     <span class="hljs-comme
 </code></pre>
 <h2 id="spread-operator">Spread Operator</h2>
 <p>2&#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xC778;&#xC218;&#xB97C; &#xB098;&#xC5F4;&#xD558;&#xB294; &#xBC29;&#xC2DD;</p>
-<h4 id="syntax">Syntax</h4>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#xD568;&#xC218; &#xD638;&#xCD9C;&#xC6A9;</span>
 myFunction(...args);
 
@@ -1073,11 +1120,11 @@ myFunction(...args);
 <span class="hljs-comment">// &#xBE44; &#xAD6C;&#xC870;&#xD654;&#xC6A9;</span>
 [a, b, ...args] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
 </code></pre>
-<h4 id="example">Example</h4>
+<h3 id="example">Example</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> org = [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
 <span class="hljs-keyword">var</span> custom = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, ...org, <span class="hljs-number">5</span>];    <span class="hljs-comment">// [1, 2, 3, 4, 5]</span>
 </code></pre>
-<h4 id="expression">Expression</h4>
+<h3 id="expression">Expression</h3>
 <ul>
 <li>&#xC2A4;&#xD504;&#xB808;&#xB4DC; &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xBC30;&#xC5F4; &amp; &#xAC1D;&#xCCB4; &#xBCF5;&#xC81C;. </li>
 </ul>
@@ -1093,12 +1140,12 @@ myFunction(...args);
 </code></pre>
 <h2 id="rest-parameter">Rest Parameter</h2>
 <p>&#xB098;&#xBA38;&#xC9C0; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218; (rest parameter) &#xAD6C;&#xBB38;&#xC5D0; &#xB098;&#xBA38;&#xC9C0; &#xC778;&#xC218;&#xB4E4;&#xB3C4; &#xC815;&#xC758;&#xD574; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
-<h4 id="syntax">Syntax</h4>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b, ...theArgs</span>) </span>{
     <span class="hljs-comment">// statements</span>
 }
 </code></pre>
-<h4 id="example">Example</h4>
+<h3 id="example">Example</h3>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params">...Args</span>) </span>{
     <span class="hljs-built_in">console</span>.log(Args.length);
 }
@@ -1115,7 +1162,7 @@ foo(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <spa
 
 <span class="hljs-built_in">console</span>.log(foo(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>));    <span class="hljs-comment">// [2, 4, 6]</span>
 </code></pre>
-<h4 id="expression">Expression</h4>
+<h3 id="expression">Expression</h3>
 <ul>
 <li><code>arguments</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2CC; <code>Array</code> &#xAC1D;&#xCCB4;&#xC758; <code>method</code> &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</li>
 </ul>
@@ -1133,7 +1180,7 @@ foo(<span class="hljs-number">5</span>, <span class="hljs-number">7</span>, <spa
 </code></pre>
 <h2 id="destructuring-syntax">Destructuring Syntax</h2>
 <p>&#xAD6C;&#xC870;&#xBD84;&#xD574; &#xBB38;&#xBC95;&#xC740; ES6 &#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBCC0;&#xC218;&#xC758; &#xC120;&#xC5B8; &#xBC29;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;.</p>
-<h4 id="expression">Expression</h4>
+<h3 id="expression">Expression</h3>
 <ul>
 <li>&#xD2B9;&#xC815; &#xAC1D;&#xCCB4;&#xC758; &#xAC12;&#xC744; &#xAEBC;&#xB0B4;&#xC624;&#xB294; &#xBC29;&#xBC95;</li>
 </ul>
@@ -1179,7 +1226,7 @@ commit(<span class="hljs-string">&apos;addProducts&apos;</span>);     <span clas
 </code></pre>
 <h2 id="export-syntax">Export Syntax</h2>
 <p>&#xC9C0;&#xC815;&#xB41C; &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xAC1D;&#xCCB4; (&#xD568;&#xC218;, &#xC624;&#xBE0C;&#xC81D;&#xD2B8;, &#xC6D0;&#xC2DC;&#xD0C0;&#xC785;) &#xC744; <code>export</code> &#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
-<h4 id="syntax">Syntax</h4>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Named Exports</span>
 <span class="hljs-keyword">export</span> { myFunction };              <span class="hljs-comment">// &#xD568;&#xC218; exports</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> foo = <span class="hljs-built_in">Math</span>.sqrt(<span class="hljs-number">2</span>);    <span class="hljs-comment">// &#xC0C1;&#xC218; exports</span>
@@ -1219,7 +1266,7 @@ commit(<span class="hljs-string">&apos;addProducts&apos;</span>);     <span clas
                 </a>
                 
                 
-                <a href="symbol-iterator-generator.html" class="navigation navigation-next " aria-label="Next page: Symbol & Iterator & Generator">
+                <a href="symbol.html" class="navigation navigation-next " aria-label="Next page: Symbol">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1230,7 +1277,7 @@ commit(<span class="hljs-string">&apos;addProducts&apos;</span>);     <span clas
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"next":{"title":"Symbol & Iterator & Generator","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol-iterator-generator.md","articles":[]},"previous":{"title":"Global Object","level":"1.3.3.2.3","depth":4,"path":"02.-front-end/03.-javascript/02.-references/global-object.md","ref":"02.-front-end/03.-javascript/02.-references/global-object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","mtime":"2018-10-08T09:51:26.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-10T03:11:09.055Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ECMA 6","level":"1.3.3.2.4","depth":4,"next":{"title":"Symbol","level":"1.3.3.2.4.1","depth":5,"path":"02.-front-end/03.-javascript/02.-references/ecma6/symbol.md","ref":"02.-front-end/03.-javascript/02.-references/ecma6/symbol.md","articles":[]},"previous":{"title":"Global Object","level":"1.3.3.2.3","depth":4,"path":"02.-front-end/03.-javascript/02.-references/global-object.md","ref":"02.-front-end/03.-javascript/02.-references/global-object.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02.-front-end/03.-javascript/02.-references/ecma6/README.md","mtime":"2018-10-10T06:01:33.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-10T09:43:01.182Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
