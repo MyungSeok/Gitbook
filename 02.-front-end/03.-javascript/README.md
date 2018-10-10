@@ -2,7 +2,7 @@
 
 ## 공백 체크
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 var blankPattern = /^\s+|\s+$/g;
