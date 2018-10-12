@@ -2,26 +2,26 @@
 
 ## HTTP Header
 
-#### Request Header
+### Request Header
 
 클라이언트 브라우저에서 HTTP 프로토콜을 이용하여 _**요청 정보를 웹 서버로 전송할 때**_ HTTP 요청 헤더에 부가적인 정보를 담아 전송한다.
 
 * Accept
-  * 클라이언트가 처리하는 미디어 타입 
+  * 클라이언트가 처리하는 미디어 타입
 * Accept-encoding
   * 클라이언트가 해석할 수 있는 인코딩 방식
 * Accept-language
   * 클라이언트가 지원하는 언어  
 * Connection
-  * 클라이언트와 서버의 연결 방식 
-    * keep-alive : 클라이언트와 접속 유지 
-    * close : 클라이언트와 접속 중단 
+  * 클라이언트와 서버의 연결 방식
+    * keep-alive : 클라이언트와 접속 유지
+    * close : 클라이언트와 접속 중단
 * Host
-  * 호스트 이름 URI 와 PORT 번호 정보 
+  * 호스트 이름 URI 와 PORT 번호 정보
 * User-agent
-  * 클라이언트 브라우저 정보 
+  * 클라이언트 브라우저 정보
 
-#### Response Header 
+### Response Header
 
 서버가 HTTP 프로토콜을 이용하여 클라이언트의 요청에 대해 응답할 때 부가적인 정보를 응답 헤더에 담아 전송한다.
 
@@ -36,11 +36,13 @@
 * Date
   * 현재 일시를 GMT 형식으로 지정
 * Server
-  * 웹 서버 정보 
+  * 웹 서버 정보
+
+> CORS 관련으로 _**Access-Control-Allow-Origin: ***_ 으로 설정되면 도메인 구분없이 XHR 호출이 가능해진다.
 
 ## Timeout
 
-#### Connection Timeout
+### Connection Timeout
 
 Connection 을 구성하는데 소요되는 시간
 
@@ -52,7 +54,7 @@ Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
 
 서버가 클라이언트에게 전송되는 문서에 대한 유형을 지칭하는 타입
 
-#### Syntax
+### Syntax
 
 ```markup
 [파일의종류]/[파일타입]
@@ -80,13 +82,14 @@ Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
 
 HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별할 수 있도록 사용하는 방식 
 
-#### 공통점
+### 공통점
 
 사용자에게 빠르게 서비스를 전달하기 위해 데이터를 저장해서 사용한다.
 
-#### 차이점
+### 차이점
 
 #### Cookie
+
 클라이언트에 저장되는 키와 값이 들어있는 작은 데이터 파일 \(하나당 4KB 이하\)
 
 이름, 값, 만료날짜 \(쿠키의 저장시간\), 경로정보 등이 포함되어 있다.
@@ -97,19 +100,19 @@ HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별
 > _**오버헤드로 인한 웹서버 에러가 발생**_ 할 수 있다.
 
 #### Session
+
 서버에서 사용하는 클라이언트 인증 정보이다.
 
 서버는 접속 클라이언트 별로 세션을 생성해서 세션의 해당하는 쿠키 \(Session ID\) 를 클라이언트에게 생성하게 하고 이 클라이언트는 서버에 접속할 때마다 해당 쿠키의 값 \(Session ID\) 을 서버에 전송하여 세션을 유지하게 한다.
 
 #### Cache
+
 정적 자원들을 안정적으로 서비스하기 위해 데이터를 미리 저장해두고 제공하는 방식
 
 프록시 \(Proxy\) 서버에서 제공
 
-**참고 자료**   
-[http://blog.kurien.co.kr/544](http://blog.kurien.co.kr/544)  
-[http://brownbears.tistory.com/34](http://brownbears.tistory.com/34)  
-[http://asfirstalways.tistory.com/68](http://asfirstalways.tistory.com/68)
-
-
-
+> Reference
+>
+> [http://blog.kurien.co.kr/544](http://blog.kurien.co.kr/544)  
+> [http://brownbears.tistory.com/34](http://brownbears.tistory.com/34)  
+> [http://asfirstalways.tistory.com/68](http://asfirstalways.tistory.com/68)
