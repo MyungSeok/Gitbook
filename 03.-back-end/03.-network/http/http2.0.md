@@ -49,11 +49,15 @@ _**HOL**_ 과 같은 문제들을 해결하기 위하여 리소스를 도메인 
     section Request HTML
     index.html     : html, 2000-01-01  , 8d
     section A Domain
-    style_1.css     : after html, 6d
+    style_1.css     : css, after html, 6d
     style_2.css     : after html, 6d
+    style_3.css     : after css, 6d
+    style_4.css     : after css, 6d
     section B Domain
-    resource_1.js     : after html, 6d
+    resource_1.js     : js , after html, 6d
     resource_2.js     : after html, 6d
+    resource_3.js     : after js, 6d
+    resource_4.js     : after js, 6d
 ```
 
 하지만 하나의 도메인별 브라우저에서 받을수 있는 커넥션의 제한 이나 _**DNS Lookup 과정과 TCP Handshake 과정에서 소요되는 시간**_ 때문에 오히려 부작용 발생 가능성이 있다.
