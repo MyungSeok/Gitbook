@@ -112,8 +112,12 @@ HTTP 2.0 은 Frame 과 Stream 이라는 개념이 적용 되었다.
     section Server Push
     style_1.css     : after html, 6d
     style_2.css     : after html, 6d
+    style_3.css     : after html, 6d
+    style_4.css     : after html, 6d
     resource_1.js     : after html, 6d
     resource_2.js     : after html, 6d
+    resource_3.js     : after html, 6d
+    resource_4.js     : after html, 6d
 ```
 
 하지만 _**브라우저가 캐싱된 데이터**_ 나 _**필요없는 리소스 데이터**_ 는 자원의 낭비를 초래할 수 있다.
