@@ -104,3 +104,6 @@ HTTP2 의 Header 는 _**Header Table 로 관리**_ 되어 _**이전 요청에서
 
 1. TSL / SSH 인증서 필요
 2. 웹서버의 세팅
+
+> Reference  
+> http://americanopeople.tistory.com/115
