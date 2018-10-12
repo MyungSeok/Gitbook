@@ -40,7 +40,14 @@
 
 > CORS 관련으로 _**Access-Control-Allow-Origin: ***_ 으로 설정되면 도메인 구분없이 XHR 호출이 가능해진다.
 
-## Timeout
+## Keep-alive 관련
+
+* _**디바이스 간의 커넥션을 유지하는 기법**_ 으로 TCP 와 HTTP 가 전혀 다르다.
+  * _**TCP 는 OS가 제어**_ 하고, _**HTTP 는 웹 서버가 제어**_ 한다.
+* HTTP 1.1 이상에서 지원되는 스팩으로 _**헤더에 설정**_ 하면 된다.
+* _**max 요청수**_ 와 _**유효시간(timeout)**_ 으로 구성된다.
+
+## Timeout 종류
 
 ### Connection Timeout
 
