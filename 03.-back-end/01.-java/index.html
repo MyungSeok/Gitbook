@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>04. Database · GitBook</title>
+        <title>01. Java · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="01.redis.html" />
+    <link rel="next" href="collection.html" />
     
     
-    <link rel="prev" href="../03.-network/http/http2.0.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -639,9 +639,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../01.-java/">
+        <li class="chapter active" data-level="1.4.1" data-path="./">
             
-                <a href="../01.-java/">
+                <a href="./">
             
                     
                     01. Java
@@ -653,9 +653,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1.1" data-path="../01.-java/collection.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="collection.html">
             
-                <a href="../01.-java/collection.html">
+                <a href="collection.html">
             
                     
                     Collection
@@ -666,9 +666,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2" data-path="../01.-java/solid.html">
+        <li class="chapter " data-level="1.4.1.2" data-path="solid.html">
             
-                <a href="../01.-java/solid.html">
+                <a href="solid.html">
             
                     
                     Solid
@@ -679,9 +679,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.3" data-path="../01.-java/access_modifier.html">
+        <li class="chapter " data-level="1.4.1.3" data-path="access_modifier.html">
             
-                <a href="../01.-java/access_modifier.html">
+                <a href="access_modifier.html">
             
                     
                     Access Modifier
@@ -812,9 +812,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.4" data-path="./">
+        <li class="chapter " data-level="1.4.4" data-path="../04.-rdbms/">
             
-                <a href="./">
+                <a href="../04.-rdbms/">
             
                     
                     04. Database
@@ -826,9 +826,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.1" data-path="01.redis.html">
+        <li class="chapter " data-level="1.4.4.1" data-path="../04.-rdbms/01.redis.html">
             
-                <a href="01.redis.html">
+                <a href="../04.-rdbms/01.redis.html">
             
                     
                     01.Redis
@@ -1033,7 +1033,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >04. Database</a>
+        <a href="../.." >01. Java</a>
     </h1>
 </div>
 
@@ -1048,7 +1048,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="04-database">04. Database</h1>
+                                <h1 id="01-java">01. Java</h1>
+<h2 id="string--stringbuffer--stringbuilder-&#xC758;-&#xC0AC;&#xC6A9;">String / StringBuffer / StringBuilder &#xC758; &#xC0AC;&#xC6A9;</h2>
+<p>&#xBB38;&#xC790;&#xC5F4;&#xC744; &#xB354;&#xD558;&#xB294; &#xC2DD;&#xC5D0;&#xB294; <code>string</code> &#xBCF4;&#xB2E4;&#xB294; <code>stringBuffer</code> &#xB098; <code>stringBuilder</code> &#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p><code>string</code> &#xC740; &#xC0C8;&#xB85C;&#xC6B4; &#xAC12;&#xC744; &#xD560;&#xB2F9;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xC0C8;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xAE30; &#xB54C;&#xBB38; (&#xD074;&#xB798;&#xC2A4;&#xC758; &#xBA54;&#xBAA8;&#xB9AC; &#xCC38;&#xC870; &#xC8FC;&#xC18C;&#xAC00; &#xBC14;&#xB01C;)</p>
+<p><code>stringBuffer</code> &#xB098; <code>stringBuilder</code> &#xB294; &#xAC12;&#xC744; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; append &#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xBCC4;&#xB3C4;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p><code>stringBuilder</code> &#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5;&#xD55C; &#xBB38;&#xC790;&#xC5F4;&#xB85C; synchronization &#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p><code>stringBuffer</code> &#xB294; <em><strong>&#xBA40;&#xD2F0;&#xC4F0;&#xB808;&#xB4DC; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC548;&#xC815;&#xC801;</strong></em> &#xC774;&#xB2E4;.</p>
+<h2 id="log4j">Log4j</h2>
+<h3 id="log-level">Log Level</h3>
+<ol>
+<li>TRACE<ul>
+<li>&#xD574;&#xB2F9;&#xB418;&#xB294; &#xB0B4;&#xC6A9;&#xC5D0; &#xB300;&#xD55C; &#xACBD;&#xB85C;&#xCD94;&#xC801;&#xC744; &#xC704;&#xD574; &#xC0AC;&#xC6A9;</li>
+</ul>
+</li>
+<li>DEBUG<ul>
+<li>&#xB514;&#xBC84;&#xAE45;&#xC744; &#xC704;&#xD55C; &#xBAA9;&#xC801;</li>
+</ul>
+</li>
+<li>INFO<ul>
+<li>&#xC2DC;&#xC2A4;&#xD15C; &#xB3D9;&#xC791;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xC81C;&#xACF5;</li>
+<li>&#xBC84;&#xADF8;&#xB098; &#xC2DC;&#xC2A4;&#xD15C; &#xBB38;&#xC81C;&#xB294; &#xC544;&#xB2C8;&#xACE0;, &#xB2E8;&#xC9C0; &#xC6B4;&#xC601;&#xC790;&#xC5D0;&#xAC8C; &#xC815;&#xBCF4;&#xB97C; &#xC81C;&#xACF5;</li>
+</ul>
+</li>
+<li>WARN<ul>
+<li>&#xD604;&#xC7AC; &#xC6B4;&#xC601;&#xC5D0;&#xB294; &#xBB38;&#xC81C;&#xAC00; &#xC5C6;&#xC9C0;&#xB9CC;, &#xBB38;&#xC81C;&#xAC00; &#xB420; &#xC218; &#xC788;&#xB294; &#xC0AC;&#xD56D;</li>
+<li>&#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0;&#xB294; &#xC54A;&#xC558;&#xC9C0;&#xB9CC; &#xD574;&#xB2F9; &#xC815;&#xBCF4;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC54C;&#xB824;&#xC8FC;&#xC5B4;&#xC57C; &#xD560; &#xACBD;&#xC6B0;</li>
+</ul>
+</li>
+<li>ERROR<ul>
+<li>&#xC2DC;&#xC2A4;&#xD15C; &#xC6B4;&#xC601;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xC788;&#xC744; &#xB9CC;&#xD55C; &#xC0AC;&#xD56D;</li>
+<li>&#xBCF4;&#xD1B5; &#xC608;&#xC678;&#xB97C; &#xC7A1;&#xC544;&#xC11C; &#xC815;&#xC0C1;&#xCC98;&#xB9AC;&#xD55C; &#xACBD;&#xC6B0; &#xAE30;&#xB85D;</li>
+</ul>
+</li>
+<li>FATAL<ul>
+<li>&#xC2DC;&#xC2A4;&#xD15C; &#xC6B4;&#xC5EC;&#xC774; &#xBD88;&#xAC00;&#xB2A5;&#xD55C; &#xACBD;&#xC6B0;</li>
+<li>&#xBCF4;&#xD1B5; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xACE0; &#xC815;&#xC0C1; &#xCC98;&#xB9AC; &#xBABB;&#xD55C; &#xACBD;&#xC6B0;</li>
+</ul>
+</li>
+</ol>
+<h3 id="layout">Layout</h3>
+<ul>
+<li>%d : &#xB85C;&#xADF8;&#xC758; &#xAE30;&#xB85D;&#xC2DC;&#xAC04;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%p : &#xB85C;&#xAE45;&#xC758; &#xB808;&#xBCA8;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%F : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC758; &#xD30C;&#xC77C;&#xBA85;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%M : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xBA54;&#xC18C;&#xB4DC;&#xC758; &#xC774;&#xB984;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%I : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xD638;&#xCD9C;&#xC9C0;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%L : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xD638;&#xCD9C;&#xC9C0;&#xC758; &#xB77C;&#xC778;&#xC218;&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%t : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; Thread&#xBA85;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%c : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%C : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xBA85;&#xC744; &#xCD9C;&#xB825;</li>
+<li>%m : &#xB85C;&#xADF8; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%n : &#xAC1C;&#xD589; &#xBB38;&#xC790;&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%% : %&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%r : &#xC5B4;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC774; &#xC2DC;&#xC791; &#xC774;&#xD6C4;&#xBD80;&#xD130; &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; &#xC2DC;&#xC810;&#xAE4C;&#xC9C0;&#xC758; &#xC2DC;&#xAC04;(ms)&#xC744; &#xCD9C;&#xB825;</li>
+<li>%x : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; Thread&#xC640; &#xAD00;&#xB828;&#xB41C; NDC(Nested diagnostic context)&#xB97C; &#xCD9C;&#xB825;</li>
+<li>%X : &#xB85C;&#xAE45;&#xC774; &#xBC1C;&#xC0DD;&#xD55C; Thread&#xC640; &#xAD00;&#xB828;&#xB41C; MDC(Mapped diagnostic context)&#xB97C; &#xCD9C;&#xB825;</li>
+</ul>
+<h3 id="sample">Sample</h3>
+<pre><code class="lang-java">[%d{yyyy-MM-dd HH:mm}] %<span class="hljs-number">5</span>p (%F:%L) %M: %m%n
+</code></pre>
+<pre><code class="lang-java">[%d{HH:mm:ss}] %-<span class="hljs-number">5</span>p %C{<span class="hljs-number">1</span>}.%M(%F:%L) - %m%n
+</code></pre>
 
                                 
                                 </section>
@@ -1076,12 +1137,12 @@
 
             
                 
-                <a href="../03.-network/http/http2.0.html" class="navigation navigation-prev " aria-label="Previous page: HTTP 2.0">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 03. Back End">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="01.redis.html" class="navigation navigation-next " aria-label="Next page: 01.Redis">
+                <a href="collection.html" class="navigation navigation-next " aria-label="Next page: Collection">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1092,7 +1153,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04. Database","level":"1.4.4","depth":2,"next":{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"03.-back-end/04.-rdbms/01.redis.md","ref":"03.-back-end/04.-rdbms/01.redis.md","articles":[]},"previous":{"title":"HTTP 2.0","level":"1.4.3.1.1","depth":4,"path":"03.-back-end/03.-network/http/http2.0.md","ref":"03.-back-end/03.-network/http/http2.0.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/04.-rdbms/README.md","mtime":"2018-10-02T13:42:47.243Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-13T12:36:13.321Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. Java","level":"1.4.1","depth":2,"next":{"title":"Collection","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/collection.md","ref":"03.-back-end/01.-java/collection.md","articles":[]},"previous":{"title":"03. Back End","level":"1.4","depth":1,"path":"03.-back-end/README.md","ref":"03.-back-end/README.md","articles":[{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java/README.md","ref":"03.-back-end/01.-java/README.md","articles":[{"title":"Collection","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/collection.md","ref":"03.-back-end/01.-java/collection.md","articles":[]},{"title":"Solid","level":"1.4.1.2","depth":3,"path":"03.-back-end/01.-java/solid.md","ref":"03.-back-end/01.-java/solid.md","articles":[]},{"title":"Access Modifier","level":"1.4.1.3","depth":3,"path":"03.-back-end/01.-java/access_modifier.md","ref":"03.-back-end/01.-java/access_modifier.md","articles":[]}]},{"title":"02. Server","level":"1.4.2","depth":2,"path":"03.-back-end/02.-server/README.md","ref":"03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"03.-back-end/02.-server/nginx/README.md","ref":"03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]}]}]},{"title":"03. Network","level":"1.4.3","depth":2,"path":"03.-back-end/03.-network/README.md","ref":"03.-back-end/03.-network/README.md","articles":[{"title":"HTTP","level":"1.4.3.1","depth":3,"path":"03.-back-end/03.-network/http/README.md","ref":"03.-back-end/03.-network/http/README.md","articles":[{"title":"HTTP 2.0","level":"1.4.3.1.1","depth":4,"path":"03.-back-end/03.-network/http/http2.0.md","ref":"03.-back-end/03.-network/http/http2.0.md","articles":[]}]}]},{"title":"04. Database","level":"1.4.4","depth":2,"path":"03.-back-end/04.-rdbms/README.md","ref":"03.-back-end/04.-rdbms/README.md","articles":[{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"03.-back-end/04.-rdbms/01.redis.md","ref":"03.-back-end/04.-rdbms/01.redis.md","articles":[]}]},{"title":"05. Framework","level":"1.4.5","depth":2,"path":"03.-back-end/05.-framework/README.md","ref":"03.-back-end/05.-framework/README.md","articles":[{"title":"Spring","level":"1.4.5.1","depth":3,"path":"03.-back-end/05.-framework/spring/README.md","ref":"03.-back-end/05.-framework/spring/README.md","articles":[{"title":"Gradle","level":"1.4.5.1.1","depth":4,"path":"03.-back-end/05.-framework/spring/gradle.md","ref":"03.-back-end/05.-framework/spring/gradle.md","articles":[]}]},{"title":"Hibernate","level":"1.4.5.2","depth":3,"path":"03.-back-end/05.-framework/hibernate.md","ref":"03.-back-end/05.-framework/hibernate.md","articles":[]}]},{"title":"06. DevOps","level":"1.4.6","depth":2,"path":"03.-back-end/06.-devops/README.md","ref":"03.-back-end/06.-devops/README.md","articles":[{"title":"Docker","level":"1.4.6.1","depth":3,"path":"03.-back-end/06.-devops/docker/README.md","ref":"03.-back-end/06.-devops/docker/README.md","articles":[{"title":"CLI","level":"1.4.6.1.1","depth":4,"path":"03.-back-end/06.-devops/docker/cli.md","ref":"03.-back-end/06.-devops/docker/cli.md","articles":[]}]},{"title":"Kubernetes","level":"1.4.6.2","depth":3,"path":"03.-back-end/06.-devops/kubernetes.md","ref":"03.-back-end/06.-devops/kubernetes.md","articles":[]},{"title":"Git","level":"1.4.6.3","depth":3,"path":"03.-back-end/06.-devops/git.md","ref":"03.-back-end/06.-devops/git.md","articles":[]}]},{"title":"07. Big Data","level":"1.4.7","depth":2,"path":"03.-back-end/04.-big-data.md","ref":"03.-back-end/04.-big-data.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java/README.md","mtime":"2018-10-13T10:49:09.334Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-13T12:36:13.321Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
