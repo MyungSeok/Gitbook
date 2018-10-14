@@ -1,5 +1,15 @@
 # 01. Java
 
+## Overloading & Overriding
+
+### Overloading (오버로딩)
+
+같은 이름의 함수를 여러개 정의하고 매개변수의 유형과 개수를 다르게 하여 다양한 유형의 호출에 응답
+
+### Overriding (오버라이딩)
+
+상의 클래스가 가지고 있는 메소드를 하위 클래스가 재 정의 하여 사용하는것
+
 ## String / StringBuffer / StringBuilder 의 사용
 
 문자열을 더하는 식에는 `string` 보다는 `stringBuffer` 나 `stringBuilder` 을 사용해야 한다.

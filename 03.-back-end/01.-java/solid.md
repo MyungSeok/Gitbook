@@ -43,3 +43,8 @@ SOLID 5대 원칙 (객체 지향 설계 5원칙)
 
 하위 레벨모듈의 변경이 상위 레벨 모듈의 변경을 요구하는 역전현상
 
+> Reference
+> 
+> http://www.nextree.co.kr/p6960/  
+> http://limkydev.tistory.com/77  
+> http://choipattern.blogspot.com/2013/08/solid.html
