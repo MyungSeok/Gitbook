@@ -20,7 +20,7 @@ script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트�
 
 > JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사용이 가능
 
-#### 스크립트 태그 삽입으로 callback 함수 jsonp 구현하기
+### 스크립트 태그 삽입으로 callback 함수 jsonp 구현하기
 
 ```javascript
 var callback = '_callback_jsonp_' + Math.round(10000 * Math.random());
@@ -36,9 +36,9 @@ window[callback] = function (data) {
 }
 ```
 
-#### 요청 URL 뒤에 callback 파라메터 추가하여 jsonp 요청 구현하기
+### 요청 URL 뒤에 callback 파라메터 추가하여 jsonp 요청 구현하기
 
-##### Client
+#### Client
 
 ```javascript
 $.getJSON('/jsonp.json?callback=?', function (data) {
@@ -46,7 +46,7 @@ $.getJSON('/jsonp.json?callback=?', function (data) {
 });
 ```
 
-##### Server
+#### Server
 
 ```java
 private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException { 
@@ -68,9 +68,9 @@ private void doGet(HttpServletRequest request, HttpServleteResponse response) th
 }
 ```
 
-#### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하기
+### 요청 json 에 callback 함수로 한번 감싸서 jsonp 구현하기
 
-##### Client
+#### Client
 
 ```javascript
 $.ajax({
@@ -86,15 +86,15 @@ $.ajax({
 });
 ```
 
-##### Server
+#### Server
 
 ```java
 myCallback({"message":"You got an AJAX response via JSONP from another site!"});
 ```
 
-#### jsonpCallback 옵션 없이 사용하기
+### jsonpCallback 옵션 없이 사용하기
 
-##### Client
+#### Client
 
 ```javascript
 $.ajax({
@@ -109,7 +109,7 @@ $.ajax({
 });
 ```
 
-##### Server
+#### Server
 
 ```java
 jQuery18305806868467951786_1366340807385({"key":"value"});
@@ -126,8 +126,6 @@ _callback_jsonp_({
 ```
 
 > 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조
-
-## 
 
 > CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.
 > 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
@@ -156,13 +154,13 @@ console.log(typeof c);        // undefined
 
 ## 상속 \(Inheritance\)
 
-#### 프로토 타입을 이용한 확장 
+### 프로토 타입을 이용한 확장 
 
 자바스크립트에는 자바와 달리 `class` 가 존재하지 않아 `prototype` 을 사용하여 class 를 구현합니다.
 
-#### 상속 Class 생성 
+### 상속 Class 생성
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 function Shape() {
@@ -183,9 +181,9 @@ Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle; 
 ```
 
-#### 상속 객체 생성
+### 상속 객체 생성
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 var rect = new Rectangle();
@@ -198,9 +196,9 @@ rect.move(1, 1);
 
 > _**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
 
-#### `Object.create()` 를 이용한 메소드 상속 
+### `Object.create()` 를 이용한 메소드 상속 
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 var parent = {
@@ -238,9 +236,9 @@ ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음
 * ES6 에서는 호이스팅의 지원이 없어졌다. \(ES5 식의 호이스팅 / TDZ 관점\)
 * 기존 ES5 에서는 호이스팅이 있어 해당 값을 선언 후 호출하면 undefined 로 나온다.
 
-#### 예제 코드 
+### 예제 코드 
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 var value = 'outer scope';
@@ -284,7 +282,7 @@ const value = 'outer scope';
 
 _**실행 가능한 상태가 아니며**_  함수의 정의를 나타내는 `Statement` 으로 _**코드 해석에 따른 수행 경과가 존재 하지 않는다.**_
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 // 함수 선언식
@@ -297,7 +295,7 @@ function foo() {
 
 _**실행 가능한 상태 코드**_ 로 해석되어 지거나 혹은 _**변수나 데이터 구조에 할당**_ 되어 있음을 의미한다.
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 // 함수 표현식
@@ -314,7 +312,7 @@ var foo = function () {
 
 익명 함수는 동적으로 할당되는 유효범위를 가지기 때문에 _**강제적인 유효범위를 설정 하는 경우에도 사용**_ 된다.
 
-#### Example #1 : JS - ES5
+### Example #1 : JS - ES5
 
 ```javascript
 (function () {
