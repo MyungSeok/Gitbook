@@ -2,7 +2,7 @@
 
 ## Browser Support
 
-![https://angular.io/guide/browser-support](../../.gitbook/assets/2018-07-10-12.39.20%20%281%29.png)
+![Angular Browser Support](/img/A003.png)
 
 ## 2 Way Binding
 

@@ -2,7 +2,7 @@
 
 프로그램을 실행하기 위해 물리적 머신 (컴퓨터) 과 유사하게 만든 머신을 소프트웨어로 구현한 것
 
-!["JVM 아키텍처"](../../../.gitbook/assets/250D6A4B592F5FE41B.png)
+!["JVM 아키텍처"](/img/A005.png)
 
 ## 특징
 
@@ -13,7 +13,7 @@
 
 ## JVM 외부
 
-!["JVM 구조"](../../../.gitbook/assets/jvm.png)
+!["JVM 구조"](/img/A006.png)
 
 Java 로 작성한 코드는 _**Class Loader 가 컴파일된 Java Byte Code 를 Runtime Data Areas 에 로드하고 Excution Engine 이 Java Byte Code 를 실행**_
 
@@ -38,7 +38,7 @@ _**Class Loader**_ 의 대표적인 역활은 사용자가 작성한 Java Byte C
 
 클래스 로더는 다음과 같은 특징이 있다.
 
-!["Class Loader 구조"](../../../.gitbook/assets/classloader_2.png)
+!["Class Loader 구조"](/img/A007.png)
 
 * Hierarchical (계층 구조)
   * 클래스 로더끼리 부모 <-> 자식 관계를 이루어 계층 구조로 구성된다.
@@ -61,7 +61,7 @@ Class Loader 가 Class Load 를 요청 받으면, 아래 순서대로 검색을 
     B-->C["Self"];
 ```
 
-!["Class Loader 요청 처리"](../../../.gitbook/assets/classload.gif)
+!["Class Loader 요청 처리"](/img/A008.png)
 
 Bootstrap Class Loader 까지 확인해도 없으면 요청 받은 클래스 로더가 _**파일 시스템에서 해당 클래스를 찾음**_
 
