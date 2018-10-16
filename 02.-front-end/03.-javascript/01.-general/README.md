@@ -16,7 +16,7 @@
 script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트를 로드할 수 있다는 것**_ 에서 착안   
 `<script>` 태그는 SOP 정책에 속하지 않기 때문에 jsonp \(json width padding\) 이 사용됨
 
-![](../../../.gitbook/assets/undefined%20%282%29.tiff)
+![](/img/undefined%20%282%29.tiff)
 
 > JSONP 의 callback 은 _**서버에서 지원**_ 해줘야 정상적으로 사용이 가능
 
