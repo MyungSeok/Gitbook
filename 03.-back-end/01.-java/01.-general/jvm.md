@@ -125,7 +125,7 @@ Java Byte Code 는 기계어에 가깝기 보다는 비교적 인간이 보기 �
 
 _**Excution Engine**_ 는 이와 같이 바이트 코드가 실제로 JVM 내부에서 기계가 실행할 수 있는 형태로 변경
 
-
+### JIT (Just In Time) Compiler
 
 ## GC (Garbage Collector)
 
