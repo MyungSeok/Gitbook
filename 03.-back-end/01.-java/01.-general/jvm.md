@@ -71,29 +71,47 @@ Bootstrap Class Loader 까지 확인해도 없으면 요청 받은 클래스 로
 
 ## Runtime Data Areas (런타임 데이터 영역)
 
-`Class Loader` 에서 로드해준 데이터를 보관하여 애플리케이션을 수행한다.
+`Class Loader` 에서 로드해준 데이터를 보관하여 애플리케이션을 수행한다.  
+이 수행 작업시에 사용되는 저장 및 참조로 하는 메모리 영역이다.
 
-* Method Area
-  * 클래스 정보를 저장하고 프로그램이 수행되는 동안 클래스정보를 참조하는 영역
-  * 임포트된 클래스가 로드되는 영역
-* Heap Area
-  * _**프로그램 상에서 데이터를 저장하기 위해 동적으로 할당하여 사용**_ 하는 메모리 영역
-  * 자바 프로그램은 `new` 연산자를 사용하여 객체를 동적으로 생성 (Method Area 에 로드된 클래스만 생성 가능)
-  * _**여러 Thread 가 이 영역을 공유**_ 한다.
-  * 이 영역은 _**GC (Garbage Collector) 를 통해서만 메모리 해제가 가능**_하다. (GC 의 실제적인 대상)
-  * Method 영역이 클래스 정보를 참고하여 인스턴스를 생성하는 곳 이다.
-* Stack Area
-  * Method 가 호출될때마다 `Stack Frame` 이라는 데이터 영역이 생성하여 구성
-  * Method 의 정보, Local Valuable, Argument 등의 _**연산 중 발생되는 임시 데이터 등이 저장**_ 된다.
-  * Method 수행 되는 동안만 사용되며 메소드의 수행이 끝나면 필요 없게 된다.
-  * Method 가 _**호출될 때는 필요로하는 변수를 Stack 에 저장**_ 하고, _**Method 실행이 끝나면 Stack 을 반환**_ 한다.
-  * _**실행중인 Thread 에 따라 각각 구성**_ 하게 된다.
-* PC Register
-  * 실행중인 각 Thread 는 별도의 PC Register 를 가지며, 명령이 실행되면 현재 실행중인 명령의 주소를 유지한다.
-* Native Method
-  * JAVA 언어가 아닌 기존의 다른 언어에서 제공되는 메소드를 의미한다.
-  * Method 의 Argument, Local Valuable 등을 저장한다.
-  * Native Method 정보를 저장한다.
+### Method Area
+
+* 모든 Thread 가 공유하는 메모리 영역
+  * `class` `interface` `method` `field` `static valuable` `byte code` 등을 보관
+* 임포트된 클래스가 로드되는 영역
+
+### Heap Area
+
+* _**프로그램 상에서 데이터를 저장하기 위해 동적으로 할당하여 사용**_ 하는 메모리 영역
+  * 실제로 Runtime 시 동적으로 할당하여 사용하는 영역
+* 자바 프로그램은 `new` 연산자를 사용하여 객체를 동적으로 생성
+  * _**Method Area**_ 에 로드된 클래스만 생성 가능
+  * `class` 를 이용하여 `instance` 를 생성하면 해당 영역에 저장하여 사용
+* _**여러 Thread 가 이 영역을 공유**_ 한다.
+* 이 영역은 _**GC (Garbage Collector) 를 통해서만 메모리 해제가 가능**_하다. (GC 의 실제적인 대상)
+* Method 영역이 클래스 정보를 참고하여 인스턴스를 생성하는 곳 이다.
+
+### JVM Stack Area
+
+* Method 가 호출될 때마다 `Stack Frame` 이라는 데이터 영역이 생성하여 구성
+  * Method 에 사용되는 Thread 의 수행 정보를 `Stack Frame` 을 통해서 저장
+  * Thread 가 시작될때 생성하며, Thread 별로 생성되기 때문에 다른 Thread 는 접근 할 수 없다.
+* Method 의 정보, Local Valuable, Argument 등의 _**연산 중 발생되는 임시 데이터 등이 저장**_ 된다.
+* Method 수행 되는 동안만 사용되며 메소드의 수행이 끝나면 필요 없게 된다.
+* Method 가 _**호출될 때는 필요로하는 변수를 Stack 에 저장**_ 하고, _**Method 실행이 끝나면 Stack 을 반환**_ 한다.
+* _**실행중인 Thread 에 따라 각각 구성**_ 하게 된다.
+
+### PC Register
+
+* 실행중인 각 Thread 는 별도의 PC Register 를 가지며, 명령이 실행되면 현재 실행중인 명령의 주소를 유지한다.
+
+### Native Method Stack
+
+* JAVA 외의 언어로 작성된 네이티브 코드들을 위한 Stack
+  * JNI (Java Native Interface) 를 통하여 호출되는 C/C++ 등의 코드를 수행하기 위한 Stack
+* 애플리케이션에서 Native Method 를 호출하게 되면 내부에 `Stack Frame` 을 생성하여 Push 한다.
+  * JNI 를 이용하여 JVM 내부에 영향을 주지 않기 위함
+  * Native Method Stack 을 실행할때는 JVM 을 거치지 않고 바로 수행한다.
 
 ### Thread 마다 하나씩 생성
 
@@ -112,6 +130,7 @@ Bootstrap Class Loader 까지 확인해도 없으면 요청 받은 클래스 로
 > http://limkydev.tistory.com/51  
 > http://postitforhooney.tistory.com/entry/JavaJVM-JVM-이해를-통한-Java-작동원리-이해하기  
 > https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+> https://medium.com/@lazysoul/jvm-이란-c142b01571f2
 
 ## Excution Engine (실행 엔진)
 
@@ -125,9 +144,32 @@ Java Byte Code 는 기계어에 가깝기 보다는 비교적 인간이 보기 �
 
 _**Excution Engine**_ 는 이와 같이 바이트 코드가 실제로 JVM 내부에서 기계가 실행할 수 있는 형태로 변경
 
+최초의 JVM 은 `Interpreter` 방식으로 수행되었다.
+
+> _**Interpreter (인터프리터) ?**_
+> 
+> `Byte Code` 명령어를 하나씩 읽어서 해석한다.  
+> 이로 인해 실행이 느리다는 단점을 가지고 있다.
+
+이를 개선하기 위해 `JIT Compiler` 를 도입하여 개선을 한다.
+
 ### JIT (Just In Time) Compiler
 
-## GC (Garbage Collector)
+`Interpreter` 방식으로 실행하다 적절한(?) 시점에 `Byte Code` 전체를 `Compile` 하여 `Native Code` 로 변경하며 이후에는 해당 메서드를 더 이상 Interpreting 하지 않고 `Native Code` 로 직접 실행하는 방식
+
+`Native Code` 를 실행하는 것이 명령어 단위로 `Interpreting` 하는것보다 빠르며, `Native Code` 는 내부 캐시에 보관하기 때문에 한번 `Compile` 한 코드는 계속 빠르게 수행
+
+```mermaid
+  graph LR;
+  A[Java Source Code]-->|Java Compiler|B[Byte Code]
+  B-->|JIT Compiler|C[Native Code]
+```
+
+JIT Compile 과정은 `Byte Code` 를 Interpreting 하는것보다 많은 비용이 발생하여, 만약 한번만 실행되는 코드라면 `Compile` 하지 않고 Interpreting 하는것이 훨씬 유리하다.
+
+내부적으로 해당 Method 가 얼마나 자주 수행되고 체크하여 일정 정도의 수준이 넘을때만 `Compile` 수행
+
+### GC (Garbage Collector)
 
 `stop-the-world` 을 실행하면 GC 를 실행하는 `thread` 를 제외한 나머지 `thread` 는 모두 작업을 멈춘다.
 
