@@ -1,5 +1,36 @@
 # 01. General
 
+## Strict Mode \(엄격 모드\)
+
+스크립트 상단 혹은 함수의 시작 부분의 `'use strict'` 을 선언하면 `Strict Mode` 로 코드를 작성 할 수 있다.
+
+```javascript
+'use strict';
+
+/* statement */
+```
+
+```javascript
+function foo () {
+  'use strict';
+
+  /* statement */
+}
+```
+
+`Strict Mode` 는 문법검사와 런타임 동작을 검사해주는 기능을 하는데 그 역활은 다음과 같다.
+
+* 경고를 에러로 변환
+* `read only` 객체는 수정불가
+* `get` 으로 선언된 객체는 수정불가
+* `extensible` 특성이 false 로 설정된 객체의 속성 확장 불가
+* `delete` 연산 사용 불가
+* `Literal Object` 의 동일한 이름의 Property 생성 불가
+* 8 진수 및 Literal 및 escape 문 사용 불가
+  
+> Reference
+> http://beomy.tistory.com/13
+
 ## 일급객체 \(First-Class Object\)
 
 자바스크립트는 일급객체 \(First-Class Object\) 입니다.  
@@ -125,10 +156,11 @@ _callback_jsonp_({
 });
 ```
 
-> 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조
-
-> CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.
-> 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
+> _**INFO**_
+>
+> * 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조  
+> * CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.  
+> * 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
 
 ## 암묵적 전역
 
