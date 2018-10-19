@@ -124,7 +124,7 @@ public class Parent {
 
 ## Spring Boot 기동
 
-#### Linux Deploy Shell Script
+### Linux Deploy Shell Script
 
 리눅스 환경에서 쉽게 관리를 위해 _**Shell Script**_ 형태로 만들어 두어 관리한다.
 
