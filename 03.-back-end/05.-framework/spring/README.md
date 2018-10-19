@@ -24,7 +24,6 @@ _**관심의 분리 \(Seperation of Concerns\) 를 통하여 핵심 관심 사�
 * 재활용성 극대화
 * 유연한 변화 수용
 
-
 ## IoC \(Inversion of Control : 제어의 역전\)
 
 _**프로그램의 제어의 흐름 구조가 바뀌는 것이다.**_
@@ -78,16 +77,27 @@ public class Parent {
 
 ### 용어 정리
 
-* Bean
-  * 스프링 (정확히는 스프링 컨테이너) 에서 생성 및 및 관계 설정, 사용등을 제어해주는 객체
-* Bean Factory
-  * 스프링이 IoC 를 담당하는 핵심 컨테이너
-  * 빈을 등록/생성/조회/반환/관리 하는 기능으로 bean factory 와 같지만 여기에 spring 의 각종 부가서비스를 추가로 제공해야 한다.
-* Application Context
-  * bean factory 를 확장한 IoC 컨테이너
-* Container (IoC Container)
-  * 객체를 관리하는 컨테이너로써 컨테이너에 객체를 담아두고 필요할 때에 컨테이너에서 객체를 가져와 사용할 수 있도록 한다.
-  * IoC 방식으로 Bean 을 관리한다는 의미에서 Bean Factory 나 Application Context 를 가르킨다.
+#### Bean
+
+* 스프링 (정확히는 스프링 컨테이너) 에서 생성 및 및 관계 설정, 사용등을 제어해주는 객체
+
+#### Bean Factory
+
+* 스프링이 IoC 를 담당하는 핵심 컨테이너
+* 빈을 등록/생성/조회/반환/관리 하는 기능으로 bean factory 와 같지만 여기에 spring 의 각종 부가서비스를 추가로 제공해야 한다.
+
+#### Application Context
+
+* bean factory 를 확장한 IoC 컨테이너
+
+#### Container (IoC Container)
+
+* 객체를 관리하는 컨테이너로써 컨테이너에 객체를 담아두고 필요할 때에 컨테이너에서 객체를 가져와 사용할 수 있도록 한다.
+* IoC 방식으로 Bean 을 관리한다는 의미에서 Bean Factory 나 Application Context 를 가르킨다.
+
+#### POJO (Plain Old Java Object)
+
+* ??????????
 
 > Reference  
 > http://javaslave.tistory.com/48
@@ -101,7 +111,7 @@ public class Parent {
   C --> D["POJO 빈 소멸 상태"]
 ```
 
-### POJO 초기화 과정
+### POJO (Plain Old Java Object) 초기화 과정
 
 1. Spring Framework 는 먼저 `Bean` 설정파일의 POJO 빈을 Instance 화 하지 않은 상태로 `Bean` 설정 파일의 정보를 초기화 한다.
     1. 빈 설정 파일의 정보를 초기화 하면서 XML DTD 에 대하여 유효한지 체크한다.
