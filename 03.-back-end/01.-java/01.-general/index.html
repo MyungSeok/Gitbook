@@ -1125,6 +1125,38 @@
 <li>float : 4 Byte</li>
 <li>double : 8 Byte</li>
 </ul>
+<h2 id="stack-&#xACFC;-heap-&#xC758;-&#xCC28;&#xC774;&#xC810;">Stack &#xACFC; Heap &#xC758; &#xCC28;&#xC774;&#xC810;</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Stack</th>
+<th>Heap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#xC811;&#xADFC; &#xC18D;&#xB3C4;</td>
+<td>&#xBE60;&#xB978; &#xC811;&#xADFC;</td>
+<td>&#xB290;&#xB9B0; &#xC811;&#xADFC;</td>
+</tr>
+<tr>
+<td>&#xBA54;&#xBAA8;&#xB9AC; &#xC81C;&#xD55C;</td>
+<td>&#xC81C;&#xD55C;&#xC801;</td>
+<td>&#xC81C;&#xD55C; &#xC5C6;&#xC74C;</td>
+</tr>
+<tr>
+<td>Resize &#xAC00;&#xB2A5;</td>
+<td>&#xBD88;&#xAC00;</td>
+<td>&#xAC00;&#xB2A5; (&#xD30C;&#xD3B8;&#xD654; &#xAC00;&#xB2A5;&#xC131;)</td>
+</tr>
+<tr>
+<td>&#xD2B9;&#xC9D5;</td>
+<td>&#xC9C0;&#xC5ED;&#xBCC0;&#xC218;&#xC5D0;&#xB9CC; &#xD560;&#xB2F9;</td>
+<td>&#xC804;&#xC5ED;&#xC801; &#xC811;&#xADFC;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="process--thread">Process &amp; Thread</h2>
 <p>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC640; &#xC2A4;&#xB808;&#xB4DC;&#xB294; &#xC11C;&#xB85C; &#xBC00;&#xC811;&#xD55C; &#xAD00;&#xACC4;&#xC5D0; &#xC788;&#xC73C;&#xB098; &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xAC1C;&#xCCB4;&#xC774;&#xB2E4;.</p>
 <h3 id="process">Process</h3>
@@ -1238,6 +1270,13 @@ Object a = <span class="hljs-number">20</span>;
 </blockquote>
 <h2 id="finalize">Finalize</h2>
 <p>&#xAC1D;&#xCCB4;&#xAC00; &#xC18C;&#xBA78;&#xB420;&#xB54C; &#xD638;&#xCD9C;&#xB418;&#xB294; &#xBA54;&#xC18C;&#xB4DC;<br>&#xC0AC;&#xC6A9;&#xC774; &#xAD8C;&#xC7A5; &#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<h2 id="checked--unchecked-exception">Checked &amp; Unchecked Exception</h2>
+<p><code>Checked Exception</code> &#xB294; &#xC678;&#xBD80; &#xD658;&#xACBD;&#xC5D0; &#xC758;&#xD574; &#xBBF8;&#xB9AC; &#xC608;&#xC0C1; &#xB418;&#xB294; &#xC624;&#xB958;&#xC774;&#xB2E4;.</p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xBA74; <code>IOException</code> <code>ClassNotFoundException</code> &#xB4F1;&#xACFC; &#xAC19;&#xC774; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xB2E4;.</strong></em></p>
+<p><code>Unchecked Exception</code> &#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xBB38;&#xC81C;&#xB85C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xC624;&#xB958;&#xB85C;&#xC368; &#xBBF8;&#xB9AC; &#xC608;&#xC0C1;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<p>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>RuntimeException</code> &#xACFC; &#xAC19;&#xC774; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC2E4;&#xD589;&#xC911;&#xC5D0; &#xC77C;&#xC5B4;&#xB098;&#xBA70; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xB97C; &#xD544;&#xC694;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</strong></em></p>
+<h2 id="&#xAC1D;&#xCCB4;-&#xC7AC;&#xC0AC;&#xC6A9;&#xC774;&#xB780;-">&#xAC1D;&#xCCB4; &#xC7AC;&#xC0AC;&#xC6A9;&#xC774;&#xB780; ?</h2>
+<p>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>Singleton</code> &#xB514;&#xC790;&#xC778; &#xD328;&#xD134;&#xACFC; &#xAC19;&#xC774; &#xBBF8;&#xB9AC; &#xC0AC;&#xC804;&#xC5D0; &#xC0DD;&#xC131;&#xB41C; <code>Instance</code> &#xB97C; &#xC7AC;&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; <code>ThreadPool</code> &#xC774;&#xB098; <code>Connection Pool</code> &#xB4F1;&#xC758; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
 
                                 
                                 </section>
@@ -1281,7 +1320,7 @@ Object a = <span class="hljs-number">20</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. General","level":"1.4.1.1","depth":3,"next":{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},"previous":{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java/README.md","ref":"03.-back-end/01.-java/README.md","articles":[{"title":"01. General","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/01.-general/README.md","ref":"03.-back-end/01.-java/01.-general/README.md","articles":[{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},{"title":"Solid","level":"1.4.1.1.2","depth":4,"path":"03.-back-end/01.-java/01.-general/solid.md","ref":"03.-back-end/01.-java/01.-general/solid.md","articles":[]}]},{"title":"02. Reference","level":"1.4.1.2","depth":3,"path":"03.-back-end/01.-java/02.-references/README.md","ref":"03.-back-end/01.-java/02.-references/README.md","articles":[{"title":"Collection","level":"1.4.1.2.1","depth":4,"path":"03.-back-end/01.-java/02.-references/collection.md","ref":"03.-back-end/01.-java/02.-references/collection.md","articles":[]}]},{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"03.-back-end/01.-java/03.-performance/README.md","ref":"03.-back-end/01.-java/03.-performance/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java/01.-general/README.md","mtime":"2018-10-19T09:01:00.720Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-19T09:34:47.349Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. General","level":"1.4.1.1","depth":3,"next":{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},"previous":{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java/README.md","ref":"03.-back-end/01.-java/README.md","articles":[{"title":"01. General","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/01.-general/README.md","ref":"03.-back-end/01.-java/01.-general/README.md","articles":[{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},{"title":"Solid","level":"1.4.1.1.2","depth":4,"path":"03.-back-end/01.-java/01.-general/solid.md","ref":"03.-back-end/01.-java/01.-general/solid.md","articles":[]}]},{"title":"02. Reference","level":"1.4.1.2","depth":3,"path":"03.-back-end/01.-java/02.-references/README.md","ref":"03.-back-end/01.-java/02.-references/README.md","articles":[{"title":"Collection","level":"1.4.1.2.1","depth":4,"path":"03.-back-end/01.-java/02.-references/collection.md","ref":"03.-back-end/01.-java/02.-references/collection.md","articles":[]}]},{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"03.-back-end/01.-java/03.-performance/README.md","ref":"03.-back-end/01.-java/03.-performance/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java/01.-general/README.md","mtime":"2018-10-21T12:37:27.529Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T12:39:52.549Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
