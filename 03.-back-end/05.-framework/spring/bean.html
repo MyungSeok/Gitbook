@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>NGINX · GitBook</title>
+        <title>Bean · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="cli.html" />
+    <link rel="next" href="dispatcherServlet.html" />
     
     
-    <link rel="prev" href="../linux.html" />
+    <link rel="prev" href="ioc.html" />
     
 
     </head>
@@ -748,9 +748,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../">
+        <li class="chapter " data-level="1.4.2" data-path="../../02.-server/">
             
-                <a href="../">
+                <a href="../../02.-server/">
             
                     
                     02. Server
@@ -762,9 +762,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../linux.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../../02.-server/linux.html">
             
-                <a href="../linux.html">
+                <a href="../../02.-server/linux.html">
             
                     
                     Linux
@@ -775,9 +775,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2.2" data-path="./">
+        <li class="chapter " data-level="1.4.2.2" data-path="../../02.-server/nginx/">
             
-                <a href="./">
+                <a href="../../02.-server/nginx/">
             
                     
                     NGINX
@@ -789,9 +789,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.2.1" data-path="cli.html">
+        <li class="chapter " data-level="1.4.2.2.1" data-path="../../02.-server/nginx/cli.html">
             
-                <a href="cli.html">
+                <a href="../../02.-server/nginx/cli.html">
             
                     
                     CLI
@@ -895,9 +895,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../../05.-framework/">
+        <li class="chapter " data-level="1.4.5" data-path="../">
             
-                <a href="../../05.-framework/">
+                <a href="../">
             
                     
                     05. Framework
@@ -909,9 +909,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1" data-path="../../05.-framework/spring/">
+        <li class="chapter " data-level="1.4.5.1" data-path="./">
             
-                <a href="../../05.-framework/spring/">
+                <a href="./">
             
                     
                     Spring
@@ -923,9 +923,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1.1" data-path="../../05.-framework/spring/aop.html">
+        <li class="chapter " data-level="1.4.5.1.1" data-path="aop.html">
             
-                <a href="../../05.-framework/spring/aop.html">
+                <a href="aop.html">
             
                     
                     AOP
@@ -936,9 +936,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.1.2" data-path="../../05.-framework/spring/ioc.html">
+        <li class="chapter " data-level="1.4.5.1.2" data-path="ioc.html">
             
-                <a href="../../05.-framework/spring/ioc.html">
+                <a href="ioc.html">
             
                     
                     IoC
@@ -949,9 +949,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.1.3" data-path="../../05.-framework/spring/bean.html">
+        <li class="chapter active" data-level="1.4.5.1.3" data-path="bean.html">
             
-                <a href="../../05.-framework/spring/bean.html">
+                <a href="bean.html">
             
                     
                     Bean
@@ -962,9 +962,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.1.4" data-path="../../05.-framework/spring/dispatcherServlet.html">
+        <li class="chapter " data-level="1.4.5.1.4" data-path="dispatcherServlet.html">
             
-                <a href="../../05.-framework/spring/dispatcherServlet.html">
+                <a href="dispatcherServlet.html">
             
                     
                     Dispatcher Servlet
@@ -975,9 +975,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.1.5" data-path="../../05.-framework/spring/gradle.html">
+        <li class="chapter " data-level="1.4.5.1.5" data-path="gradle.html">
             
-                <a href="../../05.-framework/spring/gradle.html">
+                <a href="gradle.html">
             
                     
                     Gradle
@@ -993,9 +993,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.2" data-path="../../05.-framework/hibernate.html">
+        <li class="chapter " data-level="1.4.5.2" data-path="../hibernate.html">
             
-                <a href="../../05.-framework/hibernate.html">
+                <a href="../hibernate.html">
             
                     
                     Hibernate
@@ -1136,7 +1136,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >NGINX</a>
+        <a href="../../.." >Bean</a>
     </h1>
 </div>
 
@@ -1151,33 +1151,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="nginx">NGINX</h1>
-<h2 id="&#xAE30;&#xC874;-apache-&#xB791;-&#xCC28;&#xC774;&#xC810;">&#xAE30;&#xC874; Apache &#xB791; &#xCC28;&#xC774;&#xC810;</h2>
+                                <h1 id="bean">Bean</h1>
+<p>&#xC2A4;&#xD504;&#xB9C1; (&#xC815;&#xD655;&#xD788;&#xB294; &#xC2A4;&#xD504;&#xB9C1; &#xCEE8;&#xD14C;&#xC774;&#xB108;) &#xC5D0;&#xC11C; &#xC0DD;&#xC131; &#xBC0F; &#xBC0F; &#xAD00;&#xACC4; &#xC124;&#xC815;, &#xC0AC;&#xC6A9;&#xB4F1;&#xC744; &#xC81C;&#xC5B4;&#xD574;&#xC8FC;&#xB294; &#xAC1D;&#xCCB4;</p>
+<h2 id="bean-factory">Bean Factory</h2>
 <ul>
-<li>apache<ul>
-<li>&#xC694;&#xCCAD;&#xB9C8;&#xB2E4; &#xC2A4;&#xB808;&#xB4DC; &#xD639;&#xC740; &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xC0DD;&#xC131; &#xBC0F; &#xCC98;&#xB9AC;</li>
+<li>&#xC2A4;&#xD504;&#xB9C1;&#xC774; IoC &#xB97C; &#xB2F4;&#xB2F9;&#xD558;&#xB294; &#xD575;&#xC2EC; &#xCEE8;&#xD14C;&#xC774;&#xB108;</li>
+<li>&#xBE48;&#xC744; &#xB4F1;&#xB85D;/&#xC0DD;&#xC131;/&#xC870;&#xD68C;/&#xBC18;&#xD658;/&#xAD00;&#xB9AC; &#xD558;&#xB294; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; bean factory &#xC640; &#xAC19;&#xC9C0;&#xB9CC; &#xC5EC;&#xAE30;&#xC5D0; spring &#xC758; &#xAC01;&#xC885; &#xBD80;&#xAC00;&#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xCD94;&#xAC00;&#xB85C; &#xC81C;&#xACF5;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</li>
 </ul>
+<h2 id="application-context">Application Context</h2>
+<ul>
+<li>bean factory &#xB97C; &#xD655;&#xC7A5;&#xD55C; IoC &#xCEE8;&#xD14C;&#xC774;&#xB108;</li>
+</ul>
+<h2 id="container-ioc-container">Container (IoC Container)</h2>
+<ul>
+<li>&#xAC1D;&#xCCB4;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xB85C;&#xC368; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0; &#xAC1D;&#xCCB4;&#xB97C; &#xB2F4;&#xC544;&#xB450;&#xACE0; &#xD544;&#xC694;&#xD560; &#xB54C;&#xC5D0; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0;&#xC11C; &#xAC1D;&#xCCB4;&#xB97C; &#xAC00;&#xC838;&#xC640; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;.</li>
+<li>IoC &#xBC29;&#xC2DD;&#xC73C;&#xB85C; Bean &#xC744; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC5D0;&#xC11C; Bean Factory &#xB098; Application Context &#xB97C; &#xAC00;&#xB974;&#xD0A8;&#xB2E4;.</li>
+</ul>
+<h2 id="pojo-plain-old-java-object">POJO (Plain Old Java Object)</h2>
+<ul>
+<li>??????????</li>
+</ul>
+<h2 id="spring-bean-life-cycle">Spring Bean Life Cycle</h2>
+<div class="mermaid">
+  graph TD;
+  A[&quot;&#xBE48; &#xC124;&#xC815; &#xD30C;&#xC77C; &#xC815;&#xBCF4; &#xCD08;&#xAE30;&#xD654;&quot;] --&gt; B[&quot;POJO &#xBE48; &#xCD08;&#xAE30;&#xD654; &#xC0C1;&#xD0DC;&quot;]
+  B --&gt; C[&quot;POJO &#xBE48; &#xC900;&#xBE44; &#xC0C1;&#xD0DC;&quot;]
+  C --&gt; D[&quot;POJO &#xBE48; &#xC18C;&#xBA78; &#xC0C1;&#xD0DC;&quot;]
+</div>
+
+<h3 id="pojo-plain-old-java-object-&#xCD08;&#xAE30;&#xD654;-&#xACFC;&#xC815;">POJO (Plain Old Java Object) &#xCD08;&#xAE30;&#xD654; &#xACFC;&#xC815;</h3>
+<ol>
+<li>Spring Framework &#xB294; &#xBA3C;&#xC800; <code>Bean</code> &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC758; POJO &#xBE48;&#xC744; Instance &#xD654; &#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC0C1;&#xD0DC;&#xB85C; <code>Bean</code> &#xC124;&#xC815; &#xD30C;&#xC77C;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xCD08;&#xAE30;&#xD654; &#xD55C;&#xB2E4;.<ol>
+<li>&#xBE48; &#xC124;&#xC815; &#xD30C;&#xC77C;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xCD08;&#xAE30;&#xD654; &#xD558;&#xBA74;&#xC11C; XML DTD &#xC5D0; &#xB300;&#xD558;&#xC5EC; &#xC720;&#xD6A8;&#xD55C;&#xC9C0; &#xCCB4;&#xD06C;&#xD55C;&#xB2E4;.</li>
+</ol>
 </li>
-<li>nginx <ul>
-<li>&#xC694;&#xCCAD;&#xB9C8;&#xB2E4; &#xBE44;&#xB3D9;&#xAE30; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xBC1C;&#xC0DD;&#xC2DC;&#xCF1C; &#xCC98;&#xB9AC;</li>
-</ul>
+<li>Bean Instance &#xB97C; &#xC0DD;&#xC131;&#xD558;&#xBA74;&#xC11C; &#xC758;&#xC874; &#xAD00;&#xACC4;&#xC5D0; &#xC788;&#xB294; Bean &#xC774; &#xC874;&#xC7AC;&#xD558;&#xB294;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xCCB4;&#xD06C;&#xD55C;&#xB2E4;.<ol>
+<li>&#xC758;&#xC874; &#xAD00;&#xACC4;&#xAC00; &#xC5C6;&#xB294; Bean &#xC778; &#xACBD;&#xC6B0; &#xCD08;&#xAE30;&#xD654;&#xAC00; &#xC2E4;&#xD328; &#xD55C;&#xB2E4;.</li>
+</ol>
 </li>
-</ul>
-<h2 id="proxypass">proxy_pass</h2>
-<p><em><strong>/etc/nginx/sites-available/default</strong></em> &#xACBD;&#xB85C;&#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC218;&#xC815;&#xD55C;&#xB2E4;.</p>
+<li>&#xC758;&#xC874; &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB294; &#xBE48;&#xC758; &#xCCB4;&#xD06C;&#xAC00; &#xC644;&#xB8CC;&#xB418;&#xBA74; <code>setter Method</code> &#xB97C; &#xD638;&#xCD9C;&#xD558;&#xAC70;&#xB098; &#xC0DD;&#xC131;&#xC790;&#xC758; &#xC778;&#xC790;&#xB85C; &#xC2E4;&#xC9C8;&#xC801;&#xC778; &#xAC12;&#xC744; &#xCD94;&#xAC00;&#xD558;&#xAC70;&#xB098; &#xB2E4;&#xB978; Bean &#xC5D0; &#xB300;&#xD55C; Reference &#xB85C; &#xC804;&#xB2EC;&#xD55C;&#xB2E4;.</li>
+<li>Application Context &#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xCD08;&#xAE30;&#xD654;&#xB97C; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.<ol>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; BeanNameAware Instance &#xC774;&#xBA74; setBeanName() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; BeanFactoryAware Instance &#xC774;&#xBA74; setBeanFactory() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; ApplicationContextAware Instance &#xC774;&#xBA74; setApplicationContext() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; InitalizingBean &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC774;&#xBA74; afterProperties() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+</ol>
+</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC758; &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC5D0; init-method &#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xB2E4;&#xBA74; init-method &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+</ol>
+<h3 id="&#xC885;&#xB8CC;-method-&#xB97C;-&#xD638;&#xCD9C;&#xD558;&#xB294;-&#xACFC;&#xC815;">&#xC885;&#xB8CC; Method &#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xACFC;&#xC815;</h3>
+<ol>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; DisposableBean Instance &#xC774;&#xBA74; distory() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC5D0; distory-method &#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA74; destory-method &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+</ol>
 <blockquote>
-<p>&#xC774;&#xC804; &#xD30C;&#xC77C;&#xC740; &#xBC31;&#xC5C5; &#xD55C;&#xB2E4;.</p>
+<p>Bean Life Cycle &#xC744; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; &#xD558;&#xC5EC; &#xC81C;&#xC5B4; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>Reference<br><a href="http://javaslave.tistory.com/48" target="_blank">http://javaslave.tistory.com/48</a></p>
 </blockquote>
-<pre><code class="lang-bash">server {
-        listen 80;
-
-        server_name localhost;
-
-        location / {
-                proxy_pass http://localhost:8080;
-        }
-}
-</code></pre>
 
                                 
                                 </section>
@@ -1205,12 +1235,12 @@
 
             
                 
-                <a href="../linux.html" class="navigation navigation-prev " aria-label="Previous page: Linux">
+                <a href="ioc.html" class="navigation navigation-prev " aria-label="Previous page: IoC">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="cli.html" class="navigation navigation-next " aria-label="Next page: CLI">
+                <a href="dispatcherServlet.html" class="navigation navigation-next " aria-label="Next page: Dispatcher Servlet">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1221,7 +1251,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"NGINX","level":"1.4.2.2","depth":3,"next":{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"03.-back-end/02.-server/nginx/cli.md","ref":"03.-back-end/02.-server/nginx/cli.md","articles":[]},"previous":{"title":"Linux","level":"1.4.2.1","depth":3,"path":"03.-back-end/02.-server/linux.md","ref":"03.-back-end/02.-server/linux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/02.-server/nginx/README.md","mtime":"2018-10-02T13:42:47.240Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T16:20:27.805Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bean","level":"1.4.5.1.3","depth":4,"next":{"title":"Dispatcher Servlet","level":"1.4.5.1.4","depth":4,"path":"03.-back-end/05.-framework/spring/dispatcherServlet.md","ref":"03.-back-end/05.-framework/spring/dispatcherServlet.md","articles":[]},"previous":{"title":"IoC","level":"1.4.5.1.2","depth":4,"path":"03.-back-end/05.-framework/spring/ioc.md","ref":"03.-back-end/05.-framework/spring/ioc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/05.-framework/spring/bean.md","mtime":"2018-10-21T14:05:14.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T16:20:27.805Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
