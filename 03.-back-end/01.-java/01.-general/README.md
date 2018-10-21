@@ -30,6 +30,15 @@
 * float : 4 Byte
 * double : 8 Byte
 
+## Stack 과 Heap 의 차이점
+
+||Stack|Heap|
+|--|--|--|
+|접근 속도|빠른 접근|느린 접근|
+|메모리 제한|제한적|제한 없음|
+|Resize 가능|불가|가능 (파편화 가능성)|
+|특징|지역변수에만 할당|전역적 접근|
+
 ## Process & Thread
 
 프로세스와 스레드는 서로 밀접한 관계에 있으나 서로 다른 개체이다.
@@ -167,3 +176,17 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 
 객체가 소멸될때 호출되는 메소드  
 사용이 권장 되지 않는다.
+
+## Checked & Unchecked Exception
+
+`Checked Exception` 는 외부 환경에 의해 미리 예상 되는 오류이다.
+
+예를 들면 `IOException` `ClassNotFoundException` 등과 같이 _**반드시 예외처리가 필요하다.**_
+
+`Unchecked Exception` 는 프로그램 로직상의 문제로 일어나는 로직상의 오류로써 미리 예상할 수 없다.
+
+대표적으로 `RuntimeException` 과 같이 프로그램 실행중에 일어나며 _**반드시 예외처리를 필요로 하지 않는다.**_
+
+## 객체 재사용이란 ?
+
+대표적으로 `Singleton` 디자인 패턴과 같이 미리 사전에 생성된 `Instance` 를 재사용하는 방식으로 일반적으로 `ThreadPool` 이나 `Connection Pool` 등의 방식으로 주로 사용한다.
