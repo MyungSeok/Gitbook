@@ -1,62 +1,57 @@
 # General
 
-## Process & Thread
+## JDK & JRE 차이점
 
-프로세스와 스레드는 서로 밀접한 관계에 있으나 서로 다른 개체이다.
+### JDK (Java Development Kit)
 
-### Process
+Java 의 응용프로그램을 개발할 수 있는 소프트웨어 개발 키트이다.
 
-* 실행중인 프로세스 객체
-* _**CPU 시간이나 메모리 등의 시스템 자원이 할당되는 독립적인 개체**_
-* 각 프로세스는 별도의 주소 공간에서 실행 되며, _**한 프로세스는 다른 프로세스의 변수나 자료구조에 접근할 수 없음**_
-* 같은 메모리를 읽고 쓰는 프로세스는 생성 가능
-* 프로세스간의 통신은 Pipe, Socket, File 등으로 통신한다.
+### JRE (Java Runtime Environment)
 
-### Thread
+Java 프로그램 코드가 실행되는 JVM 을 지칭함
 
-* 프로세스가 할당받은 자원을 이용하는 실행의 단위
-* 프로세스와 같은 공간의 Stack 공간을 사용하며 여러 Thread 는 그 상태의 일부를 공유한다.
+## `static` 키워드의 의미
 
-> _**Multi Thread**_ 환경의 작업시에는 Therad 간의 자원 공유의 _**동기화 문제**_ 에 신경을 써야 한다.
+Java Class 의 멤버 변수 또는 메소드가 속한 클래스의 인스턴스화를 요구하지 않고 액세스 할 수 있는 _**접근제어자**_ 입니다.  
+`static` 접근 제어자로 지정된 변수 혹은 메서드는 Java Runtime 시에 Compile 시에 정적으로 바인딩 되기 때문에 재정의 (수정) 이 불가 합니다.
 
-## OOP (Object Oriented Programming : 객체지향 프로그래밍)
+## interface 와 abstract 의 공통점 & 차이점
 
-프로그램이 더 나은 방향으로 나아가기 위한 개발 방법론으로 대표적으로는 다음 특징들을 가진다.
+인터페이스 (interface) 와 추상 클래스 (abstract) 는 근본적으로 다른 목적에 의해 구현된다.
 
-### 다형성
-
-하나의 객체를 여러 타입으로 나타내게 하여 다양한 기능으로 이용할 수 있도록 하는것이다.  
-대표적으로 `Overloading` 과 `Overriding` 이 있다.
-
-### 상속
-
-기존의 클래스를 재 사용하여 새로운 클래스로 작성하는 것  
-코드를 재사용하여 새로운 클래스로 작성할 수 있으며 다형성을 구현한 것이다.
-
-### 캡슐화
-
-객체를 내부를 외부에서 접근을 제한함으로써 이를 보호하는 것을 말한다.  
-이는 정보의 은닉화 때문이며 반드시 객체에 사용한 부분만 일부 노출을 하는 인터페이스 역활만을 노출한다.
-
-## Overloading & Overriding
-
-### Overloading (오버로딩)
-
-같은 이름의 함수를 여러개 정의하고 매개변수의 유형과 개수를 다르게 하여 다양한 유형의 호출에 응답
-
-### Overriding (오버라이딩)
-
-상의 클래스가 가지고 있는 메소드를 하위 클래스가 재 정의 하여 사용하는 것  
-어떤 메소드가 실행될지는 _**Dynamic Dispatch (동적 디스패치)**_ 가 일어나며 확인 가능하다.
-
-> Dispatch ?
-> * Static Dispatch : 컴파일 시점에서는 알 수 있다.
-> * Dynamic Dispatch : 런타임 순간에 알 수 있다.
+||interface|abstract|
+|--|--|--|
+|목적|함수의 구현을 강제화|상속을 통하여 기능을 이용하고 확장함|
+|구현 방식|반드시 모든 메소드를 구현|모든 메소드를 구현하지 않아도 됨|
+|다중 상속|가능|불가|
+|접근 제어자|`public`|`private`, `protected`, `public`|
+|변수|기본적으로 `final` 로써 최종 변수임|비 최종 변수를 포함할 수 있음|
 
 ## Boxing & Unboxing (박싱 & 언방식)
 
-* Boxing : 값 (원시타입) 을 참조 형식으로 변환
-* UnBoxing : 참조 형식을 값 형식으로 변환
+Java 의 데이터는 클래스나 객체와 같은 _**참조자료형**_ 과 기본적인 _**원시타입**_ 을 가질 수 있다.  
+이는 다시 말해 각각의 기초 자료형을 포장되어 있는 `Wrapper Class` 로 변환이 가능하다.
+
+```mermaid
+  graph LR
+    A["기본 (원시) 타입"] -- Boxing --> B["참조 자료형"]
+    B -- Unboxing --> A
+```
+
+* Boxing : 값 (기초 타입) 을 참조 형식으로 변환
+* Unboxing : 참조 형식을 값 형식으로 변환
+
+|기본형 타입|참조 자료형 (Wrapper Class)|
+|--|--|
+|byte|Byte|
+|short|Short|
+|int|Integer|
+|long|Long|
+|float|Float|
+|double|Double|
+|char|Character|
+|boolean|Boolean|
+|void|Void|
 
 ```java
 // Boxing
@@ -167,6 +162,6 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 
 대표적으로 `RuntimeException` 과 같이 프로그램 실행중에 일어나며 _**반드시 예외처리를 필요로 하지 않는다.**_
 
-## 객체 재사용이란 ?
+## 객체 재사용
 
 대표적으로 `Singleton` 디자인 패턴과 같이 미리 사전에 생성된 `Instance` 를 재사용하는 방식으로 일반적으로 `ThreadPool` 이나 `Connection Pool` 등의 방식으로 주로 사용한다.

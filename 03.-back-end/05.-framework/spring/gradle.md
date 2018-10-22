@@ -2,13 +2,13 @@
 
 ## Gradle 설치
 
-#### Mac
+### Mac
 
 ```bash
 # brew gradle
 ```
 
-#### Ubuntu
+### Ubuntu
 
 ```bash
 # apt-get install gradle
@@ -19,6 +19,3 @@
 ```bash
 # gradle build
 ```
-
-
-

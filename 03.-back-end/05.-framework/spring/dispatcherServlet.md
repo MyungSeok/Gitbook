@@ -28,7 +28,6 @@ _**MVC (Model, View, Controller)**_ 구조로 구성되어 있는 `Spring Framew
     Dispatcher Servlet ->> - Client : 최종결과 출력
 ```
 
-
 > Reference
 >
 > http://egloos.zum.com/springmvc/v/504151

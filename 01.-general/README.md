@@ -109,6 +109,19 @@
 * 양쪽 끝에서 삽입과 삭제가 모두 가능한 자료구조이다.
 * 두개의 포인터를 사용하여 양쪽에서 삽입과 삭제를 방지시킬수 있다.
 
+### Priority Queue (우선순위 큐)
+
+우선순위가 높은 데이터가 먼저 작업 된다.
+
+#### 구현 방법
+
+* 배열을 기반으로 구현
+* 연결리스트를 기반으로 구현
+* 힙 (Heap) 이용하여 구현
+
+> 데이터가 적을때는 문제가 없지만 _**데이터가 많을 경우에는 노드 수에 비례해서 비교를 하기 때문에 성능저하의 이슈**_가 있다.  
+> 따라서 _**주로 힙 (Heap) 을 이용하여 구현**_ 하는 것이 일반적이다.
+
 ### Stack 과 Heap 의 비교
 
 ||Stack|Heap|
@@ -144,7 +157,7 @@
 
 ## DAC (Discretionary Access Control : 임의적 접근 통제)
 
-## Separation Of Concern (관심의 분리) ? 
+## Separation Of Concern (관심의 분리)
 
 SOA (Service-Oriented Architecture : 서비스 지향 아키텍처) 의 핵심 원칙중의 하나로 _**관심이 다른것은 가능한 분리하여 서로 영향을 주지 않도록 하며, 관심이 같은 것은 하나의 관련 객체로 모이도록 설계나 구현**_ 을 하는 것
 
@@ -153,10 +166,12 @@ SOA (Service-Oriented Architecture : 서비스 지향 아키텍처) 의 핵심 �
 테스트 주도 개발 방법론들이다.
 
 ### TDD (Test Driven Development)
+
 * 테스트 주도 개발 방법론
 * 테스트 코드를 먼저 작성하고 해당 테스트 코드에 맞게 개발을 진행한다.
 
 ## BDD (Behavior Driven Development)
+
 * 동작 지향 개발 방법론
 * 소프트웨어의 품질을 향상 시키기 위해 개발자간의 협력 가능한 Agile Software Development 기법이다.
 * BDD 의 목표는 TDD 를 수행하기 위한 것으로, TDD 를 수행하기 위해 BDD 를 통한 행위 자체를 변경 가능하다.
