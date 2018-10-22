@@ -73,7 +73,7 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="jvm.html" />
+    <link rel="next" href="oop.html" />
     
     
     <link rel="prev" href="../" />
@@ -667,12 +667,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1.1.1" data-path="jvm.html">
+        <li class="chapter " data-level="1.4.1.1.1" data-path="oop.html">
             
-                <a href="jvm.html">
+                <a href="oop.html">
             
                     
-                    JVM
+                    OOP
             
                 </a>
             
@@ -718,6 +718,32 @@
             
                     
                     Collection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.2" data-path="../02.-references/thread.html">
+            
+                <a href="../02.-references/thread.html">
+            
+                    
+                    Thread
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.3" data-path="../02.-references/jvm.html">
+            
+                <a href="../02.-references/jvm.html">
+            
+                    
+                    JVM
             
                 </a>
             
@@ -1152,49 +1178,109 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="general">General</h1>
-<h2 id="process--thread">Process &amp; Thread</h2>
-<p>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC640; &#xC2A4;&#xB808;&#xB4DC;&#xB294; &#xC11C;&#xB85C; &#xBC00;&#xC811;&#xD55C; &#xAD00;&#xACC4;&#xC5D0; &#xC788;&#xC73C;&#xB098; &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xAC1C;&#xCCB4;&#xC774;&#xB2E4;.</p>
-<h3 id="process">Process</h3>
-<ul>
-<li>&#xC2E4;&#xD589;&#xC911;&#xC778; &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xAC1D;&#xCCB4;</li>
-<li><em><strong>CPU &#xC2DC;&#xAC04;&#xC774;&#xB098; &#xBA54;&#xBAA8;&#xB9AC; &#xB4F1;&#xC758; &#xC2DC;&#xC2A4;&#xD15C; &#xC790;&#xC6D0;&#xC774; &#xD560;&#xB2F9;&#xB418;&#xB294; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xAC1C;&#xCCB4;</strong></em></li>
-<li>&#xAC01; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB294; &#xBCC4;&#xB3C4;&#xC758; &#xC8FC;&#xC18C; &#xACF5;&#xAC04;&#xC5D0;&#xC11C; &#xC2E4;&#xD589; &#xB418;&#xBA70;, <em><strong>&#xD55C; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB294; &#xB2E4;&#xB978; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC758; &#xBCC0;&#xC218;&#xB098; &#xC790;&#xB8CC;&#xAD6C;&#xC870;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC74C;</strong></em></li>
-<li>&#xAC19;&#xC740; &#xBA54;&#xBAA8;&#xB9AC;&#xB97C; &#xC77D;&#xACE0; &#xC4F0;&#xB294; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB294; &#xC0DD;&#xC131; &#xAC00;&#xB2A5;</li>
-<li>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC04;&#xC758; &#xD1B5;&#xC2E0;&#xC740; Pipe, Socket, File &#xB4F1;&#xC73C;&#xB85C; &#xD1B5;&#xC2E0;&#xD55C;&#xB2E4;.</li>
-</ul>
-<h3 id="thread">Thread</h3>
-<ul>
-<li>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xAC00; &#xD560;&#xB2F9;&#xBC1B;&#xC740; &#xC790;&#xC6D0;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xB294; &#xC2E4;&#xD589;&#xC758; &#xB2E8;&#xC704;</li>
-<li>&#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC640; &#xAC19;&#xC740; &#xACF5;&#xAC04;&#xC758; Stack &#xACF5;&#xAC04;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA70; &#xC5EC;&#xB7EC; Thread &#xB294; &#xADF8; &#xC0C1;&#xD0DC;&#xC758; &#xC77C;&#xBD80;&#xB97C; &#xACF5;&#xC720;&#xD55C;&#xB2E4;.</li>
-</ul>
-<blockquote>
-<p><em><strong>Multi Thread</strong></em> &#xD658;&#xACBD;&#xC758; &#xC791;&#xC5C5;&#xC2DC;&#xC5D0;&#xB294; Therad &#xAC04;&#xC758; &#xC790;&#xC6D0; &#xACF5;&#xC720;&#xC758; <em><strong>&#xB3D9;&#xAE30;&#xD654; &#xBB38;&#xC81C;</strong></em> &#xC5D0; &#xC2E0;&#xACBD;&#xC744; &#xC368;&#xC57C; &#xD55C;&#xB2E4;.</p>
-</blockquote>
-<h2 id="oop-object-oriented-programming--&#xAC1D;&#xCCB4;&#xC9C0;&#xD5A5;-&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;">OOP (Object Oriented Programming : &#xAC1D;&#xCCB4;&#xC9C0;&#xD5A5; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;)</h2>
-<p>&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC774; &#xB354; &#xB098;&#xC740; &#xBC29;&#xD5A5;&#xC73C;&#xB85C; &#xB098;&#xC544;&#xAC00;&#xAE30; &#xC704;&#xD55C; &#xAC1C;&#xBC1C; &#xBC29;&#xBC95;&#xB860;&#xC73C;&#xB85C; &#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C;&#xB294; &#xB2E4;&#xC74C; &#xD2B9;&#xC9D5;&#xB4E4;&#xC744; &#xAC00;&#xC9C4;&#xB2E4;.</p>
-<h3 id="&#xB2E4;&#xD615;&#xC131;">&#xB2E4;&#xD615;&#xC131;</h3>
-<p>&#xD558;&#xB098;&#xC758; &#xAC1D;&#xCCB4;&#xB97C; &#xC5EC;&#xB7EC; &#xD0C0;&#xC785;&#xC73C;&#xB85C; &#xB098;&#xD0C0;&#xB0B4;&#xAC8C; &#xD558;&#xC5EC; &#xB2E4;&#xC591;&#xD55C; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; &#xC774;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xD558;&#xB294;&#xAC83;&#xC774;&#xB2E4;.<br>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>Overloading</code> &#xACFC; <code>Overriding</code> &#xC774; &#xC788;&#xB2E4;.</p>
-<h3 id="&#xC0C1;&#xC18D;">&#xC0C1;&#xC18D;</h3>
-<p>&#xAE30;&#xC874;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xC7AC; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC0C8;&#xB85C;&#xC6B4; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;<br>&#xCF54;&#xB4DC;&#xB97C; &#xC7AC;&#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC0C8;&#xB85C;&#xC6B4; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xC73C;&#xBA70; &#xB2E4;&#xD615;&#xC131;&#xC744; &#xAD6C;&#xD604;&#xD55C; &#xAC83;&#xC774;&#xB2E4;.</p>
-<h3 id="&#xCEA1;&#xC290;&#xD654;">&#xCEA1;&#xC290;&#xD654;</h3>
-<p>&#xAC1D;&#xCCB4;&#xB97C; &#xB0B4;&#xBD80;&#xB97C; &#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xC744; &#xC81C;&#xD55C;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC774;&#xB97C; &#xBCF4;&#xD638;&#xD558;&#xB294; &#xAC83;&#xC744; &#xB9D0;&#xD55C;&#xB2E4;.<br>&#xC774;&#xB294; &#xC815;&#xBCF4;&#xC758; &#xC740;&#xB2C9;&#xD654; &#xB54C;&#xBB38;&#xC774;&#xBA70; &#xBC18;&#xB4DC;&#xC2DC; &#xAC1D;&#xCCB4;&#xC5D0; &#xC0AC;&#xC6A9;&#xD55C; &#xBD80;&#xBD84;&#xB9CC; &#xC77C;&#xBD80; &#xB178;&#xCD9C;&#xC744; &#xD558;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC5ED;&#xD65C;&#xB9CC;&#xC744; &#xB178;&#xCD9C;&#xD55C;&#xB2E4;.</p>
-<h2 id="overloading--overriding">Overloading &amp; Overriding</h2>
-<h3 id="overloading-&#xC624;&#xBC84;&#xB85C;&#xB529;">Overloading (&#xC624;&#xBC84;&#xB85C;&#xB529;)</h3>
-<p>&#xAC19;&#xC740; &#xC774;&#xB984;&#xC758; &#xD568;&#xC218;&#xB97C; &#xC5EC;&#xB7EC;&#xAC1C; &#xC815;&#xC758;&#xD558;&#xACE0; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC758; &#xC720;&#xD615;&#xACFC; &#xAC1C;&#xC218;&#xB97C; &#xB2E4;&#xB974;&#xAC8C; &#xD558;&#xC5EC; &#xB2E4;&#xC591;&#xD55C; &#xC720;&#xD615;&#xC758; &#xD638;&#xCD9C;&#xC5D0; &#xC751;&#xB2F5;</p>
-<h3 id="overriding-&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;">Overriding (&#xC624;&#xBC84;&#xB77C;&#xC774;&#xB529;)</h3>
-<p>&#xC0C1;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC7AC; &#xC815;&#xC758; &#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;<br>&#xC5B4;&#xB5A4; &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC2E4;&#xD589;&#xB420;&#xC9C0;&#xB294; <em><strong>Dynamic Dispatch (&#xB3D9;&#xC801; &#xB514;&#xC2A4;&#xD328;&#xCE58;)</strong></em> &#xAC00; &#xC77C;&#xC5B4;&#xB098;&#xBA70; &#xD655;&#xC778; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
-<blockquote>
-<p>Dispatch ?</p>
-<ul>
-<li>Static Dispatch : &#xCEF4;&#xD30C;&#xC77C; &#xC2DC;&#xC810;&#xC5D0;&#xC11C;&#xB294; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</li>
-<li>Dynamic Dispatch : &#xB7F0;&#xD0C0;&#xC784; &#xC21C;&#xAC04;&#xC5D0; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</li>
-</ul>
-</blockquote>
+<h2 id="jdk--jre-&#xCC28;&#xC774;&#xC810;">JDK &amp; JRE &#xCC28;&#xC774;&#xC810;</h2>
+<h3 id="jdk-java-development-kit">JDK (Java Development Kit)</h3>
+<p>Java &#xC758; &#xC751;&#xC6A9;&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xAC1C;&#xBC1C;&#xD560; &#xC218; &#xC788;&#xB294; &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4; &#xAC1C;&#xBC1C; &#xD0A4;&#xD2B8;&#xC774;&#xB2E4;.</p>
+<h3 id="jre-java-runtime-environment">JRE (Java Runtime Environment)</h3>
+<p>Java &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xCF54;&#xB4DC;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; JVM &#xC744; &#xC9C0;&#xCE6D;&#xD568;</p>
+<h2 id="static-&#xD0A4;&#xC6CC;&#xB4DC;&#xC758;-&#xC758;&#xBBF8;"><code>static</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xC758; &#xC758;&#xBBF8;</h2>
+<p>Java Class &#xC758; &#xBA64;&#xBC84; &#xBCC0;&#xC218; &#xB610;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC18D;&#xD55C; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xD654;&#xB97C; &#xC694;&#xAD6C;&#xD558;&#xC9C0; &#xC54A;&#xACE0; &#xC561;&#xC138;&#xC2A4; &#xD560; &#xC218; &#xC788;&#xB294; <em><strong>&#xC811;&#xADFC;&#xC81C;&#xC5B4;&#xC790;</strong></em> &#xC785;&#xB2C8;&#xB2E4;.<br><code>static</code> &#xC811;&#xADFC; &#xC81C;&#xC5B4;&#xC790;&#xB85C; &#xC9C0;&#xC815;&#xB41C; &#xBCC0;&#xC218; &#xD639;&#xC740; &#xBA54;&#xC11C;&#xB4DC;&#xB294; Java Runtime &#xC2DC;&#xC5D0; Compile &#xC2DC;&#xC5D0; &#xC815;&#xC801;&#xC73C;&#xB85C; &#xBC14;&#xC778;&#xB529; &#xB418;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC7AC;&#xC815;&#xC758; (&#xC218;&#xC815;) &#xC774; &#xBD88;&#xAC00; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="interface-&#xC640;-abstract-&#xC758;-&#xACF5;&#xD1B5;&#xC810;--&#xCC28;&#xC774;&#xC810;">interface &#xC640; abstract &#xC758; &#xACF5;&#xD1B5;&#xC810; &amp; &#xCC28;&#xC774;&#xC810;</h2>
+<p>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; (interface) &#xC640; &#xCD94;&#xC0C1; &#xD074;&#xB798;&#xC2A4; (abstract) &#xB294; &#xADFC;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xB978; &#xBAA9;&#xC801;&#xC5D0; &#xC758;&#xD574; &#xAD6C;&#xD604;&#xB41C;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>interface</th>
+<th>abstract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#xBAA9;&#xC801;</td>
+<td>&#xD568;&#xC218;&#xC758; &#xAD6C;&#xD604;&#xC744; &#xAC15;&#xC81C;&#xD654;</td>
+<td>&#xC0C1;&#xC18D;&#xC744; &#xD1B5;&#xD558;&#xC5EC; &#xAE30;&#xB2A5;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xACE0; &#xD655;&#xC7A5;&#xD568;</td>
+</tr>
+<tr>
+<td>&#xAD6C;&#xD604; &#xBC29;&#xC2DD;</td>
+<td>&#xBC18;&#xB4DC;&#xC2DC; &#xBAA8;&#xB4E0; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAD6C;&#xD604;</td>
+<td>&#xBAA8;&#xB4E0; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB428;</td>
+</tr>
+<tr>
+<td>&#xB2E4;&#xC911; &#xC0C1;&#xC18D;</td>
+<td>&#xAC00;&#xB2A5;</td>
+<td>&#xBD88;&#xAC00;</td>
+</tr>
+<tr>
+<td>&#xC811;&#xADFC; &#xC81C;&#xC5B4;&#xC790;</td>
+<td><code>public</code></td>
+<td><code>private</code>, <code>protected</code>, <code>public</code></td>
+</tr>
+<tr>
+<td>&#xBCC0;&#xC218;</td>
+<td>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; <code>final</code> &#xB85C;&#xC368; &#xCD5C;&#xC885; &#xBCC0;&#xC218;&#xC784;</td>
+<td>&#xBE44; &#xCD5C;&#xC885; &#xBCC0;&#xC218;&#xB97C; &#xD3EC;&#xD568;&#xD560; &#xC218; &#xC788;&#xC74C;</td>
+</tr>
+</tbody>
+</table>
 <h2 id="boxing--unboxing-&#xBC15;&#xC2F1;--&#xC5B8;&#xBC29;&#xC2DD;">Boxing &amp; Unboxing (&#xBC15;&#xC2F1; &amp; &#xC5B8;&#xBC29;&#xC2DD;)</h2>
+<p>Java &#xC758; &#xB370;&#xC774;&#xD130;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xB098; &#xAC1D;&#xCCB4;&#xC640; &#xAC19;&#xC740; <em><strong>&#xCC38;&#xC870;&#xC790;&#xB8CC;&#xD615;</strong></em> &#xACFC; &#xAE30;&#xBCF8;&#xC801;&#xC778; <em><strong>&#xC6D0;&#xC2DC;&#xD0C0;&#xC785;</strong></em> &#xC744; &#xAC00;&#xC9C8; &#xC218; &#xC788;&#xB2E4;.<br>&#xC774;&#xB294; &#xB2E4;&#xC2DC; &#xB9D0;&#xD574; &#xAC01;&#xAC01;&#xC758; &#xAE30;&#xCD08; &#xC790;&#xB8CC;&#xD615;&#xC744; &#xD3EC;&#xC7A5;&#xB418;&#xC5B4; &#xC788;&#xB294; <code>Wrapper Class</code> &#xB85C; &#xBCC0;&#xD658;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<div class="mermaid">
+  graph LR
+    A[&quot;&#xAE30;&#xBCF8; (&#xC6D0;&#xC2DC;) &#xD0C0;&#xC785;&quot;] -- Boxing --&gt; B[&quot;&#xCC38;&#xC870; &#xC790;&#xB8CC;&#xD615;&quot;]
+    B -- Unboxing --&gt; A
+</div>
+
 <ul>
-<li>Boxing : &#xAC12; (&#xC6D0;&#xC2DC;&#xD0C0;&#xC785;) &#xC744; &#xCC38;&#xC870; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
-<li>UnBoxing : &#xCC38;&#xC870; &#xD615;&#xC2DD;&#xC744; &#xAC12; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
+<li>Boxing : &#xAC12; (&#xAE30;&#xCD08; &#xD0C0;&#xC785;) &#xC744; &#xCC38;&#xC870; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
+<li>Unboxing : &#xCC38;&#xC870; &#xD615;&#xC2DD;&#xC744; &#xAC12; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>&#xAE30;&#xBCF8;&#xD615; &#xD0C0;&#xC785;</th>
+<th>&#xCC38;&#xC870; &#xC790;&#xB8CC;&#xD615; (Wrapper Class)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>void</td>
+<td>Void</td>
+</tr>
+</tbody>
+</table>
 <pre><code class="lang-java"><span class="hljs-comment">// Boxing</span>
 Object a = <span class="hljs-number">20</span>;
 
@@ -1278,7 +1364,7 @@ Object a = <span class="hljs-number">20</span>;
 <p>&#xC608;&#xB97C; &#xB4E4;&#xBA74; <code>IOException</code> <code>ClassNotFoundException</code> &#xB4F1;&#xACFC; &#xAC19;&#xC774; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xB2E4;.</strong></em></p>
 <p><code>Unchecked Exception</code> &#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xBB38;&#xC81C;&#xB85C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xC624;&#xB958;&#xB85C;&#xC368; &#xBBF8;&#xB9AC; &#xC608;&#xC0C1;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
 <p>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>RuntimeException</code> &#xACFC; &#xAC19;&#xC774; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC2E4;&#xD589;&#xC911;&#xC5D0; &#xC77C;&#xC5B4;&#xB098;&#xBA70; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xB97C; &#xD544;&#xC694;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</strong></em></p>
-<h2 id="&#xAC1D;&#xCCB4;-&#xC7AC;&#xC0AC;&#xC6A9;&#xC774;&#xB780;-">&#xAC1D;&#xCCB4; &#xC7AC;&#xC0AC;&#xC6A9;&#xC774;&#xB780; ?</h2>
+<h2 id="&#xAC1D;&#xCCB4;-&#xC7AC;&#xC0AC;&#xC6A9;">&#xAC1D;&#xCCB4; &#xC7AC;&#xC0AC;&#xC6A9;</h2>
 <p>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>Singleton</code> &#xB514;&#xC790;&#xC778; &#xD328;&#xD134;&#xACFC; &#xAC19;&#xC774; &#xBBF8;&#xB9AC; &#xC0AC;&#xC804;&#xC5D0; &#xC0DD;&#xC131;&#xB41C; <code>Instance</code> &#xB97C; &#xC7AC;&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; <code>ThreadPool</code> &#xC774;&#xB098; <code>Connection Pool</code> &#xB4F1;&#xC758; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC8FC;&#xB85C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
 
                                 
@@ -1312,7 +1398,7 @@ Object a = <span class="hljs-number">20</span>;
                 </a>
                 
                 
-                <a href="jvm.html" class="navigation navigation-next " aria-label="Next page: JVM">
+                <a href="oop.html" class="navigation navigation-next " aria-label="Next page: OOP">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1323,7 +1409,7 @@ Object a = <span class="hljs-number">20</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"01. General","level":"1.4.1.1","depth":3,"next":{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},"previous":{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java/README.md","ref":"03.-back-end/01.-java/README.md","articles":[{"title":"01. General","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/01.-general/README.md","ref":"03.-back-end/01.-java/01.-general/README.md","articles":[{"title":"JVM","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/jvm.md","ref":"03.-back-end/01.-java/01.-general/jvm.md","articles":[]},{"title":"Solid","level":"1.4.1.1.2","depth":4,"path":"03.-back-end/01.-java/01.-general/solid.md","ref":"03.-back-end/01.-java/01.-general/solid.md","articles":[]}]},{"title":"02. Reference","level":"1.4.1.2","depth":3,"path":"03.-back-end/01.-java/02.-references/README.md","ref":"03.-back-end/01.-java/02.-references/README.md","articles":[{"title":"Collection","level":"1.4.1.2.1","depth":4,"path":"03.-back-end/01.-java/02.-references/collection.md","ref":"03.-back-end/01.-java/02.-references/collection.md","articles":[]}]},{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"03.-back-end/01.-java/03.-performance/README.md","ref":"03.-back-end/01.-java/03.-performance/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java/01.-general/README.md","mtime":"2018-10-21T13:41:42.630Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T16:20:27.805Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"01. General","level":"1.4.1.1","depth":3,"next":{"title":"OOP","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/oop.md","ref":"03.-back-end/01.-java/01.-general/oop.md","articles":[]},"previous":{"title":"01. Java","level":"1.4.1","depth":2,"path":"03.-back-end/01.-java/README.md","ref":"03.-back-end/01.-java/README.md","articles":[{"title":"01. General","level":"1.4.1.1","depth":3,"path":"03.-back-end/01.-java/01.-general/README.md","ref":"03.-back-end/01.-java/01.-general/README.md","articles":[{"title":"OOP","level":"1.4.1.1.1","depth":4,"path":"03.-back-end/01.-java/01.-general/oop.md","ref":"03.-back-end/01.-java/01.-general/oop.md","articles":[]},{"title":"Solid","level":"1.4.1.1.2","depth":4,"path":"03.-back-end/01.-java/01.-general/solid.md","ref":"03.-back-end/01.-java/01.-general/solid.md","articles":[]}]},{"title":"02. Reference","level":"1.4.1.2","depth":3,"path":"03.-back-end/01.-java/02.-references/README.md","ref":"03.-back-end/01.-java/02.-references/README.md","articles":[{"title":"Collection","level":"1.4.1.2.1","depth":4,"path":"03.-back-end/01.-java/02.-references/collection.md","ref":"03.-back-end/01.-java/02.-references/collection.md","articles":[]},{"title":"Thread","level":"1.4.1.2.2","depth":4,"path":"03.-back-end/01.-java/02.-references/thread.md","ref":"03.-back-end/01.-java/02.-references/thread.md","articles":[]},{"title":"JVM","level":"1.4.1.2.3","depth":4,"path":"03.-back-end/01.-java/02.-references/jvm.md","ref":"03.-back-end/01.-java/02.-references/jvm.md","articles":[]}]},{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"03.-back-end/01.-java/03.-performance/README.md","ref":"03.-back-end/01.-java/03.-performance/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["callouts","mermaid-gb3","-lunr","-search","search-plus","expandable-chapters"],"pluginsConfig":{"callouts":{"star":{"alert":"warning","picto":"fa-star"}},"mermaid-gb3":{},"search-plus":{},"expandable-chapters":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"03.-back-end/01.-java/01.-general/README.md","mtime":"2018-10-22T05:59:52.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T08:14:24.697Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
