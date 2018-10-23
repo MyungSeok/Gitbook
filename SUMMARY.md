@@ -38,7 +38,7 @@
   * [01. Java](03.-back-end/01.-java/README.md)
     * [01. General](03.-back-end/01.-java/01.-general/README.md)
       * [OOP](03.-back-end/01.-java/01.-general/oop.md)
-      * [Design Pattern](03.-back-end/01.-java/01.-general/design_pattern.md)
+      * [Design Pattern](03.-back-end/01.-java/01.-general/design_pattern/README.md)
       * [Solid](03.-back-end/01.-java/01.-general/solid.md)
     * [02. Reference](03.-back-end/01.-java/02.-references/README.md)
       * [Collection](03.-back-end/01.-java/02.-references/collection.md)
