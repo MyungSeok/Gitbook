@@ -36,6 +36,19 @@ Data 를 중복해서 포함할 수 있다.
 > AutoBoxing
 > 기본 데이터 타입을 Wrapper 클래스형의 객체로 자동 변환해주는 기능
 
+
+### Array & ArrayList 의 차이점
+
+||Array|ArrayList|
+|--|--|--|
+|Resize 여부|고정크기|가변크기|
+
+### ArrayList 와 LinkedList 의 차이점
+
+||ArrayList|LinkedList|
+|--|--|--|
+|데이터 구조|인덱스 기반|이전과 다음 요소를 가르키는 포인터 기반|
+
 ## Set
 
 집합적인 개념의 Collection  
@@ -84,7 +97,12 @@ Data 를 중복해서 포함할 수 없다.
   * 동시에 데이터를 삽입, 참조 하더라도 그 데이터가 다른 세그먼트에 위치하면 서로 Lock 을 얻기 위해 경쟁하지 않는다.
   * 이러한 방식을 _**Lock Striping**_ 이라고 한다.
 
-
 > Reference  
 > 
 > http://egloos.zum.com/Agbird/v/4849046
+
+## HashMap 의 동작 과정
+
+Java 에서의 HashMap 은 Key & Value 를 쌍으로 저장한다.  
+이는 Hash 함수를 필요로 hashCode 를 통하여 값을 저장하고 불러내는 과정을 거친다.
+

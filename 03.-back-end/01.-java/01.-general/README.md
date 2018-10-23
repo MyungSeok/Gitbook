@@ -15,6 +15,10 @@ Java 프로그램 코드가 실행되는 JVM 을 지칭함
 Java Class 의 멤버 변수 또는 메소드가 속한 클래스의 인스턴스화를 요구하지 않고 액세스 할 수 있는 _**접근제어자**_ 입니다.  
 `static` 접근 제어자로 지정된 변수 혹은 메서드는 Java Runtime 시에 Compile 시에 정적으로 바인딩 되기 때문에 재정의 (수정) 이 불가 합니다.
 
+## Java 의 다중상속
+
+Java 는 구조적으로 다중 상속이 불가능 하다. 각 클래스는 하나의 클래스에서만 상속이 가능하지만 두 개이상의 인터페이스의 구현은 가능하다.
+
 ## interface 와 abstract 의 공통점 & 차이점
 
 인터페이스 (interface) 와 추상 클래스 (abstract) 는 근본적으로 다른 목적에 의해 구현된다.
@@ -26,6 +30,11 @@ Java Class 의 멤버 변수 또는 메소드가 속한 클래스의 인스턴�
 |다중 상속|가능|불가|
 |접근 제어자|`public`|`private`, `protected`, `public`|
 |변수|기본적으로 `final` 로써 최종 변수임|비 최종 변수를 포함할 수 있음|
+
+## Call By Value & Reference 의 차이
+
+Java 에서 _**Call By Value**_ 를 통한 값 전달 방식은 객체의 복사본이 전달된다는 것을 의미한다.  
+즉 _**원본 데이터에 영향을 주지 않는다.**_ 객체가 참조로 전달되면 이는 실제 객체가 전달되지 않는 _**참조객체의 전달**_ 을 의미한다.
 
 ## Boxing & Unboxing (박싱 & 언방식)
 
@@ -147,20 +156,10 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 
 > https://wikidocs.net/232
 
-## Finalize
+## Finalize()
 
 객체가 소멸될때 호출되는 메소드  
-사용이 권장 되지 않는다.
-
-## Checked & Unchecked Exception
-
-`Checked Exception` 는 외부 환경에 의해 미리 예상 되는 오류이다.
-
-예를 들면 `IOException` `ClassNotFoundException` 등과 같이 _**반드시 예외처리가 필요하다.**_
-
-`Unchecked Exception` 는 프로그램 로직상의 문제로 일어나는 로직상의 오류로써 미리 예상할 수 없다.
-
-대표적으로 `RuntimeException` 과 같이 프로그램 실행중에 일어나며 _**반드시 예외처리를 필요로 하지 않는다.**_
+일반적으로 GC 에서 객체 메모리를 해지할때 호출되므로 사용이 권장 되지 않는다.
 
 ## 객체 재사용
 
