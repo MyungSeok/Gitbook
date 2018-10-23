@@ -32,7 +32,8 @@ java -jar myapp.jar & echo $! > ./pid.file &
 kill $(cat ./pid.file)
 ```
 
-> 참고 경로   
+> Reference
+>
 > [https://code.i-harness.com/ko/q/195154c](https://code.i-harness.com/ko/q/195154c)
 
 #### Gradle 로 Spring Boot 기동 

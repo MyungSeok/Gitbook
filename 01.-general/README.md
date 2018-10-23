@@ -175,3 +175,7 @@ SOA (Service-Oriented Architecture : 서비스 지향 아키텍처) 의 핵심 �
 * 동작 지향 개발 방법론
 * 소프트웨어의 품질을 향상 시키기 위해 개발자간의 협력 가능한 Agile Software Development 기법이다.
 * BDD 의 목표는 TDD 를 수행하기 위한 것으로, TDD 를 수행하기 위해 BDD 를 통한 행위 자체를 변경 가능하다.
+
+## Unsinged Int
+
+부호가 없는 정수형의 값만 가진다.
