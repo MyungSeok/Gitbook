@@ -20,6 +20,14 @@ OS 별로 종류가 다른데 MS Window & Linux 등의 환경에서는 `HotSpot 
 
 Java 로 작성한 코드는 _**Class Loader 가 컴파일된 Java Byte Code 를 Runtime Data Areas 에 로드하고 Excution Engine 이 Java Byte Code 를 실행**_
 
+## Compile Running
+
+1. 소스코드를 작성
+2. Compiler 는 JAVA 소스코드를 이용하여 클래스 파일을 생성
+3. 컴파일된 파일은 JVM (Java Virtual Machine) 이 인식 가능한 바이너리 파일로 변환
+4. JVM 은 클래스 파일의 바이너리 코드를 해석하여 프로그램을 실행
+5. 수행 결과가 컴퓨터에 반영
+
 ## Class Loader (클래스 로더)
 
 자바는 Runtime 시에 Class 를 로드하고 링크하는 Dynamic Loading 특징이 있다.
@@ -260,3 +268,8 @@ Old 영역은 데이터가 가득차면 GC 를 실행한다.
 > Reference
 >
 > https://d2.naver.com/helloworld/1329
+
+## finalize()
+
+객체가 소멸될때 호출되는 메소드  
+일반적으로 GC 에서 객체 메모리를 해지할때 호출되므로 사용이 권장 되지 않는다.

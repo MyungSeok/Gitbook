@@ -82,8 +82,8 @@ int b = (int) a;
 
 ```mermaid
   graph TD;
-    A[Boxing 값인지 확인]-->B[Boxing 된 값이면 값유형의 변수에 복사];
-    B-->C[박싱한 메모리와 언박싱한 메모리 2개 존재];
+    A["Boxing 값인지 확인"]-->B["Boxing 된 값이면 값유형의 변수에 복사"];
+    B-->C["박싱한 메모리와 언박싱한 메모리 2개 존재"];
 ```
 
 ### 문제점
@@ -116,14 +116,6 @@ public class Sum {
 >
 > http://grayt.tistory.com/87
 
-## Compile Running
-
-1. 소스코드를 작성
-2. Compiler 는 JAVA 소스코드를 이용하여 클래스 파일을 생성
-3. 컴파일된 파일은 JVM (Java Virtual Machine) 이 인식 가능한 바이너리 파일로 변환
-4. JVM 은 클래스 파일의 바이너리 코드를 해석하여 프로그램을 실행
-5. 수행 결과가 컴퓨터에 반영
-
 ## Access Modifier (접근 제어자)
 
 Java 에는 다음과 같은 접근 제어자가 있다.  
@@ -155,11 +147,6 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 어떤 클래스에서라도 접근 가능하다.
 
 > https://wikidocs.net/232
-
-## Finalize()
-
-객체가 소멸될때 호출되는 메소드  
-일반적으로 GC 에서 객체 메모리를 해지할때 호출되므로 사용이 권장 되지 않는다.
 
 ## 객체 재사용
 

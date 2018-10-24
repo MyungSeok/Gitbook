@@ -1,4 +1,4 @@
-# Template Method Design Pattern (팩토리 디자인 패턴)
+# Template Method Design Pattern (템플릿 메소드 디자인 패턴)
 
 상위 추상 클래스가 대략적인 로직을 잡아두고 실제로 상세한 구현은 상속을 받아 구현을 강제하도록 하는것
 
