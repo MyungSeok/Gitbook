@@ -19,7 +19,7 @@
 
 > _**Multi Thread**_ 환경의 작업시에는 Therad 간의 자원 공유의 _**동기화 문제**_ 에 신경을 써야 한다.
 
-## Thread 를 만드는 방법
+## [Thread 를 만드는 방법](/03.-back-end/01.-java/02.-references/thread/multi_thread.html)
 
 아래와 같이 크게 3가지 방법이 있다.
 
