@@ -4,6 +4,8 @@ Java 에서는 Multi Thread 환경을 만들어 사용하는 방법은 대표적
 
 ## Thread Class 를 상속받아 사용
 
+Thread Class 를 서브클래싱(subclassing) 하고 `run` Method 를 `Override` 한다.
+
 ### 구현 순서
 
 1. Thread Class 를 상속 받아 내가 시킬 일을 해줄 Class 를 하나 만든다.
@@ -35,6 +37,8 @@ at.start();
 
 ## Runnable 인터페이스를 구현하여 사용
 
+`Runnable` 인터페이스를 구현하고 `Runnable` 객체를 Thread 생성자로 전달한다.
+
 ### 구현순서
 
 1. 우선 `Runnable` Interface 를 구현할 Class 를 하나 생성한다.
@@ -63,6 +67,12 @@ Thread atr = new Thread(ar);
 
 atr.start();
 ```
+
+Thread 가 할 일을 `run` Method 안에 넣으면 된다.  
+
+Single Thread 프로그램은 `main` Method 가 반환되면 종료되고  
+Multi Thread 프로그램은 `run` Method 의 실행이 끝나면 종료된다.  
+
 
 > Reference
 > https://post.naver.com/viewer/postView.nhn?volumeNo=7852076&memberNo=30800755
