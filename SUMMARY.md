@@ -46,6 +46,7 @@
     * [02. Reference](03.-back-end/01.-java/02.-references/README.md)
       * [Collection](03.-back-end/01.-java/02.-references/collection.md)
       * [Thread](03.-back-end/01.-java/02.-references/thread/README.md)
+        * [Synchronized](03.-back-end/01.-java/02.-references/thread/synchronized.md)
         * [Multi Thread](03.-back-end/01.-java/02.-references/thread/multi_thread.md)
       * [JVM](03.-back-end/01.-java/02.-references/jvm.md)
     * [03. Performance](03.-back-end/01.-java/03.-performance/README.md)
