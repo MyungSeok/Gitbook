@@ -151,3 +151,39 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 ## 객체 재사용
 
 대표적으로 `Singleton` 디자인 패턴과 같이 미리 사전에 생성된 `Instance` 를 재사용하는 방식으로 일반적으로 `ThreadPool` 이나 `Connection Pool` 등의 방식으로 주로 사용한다.
+
+## 초기화 블럭 (Initialization Block)
+
+클래스 초기화 블럭과 인스턴스 초기화 블럭이 있다.
+
+```java
+public class TEST {
+  static int a;
+  int b;
+
+  static {
+    System.out.println("Static initialization");
+  }
+
+  {
+    System.out.println("Instance initialization");
+  }
+
+  public TEST() {
+    System.out.println("Constructor");
+  }
+
+  public static void main(String[] args) {
+    new TEST();
+    new TEST();
+  }
+}
+```
+
+```java
+Static initialization
+Instance initialization
+Constructor
+Instance initialization
+Constructor
+```
