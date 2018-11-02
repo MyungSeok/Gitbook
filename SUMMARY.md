@@ -7,6 +7,7 @@
     * [Sort](01.-general/algorithm/sort.md)
 * [02. Front End](02.-front-end/README.md)
   * [01. HTML](02.-front-end/01.-html/README.md)
+    * [Canvas](02.-front-end/01.-html/canvas.md)
     * [Performance](02.-front-end/01.-html/performance.md)
   * [02. CSS](02.-front-end/02.-css.md)
   * [03. Javascript](02.-front-end/03.-javascript/README.md)
