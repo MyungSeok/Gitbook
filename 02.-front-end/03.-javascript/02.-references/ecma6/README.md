@@ -332,3 +332,6 @@ export const foo = Math.sqrt(2);    // 상수 exports
 // Default Exports (스크립트에서 유일하게 한번 사용)
 export default myFunctionOrClass;
 ```
+
+> Reference
+> http://sanghaklee.tistory.com/54
