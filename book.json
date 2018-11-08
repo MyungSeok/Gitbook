@@ -1,13 +1,7 @@
 {
-  "plugins" : [ "callouts", "mermaid-gb3", "-lunr", "-search", "search-plus", "expandable-chapters"], 
-  "pluginsConfig":
-    {
-      "callouts":
-        {
-            "star": {
-                "alert": "warning",
-                "picto": "fa-star"
-            }
-        }
-    }
+  "plugins" : [ 
+      "mermaid-gb3", 
+      "expandable-chapters-small",
+      "search-plus"
+    ]
 }
