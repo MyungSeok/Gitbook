@@ -1,4 +1,4 @@
-# OCP (Open Closed Principle : 개방 폐쇄의 원칙)
+# 개방 폐쇄의 원칙 (OCP : Open Closed Principle)
 
 [SOLID](/book/03.-back-end/01.-java/01.-general/solid/) 원칙중에서 2번재 원칙으로 개방폐쇄의 원칙이라 한다.
 

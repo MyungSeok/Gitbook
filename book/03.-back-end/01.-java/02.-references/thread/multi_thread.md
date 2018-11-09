@@ -1,4 +1,4 @@
-# Multi Thread
+# 멀티 스레드 (Multi Thread)
 
 Java 에서는 Multi Thread 환경을 만들어 사용하는 방법은 대표적으로 3가지 방법을 많이 사용한다.
 

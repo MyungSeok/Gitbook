@@ -1,4 +1,4 @@
-# LSP (Liskov Substitution Principle : 리스코프 치환 원칙)
+# 리스코프 치환 원칙 (LSP : Liskov Substitution Principle)
 
 [SOLID](/book/03.-back-end/01.-java/01.-general/solid/) 원칙중에서 3번재 원칙으로 리스코프 치환 원칙 이라고 한다.
 
