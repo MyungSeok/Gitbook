@@ -1,6 +1,6 @@
 # Generator
 
-[Iterator Interface](/02.-front-end/03.-javascript/02.-references/ecma6/iterator.html) 를 구현한 확장형 함수
+[Iterator Interface](/book/02.-front-end/03.-javascript/02.-references/ecma6/iterator.html) 를 구현한 확장형 함수
 
 ## Example #1 - ES6
 

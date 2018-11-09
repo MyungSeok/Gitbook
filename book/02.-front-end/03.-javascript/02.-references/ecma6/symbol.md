@@ -80,6 +80,6 @@ Symbol.iterator
 * Symbol.iterator
   * 이터러블한 객체를 정의하기 위한 심볼
 * Symbol.hasInstance
-  * [`instanceof`](/02.-front-end/03.-javascript/02.-references/operator-and-expression.html?h=instanceof) 를 확장하기 위한 심볼
+  * [`instanceof`](/book/02.-front-end/03.-javascript/02.-references/operator-and-expression.html?h=instanceof) 를 확장하기 위한 심볼
 * Symbol.match
   * [`String.prototype.match`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) 메소드의 확장

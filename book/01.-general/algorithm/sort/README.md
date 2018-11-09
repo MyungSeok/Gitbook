@@ -4,4 +4,12 @@
 
 ## 속도 비교
 
-퀵 &gt; 합병 &gt; 힙 &gt; 쉘 &gt; 삽입 &gt; 선택 &gt; 버블
+```mermaid
+graph LR;
+  A["퀵 (Quick)"]-->B["합병 (Merge)"];
+  B-->C["힙 (Heap)"];
+  C-->D["쉘 (Shell)"];
+  D-->E["삽입 (Insertion)"];
+  E-->F["선택 (Selection)"];
+  F-->G["버블 (Bubble)"];
+```

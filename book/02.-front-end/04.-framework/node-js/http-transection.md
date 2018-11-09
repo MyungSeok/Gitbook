@@ -254,7 +254,7 @@ http.createServer((request, response) => {
 }).listen(8080);
 ```
 
-> 위의 방법으로 라우팅을 하고 있지만 [`express`](/02.-front-end/04.-framework/node-js/express.html) 프레임워크나 [`router`](/02.-front-end/04.-framework/node-js/express.html) 라이브러리릉 통해서 처리도 가능하다.  
+> 위의 방법으로 라우팅을 하고 있지만 [`express`](/book/02.-front-end/04.-framework/node-js/express.html) 프레임워크나 [`router`](/book/02.-front-end/04.-framework/node-js/express.html) 라이브러리릉 통해서 처리도 가능하다.  
 
 `request` 객체는 [`ReadableStream`](https://nodejs.org/api/stream.html#stream_class_stream_readable) 이고 `response` 객체는 [`WriteableStream`](https://nodejs.org/api/stream.html#stream_class_stream_writable) 이므로 [`pipe`](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options) 를 사용할 수 있다.
 

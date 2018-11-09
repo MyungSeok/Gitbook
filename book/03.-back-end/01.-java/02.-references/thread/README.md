@@ -30,7 +30,7 @@
 > 'Runnable' 인터페이스는 상속 객체를 필요로 하지 않기 때문에 인터페이스로 적절하다.
 
 이러한 방법들은 대부분 멀티스레드를 만들어 작업을 수행하는 과정으로  
-[여기](/03.-back-end/01.-java/02.-references/thread/multi_thread.html)서 자세한 방법들을 소개한다.
+[여기](/book/03.-back-end/01.-java/02.-references/thread/multi_thread.html)서 자세한 방법들을 소개한다.
 
 ## Thread 상태
 
