@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Solid · GitBook</title>
+        <title>개방 폐쇄의 원칙 (OCP) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="srp.md" />
+    <link rel="next" href="lsp.html" />
     
     
-    <link rel="prev" href="../design_pattern/template_method.html" />
+    <link rel="prev" href="srp.md" />
     
 
     </head>
@@ -976,7 +976,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.1.1.3" data-path="./">
+        <li class="chapter " data-level="1.4.1.1.3" data-path="./">
             
                 <a href="./">
             
@@ -1003,7 +1003,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.1.3.2" data-path="ocp.html">
+        <li class="chapter active" data-level="1.4.1.1.3.2" data-path="ocp.html">
             
                 <a href="ocp.html">
             
@@ -1645,7 +1645,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../../../.." >Solid</a>
+        <a href="../../../../.." >개방 폐쇄의 원칙 (OCP)</a>
     </h1>
 </div>
 
@@ -1663,31 +1663,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="solid">Solid</h1>
-<p>&#xAC1D;&#xCCB4;&#xC9C0;&#xD5A5; 4&#xB300; &#xD2B9;&#xC131;&#xC778; &#xCEA1;&#xC290;&#xD654;, &#xC0C1;&#xC18D;, &#xCD94;&#xC0C1;&#xD654;, &#xB2E4;&#xD615;&#xC131; &#xB4F1;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xAC1D;&#xCCB4;&#xC9C0;&#xD5A5; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC15C;&#xACC4;&#xB97C; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xC6D0;&#xCE59;&#xB4E4;&#xC774; &#xC788;&#xB2E4;.<br>&#xC774;&#xB97C; SOLID &#xC6D0;&#xCE59;&#xB4E4;&#xC774;&#xB77C; &#xD558;&#xBA70; &#xC790;&#xAE30; &#xC790;&#xC2E0;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC751;&#xC9D1;&#xB3C4;&#xB97C; &#xB192;&#xC774;&#xACE0;, &#xD0C0; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xACB0;&#xD569;&#xB3C4;&#xB97C; &#xB0AE;&#xCD94;&#xB294; <em><strong>High-Cohesion - Loose Coupling</strong></em> &#xC6D0;&#xCE59;&#xC744; &#xAC1D;&#xCCB4; &#xC9C0;&#xD5A5;&#xAD00;&#xC810;&#xC5D0;&#xC11C; &#xB3C4;&#xC785;&#xD55C;&#xAC83;&#xC774;&#xB2E4;.</p>
-<p>SOLID 5&#xB300; &#xC6D0;&#xCE59; (&#xAC1D;&#xCCB4; &#xC9C0;&#xD5A5; &#xC124;&#xACC4; 5&#xC6D0;&#xCE59;)</p>
+                                <h1 id="ocp-open-closed-principle--&#xAC1C;&#xBC29;-&#xD3D0;&#xC1C4;&#xC758;-&#xC6D0;&#xCE59;">OCP (Open Closed Principle : &#xAC1C;&#xBC29; &#xD3D0;&#xC1C4;&#xC758; &#xC6D0;&#xCE59;)</h1>
+<p><a href=".">SOLID</a> &#xC6D0;&#xCE59;&#xC911;&#xC5D0;&#xC11C; 2&#xBC88;&#xC7AC; &#xC6D0;&#xCE59;&#xC73C;&#xB85C; &#xAC1C;&#xBC29;&#xD3D0;&#xC1C4;&#xC758; &#xC6D0;&#xCE59;&#xC774;&#xB77C; &#xD55C;&#xB2E4;.</p>
+<blockquote>
+<p>&#xD655;&#xC7A5; &#xB420;&#xAC83;&#xACFC; &#xBD88;&#xBCC0;&#xC758; &#xC18D;&#xC131;&#xC744; &#xC5C4;&#xACA9;&#xD788; &#xAD6C;&#xBD84;&#xD55C;&#xB2E4;.<br>&#xB450; &#xBAA8;&#xB4C8;&#xC774; &#xB9CC;&#xB098;&#xB294; &#xC9C0;&#xC810;&#xC5D0; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD55C;&#xB2E4;.<br>&#xAD6C;&#xD604;&#xC5D0; &#xC758;&#xC874;&#xD558;&#xAE30;&#xBCF4;&#xB2E4; &#xC815;&#xC758;&#xD55C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0; &#xC758;&#xC874;&#xD558;&#xB3C4;&#xB85D; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD55C;&#xB2E4;.</p>
+</blockquote>
+<h2 id="&#xC815;&#xC758;">&#xC815;&#xC758;</h2>
 <ul>
-<li><a href="(/book/03.-back-end/01.-java/01.-general/solid/srp.html">SRP (Single Reponsibility Principle : &#xB2E8;&#xC77C; &#xCC45;&#xC784;&#xC758; &#xC6D0;&#xCE59;)</a>)</li>
-<li><a href="ocp.html">OCP (Open Closed Principle : &#xAC1C;&#xBC29; &#xD3D0;&#xC1C4;&#xC758; &#xC6D0;&#xCE59;)</a></li>
-<li><a href="lsp.html">LSP (Liskov Substitution Principle : &#xB9AC;&#xC2A4;&#xCF54;&#xD504; &#xCE58;&#xD658;&#xC758; &#xC6D0;&#xCE59;)</a></li>
-<li><a href="(/book/03.-back-end/01.-java/01.-general/solid/isp.html">ISP (Interface Segregation Principle : &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xBD84;&#xB9AC;&#xC758; &#xC6D0;&#xCE59;)</a>)</li>
-<li><a href="(/book/03.-back-end/01.-java/01.-general/solid/dip.html">DIP (Dependency Inversion Principle : &#xC758;&#xC874; &#xC5ED;&#xC804;&#xC758; &#xC6D0;&#xCE59;)</a>)</li>
+<li>&#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4;&#xC758; &#xAD6C;&#xC131;&#xC694;&#xC18C; (&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;, &#xD074;&#xB798;&#xC2A4;, &#xBAA8;&#xB4C8;, &#xD568;&#xC218;) &#xB294; &#xD655;&#xC7A5;&#xC5D0;&#xB294; &#xC5F4;&#xB824; &#xC788;&#xACE0;, &#xBCC0;&#xACBD;&#xC5D0;&#xB294; &#xB2EB;&#xD600; &#xC788;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</li>
 </ul>
-<h2 id="srp-single-reponsibility-principle--&#xB2E8;&#xC77C;-&#xCC45;&#xC784;&#xC758;-&#xC6D0;&#xCE59;">SRP (Single Reponsibility Principle : &#xB2E8;&#xC77C; &#xCC45;&#xC784;&#xC758; &#xC6D0;&#xCE59;)</h2>
-<p>&#xC791;&#xC131;&#xB41C; <em><strong>&#xD074;&#xB798;&#xC2A4;&#xB294; &#xD558;&#xB098;&#xC758; &#xAE30;&#xB2A5;&#xB9CC; &#xAC00;&#xC9C0;&#xBA70;</strong></em> &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xADF8; <em><strong>&#xD558;&#xB098;&#xC758; &#xCC45;&#xC784;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294;&#xB370; &#xC9D1;&#xC911;</strong></em> &#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;&#xB294;&#xAC83;</p>
-<blockquote>
-<p>&#xB9AC;&#xD329;&#xD1A0;&#xB9C1; (Refactoring) &#xC744; &#xD1B5;&#xD558;&#xC5EC; &#xD574;&#xB2F9; &#xCC45;&#xC784;&#xC744; &#xCD5C;&#xC0C1;&#xC758; &#xC0C1;&#xD0DC;&#xB85C; &#xBD84;&#xBC30;</p>
-</blockquote>
-<h2 id="isp-interface-segregation-principle--&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;-&#xBD84;&#xB9AC;-&#xC6D0;&#xCE59;">ISP (Interface Segregation Principle : &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xBD84;&#xB9AC; &#xC6D0;&#xCE59;)</h2>
-<p>&#xCD5C;&#xC18C;&#xD55C;&#xC758; &#xC758;&#xBBF8;&#xC5D0; &#xB9DE;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB9CC; &#xAD6C;&#xD604;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
-<blockquote>
-<p>&#xD074;&#xB798;&#xC2A4; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xD1B5;&#xD55C; &#xBD84;&#xB9AC;<br>&#xAC1D;&#xCCB4; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xD1B5;&#xD55C; &#xBD84;&#xB9AC; </p>
-</blockquote>
-<h2 id="dip-dependency-inversion-principle--&#xC758;&#xC874;-&#xC5ED;&#xC804;-&#xC6D0;&#xCE59;">DIP (Dependency Inversion Principle : &#xC758;&#xC874; &#xC5ED;&#xC804; &#xC6D0;&#xCE59;)</h2>
-<p>&#xD558;&#xC704; &#xB808;&#xBCA8;&#xBAA8;&#xB4C8;&#xC758; &#xBCC0;&#xACBD;&#xC774; &#xC0C1;&#xC704; &#xB808;&#xBCA8; &#xBAA8;&#xB4C8;&#xC758; &#xBCC0;&#xACBD;&#xC744; &#xC694;&#xAD6C;&#xD558;&#xB294; &#xC5ED;&#xC804;&#xD604;&#xC0C1;</p>
+<p>&#xC774;&#xB294; &#xAE30;&#xC874;&#xC758; &#xAD6C;&#xC131;&#xC694;&#xC18C;&#xB294; &#xC218;&#xC815;&#xC774; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xB9D0;&#xC544;&#xC57C; &#xD558;&#xBA70;, <em><strong>&#xAE30;&#xC874;&#xC758; &#xAD6C;&#xC131;&#xC694;&#xC18C;&#xB97C; &#xC27D;&#xAC8C; &#xD655;&#xC7A5;&#xD558;&#xC5EC; &#xC7AC;&#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</strong></em> &#xD574;&#xC57C; &#xD55C;&#xB2E4;&#xB294; &#xB73B;&#xC774;&#xBA70;, &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC124;&#xACC4; &#xACFC;&#xC815;&#xC5D0;&#xC11C; &#xB9CE;&#xC740; &#xACE0;&#xBBFC;&#xC774; &#xB418;&#xC5B4; &#xC788;&#xC5B4;&#xC57C; &#xD558;&#xACE0; &#xC774;&#xB97C; &#xC704;&#xD574; &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xBB38;&#xBC95;&#xC774; <code>interface</code> &#xB97C; &#xD65C;&#xC6A9;&#xD55C; &#xBC29;&#xBC95;&#xC774;&#xB2E4;.</p>
+<p>&#xC544;&#xB798; &#xC608;&#xC2DC;&#xB97C; &#xD1B5;&#xD558;&#xC5EC; OCP &#xC758; &#xC704;&#xBC30; &#xC0AC;&#xD56D;&#xC744; &#xC0B4;&#xD3B4; &#xBCF4;&#xC790;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SoundPlayer</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">play</span><span class="hljs-params">()</span> </span>{
+    System.out.println(<span class="hljs-string">&quot;play wav&quot;</span>);
+  }
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Client</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+    SoundPlayer sp = <span class="hljs-keyword">new</span> SoundPlayer();
+    sp.play();
+  }
+}
+</code></pre>
+<p>&#xC0C1;&#xAE30; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; <code>play()</code> &#xB97C; &#xB2E4;&#xB978; &#xD30C;&#xC77C; &#xD3EC;&#xB9F7;&#xC758; &#xC7AC;&#xC0DD;&#xC744; &#xC6D0;&#xD55C;&#xB2E4;&#xBA74; OCP &#xC6D0;&#xCE59;&#xC5D0; &#xC704;&#xBC30;&#xB41C;&#xB2E4;.</p>
+<p>&#xC774;&#xB7EC;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; <code>interface</code> &#xB97C; &#xAD6C;&#xC131;&#xD558;&#xC5EC; OCP &#xB97C; &#xB9CC;&#xC871;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">playAlgorithm</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">play</span><span class="hljs-params">()</span></span>;
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Wav</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">playAlgorithm</span> </span>{
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">play</span><span class="hljs-params">()</span> </span>{
+    System.out.println(<span class="hljs-string">&quot;Play Wav&quot;</span>);
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Mp3</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">playAlgorithm</span> </span>{
+  <span class="hljs-meta">@Override</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">play</span><span class="hljs-params">()</span> </span>{
+    System.out.println(<span class="hljs-string">&quot;Play Mp3&quot;</span>);
+  }
+}
+</code></pre>
+<p>&#xC704;&#xC640; &#xAC19;&#xC774; &#xC7AC;&#xC0DD;&#xD558;&#xACE0;&#xC790; &#xD558;&#xB294; <code>playAlgorithm</code> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC758; <code>play()</code> &#xB97C; &#xC7AC;&#xC815;&#xC758; &#xD558;&#xB3C4;&#xB85D; &#xC124;&#xACC4;&#xD55C;&#xB2E4;.</p>
+<p>&#xC774;&#xC640; &#xAC19;&#xC740; &#xC124;&#xACC4; &#xBC29;&#xC2DD;&#xC744; &#xB514;&#xC790;&#xC778; &#xD328;&#xD134;&#xC5D0;&#xC11C;&#xB294; <a href="../design_pattern/strategy.html">&#xC804;&#xB7B5; &#xD328;&#xD134; (Strategy Pattern)</a> &#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p>OCP &#xB97C; &#xB9CC;&#xC871;&#xD55C; &#xC124;&#xACC4;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC7A5;&#xC810;&#xC774; &#xC788;&#xB2E4;.</p>
+<ul>
+<li>&#xBCC0;&#xACBD;&#xC5D0; &#xC720;&#xC5F0;&#xD558;&#xAC8C; &#xB300;&#xCC98; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</li>
+<li>&#xC720;&#xC9C0;&#xBCF4;&#xC218; &#xBE44;&#xC6A9;&#xC774; &#xAC10;&#xC18C;&#xB41C;&#xB2E4;.</li>
+<li>&#xCF54;&#xB4DC;&#xC758; &#xAC00;&#xB3C5;&#xC131;&#xC774; &#xB192;&#xC544;&#xC9C4;&#xB2E4;.</li>
+</ul>
 <blockquote>
 <p>Reference</p>
-<p><a href="http://www.nextree.co.kr/p6960/" target="_blank">http://www.nextree.co.kr/p6960/</a><br><a href="http://limkydev.tistory.com/77" target="_blank">http://limkydev.tistory.com/77</a><br><a href="http://choipattern.blogspot.com/2013/08/solid.html" target="_blank">http://choipattern.blogspot.com/2013/08/solid.html</a></p>
+<p><a href="https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600" target="_blank">https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600</a></p>
 </blockquote>
 
                                 
@@ -1732,12 +1761,12 @@
 
             
                 
-                <a href="../design_pattern/template_method.html" class="navigation navigation-prev " aria-label="Previous page: Template Method">
+                <a href="srp.md" class="navigation navigation-prev " aria-label="Previous page: 단일 책임의 원칙 (SRP)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="srp.md" class="navigation navigation-next " aria-label="Next page: 단일 책임의 원칙 (SRP)">
+                <a href="lsp.html" class="navigation navigation-next " aria-label="Next page: 리스코프 치환의 원칙 (LSP)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1748,7 +1777,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Solid","level":"1.4.1.1.3","depth":4,"next":{"title":"단일 책임의 원칙 (SRP)","level":"1.4.1.1.3.1","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/srp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/srp.md","articles":[]},"previous":{"title":"Template Method","level":"1.4.1.1.2.3","depth":5,"path":"book/03.-back-end/01.-java/01.-general/design_pattern/template_method.md","ref":"book/03.-back-end/01.-java/01.-general/design_pattern/template_method.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/01.-general/solid/README.md","mtime":"2018-11-09T06:36:41.286Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-09T07:40:25.911Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"개방 폐쇄의 원칙 (OCP)","level":"1.4.1.1.3.2","depth":5,"next":{"title":"리스코프 치환의 원칙 (LSP)","level":"1.4.1.1.3.3","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","articles":[]},"previous":{"title":"단일 책임의 원칙 (SRP)","level":"1.4.1.1.3.1","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/srp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/srp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/01.-general/solid/ocp.md","mtime":"2018-11-09T07:38:52.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-09T07:40:25.911Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

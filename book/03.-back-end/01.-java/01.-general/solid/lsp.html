@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>LSP · GitBook</title>
+        <title>리스코프 치환의 원칙 (LSP) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,10 +73,10 @@
     <link rel="shortcut icon" href="../../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../02.-references/" />
+    <link rel="next" href="isp.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="ocp.html" />
     
 
     </head>
@@ -990,12 +990,64 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1.1.3.1" data-path="lsp.html">
+        <li class="chapter " data-level="1.4.1.1.3.1" data-path="srp.md">
+            
+                <span>
+            
+                    
+                    단일 책임의 원칙 (SRP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3.2" data-path="ocp.html">
+            
+                <a href="ocp.html">
+            
+                    
+                    개방 폐쇄의 원칙 (OCP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.1.3.3" data-path="lsp.html">
             
                 <a href="lsp.html">
             
                     
-                    LSP
+                    리스코프 치환의 원칙 (LSP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3.4" data-path="isp.html">
+            
+                <a href="isp.html">
+            
+                    
+                    인터페이스 분리의 원칙 (ISP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3.5" data-path="dip.html">
+            
+                <a href="dip.html">
+            
+                    
+                    의존 역전의 원칙 (DIP)
             
                 </a>
             
@@ -1593,7 +1645,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../../../.." >LSP</a>
+        <a href="../../../../.." >리스코프 치환의 원칙 (LSP)</a>
     </h1>
 </div>
 
@@ -1612,16 +1664,16 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="lsp-liskov-substitution-principle--&#xB9AC;&#xC2A4;&#xCF54;&#xD504;-&#xCE58;&#xD658;-&#xC6D0;&#xCE59;">LSP (Liskov Substitution Principle : &#xB9AC;&#xC2A4;&#xCF54;&#xD504; &#xCE58;&#xD658; &#xC6D0;&#xCE59;)</h1>
-<p>SOLID &#xC6D0;&#xCE59;&#xC911;&#xC5D0;&#xC11C; 3&#xBC88;&#xC7AC; &#xC6D0;&#xCE59;&#xC73C;&#xB85C; &#xB9AC;&#xC2A4;&#xCF54;&#xD504; &#xCE58;&#xD658; &#xC6D0;&#xCE59; &#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<p><a href=".">SOLID</a> &#xC6D0;&#xCE59;&#xC911;&#xC5D0;&#xC11C; 3&#xBC88;&#xC7AC; &#xC6D0;&#xCE59;&#xC73C;&#xB85C; &#xB9AC;&#xC2A4;&#xCF54;&#xD504; &#xCE58;&#xD658; &#xC6D0;&#xCE59; &#xC774;&#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
 <p>OCP (Open Close Principle : &#xAC1C;&#xBC29; &#xD3D0;&#xC1E0;&#xC758; &#xBC95;&#xCE59;) &#xACFC; &#xBC00;&#xC811;&#xD55C; &#xC5F0;&#xAD00;&#xC774; &#xC788;&#xC73C;&#xBA70; OCP &#xB97C; &#xBC14;&#xD0D5;&#xC73C;&#xB85C; &#xAD6C;&#xD604;&#xD55C; &#xD15C;&#xD50C;&#xB9AD; &#xC124;&#xACC4;&#xC758; &#xD558;&#xB098;&#xC758; &#xC608;&#xB77C;&#xACE0; &#xD560; &#xC218; &#xC788;&#xB2E4;.<br>&#xC989; LSP &#xB294; OCP &#xC758; &#xD574;&#xACB0;&#xCC45; &#xC911; &#xD558;&#xB098;&#xC774;&#xB2E4;.</p>
-<h2 id="&#xAC1C;&#xB150;">&#xAC1C;&#xB150;</h2>
+<h2 id="&#xC815;&#xC758;">&#xC815;&#xC758;</h2>
 <ul>
 <li>&#xC790;&#xC2DD; (&#xD30C;&#xC0DD;) &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC5B8;&#xC81C;&#xB098; &#xBD80;&#xBAA8; (&#xAE30;&#xBC18;) &#xD0C0;&#xC785;&#xACFC; &#xD638;&#xD658;&#xC774; &#xB418;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</li>
 <li>&#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC0C1;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC5ED;&#xD560;&#xC744; &#xB300;&#xC2E0;&#xD560; &#xB54C; &#xB17C;&#xB9AC;&#xC801;&#xC73C;&#xB85C; &#xB9DE;&#xC544; &#xB5A8;&#xC5B4;&#xC838;&#xC57C; &#xD55C;&#xB2E4;.</li>
 </ul>
 <p>&#xB2E4;&#xC74C; &#xC608;&#xB294; &#xC774;&#xB97C; &#xC124;&#xBA85;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xAC00;&#xC7A5; &#xC720;&#xBA85;&#xD55C; &#xC608; &#xC774;&#xB2E4;.</p>
 <div class="mermaid">
-graph TD
+graph LR
   A[&quot;Rectangle&quot;] --&gt; B[&quot;Square&quot;]
 </div>
 
@@ -1688,7 +1740,7 @@ graph TD
 }
 </code></pre>
 <p>&#xC774;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xB450;&#xAC1C;&#xC758; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC804;&#xD600; &#xB2E4;&#xB978; &#xACB0;&#xACFC;&#xB97C; &#xAC00;&#xC838;&#xC628;&#xB2E4;.</p>
-<p>&#xD558;&#xB098;&#xB294; <code>Rectangle</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xB108;&#xBE44;&#xAC00; 20 &#xC73C;&#xB85C; &#xC5F0;&#xC0B0;&#xB418;&#xB294;&#xB370; &#xBC18;&#xD574; <code>Square</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC624;&#xB958;&#xB97C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</p>
+<p>&#xD558;&#xB098;&#xB294; <code>Rectangle</code> &#xD074;&#xB798;&#xC2A4;&#xB294; <em><strong>&#xB113;&#xC774;&#xAC00; 20 &#xC73C;&#xB85C; &#xC5F0;&#xC0B0;</strong></em> &#xB418;&#xB294;&#xB370; &#xBC18;&#xD574; <code>Square</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xC624;&#xB958;&#xB97C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;.</p>
 <p>&#xC774;&#xAC83;&#xC774; &#xBC14;&#xB85C; <em><strong>&#xB9AC;&#xC2A4;&#xCF54;&#xD504;&#xC758; &#xCE58;&#xD658; &#xC6D0;&#xCE59;</strong></em> &#xC744; &#xBC97;&#xC5B4;&#xB09C; &#xB300;&#xD45C;&#xC801;&#xC778; &#xC608;&#xC774;&#xB2E4;.</p>
 <p>&#xB2E4;&#xC2DC; &#xC815;&#xB9AC;&#xD558;&#xBA74; <em><strong>&#xC0C1;&#xC704; &#xD0C0;&#xC785;&#xC758; &#xAC1D;&#xCCB4;&#xB97C; &#xD558;&#xC704;&#xD0C0;&#xC785;&#xC758; &#xAC1D;&#xCCB4;&#xB85C; &#xCE58;&#xD658;&#xD574;&#xB3C4; &#xC0C1;&#xC704; &#xD0C0;&#xC785;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC740; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB3D9;&#xC791;</strong></em> &#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
 <p>&#xB9AC;&#xC2A4;&#xCF54;&#xD504; &#xCE58;&#xD658;&#xC744; &#xBC97;&#xC5B4;&#xB098;&#xB294; &#xC704;&#xBC18;&#xC0AC;&#xB840;&#xB294; &#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
@@ -1697,6 +1749,12 @@ graph TD
 <li>&#xBA85;&#xC2DC;&#xB41C; &#xBA85;&#xC138;&#xC5D0;&#xC11C; &#xBC97;&#xC5B4;&#xB09C; <em><strong>&#xC624;&#xB958;</strong></em> &#xB97C; &#xBC1C;&#xC0DD;&#xD55C;&#xB2E4;.</li>
 <li>&#xBA85;&#xC2DC;&#xB41C; &#xBA85;&#xC138;&#xC5D0;&#xC11C; &#xBC97;&#xC5B4;&#xB09C; <em><strong>&#xAE30;&#xB2A5;</strong></em> &#xC744; &#xC218;&#xD589;&#xD55C;&#xB2E4;.</li>
 </ol>
+<h2 id="&#xD574;&#xACB0;-&#xBC29;&#xBC95;">&#xD574;&#xACB0; &#xBC29;&#xBC95;</h2>
+<ul>
+<li>&#xC0C1;&#xC18D;&#xAD00;&#xACC4;&#xB97C; &#xC81C;&#xAC70;&#xD55C;&#xB2E4;.</li>
+<li>&#xBB38;&#xC81C;&#xAC00; &#xB418;&#xB294; <code>area()</code> &#xB97C; <code>Square</code> &#xB85C; &#xC774;&#xB3D9;&#xD55C;&#xB2E4;.</li>
+<li>LSP &#xB97C; &#xD1B5;&#xD558;&#xC5EC; <em><strong>&#xC790;&#xC2DD; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC0C1;&#xC18D;&#xBC1B;&#xC740; &#xBD80;&#xBAA8; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xC5ED;&#xD65C;&#xC744; &#xCDA9;&#xC2E4;&#xD788; &#xD558;&#xBA74;&#xC11C; &#xD655;&#xC7A5;</strong></em> &#xD574;&#xB098;&#xAC00;&#xC57C; &#xD55C;&#xB2E4;.</li>
+</ul>
 <blockquote>
 <p>Reference</p>
 <p><a href="https://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710" target="_blank">https://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710</a></p>
@@ -1744,12 +1802,12 @@ graph TD
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Solid">
+                <a href="ocp.html" class="navigation navigation-prev " aria-label="Previous page: 개방 폐쇄의 원칙 (OCP)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../02.-references/" class="navigation navigation-next " aria-label="Next page: 02. Reference">
+                <a href="isp.html" class="navigation navigation-next " aria-label="Next page: 인터페이스 분리의 원칙 (ISP)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1760,7 +1818,7 @@ graph TD
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LSP","level":"1.4.1.1.3.1","depth":5,"next":{"title":"02. Reference","level":"1.4.1.2","depth":3,"path":"book/03.-back-end/01.-java/02.-references/README.md","ref":"book/03.-back-end/01.-java/02.-references/README.md","articles":[{"title":"Collection","level":"1.4.1.2.1","depth":4,"path":"book/03.-back-end/01.-java/02.-references/collection/README.md","ref":"book/03.-back-end/01.-java/02.-references/collection/README.md","articles":[{"title":"List","level":"1.4.1.2.1.1","depth":5,"path":"book/03.-back-end/01.-java/02.-references/collection/list.md","ref":"book/03.-back-end/01.-java/02.-references/collection/list.md","articles":[]},{"title":"Set","level":"1.4.1.2.1.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/collection/set.md","ref":"book/03.-back-end/01.-java/02.-references/collection/set.md","articles":[]}]},{"title":"Map","level":"1.4.1.2.2","depth":4,"path":"book/03.-back-end/01.-java/02.-references/map.md","ref":"book/03.-back-end/01.-java/02.-references/map.md","articles":[]},{"title":"Exception","level":"1.4.1.2.3","depth":4,"path":"book/03.-back-end/01.-java/02.-references/exception.md","ref":"book/03.-back-end/01.-java/02.-references/exception.md","articles":[]},{"title":"Thread","level":"1.4.1.2.4","depth":4,"path":"book/03.-back-end/01.-java/02.-references/thread/README.md","ref":"book/03.-back-end/01.-java/02.-references/thread/README.md","articles":[{"title":"Synchronized","level":"1.4.1.2.4.1","depth":5,"path":"book/03.-back-end/01.-java/02.-references/thread/synchronized.md","ref":"book/03.-back-end/01.-java/02.-references/thread/synchronized.md","articles":[]},{"title":"Multi Thread","level":"1.4.1.2.4.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/thread/multi_thread.md","ref":"book/03.-back-end/01.-java/02.-references/thread/multi_thread.md","articles":[]}]},{"title":"JVM","level":"1.4.1.2.5","depth":4,"path":"book/03.-back-end/01.-java/02.-references/jvm.md","ref":"book/03.-back-end/01.-java/02.-references/jvm.md","articles":[]}]},"previous":{"title":"Solid","level":"1.4.1.1.3","depth":4,"path":"book/03.-back-end/01.-java/01.-general/solid/README.md","ref":"book/03.-back-end/01.-java/01.-general/solid/README.md","articles":[{"title":"LSP","level":"1.4.1.1.3.1","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","mtime":"2018-11-09T06:12:52.513Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-09T06:15:08.123Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"리스코프 치환의 원칙 (LSP)","level":"1.4.1.1.3.3","depth":5,"next":{"title":"인터페이스 분리의 원칙 (ISP)","level":"1.4.1.1.3.4","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/isp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/isp.md","articles":[]},"previous":{"title":"개방 폐쇄의 원칙 (OCP)","level":"1.4.1.1.3.2","depth":5,"path":"book/03.-back-end/01.-java/01.-general/solid/ocp.md","ref":"book/03.-back-end/01.-java/01.-general/solid/ocp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/01.-general/solid/lsp.md","mtime":"2018-11-09T06:39:16.710Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-09T07:40:25.911Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
