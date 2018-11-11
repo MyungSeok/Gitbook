@@ -5,11 +5,11 @@
 
 _**SOLID**_ 5대 원칙 (객체 지향 설계 5원칙)
 
-* [SRP (Single Reponsibility Principle : 단일 책임의 원칙)]((/book/03.-back-end/01.-java/01.-general/solid/srp.html))
+* [SRP (Single Reponsibility Principle : 단일 책임의 원칙)](/book/03.-back-end/01.-java/01.-general/solid/srp.html)
 * [OCP (Open Closed Principle : 개방 폐쇄의 원칙)](/book/03.-back-end/01.-java/01.-general/solid/ocp.html)
 * [LSP (Liskov Substitution Principle : 리스코프 치환의 원칙)](/book/03.-back-end/01.-java/01.-general/solid/lsp.html)
-* [ISP (Interface Segregation Principle : 인터페이스 분리의 원칙)]((/book/03.-back-end/01.-java/01.-general/solid/isp.html))
-* [DIP (Dependency Inversion Principle : 의존 역전의 원칙)]((/book/03.-back-end/01.-java/01.-general/solid/dip.html))
+* [ISP (Interface Segregation Principle : 인터페이스 분리의 원칙)](/book/03.-back-end/01.-java/01.-general/solid/isp.html)
+* [DIP (Dependency Inversion Principle : 의존 역전의 원칙)](/book/03.-back-end/01.-java/01.-general/solid/dip.html)
 
 ## SRP (Single Reponsibility Principle : 단일 책임의 원칙)
 
