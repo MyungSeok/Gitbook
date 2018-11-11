@@ -36,7 +36,7 @@ The key's randomart image is:
 * id\_rsa.pub
   * 공개키 \(복사해서 저장소에 넣음\)
 
-#### Parameter
+### Parameter
 
 * -t
   * 암호화 타입
@@ -45,21 +45,20 @@ The key's randomart image is:
 * -C 
   * 주석입력 
 
-## Revert
+## 리버트 (Revert)
 
-#### Syntax
+### Syntax
 
 ```bash
 $ git revert {COMMIT_NUMBER} 
 ```
 
-### Merge Commit Revert
+## 머지 되돌리기 (Merge Commit Revert)
 
-일반적인 리버트로는 불가능 하다.
+머지 커밋 (Merge Commit) 일반적인 리버트로는 불가능 하다.
 
 `-m 1` 옵션을 넣어 줘야 한다.
 
 ```bash
 $ git revert -m 1 {COMMIT_NUMBER} 
 ```
-
