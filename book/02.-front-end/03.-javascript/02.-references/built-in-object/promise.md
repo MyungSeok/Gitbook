@@ -1,4 +1,4 @@
-# Promise
+# [Draft] Promise
 
 JavaScript 특성상 싱글 스레드 환경에서 대부분의 작업들은 비동기로 이루어진다.
 
@@ -75,8 +75,6 @@ _promise(true)
   * `Promise` 가 실패한 상태이다.
 * settled
   * `Promise` 성공여부와 상관없이 완료된 상태이다.
-
-# 작성중
 
 > Reference
 > 
