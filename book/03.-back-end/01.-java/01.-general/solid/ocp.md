@@ -63,5 +63,5 @@ OCP 를 만족한 설계는 다음과 같은 장점이 있다.
 * 코드의 가독성이 높아진다.
 
 > Reference
->
-> https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600
+>  
+> <https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600>
