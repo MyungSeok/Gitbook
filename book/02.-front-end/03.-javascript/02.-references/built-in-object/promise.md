@@ -65,6 +65,19 @@ _promise(true)
   });
 ```
 
+`Promise` 사용시 다음 상태중에 하나가 될 것이다.
+
+* pending
+  * 아직 `Promise` 를 수행중인 상태 
+* fulfilled
+  * `Promise` 가 성공적인 상태이다.
+* rejected
+  * `Promise` 가 실패한 상태이다.
+* settled
+  * `Promise` 성공여부와 상관없이 완료된 상태이다.
+
+# 작성중
+
 > Reference
 > 
 > <https://programmingsummaries.tistory.com/325>
