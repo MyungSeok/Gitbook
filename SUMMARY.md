@@ -36,6 +36,7 @@
         * [Array](book/02.-front-end/03.-javascript/02.-references/built-in-object/array.md)
         * [Object](book/02.-front-end/03.-javascript/02.-references/built-in-object/object.md)
         * [Function](book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md)
+        * [Promise](book/02.-front-end/03.-javascript/02.-references/built-in-object/promise.md)
       * [Operator & Expression](book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md)
       * [Global Object](book/02.-front-end/03.-javascript/02.-references/global-object.md)
       * [ECMA 6](book/02.-front-end/03.-javascript/02.-references/ecma6/README.md)
