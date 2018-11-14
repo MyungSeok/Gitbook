@@ -25,50 +25,14 @@ $ if ! [ -f ~/Library/KeyBindings/DefaultkeyBinding.dict ]; then mkdir -p ~/Libr
 
 > 바로 적용이 안된다면 **재부팅** 한다.
 
-## Statement
+### VSCode 마크다운 설정 수정
 
 ```markdown
-# 제목
-## 분류
-### 중분류
-내용내용내용
-```
-
-### Syntax
-
-```java
-  public void main (String[] args) {
-
-  }
-```
-
-### Parameter
-
-* args
-  * 매개변수
-
-### Example #1 : Java
-
-```java
-  public void main (String[] args) {
-
-  }
-```
-
-### Example #2 : JS - ES5
-
-```javascript
-  function foo() {
-
-  }
-```
-
-### Example #2 : JS - ES6
-
-```javascript
-  var foo = () => {
-
-  };
+"markdownlint.config": {
+        "MD001": false,     // 순차적 헤더
+        "MD024": false,     // 중복 헤더 제목
+        "MD026": false      // 헤더에 특수문자
+    }
 ```
 
 ## 다이어그램 (mermaid)
