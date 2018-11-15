@@ -108,7 +108,7 @@ _promise(true)
   })
 ```
 
-### Case 3 : 모든 Promise 를 완료하고 실행
+#### Case 3 : 모든 Promise 를 완료하고 실행
 
 ```javascript
 var promise1 = new Promise(function (resolve, reject) {
