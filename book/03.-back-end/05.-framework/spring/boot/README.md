@@ -28,11 +28,11 @@ kill $(cat ./pid.file)
 >
 > [https://code.i-harness.com/ko/q/195154c](https://code.i-harness.com/ko/q/195154c)
 
-#### Gradle 로 Spring Boot 기동 
+#### Gradle 로 Spring Boot 기동
 
 ```bash
 # gradle bootRun
 ```
 
 > Reference
-> http://isstory83.tistory.com/m/91
+> <http://isstory83.tistory.com/m/91>
