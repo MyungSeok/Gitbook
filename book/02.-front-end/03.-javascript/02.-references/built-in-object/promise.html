@@ -751,9 +751,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.3" data-path="../../03.-performance/READEME.md">
+        <li class="chapter " data-level="1.3.3.3" data-path="../../03.-performance/">
             
-                <span>
+                <a href="../../03.-performance/">
             
                     
                     03. Performance
@@ -765,7 +765,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.3.3.1" data-path="../../03.-performance/netfunnel.html">
+        <li class="chapter " data-level="1.3.3.3.1" data-path="../../03.-performance/memory_leak.html">
+            
+                <a href="../../03.-performance/memory_leak.html">
+            
+                    
+                    Memory Leak
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3.2" data-path="../../03.-performance/netfunnel.html">
             
                 <a href="../../03.-performance/netfunnel.html">
             
@@ -1734,7 +1747,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="draft-promise">[Draft] Promise</h1>
+                                <h1 id="promise">Promise</h1>
 <p>JavaScript &#xD2B9;&#xC131;&#xC0C1; &#xC2F1;&#xAE00; &#xC2A4;&#xB808;&#xB4DC; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xC791;&#xC5C5;&#xB4E4;&#xC740; &#xBE44;&#xB3D9;&#xAE30;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4;&#xB2E4;.</p>
 <p>&#xD558;&#xC9C0;&#xB9CC; &#xCD5C;&#xADFC;&#xC5D0; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xAE30;&#xC220;&#xC758; &#xBC1C;&#xC804;&#xACFC; &#xD558;&#xB098;&#xC758; &#xC791;&#xC5C5;&#xC744; &#xCF5C;&#xBC31;&#xC73C;&#xB85C; &#xACB0;&#xACFC;&#xB97C; &#xBC1B;&#xC740;&#xB4A4; &#xC21C;&#xCC28;&#xC801;&#xC73C;&#xB85C; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD558;&#xACE0;&#xC790; &#xD55C;&#xB2E4;&#xBA74; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xCF5C;&#xBC31; &#xC911;&#xCCA9; (&#xCF5C;&#xBC31; &#xC9C0;&#xC625;) &#xC744; &#xACBD;&#xD5D8;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">async</span>(<span class="hljs-number">1</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -1750,17 +1763,19 @@
 });
 </code></pre>
 <p>&#xC774;&#xB7EC;&#xD55C; &#xC0C1;&#xD669;&#xC744; &#xADF9;&#xBCF5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC624;&#xB798;&#xC804;&#xBD80;&#xD130; Promies &#xB77C;&#xB294; &#xD328;&#xD134;&#xC774; &#xC81C;&#xC548;&#xB418;&#xC5B4; &#xC654;&#xC73C;&#xBA70; &#xB2E4;&#xC591;&#xD55C; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xC774;&#xB97C; &#xAD6C;&#xD604;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;&#xD574; &#xC654;&#xB2E4;.</p>
-<p><code>Promise</code> &#xD328;&#xD134;&#xC740; ES5 &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC77C;&#xBD80; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xBA70; ES6 &#xC5D0; &#xC815;&#xC2DD; &#xC2A4;&#xD329;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5C8;&#xB2E4;. </p>
+<p><code>Promise</code> &#xD328;&#xD134;&#xC740; ES5 &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC77C;&#xBD80; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD558;&#xBA70; ES6 &#xC5D0; &#xC815;&#xC2DD; &#xC2A4;&#xD329;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5C8;&#xB2E4;.</p>
 <blockquote>
-<p>IE &#xB294; &#xC0AC;&#xC6A9; &#xBD88;&#xAC00;&#xD558;&#xC5EC; Polyfill &#xCF54;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xAD6C;&#xD604;&#xD574;&#xC57C; &#xD568;<br>Chrome, FF &#xB294; Full Support</p>
+<h3 id="&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xBCC4;-&#xC9C0;&#xC6D0;-&#xC5EC;&#xBD80;">&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xBCC4; &#xC9C0;&#xC6D0; &#xC5EC;&#xBD80;</h3>
+<p>IE &#xB294; &#xC0AC;&#xC6A9; &#xBD88;&#xAC00;&#xD558;&#xC5EC; Polyfill &#xCF54;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xAD6C;&#xD604;&#xD574;&#xC57C; &#xD568;<br>Chrome, FF &#xB294; <em><strong>Full Support</strong></em></p>
 </blockquote>
-<h2 id="syntax">Syntax</h2>
+<h2 id="&#xC0AC;&#xC6A9;">&#xC0AC;&#xC6A9;</h2>
+<h3 id="syntax">Syntax</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
   <span class="hljs-comment">/* statement */</span>
 });
 </code></pre>
 <p>&#xC2E4;&#xD589;&#xC2DC; <code>Promise</code> &#xAD6C;&#xBB38;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xD55C; &#xC775;&#xBA85;&#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xAC12;&#xC740; &#xBB34;&#xC2DC;&#xB41C;&#xB2E4;.</p>
-<h3 id="parameter">Parameter</h3>
+<h4 id="parameters">Parameters</h4>
 <ul>
 <li>resolve<ul>
 <li>&#xC131;&#xACF5;&#xC2DC; &#xC804;&#xB2EC;&#xB418;&#xB294; &#xC778;&#xC218; (&#xD568;&#xC218; &#xD639;&#xC740; &#xBCC0;&#xC218;)</li>
@@ -1771,7 +1786,9 @@
 </ul>
 </li>
 </ul>
-<h2 id="example-1">Example 1</h2>
+<h3 id="example">Example</h3>
+<h4 id="case-1--&#xAE30;&#xCD08;">Case 1 : &#xAE30;&#xCD08;</h4>
+<p>Promise &#xC758; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xC120;&#xC5B8;&#xC740; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> _promise = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">param</span>) </span>{
   <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
     <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
@@ -1780,21 +1797,14 @@
       } <span class="hljs-keyword">else</span> {
         reject(<span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;Failed&apos;</span>));
       }
-    });
+    }, <span class="hljs-number">3000</span>);
   });
 }
-
-_promise(<span class="hljs-literal">true</span>)
-  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
-    <span class="hljs-built_in">console</span>.log(message);
-  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
-    <span class="hljs-built_in">console</span>.error(error);
-  });
 </code></pre>
 <p><code>Promise</code> &#xC0AC;&#xC6A9;&#xC2DC; &#xB2E4;&#xC74C; &#xC0C1;&#xD0DC;&#xC911;&#xC5D0; &#xD558;&#xB098;&#xAC00; &#xB420; &#xAC83;&#xC774;&#xB2E4;.</p>
 <ul>
 <li>pending<ul>
-<li>&#xC544;&#xC9C1; <code>Promise</code> &#xB97C; &#xC218;&#xD589;&#xC911;&#xC778; &#xC0C1;&#xD0DC; </li>
+<li>&#xC544;&#xC9C1; <code>Promise</code> &#xB97C; &#xC218;&#xD589;&#xC911;&#xC778; &#xC0C1;&#xD0DC;</li>
 </ul>
 </li>
 <li>fulfilled<ul>
@@ -1810,8 +1820,50 @@ _promise(<span class="hljs-literal">true</span>)
 </ul>
 </li>
 </ul>
+<p><code>new Promise</code> &#xB85C; Promise &#xAC00; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xC9C1;&#xD6C4;&#xBD80;&#xD130; <code>resolve</code> &#xB098; <code>reject</code> &#xAC00; &#xD638;&#xCD9C;&#xB418;&#xAE30; &#xC804;&#xAE4C;&#xC9C0;&#xC758; &#xC21C;&#xAC04;&#xC744; pending &#xC0C1;&#xD0DC;&#xB77C;&#xACE0; &#xBCFC; &#xC218; &#xC788;&#xB2E4;.<br>&#xC774;&#xD6C4; &#xBE44;&#xB3D9;&#xAE30; &#xC791;&#xC5C5;&#xC774; &#xB9C8;&#xCE5C;&#xB4A4; &#xACB0;&#xACFC;&#xBB3C;&#xC744; &#xC57D;&#xC18D;&#xB300;&#xB85C; &#xC798; &#xC904; &#xC218; &#xC788;&#xB2E4;&#xBA74; &#xCCAB;&#xBC88;&#xC9F8; &#xD30C;&#xB77C;&#xBA54;&#xD130;&#xB85C; &#xC8FC;&#xC785;&#xB418;&#xB294; <code>resolve</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xACE0;, &#xC2E4;&#xD328;&#xD588;&#xB2E4;&#xBA74; <code>reject</code> &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xAC83;&#xC774; &#xAE30;&#xBCF8;&#xC801;&#xC778; Promise &#xAC1C;&#xB150;&#xC774;&#xB2E4;.</p>
+<p>&#xC774;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xC2E4;&#xD589;&#xBD80;&#xB294; &#xC544;&#xB798;&#xC640; &#xAC19;&#xB2E4;.</p>
+<pre><code class="lang-javascript">_promise(<span class="hljs-literal">true</span>)
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(message);
+  }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">error</span>) </span>{
+    <span class="hljs-built_in">console</span>.error(error);
+  });
+</code></pre>
+<p>&#xC2E4;&#xD589;&#xBD80;&#xC5D0;&#xC11C;&#xB294; <code>_promise()</code> &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; Promise &#xC758; &#xC0C8;&#xB85C;&#xC6B4; &#xAC1D;&#xCCB4;&#xAC00; &#xBC18;&#xD658;&#xB418;&#xACE0; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xBE44;&#xB3D9;&#xAE30; &#xC791;&#xC5C5;&#xC774; &#xC218;&#xD589;&#xB42C;&#xC744;&#xB54C; <code>then</code> &#xC744; &#xD638;&#xCD9C;&#xD558;&#xB294; API &#xAC00; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.<br><code>then</code> &#xC740; &#xC131;&#xACF5;&#xC2DC; &#xCCAB;&#xBC88;&#xC9F8; &#xD30C;&#xB77C;&#xBA54;&#xD130;&#xB97C; &#xC218;&#xD589;&#xD558;&#xBA70;, &#xC2E4;&#xD328;&#xC2DC; &#xB450;&#xBC88;&#xC9F8; &#xD30C;&#xB77C;&#xBA54;&#xD130;&#xB97C; &#xC218;&#xD589;&#xD558;&#xAC8C; &#xB41C;&#xB2E4;.</p>
+<h4 id="case-2--&#xC608;&#xC678;&#xCC98;&#xB9AC;">Case 2 : &#xC608;&#xC678;&#xCC98;&#xB9AC;</h4>
+<p>Javascript &#xD568;&#xC218;&#xC758; &#xCCB4;&#xC774;&#xB2DD;&#xC73C;&#xB85C; &#xC5F0;&#xACB0;&#xB41C; &#xD615;&#xD0DC;&#xC5D0;&#xC11C; &#xBE44;&#xB3D9;&#xAE30; &#xC791;&#xC5C5;&#xC774; &#xC911;&#xAC04;&#xC5D0; &#xC5D0;&#xB7EC;&#xB0A0; &#xACBD;&#xC6B0; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xCC98;&#xB9AC; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<pre><code class="lang-javascript">_promise(<span class="hljs-literal">true</span>)
+  .then(<span class="hljs-built_in">JSON</span>.parse)
+  .catch(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    alert(<span class="hljs-string">&apos;Error&apos;</span>);
+  })
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">message</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(message);
+  })
+</code></pre>
+<h3 id="case-3--&#xBAA8;&#xB4E0;-promise-&#xB97C;-&#xC644;&#xB8CC;&#xD558;&#xACE0;-&#xC2E4;&#xD589;">Case 3 : &#xBAA8;&#xB4E0; Promise &#xB97C; &#xC644;&#xB8CC;&#xD558;&#xACE0; &#xC2E4;&#xD589;</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> promise1 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+  <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;1st Promise&apos;</span>);
+    resolve(<span class="hljs-string">&apos;1&apos;</span>);
+  }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">20000</span> + <span class="hljs-number">1000</span>);
+});
+
+<span class="hljs-keyword">var</span> promise2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">resolve, reject</span>) </span>{
+  <span class="hljs-built_in">window</span>.setTimeout(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;2nd Promise&apos;</span>);
+    resolve(<span class="hljs-string">&apos;2&apos;</span>);
+  }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">10000</span> + <span class="hljs-number">1000</span>);
+});
+
+<span class="hljs-built_in">Promise</span>.all([promise1, promise2])
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">values</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;All Complete&apos;</span>);
+    <span class="hljs-built_in">console</span>.dir(values);
+  });
+</code></pre>
 <blockquote>
-<p>Reference</p>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
 <p><a href="https://programmingsummaries.tistory.com/325" target="_blank">https://programmingsummaries.tistory.com/325</a>
 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a></p>
 </blockquote>
@@ -1874,7 +1926,7 @@ _promise(<span class="hljs-literal">true</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Promise","level":"1.3.3.2.1.4","depth":5,"next":{"title":"Operator & Expression","level":"1.3.3.2.2","depth":4,"path":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","ref":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","articles":[]},"previous":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/promise.md","mtime":"2018-11-14T06:19:35.491Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T02:55:12.253Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Promise","level":"1.3.3.2.1.4","depth":5,"next":{"title":"Operator & Expression","level":"1.3.3.2.2","depth":4,"path":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","ref":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","articles":[]},"previous":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/promise.md","mtime":"2018-11-15T05:58:51.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-15T06:07:29.239Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
