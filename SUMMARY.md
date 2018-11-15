@@ -5,6 +5,7 @@
   * [Manual](book/manual.md)
   * [Template](book/template.md)
 * [01. General](book/01.-general/README.md)
+  * [Architecture](book/01.-general/architecture/README.md)
   * [Data Structure](book/01.-general/data-structure/README.md)
     * [Data Type](book/01.-general/data-structure/data-type.md)
     * [Stack](book/01.-general/data-structure/stack.md)

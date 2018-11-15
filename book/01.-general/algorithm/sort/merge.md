@@ -10,7 +10,9 @@
 
 _**별도의 저장 공간이 필요**_ 하다.
 
-## Example # 1 : JS - ES5
+## Example
+
+### Case 1 : JS - ES5
 
 ```javascript
 var arr = [6, 3, 8, 4, 1, 9, 2, 5, 7, 0];
@@ -45,8 +47,8 @@ MergeSort.prototype = (function () {
   }
 
   function merge(left, right) {
-    var answer = [], 
-      leftLength = left.length, 
+    var answer = [],
+      leftLength = left.length,
       rightLength = right.length,
       leftIdx = 0, 
       rightIdx = 0;

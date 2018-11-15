@@ -2,7 +2,7 @@
 
 ## VSCode
 
-#### extension package
+### extension package
 
 * BreadCrumb in StatusBar
   * 선택 파일 경로 노출
@@ -15,7 +15,7 @@
 * Material Icon Theme
   * 에디터 아이콘
 
-#### usersetting.json
+### usersetting.json
 
 ```javascript
 {
@@ -32,6 +32,8 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home",
+    "window.openFilesInNewWindow": "on",
     "window.zoomLevel": 0,
     "editor.tabSize": 2,
     "editor.fontFamily": "D2Coding ligature",
@@ -40,15 +42,20 @@
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
     "workbench.colorTheme": "One Dark Pro Vivid",
-    "breadcrumbs.enabled": true
-//    필요할때 사용     
-//    "eslint.options": {
-//        "configFile": "/Users/rrest/wemakeprice/workspace/.eslintrc"
-//    }
+    "breadcrumbs.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "material-icon-theme.folders.theme": "specific",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "markdownlint.config": {
+        "MD001": false,
+        "MD024": false,
+        "MD026": false, 
+        "MD033": false
+    }
 }
 ```
 
-#### .eslintrc
+### .eslintrc
 
 ```javascript
 {
@@ -118,4 +125,3 @@
   }
 }
 ```
-
