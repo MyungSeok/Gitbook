@@ -24,9 +24,8 @@ java -jar myapp.jar & echo $! > ./pid.file &
 kill $(cat ./pid.file)
 ```
 
-> Reference
->
-> [https://code.i-harness.com/ko/q/195154c](https://code.i-harness.com/ko/q/195154c)
+> ### 참고자료
+> <https://code.i-harness.com/ko/q/195154c>
 
 #### Gradle 로 Spring Boot 기동
 
@@ -34,5 +33,5 @@ kill $(cat ./pid.file)
 # gradle bootRun
 ```
 
-> Reference
+> ### 참고자료
 > <http://isstory83.tistory.com/m/91>

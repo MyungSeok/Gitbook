@@ -89,6 +89,6 @@ public class Foo {
 
 특정 경로 [링크](/) 를 통하여 이동가능하다.
 
-> ### 참고 자료
+> ### 참고자료
 > <http://www.myungseok.github.io>  
 > <http://www.myungseok.github.io>

@@ -85,5 +85,5 @@ target.addEventListener(type, listener [, useCapture]);
 * useCapture
   * 이벤트 캡쳐링/버블링 유무 
 
-> **참고 자료**   
-> [http://sculove.github.io/blog/2016/12/29/addEventListener-passive/](http://sculove.github.io/blog/2016/12/29/addEventListener-passive/)
+> ### 참고자료
+> <http://sculove.github.io/blog/2016/12/29/addEventListener-passive/>
