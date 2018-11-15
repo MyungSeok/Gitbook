@@ -25,4 +25,4 @@ HTML5 에 새로 추가된 History API 의 한 방식으로 IE 10 이상에서 �
 _**브라우저의 히스토리를 조작**_ 하여 사용하는 방식
 
 > Reference
-> https://blog.outsider.ne.kr/1276
+> <https://blog.outsider.ne.kr/1276>
