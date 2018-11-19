@@ -24,6 +24,5 @@
 
 manifest 파일을 생성하여 등록 해야 한다.
 
-> Reference
->
-> http://theeye.pe.kr/archives/2075
+> ### 참고자료
+> <http://theeye.pe.kr/archives/2075>

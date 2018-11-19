@@ -48,7 +48,7 @@
 1. 생성한 Bean 이 DisposableBean Instance 이면 distory() Method 를 호출한다.
 2. 생성한 Bean 설정파일에 distory-method 가 설정되어 있으면 destory-method 에 해당하는 메소드를 호출한다.
 
-> Bean Life Cycle 을 커스터마이징 하여 제어 할 수 있다.
+#### Bean Life Cycle 을 커스터마이징 하여 제어 할 수 있다.
 
-> Reference  
-> http://javaslave.tistory.com/48
+> ### 참고자료
+> <http://javaslave.tistory.com/48>

@@ -28,8 +28,8 @@ function foo () {
 * `Literal Object` 의 동일한 이름의 Property 생성 불가
 * 8 진수 및 Literal 및 escape 문 사용 불가
   
-> Reference
-> http://beomy.tistory.com/13
+> ### 참고자료
+> <http://beomy.tistory.com/13>
 
 ## 일급객체 \(First-Class Object\)
 
@@ -383,5 +383,5 @@ ECMA5 의 엄격모드는 다음과 같은 특징을 가집니다.
 * 최적화 작업을 도와준다. (특정 스크립트 코드가 빨리 해석되게끔 함)
 * 향후 버전에서 정의될 문법들을 금지한다.
 
-> Reference  
-> https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode
+> ### 참고자료
+> <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode>

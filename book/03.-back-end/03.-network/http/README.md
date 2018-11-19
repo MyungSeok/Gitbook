@@ -122,8 +122,7 @@ HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별
 
 프록시 \(Proxy\) 서버에서 제공
 
-> Reference
->
+> ### 참고자료
 > [http://blog.kurien.co.kr/544](http://blog.kurien.co.kr/544)  
 > [http://brownbears.tistory.com/34](http://brownbears.tistory.com/34)  
 > [http://asfirstalways.tistory.com/68](http://asfirstalways.tistory.com/68)

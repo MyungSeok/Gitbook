@@ -85,5 +85,5 @@ Java 5 이상에서 지원하는 방식으로 Callback Pattern 으로 쉽게 사
 2. 작업의 결과는 `Future` 객체가 반환 받는다.
 3. `Future` 객체 사용 시 이미 결과가 준비 되어 있는 경우에는 즉시 사용하며, 그렇지 않는 경우에는 Polling Thread 는 준비가 될 때까지 Block 상태가 된다.
 
-> Reference
-> https://post.naver.com/viewer/postView.nhn?volumeNo=7852076&memberNo=30800755
+> ### 참고자료
+> <https://post.naver.com/viewer/postView.nhn?volumeNo=7852076&memberNo=30800755>

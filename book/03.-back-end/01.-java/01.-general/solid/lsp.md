@@ -109,6 +109,5 @@ public class MyClass {
 * 문제가 되는 `area()` 를 `Square` 로 이동한다.
 * LSP 를 통하여 _**자식 클래스가 상속받은 부모 클래스의 역활을 충실히 하면서 확장**_ 해나가야 한다.
 
-> Reference
->
-> https://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710
+> ### 참고자료
+> <https://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710>

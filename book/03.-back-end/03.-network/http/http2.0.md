@@ -161,9 +161,8 @@ HTTP 1.1 보다 성능적으로는 우수하지만 적용하였을때의 아래�
 * Opera
 * [기타 브라우저](https://caniuse.com/#feat=http2)
 
-> Reference  
->
-> https://d2.naver.com/helloworld/140351  
-> http://americanopeople.tistory.com/115  
-> https://www.popit.kr/나만-모르고-있던-http2/  
-> https://kinsta.com/learn/what-is-http2/
+> ### 참고자료  
+> <https://d2.naver.com/helloworld/140351>  
+> <http://americanopeople.tistory.com/115>  
+> <https://www.popit.kr/나만-모르고-있던-http2/>  
+> <https://kinsta.com/learn/what-is-http2/>

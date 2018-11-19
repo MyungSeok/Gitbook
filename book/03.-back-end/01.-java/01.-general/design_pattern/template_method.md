@@ -49,6 +49,5 @@ move Car
 Something others
 ```
 
-> Reference
->
-> http://limkydev.tistory.com/81?category=957882
+> ### 참고자료
+> <http://limkydev.tistory.com/81?category=957882>

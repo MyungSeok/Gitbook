@@ -333,5 +333,5 @@ export const foo = Math.sqrt(2);    // 상수 exports
 export default myFunctionOrClass;
 ```
 
-> Reference
-> http://sanghaklee.tistory.com/54
+> ### 참고자료
+> <http://sanghaklee.tistory.com/54>

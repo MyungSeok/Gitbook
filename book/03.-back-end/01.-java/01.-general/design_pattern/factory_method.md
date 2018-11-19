@@ -6,6 +6,5 @@
 
 유지보수가 용이하다.
 
-> Reference
->
-> http://limkydev.tistory.com/83?category=957882
+> ### 참고자료
+> <http://limkydev.tistory.com/83?category=957882>

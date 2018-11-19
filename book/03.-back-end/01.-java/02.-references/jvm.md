@@ -76,9 +76,8 @@ Class Loader 가 Class Load 를 요청 받으면, 아래 순서대로 검색을 
 
 Bootstrap Class Loader 까지 확인해도 없으면 요청 받은 클래스 로더가 _**파일 시스템에서 해당 클래스를 찾음**_
 
-> Reference
->
-> https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+> ### 참고자료
+> <https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https%3A%2F%2Fwww.google.com%2F>
 
 ## Runtime Data Areas (런타임 데이터 영역)
 
@@ -136,12 +135,11 @@ Bootstrap Class Loader 까지 확인해도 없으면 요청 받은 클래스 로
 * Method Area
 * Runtime Constant Pool
 
-> Reference
->
-> http://limkydev.tistory.com/51  
-> http://postitforhooney.tistory.com/entry/JavaJVM-JVM-이해를-통한-Java-작동원리-이해하기  
-> https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https%3A%2F%2Fwww.google.com%2F
-> https://medium.com/@lazysoul/jvm-이란-c142b01571f2
+> ### 참고자료
+> <http://limkydev.tistory.com/51>  
+> <http://postitforhooney.tistory.com/entry/JavaJVM-JVM-이해를-통한-Java-작동원리-이해하기>  
+> <https://m.blog.naver.com/PostView.nhn?blogId=choigohot&logNo=40192701035&proxyReferer=https%3A%2F%2Fwww.google.com%2F>  
+> <https://medium.com/@lazysoul/jvm-이란-c142b01571f2>
 
 ## Excution Engine (실행 엔진)
 
@@ -265,9 +263,8 @@ Old 영역은 데이터가 가득차면 GC 를 실행한다.
 * G1 (Garbage First) GC
   * 가장 최신의 가장 성능이 좋은 GC (JDK 7 이상)
 
-> Reference
->
-> https://d2.naver.com/helloworld/1329
+> ### 참고자료
+> <https://d2.naver.com/helloworld/1329>
 
 ## finalize()
 

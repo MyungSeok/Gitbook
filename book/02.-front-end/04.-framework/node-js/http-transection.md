@@ -305,5 +305,5 @@ http.createServer(request, response) => {
 
 ## 
 
-> Reference URL
-> https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/
+> ### 참고자료
+> <https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/>

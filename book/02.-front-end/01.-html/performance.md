@@ -67,8 +67,7 @@ HTML 은 _**gzip**_ 전송을 한다.
 * 브라우저 캐싱 사용
 * 방문 리다이렉션 사용 안함
 
-> Reference  
-> 
-> https://developers.google.com/speed/docs/insights/browser-reflow?hl=ko  
-> http://lists.w3.org/Archives/Public/public-html-ig-ko/2011Sep/att-0030/Reflow_____________________________Tip.pdf  
-> http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/
+> ### 참고자료
+> <https://developers.google.com/speed/docs/insights/browser-reflow?hl=ko>  
+> <http://lists.w3.org/Archives/Public/public-html-ig-ko/2011Sep/att-0030/Reflow_____________________________Tip.pdf>  
+> <http://www.stubbornella.org/content/2009/03/27/reflows-repaints-css-performance-making-your-javascript-slow/>

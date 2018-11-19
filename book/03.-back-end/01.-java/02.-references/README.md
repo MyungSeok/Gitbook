@@ -13,6 +13,5 @@ JCF 의 상속 구조이며 사용용도에 따랄 `List` `Set` `Map` 으로 나
 |Set|HashSet<br>TreeSet|순서를 유지하지 않는 집합<br>데이터의 중복이 허용되지 않는다.|
 |Map|HashMap<br>TreeMap<br>HashTable<br>Properites|키 와 값의 쌍으로 이루어진 데이터 집합이며 순서를 유지하지 않는 집합이다.<br>데이터의 중복이 허용되지 않지만 값의 중복은 허용한다.|
 
-> Reference  
-> 
-> http://hackersstudy.tistory.com/26
+> ### 참고자료  
+> <http://hackersstudy.tistory.com/26>

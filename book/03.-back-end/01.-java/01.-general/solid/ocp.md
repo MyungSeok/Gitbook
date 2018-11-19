@@ -62,6 +62,5 @@ OCP 를 만족한 설계는 다음과 같은 장점이 있다.
 * 유지보수 비용이 감소된다.
 * 코드의 가독성이 높아진다.
 
-> Reference
->  
+> ### 참고자료
 > <https://code.tutsplus.com/tutorials/solid-part-2-the-openclosed-principle--net-36600>

@@ -12,8 +12,8 @@ _**다이제스트 (Digest) 란 해시 함수라는 수학적인 연산을 통�
 
 대표적인 해시 함수는 `MD5` `SHA-1` `SHA-256` 등이 있다.
 
-> Reference
-> http://www.itworld.co.kr/news/94202
+> ### 참고자료
+> <http://www.itworld.co.kr/news/94202>
 
 ## TCP/UDP 포트 목록
 

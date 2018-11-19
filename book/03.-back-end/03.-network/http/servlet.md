@@ -45,7 +45,7 @@ WAS 서버는 대부분은 애플리케이션을 수행해주는 미들웨어 (�
 
 ## Servlet Container
 
-> Reference
-> http://blog.naver.com/PostView.nhn?blogId=00050004&logNo=70043657451
-> https://dololak.tistory.com/82
-> http://mangkyu.tistory.com/14
+> ### 참고자료
+> <http://blog.naver.com/PostView.nhn?blogId=00050004&logNo=70043657451>
+> <https://dololak.tistory.com/82>
+> <http://mangkyu.tistory.com/14>

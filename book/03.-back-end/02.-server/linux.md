@@ -163,6 +163,5 @@ $ crontab -r
 
 초단위로 실행할 경우 `sleep` 명령어 를 이용하면 된다.
 
-> Reference
->
-> https://jdm.kr/blog/2
+> ### 참고자료
+> <https://jdm.kr/blog/2>

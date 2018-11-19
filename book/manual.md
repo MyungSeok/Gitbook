@@ -151,5 +151,5 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 
-> **Reference Url**
-> https://mermaidjs.github.io/
+> ### 참고자료
+> <https://mermaidjs.github.io/>

@@ -77,6 +77,5 @@ public static void add(int value) {
 }
 ```
 
-> Reference
->
-> http://parkcheolu.tistory.com/15
+> ### 참고자료
+> <http://parkcheolu.tistory.com/15>

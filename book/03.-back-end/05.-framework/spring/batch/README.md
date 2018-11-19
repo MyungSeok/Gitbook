@@ -16,6 +16,5 @@
 
 대부분 [Rabbit MQ](/book/03.-back-end/05.-framework/spring/batch/rabbitmq.html) 와 연동하여 사용한다.
 
-> Reference
->
+> ### 참고자료
 > <https://jojoldu.tistory.com/324?category=635883>

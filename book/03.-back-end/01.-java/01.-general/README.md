@@ -112,9 +112,8 @@ public class Sum {
 }
 ```
 
-> Reference
->
-> http://grayt.tistory.com/87
+> ### 참고자료
+> <http://grayt.tistory.com/87>
 
 ## Access Modifier (접근 제어자)
 
@@ -146,7 +145,8 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 
 어떤 클래스에서라도 접근 가능하다.
 
-> https://wikidocs.net/232
+> ### 참고자료
+> <https://wikidocs.net/232>
 
 ## 객체 재사용
 
