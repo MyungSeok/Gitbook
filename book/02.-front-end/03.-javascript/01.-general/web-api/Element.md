@@ -10,5 +10,5 @@
 var domRect = element.getBoundingClientRect();
 ```
 
-> Reference  
-> https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect
+> ### 참고자료
+> <https://developer.mozilla.org/ko/docs/Web/API/Element/getBoundingClientRect>
