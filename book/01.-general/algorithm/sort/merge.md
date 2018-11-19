@@ -8,7 +8,7 @@
 
 ## 특이사항
 
-_**별도의 저장 공간이 필요**_ 하다.
+* _**별도의 저장 공간이 필요**_ 하다.
 
 ## Example
 
@@ -50,7 +50,7 @@ MergeSort.prototype = (function () {
     var answer = [],
       leftLength = left.length,
       rightLength = right.length,
-      leftIdx = 0, 
+      leftIdx = 0,
       rightIdx = 0;
 
     while (leftIdx < leftLength && rightIdx < rightLength) {
