@@ -53,3 +53,22 @@ IT 전반에 걸친 일반적인 지식들을 정리한다.
 
 > ### 참고자료
 > <https://msdn.microsoft.com/ko-kr/library/s3f49ktz.aspx>
+
+## Type-Safe 란?
+
+어떠한 연산 (Operation) 도 정의 되지 않는 결과를 내놓지 않는 것 이라고 한다.
+
+이는 예측 불가능한 결과를 내지 않는건데
+
+예를 들면
+
+`1 + '1'` 아래의 연산이 가능하거나 문자열 변수에 숫자 1을 할당하는 것이 가능하다거나 하는 _**비논리적인 일**_ 을 일컫는다.
+
+보통 `type-safe` 하다고 알려진 언어에서는 컴파일시에 이런 에러를 처리해주지만 `type-safe` 하지 않는 언어에서는 이를 적당이 암묵적으로 처리한다.
+
+그래서 `javascript` 는 `type-safe` 한 언어가 아니라고 한다.
+
+일반적으로 `C#`, `java` 등과 같이 컴파일 기반언어들을 `type-safe` 한 언어로 취급한다.
+
+> ### 참고자료
+> <https://m.blog.naver.com/PostView.nhn?blogId=jerrypop&logNo=40117130140&proxyReferer=https%3A%2F%2Fwww.google.com%2F>

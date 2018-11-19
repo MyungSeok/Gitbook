@@ -101,6 +101,7 @@
         * [Dispatcher Servlet](book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md)
         * [Gradle](book/03.-back-end/05.-framework/spring/fundamental/gradle.md)
       * [Boot](book/03.-back-end/05.-framework/spring/boot/README.md)
+        * [Thymeleaf](book/03.-back-end/05.-framework/spring/boot/thymeleaf.md)
       * [Batch](book/03.-back-end/05.-framework/spring/batch/README.md)
         * [Rabbit MQ](book/03.-back-end/05.-framework/spring/batch/rabbitmq.md)  
       * [Security](book/03.-back-end/05.-framework/spring/security.md)
