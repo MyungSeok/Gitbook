@@ -155,8 +155,7 @@ _**Excution Engine**_ 는 이와 같이 바이트 코드가 실제로 JVM 내부
 
 최초의 JVM 은 `Interpreter` 방식으로 수행되었다.
 
-> _**Interpreter (인터프리터) ?**_
-> 
+> ### Interpreter (인터프리터)
 > `Byte Code` 명령어를 하나씩 읽어서 해석한다.  
 > 이로 인해 실행이 느리다는 단점을 가지고 있다.
 

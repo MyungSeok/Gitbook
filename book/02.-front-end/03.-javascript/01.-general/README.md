@@ -156,8 +156,7 @@ _callback_jsonp_({
 });
 ```
 
-> _**INFO**_
->
+> ### Info
 > * 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조  
 > * CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.  
 > * 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경

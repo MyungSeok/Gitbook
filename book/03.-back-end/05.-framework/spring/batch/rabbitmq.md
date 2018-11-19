@@ -11,6 +11,8 @@ AMQP 프로토콜을 구현한 메시지 브로커이다.
 > * 보안
 > 위 사항들을 지향하는 데이터 형식을 따르는 메시지를 만들고 이를 해석 가능한 도구라면 구현 언어에 관계없이 다른 호환 도구와 상호운용이 가능하다.
 
+작성중 ...
+
 > ### 참고자료
 > <http://itstory.tk/entry/Message-Queue-RabbitMQ란>  
 > <https://brunch.co.kr/@springboot/51>
