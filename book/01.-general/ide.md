@@ -14,6 +14,9 @@
   * 에디터 아이콘
 * Material Icon Theme
   * 에디터 아이콘
+* Markdown lint
+  * 마크다운 문법 검사
+  * <https://github.com/DavidAnson/vscode-markdownlint>
 
 ### usersetting.json
 
