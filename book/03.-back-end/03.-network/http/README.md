@@ -26,11 +26,11 @@
 서버가 HTTP 프로토콜을 이용하여 클라이언트의 요청에 대해 응답할 때 부가적인 정보를 응답 헤더에 담아 전송한다.
 
 * Connection
-  * 클라이언트와 서버의 연결 방식 설정 
-    * keep-alive : 클라이언트와 접속 유지 
-    * close : 클라이언트와 접속 중단 
+  * 클라이언트와 서버의 연결 방식 설정
+    * keep-alive : 클라이언트와 접속 유지
+    * close : 클라이언트와 접속 중단
 * Content-Length
-  * 요청한 파일의 데이터 길이 
+  * 요청한 파일의 데이터 길이
 * Content-Type
   * 헤더 응답 문서의 mime 타입
 * Date
@@ -70,7 +70,7 @@ Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
 #### Type List
 
 * text
-  * 텍스트 파일 
+  * 텍스트 파일
   * text/plain, text/html, text/css, text/javascript
 * multipart
   * 이미지 파일 \(비디오 제외\)
@@ -87,7 +87,7 @@ Server 에서 데이터를 완전히 받을때 까지 걸리는 시간
 
 ## Cookie & Session & Cache
 
-HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별할 수 있도록 사용하는 방식 
+HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별할 수 있도록 사용하는 방식
 
 ### 공통점
 
