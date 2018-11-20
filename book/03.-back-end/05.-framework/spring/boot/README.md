@@ -33,5 +33,10 @@ kill $(cat ./pid.file)
 # gradle bootRun
 ```
 
+## 히카리 (Hikari CP)
+
+Spring Boot 2.0 부터 지원 하는 JDBC Connection Pool 이다.
+
 > ### 참고자료
-> <http://isstory83.tistory.com/m/91>
+> <http://jeong-pro.tistory.com/162>  
+> <http://netframework.tistory.com/entry/HikariCP-소개>
