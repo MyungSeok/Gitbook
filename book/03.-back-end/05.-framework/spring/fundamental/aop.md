@@ -30,6 +30,8 @@ _**관심의 분리 \(Seperation of Concerns\) 를 통하여 핵심 관심 사�
   * Advice 를 적용 가능한 지점으로 Method 를 호출
   * 필드 값 변경이 해당
   * Spring 에서는 Method 호출만 지원
+* Interceptor
+  * Interceptor Chain 방식의 AOP 툴에서 사용되는 용어로서 주로 한개의 호출 Method 를 가지는 Advice
 * Advice
   * 언제, 어떤 공통 관심 기능을 핵심 관심 모듈에 적용할 지를 정의
 * Weaving
