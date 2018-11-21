@@ -16,3 +16,4 @@ AMQP 프로토콜을 구현한 메시지 브로커이다.
 > ### 참고자료
 > <http://itstory.tk/entry/Message-Queue-RabbitMQ란>  
 > <https://brunch.co.kr/@springboot/51>
+> <http://abh0518.net/tok/?p=384>
