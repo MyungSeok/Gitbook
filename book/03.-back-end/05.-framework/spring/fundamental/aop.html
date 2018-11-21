@@ -1857,6 +1857,64 @@
 <li>&#xC7AC;&#xD65C;&#xC6A9;&#xC131; &#xADF9;&#xB300;&#xD654;</li>
 <li>&#xC720;&#xC5F0;&#xD55C; &#xBCC0;&#xD654; &#xC218;&#xC6A9;</li>
 </ul>
+<h2 id="&#xC0AC;&#xC6A9;">&#xC0AC;&#xC6A9;</h2>
+<p>&#xB2E4;&#xC74C;&#xC740; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;&#xC744; &#xC54C;&#xC544;&#xBCF4;&#xC790; (Spring Boot &#xAE30;&#xC900;)</p>
+<h3 id="&#xC8FC;&#xC694;&#xAC1C;&#xB150;">&#xC8FC;&#xC694;&#xAC1C;&#xB150;</h3>
+<ul>
+<li>Aspect<ul>
+<li>&#xC5EC;&#xB7EC; &#xAC1D;&#xCCB4;&#xC5D0; &#xACF5;&#xD1B5;&#xC73C;&#xB85C; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xD6A1;&#xB2E8; &#xAD00;&#xC2EC; &#xBAA8;&#xB4C8;&#xC744; &#xC815;&#xC758;</li>
+</ul>
+</li>
+<li>Joinpoint<ul>
+<li>Advice &#xB97C; &#xC801;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xC9C0;&#xC810;&#xC73C;&#xB85C; Method &#xB97C; &#xD638;&#xCD9C;</li>
+<li>&#xD544;&#xB4DC; &#xAC12; &#xBCC0;&#xACBD;&#xC774; &#xD574;&#xB2F9;</li>
+<li>Spring &#xC5D0;&#xC11C;&#xB294; Method &#xD638;&#xCD9C;&#xB9CC; &#xC9C0;&#xC6D0;</li>
+</ul>
+</li>
+<li>Interceptor<ul>
+<li>Interceptor Chain &#xBC29;&#xC2DD;&#xC758; AOP &#xD234;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xB418;&#xB294; &#xC6A9;&#xC5B4;&#xB85C;&#xC11C; &#xC8FC;&#xB85C; &#xD55C;&#xAC1C;&#xC758; &#xD638;&#xCD9C; Method &#xB97C; &#xAC00;&#xC9C0;&#xB294; Advice</li>
+</ul>
+</li>
+<li>Advice<ul>
+<li>&#xC5B8;&#xC81C;, &#xC5B4;&#xB5A4; &#xACF5;&#xD1B5; &#xAD00;&#xC2EC; &#xAE30;&#xB2A5;&#xC744; &#xD575;&#xC2EC; &#xAD00;&#xC2EC; &#xBAA8;&#xB4C8;&#xC5D0; &#xC801;&#xC6A9;&#xD560; &#xC9C0;&#xB97C; &#xC815;&#xC758;</li>
+</ul>
+</li>
+<li>Weaving<ul>
+<li>Advice &#xB97C; &#xD575;&#xC2EC; &#xAD00;&#xC2EC; &#xBAA8;&#xB4C8;&#xC5D0; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC815;&#xC758;</li>
+</ul>
+</li>
+<li>Pointcut<ul>
+<li>&#xD6A1;&#xB2E8; &#xAD00;&#xC2EC; &#xBAA8;&#xB4C8;&#xC774; &#xC801;&#xC6A9;&#xB420; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC120;&#xC815;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC2A4;&#xD504;&#xB9C1;&#xC5D0;&#xC11C;&#xB294; &#xC815;&#xADDC; &#xD45C;&#xD604;&#xC2DD;&#xC774;&#xB098; Aspect J &#xBB38;&#xBC95;&#xC744; &#xD1B5;&#xD574; &#xC815;&#xC758;</li>
+</ul>
+</li>
+</ul>
+<h3 id="advice-&#xC758;-&#xC885;&#xB958;"><code>Advice</code> &#xC758; &#xC885;&#xB958;</h3>
+<ul>
+<li>Before<ul>
+<li>&#xB300;&#xC0C1; &#xAC1D;&#xCCB4;&#xC758; Method &#xD638;&#xCD9C; &#xC804; &#xC2E4;&#xD589;</li>
+</ul>
+</li>
+<li>After Returning<ul>
+<li>&#xB300;&#xC0C1; &#xAC1D;&#xCCB4;&#xAC00; <code>Exception</code> &#xC5C6;&#xC774; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xB41C; &#xD6C4; &#xC2E4;&#xD589;</li>
+</ul>
+</li>
+<li>After Throwing<ul>
+<li>&#xB300;&#xC0C1; &#xAC1D;&#xCCB4;&#xC758; <code>Exception</code> &#xACFC; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xC2E4;&#xD589;</li>
+<li><code>finally</code> &#xC758; &#xAE30;&#xB2A5;&#xACFC; &#xBE44;&#xC2B7;&#xD568;</li>
+</ul>
+</li>
+<li>Around<ul>
+<li>&#xB300;&#xC0C1; &#xAC1D;&#xCCB4;&#xC758; &#xBA54;&#xC11C;&#xB4DC; &#xD638;&#xCD9C; &#xC804;, &#xD6C4; &#xB610;&#xB294; <code>Exception</code> &#xBC1C;&#xC0DD; &#xC2DC;&#xC810;&#xC5D0; &#xC2E4;&#xD589;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="https://heowc.github.io/2018/02/07/spring-boot-aop/" target="_blank">https://heowc.github.io/2018/02/07/spring-boot-aop/</a>
+<a href="http://jyh1536.tistory.com/66" target="_blank">http://jyh1536.tistory.com/66</a>
+<a href="http://addio3305.tistory.com/86" target="_blank">http://addio3305.tistory.com/86</a>
+<a href="https://jojoldu.tistory.com/27" target="_blank">https://jojoldu.tistory.com/27</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -1916,7 +1974,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"next":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"previous":{"title":"Fundamental","level":"1.4.5.1.1","depth":4,"path":"book/03.-back-end/05.-framework/spring/fundamental/README.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/README.md","articles":[{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","articles":[]},{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","articles":[]},{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},{"title":"Gradle","level":"1.4.5.1.1.5","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","mtime":"2018-11-19T07:59:39.620Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-20T09:20:43.400Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"next":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"previous":{"title":"Fundamental","level":"1.4.5.1.1","depth":4,"path":"book/03.-back-end/05.-framework/spring/fundamental/README.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/README.md","articles":[{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","articles":[]},{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","articles":[]},{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},{"title":"Gradle","level":"1.4.5.1.1.5","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","mtime":"2018-11-21T06:02:19.690Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-21T06:29:05.950Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
