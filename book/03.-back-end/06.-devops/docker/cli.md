@@ -2,7 +2,7 @@
 
 ## Version
 
-#### 버전 확인 \(version\)
+### 버전 확인 \(version\)
 
 ```bash
 $ docker version
@@ -10,7 +10,7 @@ $ docker --version
 $ docker version
 ```
 
-#### 정보 확인 \(info\)
+### 정보 확인 \(info\)
 
 ```bash
 $ docker info
@@ -18,61 +18,91 @@ $ docker info
 
 ## Image
 
-#### 이미지 찾기 \(search\)
+### 이미지 찾기 \(search\)
+
+#### Syntax
 
 ```bash
 $ docker search IMAGE
 ```
 
-#### 이미지 다운 \(pull\)
+#### Example
+
+```bash
+$ docker search ubuntu
+```
+
+### 이미지 다운 \(pull\)
+
+#### Syntax
 
 ```bash
 $ docker pull IMAGE[:TAG]
 ```
 
-#### 이미지 목록 \(ls\)
+#### Example
+
+```bash
+$ docker pull ubuntu:latest
+```
+
+### 이미지 목록 \(ls\)
+
+#### Syntax
 
 ```bash
 $ docker image ls
 ```
 
-#### 이미지 삭제 \(rmi\)
+### 이미지 삭제 \(rmi\)
+
+#### Syntax
 
 ```bash
 $ docker rmi IMAGE[:TAG]
 ```
 
+#### Example
+
+```bash
+$ docker rmi ubuntu
+```
+
 ## Container
 
-#### 컨테이너 생성 \(run\)
+### 컨테이너 생성 \(run\)
+
+#### Syntax
 
 ```bash
 $ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
 ```
 
+#### Example
+
 ```bash
-$ docker run -i -t -d -p 80:80 --name ubuntu_container ubuntu /bin/bash
+$ docker run -i -t -d -p 80:80/tcp --name ubuntu_container ubuntu /bin/bash
 ```
 
 ubuntu 이미지를 컨테이너로 생성
 
-* ubuntu 이미지를 컨테이너로 생성 
-* `-i`\(interactive\) 
-  * 표준 입력\(stdin\)을 활성화 
-  * 컨테이너와 연결\(attach\)되어 있지 않더라도 표준 입력을 유지합니다. 
+* ubuntu 이미지를 컨테이너로 생성
+* `-i`\(interactive\)
+  * 표준 입력\(stdin\)을 활성화
+  * 컨테이너와 연결\(attach\)되어 있지 않더라도 표준 입력을 유지합니다.
   * 보통 이 옵션을 사용하여 Bash에 명령을 입력합니다.
-* `-t`\(Pseudo-tty\) 
-  * TTY 모드 
-  * Bash Shell 사용하려면 필요한 옵션 
+* `-t`\(Pseudo-tty\)
+  * TTY 모드
+  * Bash Shell 사용하려면 필요한 옵션
   * 이 옵션을 설정하지 않으면 명령을 입력할 수는 있지만 셸이 표시되지 않습니다.
-* `-d` \(detached\) 
-  * 데몬 모드 
+* `-d` \(detached\)
+  * 데몬 모드
   * 컨테이너가 백그라운드로 동작 된다
 * `-p` \(port\)
   * 컨테이너 포트 포워딩
   * \[HOST\_PORT\] : \[CONTAINER\_PORT\]
-* `--name` 
-  * 컨테이너의 이름을 지정 
+* `--name`
+  * 컨테이너의 이름을 지정
 * `/bin/bash` 쉘을 이용하여 입출력을 할 수 있다.
 
 #### 컨테이너 목록 \(ls\)
@@ -130,7 +160,7 @@ $ docker rm CONTAINER
 $ docker cp CONTAINER:CONTAINER_FILE_PATH HOST_FILE_PATH
 ```
 
-##### 호스트 -&gt; 컨테이너 
+##### 호스트 -&gt; 컨테이너
 
 ```bash
 $ docker cp HOST_FILE_PATH CONTAINER:CONTAINER_FILE_PATH
@@ -141,4 +171,3 @@ $ docker cp ubuntu:/etc/nginx/nginx.conf ./
 ```
 
 `ubuntu` 내에 있는 `nginx.conf` 파일을 지정된 로컬 호스트 경로로 복사한다.
-
