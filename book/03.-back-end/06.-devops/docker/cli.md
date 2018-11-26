@@ -152,7 +152,15 @@ CONTAINER 이름을 가진 컨테이너에 `/bin/bash` 쉘을 사용한다.
 $ docker rm CONTAINER
 ```
 
-#### 컨테이너 파일 복사 \(cp\)
+#### 컨테이너 세부정보 확인 (inspect)
+
+컨테이너의 세부정보를 json 형태로 확인 가능
+
+```bash
+$ docker inspect CONTAINER
+```
+
+#### 컨테이너에 파일 복사 \(cp\)
 
 ##### 컨테이너 -&gt; 호스트
 

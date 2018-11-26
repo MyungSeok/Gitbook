@@ -2,7 +2,7 @@
 
 ## Docker 란?
 
-호스트 OS 위에 게스트 OS 전체를 가상화 시키는 기존 방식과는 달리   
+호스트 OS 위에 게스트 OS 전체를 가상화 시키는 기존 방식과는 달리  
 CPU 의 가상화 기술 \(HVM\) 을 이용한 KVM \(Kernel-based Virtual Machine\) 과 반가상화 \(Paravirtualization\) 방식의 Xen 방식으로 구성된다.  
 Docker 는 _**프로세스를 격리**_ 시켜 하나의 독립된 OS 처럼 가상화 시키는 방법으로 사용된다.
 
