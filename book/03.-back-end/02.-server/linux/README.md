@@ -114,7 +114,7 @@ $ telnet DOMAIN [PORT]
 * `-o` `--timers`
   * 연결 대기 시간 표기
 * `-p` `--program`
-  *  PID 와 사용중인 프로그램명을 표시 
+  * PID 와 사용중인 프로그램명을 표시
 * `-r` `--route`
   * 라우팅 테이블 보기
 * `-s` `--statistics`
