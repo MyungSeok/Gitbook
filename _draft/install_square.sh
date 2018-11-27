@@ -2,7 +2,7 @@
 # Bash Shell 기반으로 실행함
 
 PROJECT_PATH=$HOME"/wemakeprice/workspace/"
-DEV_WEB="dev-square"
+DEV_WEB="web-square"
 
 function removeDocker() {
   for TYPE in $*
