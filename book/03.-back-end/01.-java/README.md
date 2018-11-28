@@ -1,5 +1,7 @@
 # 01. Java
 
+Java 언어의 전반적인 이야기를 다룹니다.
+
 ## Log4j
 
 ### Log Level
