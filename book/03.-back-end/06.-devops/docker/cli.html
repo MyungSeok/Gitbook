@@ -1292,12 +1292,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2.5" data-path="../../01.-java/02.-references/jvm.html">
+        <li class="chapter " data-level="1.4.1.2.5" data-path="../../01.-java/02.-references/generic.html">
+            
+                <a href="../../01.-java/02.-references/generic.html">
+            
+                    
+                    Generic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.6" data-path="../../01.-java/02.-references/jvm.html">
             
                 <a href="../../01.-java/02.-references/jvm.html">
             
                     
                     JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.7" data-path="../../01.-java/02.-references/functional/">
+            
+                <a href="../../01.-java/02.-references/functional/">
+            
+                    
+                    함수형 프로그래밍
             
                 </a>
             
@@ -1342,9 +1368,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../../02.-server/linux.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../../02.-server/linux/">
             
-                <a href="../../02.-server/linux.html">
+                <a href="../../02.-server/linux/">
             
                     
                     Linux
@@ -1352,6 +1378,25 @@
                 </a>
             
 
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1.1" data-path="../../02.-server/linux/shell_script.html">
+            
+                <a href="../../02.-server/linux/shell_script.html">
+            
+                    
+                    Shell Script
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1963,7 +2008,11 @@ $ docker container ls -aq            <span class="hljs-comment"># all and quite 
 <h4 id="&#xCEE8;&#xD14C;&#xC774;&#xB108;-&#xC0AD;&#xC81C;-rm">&#xCEE8;&#xD14C;&#xC774;&#xB108; &#xC0AD;&#xC81C; (rm)</h4>
 <pre><code class="lang-bash">$ docker rm CONTAINER
 </code></pre>
-<h4 id="&#xCEE8;&#xD14C;&#xC774;&#xB108;-&#xD30C;&#xC77C;-&#xBCF5;&#xC0AC;-cp">&#xCEE8;&#xD14C;&#xC774;&#xB108; &#xD30C;&#xC77C; &#xBCF5;&#xC0AC; (cp)</h4>
+<h4 id="&#xCEE8;&#xD14C;&#xC774;&#xB108;-&#xC138;&#xBD80;&#xC815;&#xBCF4;-&#xD655;&#xC778;-inspect">&#xCEE8;&#xD14C;&#xC774;&#xB108; &#xC138;&#xBD80;&#xC815;&#xBCF4; &#xD655;&#xC778; (inspect)</h4>
+<p>&#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC758; &#xC138;&#xBD80;&#xC815;&#xBCF4;&#xB97C; json &#xD615;&#xD0DC;&#xB85C; &#xD655;&#xC778; &#xAC00;&#xB2A5;</p>
+<pre><code class="lang-bash">$ docker inspect CONTAINER
+</code></pre>
+<h4 id="&#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0;-&#xD30C;&#xC77C;-&#xBCF5;&#xC0AC;-cp">&#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC5D0; &#xD30C;&#xC77C; &#xBCF5;&#xC0AC; (cp)</h4>
 <h5 id="&#xCEE8;&#xD14C;&#xC774;&#xB108;---&#xD638;&#xC2A4;&#xD2B8;">&#xCEE8;&#xD14C;&#xC774;&#xB108; -&gt; &#xD638;&#xC2A4;&#xD2B8;</h5>
 <pre><code class="lang-bash">$ docker cp CONTAINER:CONTAINER_FILE_PATH HOST_FILE_PATH
 </code></pre>
@@ -2032,7 +2081,7 @@ $ docker container ls -aq            <span class="hljs-comment"># all and quite 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CLI","level":"1.4.6.1.1","depth":4,"next":{"title":"Kubernetes","level":"1.4.6.2","depth":3,"path":"book/03.-back-end/06.-devops/kubernetes.md","ref":"book/03.-back-end/06.-devops/kubernetes.md","articles":[]},"previous":{"title":"Docker","level":"1.4.6.1","depth":3,"path":"book/03.-back-end/06.-devops/docker/README.md","ref":"book/03.-back-end/06.-devops/docker/README.md","articles":[{"title":"CLI","level":"1.4.6.1.1","depth":4,"path":"book/03.-back-end/06.-devops/docker/cli.md","ref":"book/03.-back-end/06.-devops/docker/cli.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/06.-devops/docker/cli.md","mtime":"2018-11-22T08:33:24.468Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-22T08:35:50.625Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CLI","level":"1.4.6.1.1","depth":4,"next":{"title":"Kubernetes","level":"1.4.6.2","depth":3,"path":"book/03.-back-end/06.-devops/kubernetes.md","ref":"book/03.-back-end/06.-devops/kubernetes.md","articles":[]},"previous":{"title":"Docker","level":"1.4.6.1","depth":3,"path":"book/03.-back-end/06.-devops/docker/README.md","ref":"book/03.-back-end/06.-devops/docker/README.md","articles":[{"title":"CLI","level":"1.4.6.1.1","depth":4,"path":"book/03.-back-end/06.-devops/docker/cli.md","ref":"book/03.-back-end/06.-devops/docker/cli.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/06.-devops/docker/cli.md","mtime":"2018-11-26T08:50:54.708Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T03:54:11.344Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
