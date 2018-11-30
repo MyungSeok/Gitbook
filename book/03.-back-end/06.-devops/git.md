@@ -107,6 +107,18 @@ Unstaged files 로 들어 있어야 함
 $ git checkout file1
 ```
 
+### 작업 커밋하기
+
+```bash
+$ git commit -m '작업내역'
+```
+
+### 작업 푸시히기
+
+```bash
+$ git push
+```
+
 ### 원격 브랜치 업데이트
 
 새로 생성된 브랜치 정보를 가져온다.
@@ -129,6 +141,10 @@ $ git branch -r
 $ git checkout -t origin/feature/CNST-001
 ```
 
+```bash
+$ git checkout --track origin/feature/CNST-001
+```
+
 ### 머지 되돌리기 (Merge Commit Revert)
 
 머지 커밋 (Merge Commit) 일반적인 리버트로는 불가능 하다.
@@ -138,3 +154,6 @@ $ git checkout -t origin/feature/CNST-001
 ```bash
 $ git revert -m 1 {COMMIT_NUMBER}
 ```
+
+> ### 참고자료
+> <https://mylko72.gitbooks.io/git/content/remote/branch.html>
