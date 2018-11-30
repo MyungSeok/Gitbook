@@ -57,6 +57,78 @@ $ git revert {COMMIT_NUMBER}
 
 ## CLI
 
+### 로컬 브랜치 생성 & 체크아웃
+
+현재 브랜치 기준으로 생성된다.
+
+```bash
+$ git checkout -b feature/CNST-001
+```
+
+### 로컬 상태 보기 (변경 파일)
+
+```bash
+$ git status
+```
+
+### 로컬 작업 Staged files 로 올리기
+
+```bash
+$ git add file1 file2 file3 (...)
+```
+
+```bash
+$ git add .
+```
+
+```bash
+$ git add *
+```
+
+### 로컬 작업 Unstaged files 로 내리기
+
+```bash
+$ git reset file1 file2 file3 (...)
+```
+
+```bash
+$ git reset *
+```
+
+```bash
+$ git reset .
+```
+
+### 로컬 작업 되돌리기
+
+Unstaged files 로 들어 있어야 함
+
+```bash
+$ git checkout file1
+```
+
+### 원격 브랜치 업데이트
+
+새로 생성된 브랜치 정보를 가져온다.
+
+```bash
+$ git remote update
+```
+
+### 원격 브랜치 정보 리스트
+
+```bash
+$ git branch -r
+```
+
+### 원격 브랜치 다운로드 & 체크아웃
+
+원격 브랜치랑 동잃한 이름으로 체크아웃 한다.
+
+```bash
+$ git checkout -t origin/feature/CNST-001
+```
+
 ### 머지 되돌리기 (Merge Commit Revert)
 
 머지 커밋 (Merge Commit) 일반적인 리버트로는 불가능 하다.
