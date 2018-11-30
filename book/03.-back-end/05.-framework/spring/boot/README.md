@@ -33,6 +33,26 @@ kill $(cat ./pid.file)
 # gradle bootRun
 ```
 
+#### 빌드 파일 기동
+
+기본 기동
+
+```bash
+$ java -jar ./sq_wf-0.0.1-SNAPSHOT.jar
+```
+
+포트 `8888` 변경하여 기동
+
+```bash
+$ java -jar -Dserver.port=8888 ./sq_wf-0.0.1-SNAPSHOT.jar
+```
+
+`spring.profiles.active` 값 지정하여 기동
+
+```bash
+$ java -jar -Dserver.port=8888 -Dspring.profiles.active=release ./sq_wf-0.0.1-SNAPSHOT.jar
+```
+
 ## 히카리 (Hikari CP)
 
 Spring Boot 2.0 부터 지원 하는 JDBC Connection Pool 이다.
