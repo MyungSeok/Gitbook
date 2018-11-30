@@ -107,6 +107,10 @@ Unstaged files 로 들어 있어야 함
 $ git checkout file1
 ```
 
+```bash
+$ git checkout *
+```
+
 ### 작업 커밋하기
 
 ```bash
