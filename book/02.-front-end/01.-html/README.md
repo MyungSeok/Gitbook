@@ -8,7 +8,7 @@ _**HTML**_ 에서 문서 형식을 지정하는 것을 _**DTD**_ 라고 하며 _
 
 올바르게 문서형식이 지정된 경우에는 표준 \(Strict\) 방식, 그렇지 않는 경우에는 호환 \(Quirks\) 방식으로 출력한다.
 
-### 호환 출력 방식 \(Quirks Rendering Mode\) 특징 
+### 호환 출력 방식 \(Quirks Rendering Mode\) 특징
 
 * 브라우저가 HTML 을 랜더링 \(읽기, 해석, 출력\) 하는 시간이 더 걸린다.
 * 브라우저마다 HTML 출력을 각각 다르게 출력한다.
@@ -45,6 +45,65 @@ object.onload = function () {/* script */};
 ```javascript
 object.addEventListener('load', script);
 ```
+
+## `$(document).ready` vs `$(window).load` 차이점
+
+두 이벤트 리스너 모두 jQuery 라이브러리를 필요로 하며 차이점은 아래와 같다.
+
+* `ready` 이벤트는 DOM 이 로드되고 Element 의 접근이 안정될 때 발생한다.
+* `load` 이벤트는 DOM 과 모든 Asset (이미지, 문서 등등...) 들이 로드된 이후에 발생한다.
+
+### Syntax
+
+```javascript
+$(document).ready(function () {
+    /* statement */
+});
+```
+
+```javascript
+$(window).load(function () {
+    /* statement */
+});
+```
+
+### Vanilla JS
+
+#### IE 9 이상
+
+```javascript
+document.addEventListener('DOMContentLoaded', function () {
+    /* statement */
+});
+```
+
+#### IE8 이하
+
+`IE8` 이하에서는 아래와 같이 사용해야 한다.
+
+|readyState|Description|
+|:--|:--
+|uninitialized|아직 로딩이 시작되지 않음|
+|loading|로딩중|
+|interactive|어느정도 로드가 되었으며 사용자가 상호작용 할 수 있음|
+|complete|로딩 완료|
+
+```javascript
+document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+        /* statement */
+    }
+};
+```
+
+```javascript
+window.onload = function () {
+    /* statement */
+}
+```
+
+> ### 참고자료
+> <https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload>
 
 ### Detail
 
