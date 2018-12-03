@@ -81,13 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 `IE8` 이하에서는 아래와 같이 사용해야 한다.
 
-|readyState|Description|
-|:--|:--
-|uninitialized|아직 로딩이 시작되지 않음|
-|loading|로딩중|
-|interactive|어느정도 로드가 되었으며 사용자가 상호작용 할 수 있음|
-|complete|로딩 완료|
-
 ```javascript
 document.onreadystatechange = function () {
     if (document.readyState === 'complete') {
@@ -95,6 +88,15 @@ document.onreadystatechange = function () {
     }
 };
 ```
+
+`readyState` 에 필드 값 유형
+
+|readyState|Description|
+|:--|:--
+|uninitialized|아직 로딩이 시작되지 않음|
+|loading|로딩중|
+|interactive|어느정도 로드가 되었으며 사용자가 상호작용 할 수 있음|
+|complete|로딩 완료|
 
 ```javascript
 window.onload = function () {

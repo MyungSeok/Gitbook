@@ -80,7 +80,7 @@ $.getJSON('/jsonp.json?callback=?', function (data) {
 #### Server
 
 ```java
-private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException { 
+private void doGet(HttpServletRequest request, HttpServleteResponse response) throws ServletException, IOException {
     request.setCharacterEncoding("UTF-8");
     response.setCharacterEncoding("UTF-8");
 
@@ -185,7 +185,7 @@ console.log(typeof c);        // undefined
 
 ## 상속 \(Inheritance\)
 
-### 프로토 타입을 이용한 확장 
+### 프로토 타입을 이용한 확장
 
 자바스크립트에는 자바와 달리 `class` 가 존재하지 않아 `prototype` 을 사용하여 class 를 구현합니다.
 
@@ -233,7 +233,7 @@ rect.move(1, 1);
 
 ```javascript
 var parent = {
-    num: 2, 
+    num: 2,
     increase: function () {
         return (this.num + 1);
     }
@@ -248,7 +248,7 @@ child.num = 12;
 console.log(child.increase());    // 13
 ```
 
-## 자료형 \(변수형\) 에 대한 차이점 
+## 자료형 \(변수형\) 에 대한 차이점
 
 ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음과 같은 차이점을 가진다.
 
@@ -259,7 +259,7 @@ ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음
 
 ## 호이스팅 \(Hoisting\)
 
-자바스크립트 엔진이 실행 컨텍스트를 생성하면서 scope 를 정의할 때 기술된 순서에 상관없이 _**선언부에 대한 처리 해석의 우선순위를 최우선으로 끌어올려 먼저 해석**_ 하는 것   
+자바스크립트 엔진이 실행 컨텍스트를 생성하면서 scope 를 정의할 때 기술된 순서에 상관없이 _**선언부에 대한 처리 해석의 우선순위를 최우선으로 끌어올려 먼저 해석**_ 하는 것  
 이는 다음과 같은 특징을 갖는다.
 
 * 변수의 정의가 그 범위에 따라 _**선언과 할당으로 분리**_ 한다.
@@ -267,7 +267,7 @@ ES 5 & 6 에 지원하는 자료형 \(변수형\) `var` `let` `const` 은 다음
 * ES6 에서는 호이스팅의 지원이 없어졌다. \(ES5 식의 호이스팅 / TDZ 관점\)
 * 기존 ES5 에서는 호이스팅이 있어 해당 값을 선언 후 호출하면 undefined 로 나온다.
 
-### 예제 코드 
+### 예제 코드
 
 ### Example #1 : JS - ES5
 
