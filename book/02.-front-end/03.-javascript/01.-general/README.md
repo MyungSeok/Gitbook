@@ -286,7 +286,8 @@ var value = 'outer scope';
 (function () {
     var value;
 
-    console.log(value);        // undefined    
+    // undefined
+    console.log(value);
     var value = 'inner scope';
 });
 ```
@@ -357,13 +358,36 @@ console.log(value);     // ReferenceError: value is not defined
 
 익명 함수 \(Anonymouse Function\) 를 이용하여 _**바로 실행 가능한 함수 표현식을 이용**_ 하여 만들어 내는 구문
 
-### Example #1 : JS - ES5
+### Syntax
 
 ```javascript
 (function () {
   /* 실행코드 */
 }());
 ```
+
+### Example
+
+기본적인 사용법
+
+```javascript
+(function () { /* statement */ })();
+(function () { /* statement */ }());
+(() => { /* statement */ })(); // With ES6 arrow functions (though parentheses only allowed on outside)
+```
+
+다른 방식으로 실행을 강제하는 방법
+
+```javascript
+!function () { /* statement */ }();
+~function () { /* statement */ }();
+-function () { /* statement */ }();
++function () { /* statement */ }();
+void function () { /* statement */ }();
+```
+
+> ### 참고자료
+> <https://en.wikipedia.org/wiki/Immediately_invoked_function_expression>
 
 ## Strict Mode
 
@@ -383,4 +407,4 @@ ECMA5 의 엄격모드는 다음과 같은 특징을 가집니다.
 * 향후 버전에서 정의될 문법들을 금지한다.
 
 > ### 참고자료
-> <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode>
+> <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode>  
