@@ -51,8 +51,98 @@ _**관심의 분리 \(Seperation of Concerns\) 를 통하여 핵심 관심 사�
 * Around
   * 대상 객체의 메서드 호출 전, 후 또는 `Exception` 발생 시점에 실행
 
+### Example
+
+```java
+package com.square.common.advice;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+@Order(0)
+public class LoggerAdvice {
+  
+  private static final Logger logger = LoggerFactory.getLogger(LoggerAdvice.class);
+
+  @Before("execution(* com.square..controller.*Controller.*(..))")
+  public void logServiceAccessBefore(JoinPoint joinPoint) throws Throwable{
+    logger.info("Logger Advice Before");
+  }
+
+  @After("execution(* com.square..controller.*Controller.*(..))")
+  public void logServiceAccessAfter(JoinPoint joinPoint) throws Throwable{
+    logger.info("Logger Advice After");
+  }
+
+  @AfterReturning(pointcut="execution(* com.square..controller.*Controller.*(..))", returning="str")
+  public void logServiceAccessAfterReturning(JoinPoint joinPoint, Object str) throws Throwable{
+    logger.info("Returning is " + str);
+
+    logger.info("Logger Advice AfterReturning");
+  }
+
+  @Pointcut("execution(* com.square..controller.*Controller.*(..))")
+  public void logServiceAccessPointcut() {}
+
+  @Before("logServiceAccessPointcut()")
+  public void logServiceAccessPointcutBefore(JoinPoint joinPoint) {
+    logger.info("[Pointcut] Logger Advice Before");
+  }
+  
+  @After("logServiceAccessPointcut()")
+  public void logServiceAccessPointcutAfter(JoinPoint joinPoint) {
+    logger.info("[Pointcut] Logger Advice After");
+  }
+  
+  @AfterReturning(value="logServiceAccessPointcut()", returning="str")
+  public void logServiceAccessPointcutAfterReturning(JoinPoint joinPoint, Object str) {
+    logger.info("[Pointcut] Returning is " + str);
+
+    logger.info("[Pointcut] Logger Advice AfterReturning");
+  }
+
+  @Around("execution(* com.square..controller.*Controller.*(..))")
+  public Object logServiceAccessPointcutAround(ProceedingJoinPoint processedJoinPoint) throws Throwable {
+    logger.info("[Pointcut] Logger Advice Around Before");
+
+    Object obj = processedJoinPoint.proceed();
+
+    logger.info("[Pointcut] Logger Advice Around After");
+
+    return obj;
+  }
+}
+```
+
+AOP 적용 대상 페이지를 호출하면 다음과 같이 로그가 남는다.
+
+```bash
+[Pointcut] Logger Advice Around Before
+Logger Advice Before
+[Pointcut] Logger Advice Before
+[Pointcut] Logger Advice Around After
+Logger Advice After
+[Pointcut] Logger Advice After
+Returning is index
+Logger Advice AfterReturning
+[Pointcut] Returning is index
+[Pointcut] Logger Advice AfterReturning
+```
+
 > ### 참고자료
-> <https://heowc.github.io/2018/02/07/spring-boot-aop/>
-> <http://jyh1536.tistory.com/66>
-> <http://addio3305.tistory.com/86>
+> <https://heowc.github.io/2018/02/07/spring-boot-aop/>  
+> <http://jyh1536.tistory.com/66>  
+> <http://addio3305.tistory.com/86>  
 > <https://jojoldu.tistory.com/27>
