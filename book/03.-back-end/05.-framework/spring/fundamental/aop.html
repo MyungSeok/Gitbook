@@ -1972,12 +1972,93 @@
 </ul>
 </li>
 </ul>
+<h3 id="example">Example</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.square.common.advice;
+
+<span class="hljs-keyword">import</span> org.aspectj.lang.JoinPoint;
+<span class="hljs-keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Before;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.After;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.AfterReturning;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Around;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Aspect;
+<span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Pointcut;
+<span class="hljs-keyword">import</span> org.slf4j.Logger;
+<span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;
+<span class="hljs-keyword">import</span> org.springframework.core.annotation.Order;
+<span class="hljs-keyword">import</span> org.springframework.stereotype.Component;
+
+<span class="hljs-meta">@Aspect</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-meta">@Order</span>(<span class="hljs-number">0</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LoggerAdvice</span> </span>{
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger logger = LoggerFactory.getLogger(LoggerAdvice.class);
+
+  <span class="hljs-meta">@Before</span>(<span class="hljs-string">&quot;execution(* com.square..controller.*Controller.*(..))&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessBefore</span><span class="hljs-params">(JoinPoint joinPoint)</span> <span class="hljs-keyword">throws</span> Throwable</span>{
+    logger.info(<span class="hljs-string">&quot;Logger Advice Before&quot;</span>);
+  }
+
+  <span class="hljs-meta">@After</span>(<span class="hljs-string">&quot;execution(* com.square..controller.*Controller.*(..))&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessAfter</span><span class="hljs-params">(JoinPoint joinPoint)</span> <span class="hljs-keyword">throws</span> Throwable</span>{
+    logger.info(<span class="hljs-string">&quot;Logger Advice After&quot;</span>);
+  }
+
+  <span class="hljs-meta">@AfterReturning</span>(pointcut=<span class="hljs-string">&quot;execution(* com.square..controller.*Controller.*(..))&quot;</span>, returning=<span class="hljs-string">&quot;str&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessAfterReturning</span><span class="hljs-params">(JoinPoint joinPoint, Object str)</span> <span class="hljs-keyword">throws</span> Throwable</span>{
+    logger.info(<span class="hljs-string">&quot;Returning is &quot;</span> + str);
+
+    logger.info(<span class="hljs-string">&quot;Logger Advice AfterReturning&quot;</span>);
+  }
+
+  <span class="hljs-meta">@Pointcut</span>(<span class="hljs-string">&quot;execution(* com.square..controller.*Controller.*(..))&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessPointcut</span><span class="hljs-params">()</span> </span>{}
+
+  <span class="hljs-meta">@Before</span>(<span class="hljs-string">&quot;logServiceAccessPointcut()&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessPointcutBefore</span><span class="hljs-params">(JoinPoint joinPoint)</span> </span>{
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Logger Advice Before&quot;</span>);
+  }
+
+  <span class="hljs-meta">@After</span>(<span class="hljs-string">&quot;logServiceAccessPointcut()&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessPointcutAfter</span><span class="hljs-params">(JoinPoint joinPoint)</span> </span>{
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Logger Advice After&quot;</span>);
+  }
+
+  <span class="hljs-meta">@AfterReturning</span>(value=<span class="hljs-string">&quot;logServiceAccessPointcut()&quot;</span>, returning=<span class="hljs-string">&quot;str&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">logServiceAccessPointcutAfterReturning</span><span class="hljs-params">(JoinPoint joinPoint, Object str)</span> </span>{
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Returning is &quot;</span> + str);
+
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Logger Advice AfterReturning&quot;</span>);
+  }
+
+  <span class="hljs-meta">@Around</span>(<span class="hljs-string">&quot;execution(* com.square..controller.*Controller.*(..))&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">logServiceAccessPointcutAround</span><span class="hljs-params">(ProceedingJoinPoint processedJoinPoint)</span> <span class="hljs-keyword">throws</span> Throwable </span>{
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Logger Advice Around Before&quot;</span>);
+
+    Object obj = processedJoinPoint.proceed();
+
+    logger.info(<span class="hljs-string">&quot;[Pointcut] Logger Advice Around After&quot;</span>);
+
+    <span class="hljs-keyword">return</span> obj;
+  }
+}
+</code></pre>
+<p>AOP &#xC801;&#xC6A9; &#xB300;&#xC0C1; &#xD398;&#xC774;&#xC9C0;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xB85C;&#xADF8;&#xAC00; &#xB0A8;&#xB294;&#xB2E4;.</p>
+<pre><code class="lang-bash">[Pointcut] Logger Advice Around Before
+Logger Advice Before
+[Pointcut] Logger Advice Before
+[Pointcut] Logger Advice Around After
+Logger Advice After
+[Pointcut] Logger Advice After
+Returning is index
+Logger Advice AfterReturning
+[Pointcut] Returning is index
+[Pointcut] Logger Advice AfterReturning
+</code></pre>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
-<p><a href="https://heowc.github.io/2018/02/07/spring-boot-aop/" target="_blank">https://heowc.github.io/2018/02/07/spring-boot-aop/</a>
-<a href="http://jyh1536.tistory.com/66" target="_blank">http://jyh1536.tistory.com/66</a>
-<a href="http://addio3305.tistory.com/86" target="_blank">http://addio3305.tistory.com/86</a>
-<a href="https://jojoldu.tistory.com/27" target="_blank">https://jojoldu.tistory.com/27</a></p>
+<p><a href="https://heowc.github.io/2018/02/07/spring-boot-aop/" target="_blank">https://heowc.github.io/2018/02/07/spring-boot-aop/</a><br><a href="http://jyh1536.tistory.com/66" target="_blank">http://jyh1536.tistory.com/66</a><br><a href="http://addio3305.tistory.com/86" target="_blank">http://addio3305.tistory.com/86</a><br><a href="https://jojoldu.tistory.com/27" target="_blank">https://jojoldu.tistory.com/27</a></p>
 </blockquote>
 
                                 
@@ -2038,7 +2119,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"next":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"previous":{"title":"Fundamental","level":"1.4.5.1.1","depth":4,"path":"book/03.-back-end/05.-framework/spring/fundamental/README.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/README.md","articles":[{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","articles":[]},{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","articles":[]},{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},{"title":"Gradle","level":"1.4.5.1.1.5","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","mtime":"2018-11-30T08:50:23.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-03T02:15:20.937Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"next":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"previous":{"title":"Fundamental","level":"1.4.5.1.1","depth":4,"path":"book/03.-back-end/05.-framework/spring/fundamental/README.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/README.md","articles":[{"title":"AOP","level":"1.4.5.1.1.1","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","articles":[]},{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","articles":[]},{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},{"title":"Gradle","level":"1.4.5.1.1.5","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/gradle.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/aop.md","mtime":"2018-12-05T03:08:25.383Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-05T03:10:09.889Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
