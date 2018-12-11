@@ -11,8 +11,18 @@
 ### Ubuntu
 
 ```bash
-# apt-get install gradle
+# 저장소 추가
+$ add-apt-repository ppa:cwchien/gradle
+
+# apt-get 업데이트
+$ apt-get update
+
+# Gradle 설치
+$ apt-get install gradle
 ```
+
+> ### 참고자료
+> <https://zetawiki.com/wiki/우분투_Gradle_최신버전_설치>
 
 ## Gradle 빌드
 
