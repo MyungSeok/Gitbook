@@ -161,3 +161,11 @@ $ git revert -m 1 {COMMIT_NUMBER}
 
 > ### 참고자료
 > <https://mylko72.gitbooks.io/git/content/remote/branch.html>
+
+### SSH 등록 후 원격 저정소 푸시 비밀번호 물어볼때
+
+아래와 같이 키체인에 추가한다.
+
+```bash
+$ ssh-add -K ~/.ssh/id_rsa
+```
