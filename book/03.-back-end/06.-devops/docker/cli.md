@@ -98,6 +98,9 @@ ubuntu 이미지를 컨테이너로 생성
 * `-d` \(detached\)
   * 데몬 모드
   * 컨테이너가 백그라운드로 동작 된다
+* `-v` \(volume\)
+  * 호스트의 디렉토리가 데이터 볼륨으로 생성되어 공유된다.
+  * \[HOST\_PATH\] : \[CONTAINER\_PATH\]
 * `-p` \(port\)
   * 컨테이너 포트 포워딩
   * \[HOST\_PORT\] : \[CONTAINER\_PORT\]
