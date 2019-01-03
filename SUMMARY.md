@@ -54,6 +54,7 @@
       * [Express](book/02.-front-end/04.-framework/node-js/express.md)
     * [Angular JS](book/02.-front-end/04.-framework/angular-js.md)
     * [React JS](book/02.-front-end/04.-framework/react/README.md)
+      * [Lifecycle](book/02.-front-end/04.-framework/react/lifecycle.md)
       * [Redux](book/02.-front-end/04.-framework/react/redux.md)
     * [Vue](book/02.-front-end/04.-framework/vue/README.md)
       * [Lifecycle](book/02.-front-end/04.-framework/vue/lifecycle.md)
