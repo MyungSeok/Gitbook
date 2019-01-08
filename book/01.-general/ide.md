@@ -17,6 +17,9 @@
 * Markdown lint
   * 마크다운 문법 검사
   * <https://github.com/DavidAnson/vscode-markdownlint>
+* Bracket Pair Colorizer
+  * 코드 블럭 브라켓
+  * <https://github.com/CoenraadS/Bracket-Pair-Colorizer-2>
 
 ### usersetting.json
 
