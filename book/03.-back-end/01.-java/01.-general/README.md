@@ -115,6 +115,24 @@ public class Sum {
 > ### 참고자료
 > <http://grayt.tistory.com/87>
 
+## Function Signature (함수 시그니처)
+
+_**함수**_ 의 원형에 명시되는 매개변수 리스트를 가르킨다.
+
+두 함수의 _**매개변수의 갯수**_ 와 _**타입**_ 이 같으면 두 함수의 시그니처는 같다고 할 수 있습니다.
+
+```java
+int sum (int a, int b, double c);
+
+int sum2 (int, int, double);
+```
+
+위 두 함수의 시그니처가 같다.  
+시그니처가 같은 함수는 같은 함수 포인터에 의해 상호호환이 가능하다.
+
+> ### 참고자료
+> <https://blog.sapzape.com/330>
+
 ## Access Modifier (접근 제어자)
 
 Java 에는 다음과 같은 접근 제어자가 있다.  
