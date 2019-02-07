@@ -2,8 +2,10 @@
 
 ## SetTimeout
 
-`WindowTimers` 에서 지원하는 타이머 객체로서   
+`WindowTimers` 에서 지원하는 타이머 객체로서
 _**자바스크립트 엔진이 일정시간 대기하였다가 UI 큐에 작업을 추가**_ 한다.
+
+> UI 큐에 추가한 작업은 이전에 추가된 작업 대기열 이후에 실행행 될 수 있도록 예정된다.
 
 ### Syntax
 
@@ -14,13 +16,13 @@ _**자바스크립트 엔진이 일정시간 대기하였다가 UI 큐에 작업
 #### Parameter
 
 * window
-  * `this` 객체가 window 일때 생략 가능 
+  * `this` 객체가 window 일때 생략 가능
 * callback
-  * 지연된 시간이 끝난 후 실행되는 콜백 함수 
+  * 지연된 시간이 끝난 후 실행되는 콜백 함수
 * delay
   * 함수 지연 시간 \(default : 0\)
 * param1 ... paramN
-  * 콜백 함수로 전달될 매개변수 
+  * 콜백 함수로 전달될 매개변수
   * IE9 이하에서는 매개변수 전달이 안된다. \(IE 10 이상 지원\)
 
 #### Example #1 : JS - ES5
@@ -28,14 +30,14 @@ _**자바스크립트 엔진이 일정시간 대기하였다가 UI 큐에 작업
 ```javascript
 var timeoutId;
 
-// 타이머 세팅 
+// 타이머 세팅
 function setTimer() {
     timeoutId = window.setTimeout(function () {
         alert('Notice');
     }, 2000);
 }
 
-// 타이머 삭제 
+// 타이머 삭제
 function cancleTimer() {
     window.clearTimeout(timeoutId);
 }
