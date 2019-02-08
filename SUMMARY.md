@@ -14,6 +14,7 @@
       * [DEQUE](book/01.-general/data-structure/queue/deque.md)
       * [Priority Queue](book/01.-general/data-structure/queue/priority-queue.md)
   * [Algorithm](book/01.-general/algorithm/README.md)
+    * [Security](book/01.-general/algorithm/security/README.md)
     * [Sort](book/01.-general/algorithm/sort/README.md)
       * [Quick](book/01.-general/algorithm/sort/quick.md)
       * [Merge](book/01.-general/algorithm/sort/merge.md)
