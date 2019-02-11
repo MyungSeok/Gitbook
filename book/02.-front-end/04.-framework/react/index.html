@@ -2072,6 +2072,29 @@
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
 <p><a href="https://velopert.com/3236" target="_blank">https://velopert.com/3236</a></p>
 </blockquote>
+<h2 id="class-constructor-&#xC5D0;&#xC11C;-super">Class Constructor &#xC5D0;&#xC11C; <code>super()</code></h2>
+<p>&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8; &#xC548;&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xC790; (constructor) &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; &#xBC18;&#xB4DC;&#xC2DC; <code>super()</code> &#xB97C; &#xC2E4;&#xD589;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.<br>&#xC0DD;&#xC131;&#xC790; (constructor) &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC2E4;&#xD589;&#xD574;&#xC900;&#xB2E4;.</p>
+<p>&#xC774;&#xB294; <code>this</code> &#xAC1D;&#xCCB4;&#xB97C; &#xCD08;&#xAE30;&#xD654; &#xD574;&#xC8FC;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-es6">class Myclass extends React.Component {
+  constructor() {
+    console.log(this);   // Error : &apos;this&apos; is not allowed before
+    super();
+  }
+}
+</code></pre>
+<p>&#xC704;&#xC640; &#xAC19;&#xC774; <code>super()</code> &#xC2E4;&#xD574; &#xC774;&#xC804;&#xC5D0; <code>this</code> &#xB97C; &#xCC38;&#xC870;&#xD558;&#xBA74; &#xD5C8;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p><code>super()</code> &#xB97C; &#xD638;&#xCD9C;&#xD560;&#xB54C; <code>props</code> &#xC778;&#xC790;&#xB97C; &#xB118;&#xACA8;&#xC8FC;&#xBA74; constructor &#xC548;&#xC5D0;&#xC11C; <code>this.props</code> &#xB97C; &#xC811;&#xADFC; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xAD6C;&#xC131;&#xD574;&#xC900;&#xB2E4;.</p>
+<pre><code class="lang-es6">class Myclass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+}
+</code></pre>
+<p>&#xC704;&#xC640; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xC815;&#xC0C1;&#xC801;&#xC73C;&#xB85C; <code>this.props</code> &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="mailto:https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9" target="_blank">https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -2131,7 +2154,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React JS","level":"1.3.4.3","depth":3,"next":{"title":"Lifecycle","level":"1.3.4.3.1","depth":4,"path":"book/02.-front-end/04.-framework/react/lifecycle.md","ref":"book/02.-front-end/04.-framework/react/lifecycle.md","articles":[]},"previous":{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"book/02.-front-end/04.-framework/angular-js.md","ref":"book/02.-front-end/04.-framework/angular-js.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/04.-framework/react/README.md","mtime":"2019-02-08T03:50:33.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-11T03:07:20.712Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React JS","level":"1.3.4.3","depth":3,"next":{"title":"Lifecycle","level":"1.3.4.3.1","depth":4,"path":"book/02.-front-end/04.-framework/react/lifecycle.md","ref":"book/02.-front-end/04.-framework/react/lifecycle.md","articles":[]},"previous":{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"book/02.-front-end/04.-framework/angular-js.md","ref":"book/02.-front-end/04.-framework/angular-js.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/04.-framework/react/README.md","mtime":"2019-02-11T03:33:55.959Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-11T03:34:21.764Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
