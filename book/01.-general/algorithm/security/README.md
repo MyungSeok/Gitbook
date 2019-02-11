@@ -28,3 +28,56 @@
 > <http://rigvedawiki.net/w/%EC%95%94%ED%98%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98>  
 > <https://o-m-i.tistory.com/209>  
 > <https://jusungpark.tistory.com/34>
+
+## SHA-256
+
+해싱 알고리즘의 대표적인 예인 SHA-256 은 해시 값으로 암호하여 복호화가 불가능 하다.
+
+### Example
+
+```java
+import java.security.MessageDigest;
+
+public class SHA256Password {
+
+  public void LockPassword(String password) {
+   try {
+      MessageDigest digest = MessageDigest.getInstance("SHA-256");
+      byte[] hash = digest.digest(password.getBytes("UTF-8"));
+      StringBuffer hexString = new StringBuffer();
+
+      for (int i = 0; i < hash.length; i++) {
+        String hex = Integer.toHexString(0xff & hash[i]);
+        if (hex.length() == 1)
+          hexString.append('0');
+        hexString.append(hex);
+      }
+
+      System.out.println(hexString.toString());
+
+    } catch (Exception ex) {
+      throw new RuntimeException(ex);
+    }
+  }
+}
+
+```
+
+### 보안적인 관점
+
+해시값은 복호화 할 수 없는데 이는 특정 문자열을 암호화하면 나오는 결과값이 다른 문자열을 해싱해서 나올수도 있기 때문이다.  
+
+```text
+홍길동 -> 홍
+홍성대 -> 홍
+```
+
+위와 같은 원리로 결과값의 크기 (치역) 는 고정되어 있고 입력값 (정의역) 은 서로 다를 수 있기 때문이다.  
+`2²` 과 `-2²` 의 결과 값이 서로 같은 것과 마찬가지인 원리로 결과값 4 를 기준으로 원본 데이터를 특정지을수가 없다.  
+하지만 대표적인 비밀번호 테이블을 구비하여 해당 결과 해시값을 대조하여 일일이 찾아보는 경우가 있다 (sha 함수 테이블)
+
+해시값의 보안성을 높이기 위하여 값을 암호화 할때 Salt 값을 넣어 해싱을 함으로써 공격의 효율을 크게 저하 시키는 방법도 유효하다.
+
+> ### 참고자료
+> <https://yoo-hyeok.tistory.com/41>  
+> <https://jusungpark.tistory.com/35>
