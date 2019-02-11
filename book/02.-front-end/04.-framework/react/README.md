@@ -51,3 +51,37 @@ _**Virtual DOM 은 DOM fragment 를 관리하는 과정을 수동으로 하나�
 
 > ### 참고자료
 > <https://velopert.com/3236>
+
+## Class Constructor 에서 `super()`
+
+컴포넌트 안에서 생성자 (constructor) 를 실행하면 반드시 `super()` 를 실행해야 한다.  
+생성자 (constructor) 를 사용하지 않으면 자동으로 실행해준다.
+
+이는 `this` 객체를 초기화 해주지 않기 때문이다.
+
+```es6
+class Myclass extends React.Component {
+  constructor() {
+    console.log(this);   // Error : 'this' is not allowed before
+    super();
+  }
+}
+```
+
+위와 같이 `super()` 실해 이전에 `this` 를 참조하면 허용되지 않는다.
+
+`super()` 를 호출할때 `props` 인자를 넘겨주면 constructor 안에서 `this.props` 를 접근 가능하게 구성해준다.
+
+```es6
+class Myclass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+}
+```
+
+위와 같이 사용해야 정상적으로 `this.props` 사용이 가능하다.
+
+
+> ### 참고자료
+> <https://medium.com/@umioh1109/react-es6-class-constructor%EC%97%90%EC%84%9C%EC%9D%98-super-9d53ba0611d9>
