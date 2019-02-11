@@ -25,7 +25,7 @@
 > ### 참고자료
 > <https://sungjk.github.io/2016/09/30/Security.html>  
 > <https://javaplant.tistory.com/26>  
-> <http://rigvedawiki.net/w/%EC%95%94%ED%98%B8%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98>  
+> <http://rigvedawiki.net/w/암호%20알고리즘>  
 > <https://o-m-i.tistory.com/209>  
 > <https://jusungpark.tistory.com/34>
 
