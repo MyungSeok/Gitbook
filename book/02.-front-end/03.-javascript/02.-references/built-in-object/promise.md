@@ -132,6 +132,40 @@ Promise.all([promise1, promise2])
   });
 ```
 
+## `async` 와 `await`
+
+ES8 에서 Promise 사용을 쉽게 해주는 `async` 와 `await` 을 도입 하였다.
+
+### async
+
+비동기 함수를 정의하며 `AsyncFunction` 객체를 반환 합니다.
+
+`AsyncFunction` 객체는 해당 함수내에 포함되어 있는 코드를 수행하는 비동기 함수를 나타냅니다.
+
+### await
+
+`async` 함수 내에서만 사용될 수 있으며 _**동기적으로 Promise 를 처리**_ 해줍니다.
+
+`async` 밖에서 프로미스를 사용하면 `then` 콜백을 사용해야 한다.
+
+```javascript
+async function loadData() {
+  var promise1 = req('/getData_1.json');
+  var promise2 = req('/getData_2.json');
+
+  var response1 = await promise1;
+  var response2 = await promise2;
+
+  return response1 + response2;
+}
+
+loadData()
+  .then(() => {
+    console.log('Done');
+  });
+```
+
 > ### 참고자료
 > <https://programmingsummaries.tistory.com/325>
 > <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise>
+> <https://joshua1988.github.io/web-development/javascript/promise-for-beginners/>
