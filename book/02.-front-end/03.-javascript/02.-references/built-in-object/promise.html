@@ -2176,10 +2176,34 @@
     <span class="hljs-built_in">console</span>.dir(values);
   });
 </code></pre>
+<h2 id="async-&#xC640;-await"><code>async</code> &#xC640; <code>await</code></h2>
+<p>ES8 &#xC5D0;&#xC11C; Promise &#xC0AC;&#xC6A9;&#xC744; &#xC27D;&#xAC8C; &#xD574;&#xC8FC;&#xB294; <code>async</code> &#xC640; <code>await</code> &#xC744; &#xB3C4;&#xC785; &#xD558;&#xC600;&#xB2E4;.</p>
+<h3 id="async">async</h3>
+<p>&#xBE44;&#xB3D9;&#xAE30; &#xD568;&#xC218;&#xB97C; &#xC815;&#xC758;&#xD558;&#xBA70; <code>AsyncFunction</code> &#xAC1D;&#xCCB4;&#xB97C; &#xBC18;&#xD658; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<p><code>AsyncFunction</code> &#xAC1D;&#xCCB4;&#xB294; &#xD574;&#xB2F9; &#xD568;&#xC218;&#xB0B4;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xC218;&#xD589;&#xD558;&#xB294; &#xBE44;&#xB3D9;&#xAE30; &#xD568;&#xC218;&#xB97C; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="await">await</h3>
+<p><code>async</code> &#xD568;&#xC218; &#xB0B4;&#xC5D0;&#xC11C;&#xB9CC; &#xC0AC;&#xC6A9;&#xB420; &#xC218; &#xC788;&#xC73C;&#xBA70; <em><strong>&#xB3D9;&#xAE30;&#xC801;&#xC73C;&#xB85C; Promise &#xB97C; &#xCC98;&#xB9AC;</strong></em> &#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p><code>async</code> &#xBC16;&#xC5D0;&#xC11C; &#xD504;&#xB85C;&#xBBF8;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; <code>then</code> &#xCF5C;&#xBC31;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadData</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> promise1 = req(<span class="hljs-string">&apos;/getData_1.json&apos;</span>);
+  <span class="hljs-keyword">var</span> promise2 = req(<span class="hljs-string">&apos;/getData_2.json&apos;</span>);
+
+  <span class="hljs-keyword">var</span> response1 = <span class="hljs-keyword">await</span> promise1;
+  <span class="hljs-keyword">var</span> response2 = <span class="hljs-keyword">await</span> promise2;
+
+  <span class="hljs-keyword">return</span> response1 + response2;
+}
+
+loadData()
+  .then(() =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Done&apos;</span>);
+  });
+</code></pre>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
 <p><a href="https://programmingsummaries.tistory.com/325" target="_blank">https://programmingsummaries.tistory.com/325</a>
-<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a></p>
+<a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise</a>
+<a href="https://joshua1988.github.io/web-development/javascript/promise-for-beginners/" target="_blank">https://joshua1988.github.io/web-development/javascript/promise-for-beginners/</a></p>
 </blockquote>
 
                                 
@@ -2240,7 +2264,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Promise","level":"1.3.3.2.1.4","depth":5,"next":{"title":"Operator & Expression","level":"1.3.3.2.2","depth":4,"path":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","ref":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","articles":[]},"previous":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/promise.md","mtime":"2019-02-11T04:59:56.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T05:21:00.403Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Promise","level":"1.3.3.2.1.4","depth":5,"next":{"title":"Operator & Expression","level":"1.3.3.2.2","depth":4,"path":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","ref":"book/02.-front-end/03.-javascript/02.-references/operator-and-expression.md","articles":[]},"previous":{"title":"Function","level":"1.3.3.2.1.3","depth":5,"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","ref":"book/02.-front-end/03.-javascript/02.-references/built-in-object/function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/02.-references/built-in-object/promise.md","mtime":"2019-02-14T05:54:56.213Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-14T05:59:48.230Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
