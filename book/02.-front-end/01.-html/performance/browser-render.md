@@ -1,8 +1,6 @@
-# Performance
+# HTML 랜더링 순서
 
 HTML 속도 개선을 위해서는 기본적인 먼저 랜더링 순서를 파악하고 이를 개선해야 한다.
-
-## HTML 랜더링 순서
 
 ```mermaid
   graph LR

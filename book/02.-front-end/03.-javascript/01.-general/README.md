@@ -156,10 +156,10 @@ _callback_jsonp_({
 });
 ```
 
-> ### Info
-> * 전달 받는 데이터를 _**콜백 함수의 매개변수로 전달하여 실행**_ 시키는 구조  
-> * CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.  
-> * 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
+> ### Info  
+> 전달 받는 데이터를 콜백 함수의 매개변수로 전달하여 실행 시키는 구조  
+> CORS 설정을 한다면 별도의 jsonp 작업은 필요 없다.  
+> 요청 데이터의 응답 헤더가 `Access-Control-Allow-Orign: *` 으로 변경
 
 ## 암묵적 전역
 
@@ -209,7 +209,7 @@ function Rectangle() {
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
-Rectangle.prototype.constructor = Rectangle; 
+Rectangle.prototype.constructor = Rectangle;
 ```
 
 ### 상속 객체 생성
@@ -227,7 +227,7 @@ rect.move(1, 1);
 
 > _**프로토타입의 확장을 이용한 방법**_ 은 _**Monkey Patching**_ 이라고도 하며 _**권장하지 않는 방법**_ 이다.
 
-### `Object.create()` 를 이용한 메소드 상속 
+### `Object.create()` 를 이용한 메소드 상속
 
 ### Example #1 : JS - ES5
 
