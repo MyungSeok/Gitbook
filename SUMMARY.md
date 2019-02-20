@@ -90,7 +90,7 @@
       * [Thread](book/03.-back-end/01.-java/02.-references/thread/README.md)
         * [Synchronized](book/03.-back-end/01.-java/02.-references/thread/synchronized.md)
         * [Multi Thread](book/03.-back-end/01.-java/02.-references/thread/multi_thread.md)
-      * [Generic](book/03.-back-end/01.-java/02.-references/generic.md)
+      * [Generic](book/03.-back-end/01.-java/02.-references/generic/README.md)
       * [JVM](book/03.-back-end/01.-java/02.-references/jvm.md)
       * [함수형 프로그래밍](book/03.-back-end/01.-java/02.-references/functional/README.md)
     * [03. Performance](book/03.-back-end/01.-java/03.-performance/README.md)

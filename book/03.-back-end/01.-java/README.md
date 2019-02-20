@@ -50,3 +50,6 @@ Java 언어의 전반적인 이야기를 다룹니다.
 ```java
 [%d{HH:mm:ss}] %-5p %C{1}.%M(%F:%L) - %m%n
 ```
+
+> ### 참고자료
+> <http://tcpschool.com/java/intro>
