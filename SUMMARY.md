@@ -81,6 +81,8 @@
         * [의존 역전의 원칙 (DIP)](book/03.-back-end/01.-java/01.-general/solid/dip.md)
       * [JPA](book/03.-back-end/01.-java/01.-general/jpa.md)
       * [EJB](book/03.-back-end/01.-java/01.-general/ejb.md)
+      * [Immutable](book/03.-back-end/01.-java/01.-general/immutable.md)
+      * [Reflection](book/03.-back-end/01.-java/01.-general/reflection.md)
     * [02. Reference](book/03.-back-end/01.-java/02.-references/README.md)
       * [Collection](book/03.-back-end/01.-java/02.-references/collection/README.md)
         * [List](book/03.-back-end/01.-java/02.-references/collection/list.md)
