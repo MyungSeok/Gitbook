@@ -31,7 +31,7 @@ Character mage = Character.newMage();
 ```
 
 위 코드는 정적 팩토리 메서드를 호출할 때 마다 `new` 연산을 하게 되는데  
-`immutable` 객체를 캐시해서 쓰고 있거나 _**singleton design pattern**_ 을 이용하여 사용도 가능하다.
+`immutable` 객체를 캐시해서 쓰고 있거나 혹은 아래와 같이 _**singleton design pattern**_ 을 이용하여 사용도 가능하다.
 
 ```java
 class Person {
@@ -41,6 +41,27 @@ class Person {
     return this.p;
   }
 }
+```
+
+아래와 같이 리턴하는 클래스의 타입을 유연하게 지정가능하다.
+
+```java
+class OrderUtil {
+  public static Discount createDiscountItem(String code) throws Exception {
+    if (!isValidCode(code)) {
+      throw new Exception("Wrong discount code !!");
+    }
+
+    if (isCoupon(code)) {
+      return new Coupon(1000);
+    } else if (isPoint(code)) {
+      return new Point(500);
+    }
+  }
+}
+
+class Coupon extends Discount { ... }
+class Point extends Discount { ... }
 ```
 
 > ### 관련출처
