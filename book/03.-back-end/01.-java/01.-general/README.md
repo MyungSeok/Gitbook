@@ -31,6 +31,13 @@ Java 는 구조적으로 다중 상속이 불가능 하다. 각 클래스는 하
 |접근 제어자|`public`|`private`, `protected`, `public`|
 |변수|기본적으로 `final` 로써 최종 변수임|비 최종 변수를 포함할 수 있음|
 
+> #### Java 8 이전까지는 Interface 안에 static 메서드를 선언할 수 없었다.
+> 이는 static 클래스인 경우에는 클래스 자체가 JVM 기동하면서 바로 로딩 된다.  
+> Interface 나 Abstract Class 인 경우 클래스가 생성되어진 이후에 해당 객체를 Reference 하게 된다.  
+> 상대적으로 로딩시간이 앞서 있는 static 클래스에 대해서는 interface 나 Abstract 클래스의 구현이 불가하다
+> ### 관련출처
+> <https://groups.google.com/forum/#!topic/ksug/XJAznUUFQl4>
+
 ## Call By Value & Reference 의 차이
 
 Java 에서 _**Call By Value**_ 를 통한 값 전달 방식은 객체의 복사본이 전달된다는 것을 의미한다.  
