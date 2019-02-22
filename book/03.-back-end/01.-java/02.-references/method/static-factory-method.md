@@ -31,11 +31,15 @@ Character mage = Character.newMage();
 ```
 
 위 코드는 정적 팩토리 메서드를 호출할 때 마다 `new` 연산을 하게 되는데  
-`immutable` 객체를 캐시해서 쓰고 있거나 singleton design pattern 을 이용하여 사용도 가능하다.
+`immutable` 객체를 캐시해서 쓰고 있거나 _**singleton design pattern**_ 을 이용하여 사용도 가능하다.
 
 ```java
 class Person {
   private final Person p = new Person();
+
+  public static Person getInstance() {
+    return this.p;
+  }
 }
 ```
 
