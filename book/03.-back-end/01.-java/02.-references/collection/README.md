@@ -1,7 +1,8 @@
-
 # Collection
 
 `Collection` 인터페이스를 상속 받은 구현체 `List` 와 `Set` 을 기준으로 나뉜다.
+
+![자바 자료구조](/img/A034.png)
 
 ```mermaid
   graph LR
@@ -21,4 +22,5 @@
 ```
 
 > ### 참고자료
-> <http://withwani.tistory.com/150>
+> <http://withwani.tistory.com/150>  
+> <https://www.toolsqa.com/java/data-structure/>
