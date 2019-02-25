@@ -2128,6 +2128,7 @@
                                 <h1 id="&#xC815;&#xC801;-&#xD329;&#xD1A0;&#xB9AC;-&#xBA54;&#xC18C;&#xB4DC;-static-factory-method">&#xC815;&#xC801; &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC18C;&#xB4DC; (Static Factory Method)</h1>
 <p>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; Class &#xC758; Instance &#xB97C; &#xC5BB;&#xB294; &#xC804;&#xD1B5;&#xC801;&#xC778; &#xC218;&#xB2E8;&#xC740; public &#xC0DD;&#xC131;&#xC790;&#xC774;&#xB2E4;.</p>
 <p>&#xD074;&#xB798;&#xC2A4;&#xB294; &#xC0DD;&#xC131;&#xC790;&#xC640; &#xBCC4;&#xB3C4;&#xB85C; &#xC815;&#xC801; &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC; (static factory method) &#xB97C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h2 id="&#xC0AC;&#xC6A9;">&#xC0AC;&#xC6A9;</h2>
 <pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Character</span>() </span>{
   <span class="hljs-keyword">int</span> strength, dexterity, consitution, intelligence;
 
@@ -2168,7 +2169,6 @@ Character mage = Character.newMage();
 
     <span class="hljs-keyword">if</span> (isCoupon(code)) {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Coupon(<span class="hljs-number">1000</span>);
-    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPoint(code)) {
       <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Point(<span class="hljs-number">500</span>);
     }
   }
@@ -2177,10 +2177,18 @@ Character mage = Character.newMage();
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Coupon</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Discount</span> </span>{ ... }
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Discount</span> </span>{ ... }
 </code></pre>
+<h2 id="&#xB2E8;&#xC810;">&#xB2E8;&#xC810;</h2>
+<ul>
+<li>&#xC0C1;&#xC18D;&#xC744; &#xD558;&#xB824;&#xBA74; <code>public</code> &#xC774;&#xB098; <code>protected</code> &#xC0DD;&#xC131;&#xC790;&#xAC01; &#xD544;&#xC694;&#xD558;&#xB2C8; &#xC815;&#xC801; &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC;&#xB9CC; &#xC9C0;&#xC6D0;&#xD558;&#xBA74; &#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E4;&#xC218; &#xC5C6;&#xB2E4;.</li>
+<li>&#xC815;&#xC801; &#xD329;&#xD1A0;&#xB9AC; &#xBA54;&#xC11C;&#xB4DC;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xAC00; &#xCC3E;&#xAE30; &#xC5B4;&#xB835;&#xB2E4;.<ul>
+<li>&#xC554;&#xBB35;&#xC801;&#xC73C;&#xB85C; &#xB300;&#xD45C;&#xC801;&#xC778; &#xBA85;&#xBA85; &#xADDC;&#xCE59;&#xB4E4;&#xC5D0; &#xC758;&#xD574; &#xBA54;&#xC11C;&#xB4DC; &#xB124;&#xC774;&#xBC0D;&#xC744; &#xD558;&#xB294;&#xAC83;&#xC774; &#xC77C;&#xBC18;&#xC801;&#xC774;&#xB2E4;.</li>
+<li><code>from</code>, <code>of</code>, <code>valueOf</code>, <code>instance</code>, <code>getInstance</code>, <code>create</code>, <code>getType</code> ...</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <h3 id="&#xAD00;&#xB828;&#xCD9C;&#xCC98;">&#xAD00;&#xB828;&#xCD9C;&#xCC98;</h3>
-<p>Effective Java 3rd<br><a href="https://johngrib.github.io/wiki/static-factory-method-pattern/" target="_blank">https://johngrib.github.io/wiki/static-factory-method-pattern/</a>
-<a href="https://mommoo.tistory.com/53" target="_blank">https://mommoo.tistory.com/53</a></p>
+<p>Effective Java 3rd<br><a href="https://johngrib.github.io/wiki/static-factory-method-pattern/" target="_blank">https://johngrib.github.io/wiki/static-factory-method-pattern/</a><br><a href="https://mommoo.tistory.com/53" target="_blank">https://mommoo.tistory.com/53</a></p>
 </blockquote>
 
                                 
@@ -2241,7 +2249,7 @@ Character mage = Character.newMage();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"정적 팩토리 메소드","level":"1.4.1.2.5.5","depth":5,"next":{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"book/03.-back-end/01.-java/03.-performance/README.md","ref":"book/03.-back-end/01.-java/03.-performance/README.md","articles":[]},"previous":{"title":"Reflection","level":"1.4.1.2.5.4","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/reflection.md","ref":"book/03.-back-end/01.-java/02.-references/method/reflection.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","mtime":"2019-02-22T09:57:29.033Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-22T09:58:04.806Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"정적 팩토리 메소드","level":"1.4.1.2.5.5","depth":5,"next":{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"book/03.-back-end/01.-java/03.-performance/README.md","ref":"book/03.-back-end/01.-java/03.-performance/README.md","articles":[]},"previous":{"title":"Reflection","level":"1.4.1.2.5.4","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/reflection.md","ref":"book/03.-back-end/01.-java/02.-references/method/reflection.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","mtime":"2019-02-25T13:25:42.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T14:12:59.197Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>

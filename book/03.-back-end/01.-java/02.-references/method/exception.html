@@ -2130,11 +2130,56 @@
 <h2 id="checked-exception">Checked Exception</h2>
 <p><code>Checked Exception</code> &#xB294; &#xC678;&#xBD80; &#xD658;&#xACBD;&#xC5D0; &#xC758;&#xD574; &#xBBF8;&#xB9AC; &#xC608;&#xC0C1; &#xB418;&#xB294; &#xC624;&#xB958;&#xC774;&#xB2E4;.</p>
 <p>&#xC608;&#xB97C; &#xB4E4;&#xBA74; <code>IOException</code> <code>ClassNotFoundException</code> &#xB4F1;&#xACFC; &#xAC19;&#xC774; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xAC00; &#xD544;&#xC694;&#xD558;&#xB2E4;.</strong></em></p>
-<h2 id="unchecked-exception">Unchecked Exception</h2>
+<ul>
+<li>IOException</li>
+<li>SQLException</li>
+</ul>
+<h2 id="unchecked-exception-runtime-exception">Unchecked Exception (Runtime Exception)</h2>
 <p><code>Unchecked Exception</code> &#xB294; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xBB38;&#xC81C;&#xB85C; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xB85C;&#xC9C1;&#xC0C1;&#xC758; &#xC624;&#xB958;&#xB85C;&#xC368; &#xBBF8;&#xB9AC; &#xC608;&#xC0C1;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
 <p>&#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; <code>RuntimeException</code> &#xACFC; &#xAC19;&#xC774; &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xC2E4;&#xD589;&#xC911;&#xC5D0; &#xC77C;&#xC5B4;&#xB098;&#xBA70; <em><strong>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xB97C; &#xD544;&#xC694;&#xB85C; &#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</strong></em></p>
+<ul>
+<li>NullPointerException</li>
+<li>IllegalArgumentException</li>
+<li>IndexOutOfBoundException</li>
+<li>SystemException</li>
+</ul>
 <blockquote>
 <p>&#xC608;&#xC678;&#xCC98;&#xB9AC;&#xD55C; &#xAC1D;&#xCCB4;&#xB294; &#xC791;&#xC5C5;&#xC774; &#xB05D;&#xB09C;&#xD6C4; &#xBAA8;&#xB4DC; GC &#xC758; &#xB300;&#xC0C1;&#xC774; &#xB41C;&#xB2E4;.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Checked Exception</th>
+<th>Unchecked Exception</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#xCC98;&#xB9AC;&#xC5EC;&#xBD80;</td>
+<td>&#xBC18;&#xB4DC;&#xC2DC; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xAC00; &#xD544;&#xC694;</td>
+<td>&#xBA85;&#xC2DC;&#xC801;&#xC778; &#xCC98;&#xB9AC;&#xB97C; &#xAC15;&#xC81C;&#xD558;&#xC9C0; &#xC54A;&#xC74C;</td>
+</tr>
+<tr>
+<td>&#xD655;&#xC778;&#xC2DC;&#xC810;</td>
+<td>&#xCEF4;&#xD30C;&#xC77C; &#xB2E8;&#xACC4;</td>
+<td>&#xC2E4;&#xD589;&#xB2E8;&#xACC4;</td>
+</tr>
+<tr>
+<td>&#xC608;&#xC678; &#xBC1C;&#xC0DD; &#xC2DC;<br>&#xD2B8;&#xB79C;&#xC7AD;&#xC158; &#xC5EC;&#xBD80;</td>
+<td>roll-back &#xD558;&#xC9C0; &#xC54A;&#xC74C;</td>
+<td>roll-back &#xCC98;&#xB9AC;</td>
+</tr>
+<tr>
+<td>&#xB300;&#xD45C;&#xC801;&#xC778; &#xC608;&#xC678;</td>
+<td><code>Exception</code> &#xC758; &#xC0C1;&#xC18D;&#xC744; &#xBC1B;&#xB294; &#xD558;&#xC704; &#xD074;&#xB798;&#xC2A4; &#xC911;<br><code>Runtime Exception</code>&#xC744; &#xC81C;&#xC678;&#xD55C; &#xBAA8;&#xB4E0; &#xC608;&#xC678;</td>
+<td><code>Runtime Exception</code> &#xC758; &#xD558;&#xC704; &#xC608;&#xC678; &#xD074;&#xB798;&#xC2A4;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="http://www.nextree.co.kr/p3239/" target="_blank">http://www.nextree.co.kr/p3239/</a></p>
 </blockquote>
 
                                 
@@ -2195,7 +2240,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Exception","level":"1.4.1.2.5.1","depth":5,"next":{"title":"Generic","level":"1.4.1.2.5.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","articles":[]},"previous":{"title":"Method","level":"1.4.1.2.5","depth":4,"path":"book/03.-back-end/01.-java/02.-references/method/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/README.md","articles":[{"title":"Exception","level":"1.4.1.2.5.1","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/exception.md","ref":"book/03.-back-end/01.-java/02.-references/method/exception.md","articles":[]},{"title":"Generic","level":"1.4.1.2.5.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","articles":[]},{"title":"Immutable","level":"1.4.1.2.5.3","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/immutable.md","ref":"book/03.-back-end/01.-java/02.-references/method/immutable.md","articles":[]},{"title":"Reflection","level":"1.4.1.2.5.4","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/reflection.md","ref":"book/03.-back-end/01.-java/02.-references/method/reflection.md","articles":[]},{"title":"정적 팩토리 메소드","level":"1.4.1.2.5.5","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","ref":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/02.-references/method/exception.md","mtime":"2019-02-22T08:54:47.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-22T09:58:04.806Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Exception","level":"1.4.1.2.5.1","depth":5,"next":{"title":"Generic","level":"1.4.1.2.5.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","articles":[]},"previous":{"title":"Method","level":"1.4.1.2.5","depth":4,"path":"book/03.-back-end/01.-java/02.-references/method/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/README.md","articles":[{"title":"Exception","level":"1.4.1.2.5.1","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/exception.md","ref":"book/03.-back-end/01.-java/02.-references/method/exception.md","articles":[]},{"title":"Generic","level":"1.4.1.2.5.2","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","ref":"book/03.-back-end/01.-java/02.-references/method/generic/README.md","articles":[]},{"title":"Immutable","level":"1.4.1.2.5.3","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/immutable.md","ref":"book/03.-back-end/01.-java/02.-references/method/immutable.md","articles":[]},{"title":"Reflection","level":"1.4.1.2.5.4","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/reflection.md","ref":"book/03.-back-end/01.-java/02.-references/method/reflection.md","articles":[]},{"title":"정적 팩토리 메소드","level":"1.4.1.2.5.5","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","ref":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/02.-references/method/exception.md","mtime":"2019-02-25T13:25:42.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T14:12:59.197Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
