@@ -146,7 +146,7 @@ Java 에는 다음과 같은 접근 제어자가 있다.
 ### Protected
 
 동일패키지 내의 클래스에서 접근 가능하다.
-해당 클래스를 상속 받은 외부 패키지의 클래스에서 접근 가능하다.
+해당 클래스를 _**상속 받은 외부 패키지의 클래스에서 접근 가능**_ 하다.
 
 ### Public
 
@@ -169,15 +169,15 @@ public class TEST {
   int b;
 
   static {
-    System.out.println("Static initialization");
+    System.out.println("Static initialization"); // 1
   }
 
   {
-    System.out.println("Instance initialization");
+    System.out.println("Instance initialization"); // 2 // 4
   }
 
   public TEST() {
-    System.out.println("Constructor");
+    System.out.println("Constructor"); // 3 // 5
   }
 
   public static void main(String[] args) {
