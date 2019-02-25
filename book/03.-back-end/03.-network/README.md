@@ -31,6 +31,11 @@ _**다이제스트 (Digest) 란 해시 함수라는 수학적인 연산을 통�
 | 443 | HTTPS - SSL 위의 HTTP의 암호화 전송 | O |  |
 | 990 | SSL 위의 FTP의 암호화 전송 | O |  |
 
+## OSI 7 Layer
+
+> ### 참고자료
+> <https://kimdongwook.tistory.com/entry/OSI-7계층>
+
 ## 네트워크 스위치 (NetWork Switch)
 
 |Switch|기능|
