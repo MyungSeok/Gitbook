@@ -37,3 +37,10 @@ try{
   /* statement */
 }
 ```
+
+## 샤딩 (Sharding)
+
+같은 테이블 스키마를 가진 데이터를 다수의 데이터 베이스에 분산하여 저장하는 방법을 의미
+
+> ### 참고자료
+> <https://nesoy.github.io/articles/2018-05/Database-Shard>
