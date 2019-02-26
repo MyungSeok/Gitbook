@@ -12,7 +12,6 @@
         
         
     
-    
     <link rel="stylesheet" href="../../../gitbook/style.css">
 
     
@@ -57,9 +56,6 @@
         
     
         
-    
-
-
     
 
         
@@ -2130,9 +2126,6 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div class="search-plus" id="book-search-results">
-    <div class="search-noresults">
-    
 <div id="book-search-results">
     <div class="search-noresults">
     
@@ -2156,11 +2149,57 @@
 <h3 id="&#xC774;&#xC9C4;-&#xD2B8;&#xB9AC;-binary-tree">&#xC774;&#xC9C4; &#xD2B8;&#xB9AC; (Binary Tree)</h3>
 <p>&#xD2B8;&#xB9AC;&#xC911;&#xC5D0;&#xC11C;&#xB3C4; &#xAC01; &#xB178;&#xB4DC;&#xC758; <em><strong>&#xC790;&#xC2DD;&#xB178;&#xB4DC;&#xAC00; &#xCD5C;&#xB300; 2&#xAC1C;</strong></em> &#xB97C; &#xAC16;&#xACE0; &#xC788;&#xB294; &#xD2B8;&#xB9AC;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.</p>
 <h2 id="&#xD2B8;&#xB9AC;&#xC758;-&#xC21C;&#xD68C;-&#xD0D0;&#xC0C9;">&#xD2B8;&#xB9AC;&#xC758; &#xC21C;&#xD68C; (&#xD0D0;&#xC0C9;)</h2>
-<p>&#xD2B8;&#xB9AC;&#xC758; &#xC21C;&#xD68C; &#xBC29;&#xC2DD;&#xC740; &#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; 3&#xAC00;&#xC9C0;&#xB85C; &#xB098;&#xB25C;&#xB2E4;.</p>
+<p>&#xD2B8;&#xB9AC;&#xC758; &#xC21C;&#xD68C; &#xBC29;&#xC2DD;&#xC740; &#xB300;&#xD45C;&#xC801;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; 4&#xAC00;&#xC9C0; (&#xC804;&#xC704;, &#xC911;&#xC704;, &#xD6C4;&#xC704;, &#xB808;&#xBCA8;) &#xB85C; &#xB098;&#xB25C;&#xB2E4;.</p>
+<h3 id="&#xC804;&#xC704;-&#xC21C;&#xD68C;-pre-order-traversal">&#xC804;&#xC704; &#xC21C;&#xD68C; (Pre-order traversal)</h3>
+<ol>
+<li>&#xB8E8;&#xD2B8;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xC67C;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xC624;&#xB978;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+</ol>
+<blockquote>
+<p>&#xB8E8;&#xD2B8; &#xB178;&#xB4DC;&#xAC00; &#xB9E8; &#xCC98;&#xC74C; &#xB098;&#xC628;&#xB2E4;.</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">preOrder</span><span class="hljs-params">(Node n)</span> </span>{
+  <span class="hljs-keyword">if</span> (n != <span class="hljs-keyword">null</span>) {
+    System.out.println(n.getData() + <span class="hljs-string">&quot; &quot;</span>);
+    preOrder(n.getLeft());
+    preOrder(n.getRight());
+  }
+}
+</code></pre>
+<h3 id="&#xC911;&#xC704;-&#xC21C;&#xD68C;-in-order-traversal">&#xC911;&#xC704; &#xC21C;&#xD68C; (In-order traversal)</h3>
+<ol>
+<li>&#xC67C;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xB8E8;&#xD2B8;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xC624;&#xB978;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">inOrder</span><span class="hljs-params">(Node n)</span> </span>{
+  <span class="hljs-keyword">if</span> (n != <span class="hljs-keyword">null</span>) {
+    inOrder(n.getLeft());
+    System.out.println(n.getData() + <span class="hljs-string">&quot; &quot;</span>);
+    inOrder(n.getRight());
+  }
+}
+</code></pre>
+<h3 id="&#xD6C4;&#xC704;-&#xC21C;&#xD68C;-post-order-traversal">&#xD6C4;&#xC704; &#xC21C;&#xD68C; (Post-order traversal)</h3>
+<ol>
+<li>&#xC67C;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xC624;&#xB978;&#xCABD; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+<li>&#xB8E8;&#xD2B8;&#xB97C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">postOrder</span><span class="hljs-params">(Node n)</span> </span>{
+  <span class="hljs-keyword">if</span> (n != <span class="hljs-keyword">null</span>) {
+    postOrder(n.getLeft());
+    postOrder(n.getRight());
+    System.out.println(n.getData() + <span class="hljs-string">&quot; &quot;</span>);
+  }
+}
+</code></pre>
+<h3 id="&#xB808;&#xBCA8;-&#xC21C;&#xD68C;-level-order-traversal">&#xB808;&#xBCA8; &#xC21C;&#xD68C; (Level-order traversal)</h3>
+<p>&#xD55C; &#xB808;&#xBCA8;&#xC758; &#xBAA8;&#xB4E0; &#xB178;&#xB4DC;&#xB97C; &#xBC29;&#xBB38;&#xD558;&#xACE0; &#xB2E4;&#xC74C; &#xB808;&#xBCA8; &#xBC29;&#xBB38;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C;<br>&#xB808;&#xBCA8;&#xC740; &#xC67C;&#xCABD;&#xC5D0;&#xC11C; &#xC624;&#xB978;&#xCABD;&#xC73C;&#xB85C; &#xBC29;&#xBB38;&#xD55C;&#xB2E4;.</p>
+<p><img src="../../../img/A038.png" alt="&#xB808;&#xBCA8; &#xC21C;&#xD68C; &#xD0D0;&#xC0C9;"></p>
 <ul>
-<li>&#xC804;&#xC704; &#xC21C;&#xD68C; (Pre-order traversal)</li>
-<li>&#xC911;&#xC704; &#xC21C;&#xD68C; (In-order traversal)</li>
-<li>&#xD6C4;&#xC704; &#xC21C;&#xD68C; (Post-order traversal)</li>
+<li>&#xBC29;&#xBB38;&#xC21C;&#xC11C; : E &gt; B &gt; G &gt; A &gt; D &gt; F &gt; H &gt; C</li>
 </ul>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
@@ -2171,22 +2210,6 @@
                                 
                                 </section>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -2226,13 +2249,12 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tree","level":"1.2.2.4","depth":3,"next":{"title":"Algorithm","level":"1.2.3","depth":2,"path":"book/01.-general/algorithm/README.md","ref":"book/01.-general/algorithm/README.md","articles":[{"title":"Security","level":"1.2.3.1","depth":3,"path":"book/01.-general/algorithm/security/README.md","ref":"book/01.-general/algorithm/security/README.md","articles":[]},{"title":"Sort","level":"1.2.3.2","depth":3,"path":"book/01.-general/algorithm/sort/README.md","ref":"book/01.-general/algorithm/sort/README.md","articles":[{"title":"Quick","level":"1.2.3.2.1","depth":4,"path":"book/01.-general/algorithm/sort/quick.md","ref":"book/01.-general/algorithm/sort/quick.md","articles":[]},{"title":"Merge","level":"1.2.3.2.2","depth":4,"path":"book/01.-general/algorithm/sort/merge.md","ref":"book/01.-general/algorithm/sort/merge.md","articles":[]},{"title":"Insertion","level":"1.2.3.2.3","depth":4,"path":"book/01.-general/algorithm/sort/insertion.md","ref":"book/01.-general/algorithm/sort/insertion.md","articles":[]},{"title":"Selection","level":"1.2.3.2.4","depth":4,"path":"book/01.-general/algorithm/sort/selection.md","ref":"book/01.-general/algorithm/sort/selection.md","articles":[]},{"title":"Bubble","level":"1.2.3.2.5","depth":4,"path":"book/01.-general/algorithm/sort/bubble.md","ref":"book/01.-general/algorithm/sort/bubble.md","articles":[]}]}]},"previous":{"title":"Priority Queue","level":"1.2.2.3.2","depth":4,"path":"book/01.-general/data-structure/queue/priority-queue.md","ref":"book/01.-general/data-structure/queue/priority-queue.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/01.-general/data-structure/tree.md","mtime":"2019-02-25T15:57:39.772Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T16:08:28.900Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tree","level":"1.2.2.4","depth":3,"next":{"title":"Algorithm","level":"1.2.3","depth":2,"path":"book/01.-general/algorithm/README.md","ref":"book/01.-general/algorithm/README.md","articles":[{"title":"Security","level":"1.2.3.1","depth":3,"path":"book/01.-general/algorithm/security/README.md","ref":"book/01.-general/algorithm/security/README.md","articles":[]},{"title":"Sort","level":"1.2.3.2","depth":3,"path":"book/01.-general/algorithm/sort/README.md","ref":"book/01.-general/algorithm/sort/README.md","articles":[{"title":"Quick","level":"1.2.3.2.1","depth":4,"path":"book/01.-general/algorithm/sort/quick.md","ref":"book/01.-general/algorithm/sort/quick.md","articles":[]},{"title":"Merge","level":"1.2.3.2.2","depth":4,"path":"book/01.-general/algorithm/sort/merge.md","ref":"book/01.-general/algorithm/sort/merge.md","articles":[]},{"title":"Insertion","level":"1.2.3.2.3","depth":4,"path":"book/01.-general/algorithm/sort/insertion.md","ref":"book/01.-general/algorithm/sort/insertion.md","articles":[]},{"title":"Selection","level":"1.2.3.2.4","depth":4,"path":"book/01.-general/algorithm/sort/selection.md","ref":"book/01.-general/algorithm/sort/selection.md","articles":[]},{"title":"Bubble","level":"1.2.3.2.5","depth":4,"path":"book/01.-general/algorithm/sort/bubble.md","ref":"book/01.-general/algorithm/sort/bubble.md","articles":[]}]}]},"previous":{"title":"Priority Queue","level":"1.2.2.3.2","depth":4,"path":"book/01.-general/data-structure/queue/priority-queue.md","ref":"book/01.-general/data-structure/queue/priority-queue.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/01.-general/data-structure/tree.md","mtime":"2019-02-26T07:37:02.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T07:38:47.153Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
     
@@ -2276,8 +2298,6 @@
         <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
-
-    <script src="../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

@@ -12,7 +12,6 @@
         
         
     
-    
     <link rel="stylesheet" href="../../../../gitbook/style.css">
 
     
@@ -57,9 +56,6 @@
         
     
         
-    
-
-
     
 
         
@@ -2130,9 +2126,6 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div class="search-plus" id="book-search-results">
-    <div class="search-noresults">
-    
 <div id="book-search-results">
     <div class="search-noresults">
     
@@ -2153,6 +2146,24 @@
 </code></pre>
 <p>&#xC989; &#xC704;&#xC5D0; &#xCF54;&#xB4DC;&#xB294; <code>setTimeout</code> &#xC740; 1,000ms &#xD6C4;&#xC5D0; &#xC2E4;&#xD589;&#xC774; &#xC544;&#xB2CC; 1,000ms &#xC774;&#xD6C4;&#xC5D0; <code>Callback Queue</code> &#xC5D0; &#xCD94;&#xAC00;&#xB418;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
 <p><img src="../../../../img/A033.gif" alt="&#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;"></p>
+<ol>
+<li>&#xCF5C;&#xC2A4;&#xD0DD;, &#xCF5C;&#xBC31;&#xD050; &#xB4F1;&#xC758; &#xBAA8;&#xB4E0;&#xAC83;&#xC774; &#xBE44;&#xC6CC;&#xC838;&#xC788;&#xB2E4;.</li>
+<li><code>console.log(&apos;Hi&apos;)</code> &#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xCD94;&#xAC00;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li><code>console.log(&apos;Hi&apos;)</code> &#xAC00; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</li>
+<li><code>console.log(&apos;Hi&apos;)</code> &#xAC00; &#xCF5C; &#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li><code>setTimeout(function cb1() {...})</code> &#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xCD94;&#xAC00;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li><code>setTimeout(function cb1() {...})</code> &#xC774; &#xC2E4;&#xD589;&#xB418;&#xBA74;&#xC11C; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xAC00; &#xC6F9; API &#xC758; &#xC77C;&#xD658;&#xC778; &#xD0C0;&#xC774;&#xBA38;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.<br>&#xC774; &#xD0C0;&#xC774;&#xBA38;&#xB294; &#xCE74;&#xC6B4;&#xD2B8; &#xB2E4;&#xC6B4;&#xC744; &#xCC98;&#xB9AC;&#xD55C;&#xB2E4;.</li>
+<li><code>setTimeout(function cb1() {...})</code> &#xAC00; &#xC2E4;&#xD589;&#xC774; &#xC644;&#xB8CC;&#xB418;&#xACE0; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</li>
+<li><code>console.log(&apos;Bye&apos;)</code> &#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xCD94;&#xAC00;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li><code>console.log(&apos;Bye&apos;)</code> &#xC774; &#xC2E4;&#xD589;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li><code>console.log(&apos;Bye&apos;)</code> &#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB418;&#xC5C8;&#xB2E4;.</li>
+<li>&#xD0C0;&#xC774;&#xBA38;&#xAC00; &#xC644;&#xB8CC;&#xB418;&#xBA74; <code>cb1</code> &#xC744; &#xCF5C;&#xBC31;&#xD050;&#xC5D0; &#xBC00;&#xC5B4; &#xB123;&#xB294;&#xB2E4;.</li>
+<li>&#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;&#xAC00; <code>cb1</code> &#xC744; &#xCF5C;&#xBC31;&#xD050;&#xC5D0;&#xC11C; &#xAC00;&#xC838;&#xB2E4; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xBC00;&#xC5B4; &#xB123;&#xB294;&#xB2E4;.</li>
+<li><code>cb1</code> &#xC774; &#xC2E4;&#xD589;&#xB418;&#xACE0; <code>console.log(&apos;cb1&apos;)</code> &#xC774; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xCD94;&#xAC00;&#xB41C;&#xB2E4;.</li>
+<li><code>console.log(&apos;cb1&apos;)</code> &#xC774; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</li>
+<li><code>console.log(&apos;cb1&apos;)</code> &#xC774; &#xCF5C; &#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</li>
+<li>&apos;cb1` &#xC774; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</li>
+</ol>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
 <p><a href="https://engineering.huiseoul.com/&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294;-&#xC5B4;&#xB5BB;&#xAC8C;-&#xC791;&#xB3D9;&#xD558;&#xB294;&#xAC00;-&#xC774;&#xBCA4;&#xD2B8;-&#xB8E8;&#xD504;&#xC640;-&#xBE44;&#xB3D9;&#xAE30;-&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC758;-&#xBD80;&#xC0C1;-async-await&#xC744;-&#xC774;&#xC6A9;&#xD55C;-&#xCF54;&#xB529;-&#xD301;-&#xB2E4;&#xC12F;-&#xAC00;&#xC9C0;-df65ffb4e7e" target="_blank">https://engineering.huiseoul.com/&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294;-&#xC5B4;&#xB5BB;&#xAC8C;-&#xC791;&#xB3D9;&#xD558;&#xB294;&#xAC00;-&#xC774;&#xBCA4;&#xD2B8;-&#xB8E8;&#xD504;&#xC640;-&#xBE44;&#xB3D9;&#xAE30;-&#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC758;-&#xBD80;&#xC0C1;-async-await&#xC744;-&#xC774;&#xC6A9;&#xD55C;-&#xCF54;&#xB529;-&#xD301;-&#xB2E4;&#xC12F;-&#xAC00;&#xC9C0;-df65ffb4e7e</a></p>
@@ -2161,22 +2172,6 @@
                                 
                                 </section>
                             
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
     </div>
     <div class="search-results">
         <div class="has-results">
@@ -2216,13 +2211,12 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Event Loop","level":"1.3.3.3.3","depth":4,"next":{"title":"04. Framework","level":"1.3.4","depth":2,"path":"book/02.-front-end/04.-framework/README.md","ref":"book/02.-front-end/04.-framework/README.md","articles":[{"title":"Node JS","level":"1.3.4.1","depth":3,"path":"book/02.-front-end/04.-framework/node-js/README.md","ref":"book/02.-front-end/04.-framework/node-js/README.md","articles":[{"title":"HTTP Transection","level":"1.3.4.1.1","depth":4,"path":"book/02.-front-end/04.-framework/node-js/http-transection.md","ref":"book/02.-front-end/04.-framework/node-js/http-transection.md","articles":[]},{"title":"Express","level":"1.3.4.1.2","depth":4,"path":"book/02.-front-end/04.-framework/node-js/express.md","ref":"book/02.-front-end/04.-framework/node-js/express.md","articles":[]}]},{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"book/02.-front-end/04.-framework/angular-js.md","ref":"book/02.-front-end/04.-framework/angular-js.md","articles":[]},{"title":"React JS","level":"1.3.4.3","depth":3,"path":"book/02.-front-end/04.-framework/react/README.md","ref":"book/02.-front-end/04.-framework/react/README.md","articles":[{"title":"Lifecycle","level":"1.3.4.3.1","depth":4,"path":"book/02.-front-end/04.-framework/react/lifecycle.md","ref":"book/02.-front-end/04.-framework/react/lifecycle.md","articles":[]},{"title":"Redux","level":"1.3.4.3.2","depth":4,"path":"book/02.-front-end/04.-framework/react/redux.md","ref":"book/02.-front-end/04.-framework/react/redux.md","articles":[]}]},{"title":"Vue","level":"1.3.4.4","depth":3,"path":"book/02.-front-end/04.-framework/vue/README.md","ref":"book/02.-front-end/04.-framework/vue/README.md","articles":[{"title":"Lifecycle","level":"1.3.4.4.1","depth":4,"path":"book/02.-front-end/04.-framework/vue/lifecycle.md","ref":"book/02.-front-end/04.-framework/vue/lifecycle.md","articles":[]}]}]},"previous":{"title":"NetFunnel","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","ref":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","mtime":"2019-02-25T15:28:30.286Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-25T16:08:28.900Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Event Loop","level":"1.3.3.3.3","depth":4,"next":{"title":"04. Framework","level":"1.3.4","depth":2,"path":"book/02.-front-end/04.-framework/README.md","ref":"book/02.-front-end/04.-framework/README.md","articles":[{"title":"Node JS","level":"1.3.4.1","depth":3,"path":"book/02.-front-end/04.-framework/node-js/README.md","ref":"book/02.-front-end/04.-framework/node-js/README.md","articles":[{"title":"HTTP Transection","level":"1.3.4.1.1","depth":4,"path":"book/02.-front-end/04.-framework/node-js/http-transection.md","ref":"book/02.-front-end/04.-framework/node-js/http-transection.md","articles":[]},{"title":"Express","level":"1.3.4.1.2","depth":4,"path":"book/02.-front-end/04.-framework/node-js/express.md","ref":"book/02.-front-end/04.-framework/node-js/express.md","articles":[]}]},{"title":"Angular JS","level":"1.3.4.2","depth":3,"path":"book/02.-front-end/04.-framework/angular-js.md","ref":"book/02.-front-end/04.-framework/angular-js.md","articles":[]},{"title":"React JS","level":"1.3.4.3","depth":3,"path":"book/02.-front-end/04.-framework/react/README.md","ref":"book/02.-front-end/04.-framework/react/README.md","articles":[{"title":"Lifecycle","level":"1.3.4.3.1","depth":4,"path":"book/02.-front-end/04.-framework/react/lifecycle.md","ref":"book/02.-front-end/04.-framework/react/lifecycle.md","articles":[]},{"title":"Redux","level":"1.3.4.3.2","depth":4,"path":"book/02.-front-end/04.-framework/react/redux.md","ref":"book/02.-front-end/04.-framework/react/redux.md","articles":[]}]},{"title":"Vue","level":"1.3.4.4","depth":3,"path":"book/02.-front-end/04.-framework/vue/README.md","ref":"book/02.-front-end/04.-framework/vue/README.md","articles":[{"title":"Lifecycle","level":"1.3.4.4.1","depth":4,"path":"book/02.-front-end/04.-framework/vue/lifecycle.md","ref":"book/02.-front-end/04.-framework/vue/lifecycle.md","articles":[]}]}]},"previous":{"title":"NetFunnel","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","ref":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","mtime":"2019-02-26T07:37:02.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T07:38:47.153Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../../../../gitbook/gitbook.js"></script>
     <script src="../../../../gitbook/theme.js"></script>
     
@@ -2266,8 +2260,6 @@
         <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
-
-    <script src="../../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
