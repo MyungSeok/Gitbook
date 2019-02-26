@@ -12,6 +12,7 @@
         
         
     
+    
     <link rel="stylesheet" href="../../../../gitbook/style.css">
 
     
@@ -56,6 +57,9 @@
         
     
         
+    
+
+
     
 
         
@@ -2126,6 +2130,9 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
 <div id="book-search-results">
     <div class="search-noresults">
     
@@ -2308,6 +2315,22 @@
     </div>
 </div>
 
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
                         </div>
                     </div>
                 
@@ -2331,12 +2354,13 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTTP 2.0","level":"1.4.3.1.2","depth":4,"next":{"title":"04. Database","level":"1.4.4","depth":2,"path":"book/03.-back-end/04.-rdbms/README.md","ref":"book/03.-back-end/04.-rdbms/README.md","articles":[{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"book/03.-back-end/04.-rdbms/01.redis.md","ref":"book/03.-back-end/04.-rdbms/01.redis.md","articles":[]}]},"previous":{"title":"Servlet","level":"1.4.3.1.1","depth":4,"path":"book/03.-back-end/03.-network/http/servlet.md","ref":"book/03.-back-end/03.-network/http/servlet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/03.-network/http/http2.0.md","mtime":"2019-02-26T07:37:02.741Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T07:38:47.153Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTP 2.0","level":"1.4.3.1.2","depth":4,"next":{"title":"04. Database","level":"1.4.4","depth":2,"path":"book/03.-back-end/04.-rdbms/README.md","ref":"book/03.-back-end/04.-rdbms/README.md","articles":[{"title":"01.Redis","level":"1.4.4.1","depth":3,"path":"book/03.-back-end/04.-rdbms/01.redis.md","ref":"book/03.-back-end/04.-rdbms/01.redis.md","articles":[]}]},"previous":{"title":"Servlet","level":"1.4.3.1.1","depth":4,"path":"book/03.-back-end/03.-network/http/servlet.md","ref":"book/03.-back-end/03.-network/http/servlet.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/03.-network/http/http2.0.md","mtime":"2019-02-26T07:45:48.658Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-26T07:47:36.991Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../../../gitbook/gitbook.js"></script>
     <script src="../../../../gitbook/theme.js"></script>
     
@@ -2380,6 +2404,8 @@
         <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../../../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
