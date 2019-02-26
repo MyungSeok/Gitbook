@@ -28,11 +28,66 @@
 
 ## 트리의 순회 (탐색)
 
-트리의 순회 방식은 대표적으로 다음 3가지로 나뉜다.
+트리의 순회 방식은 대표적으로 다음 4가지 (전위, 중위, 후위, 레벨) 로 나뉜다.
 
-* 전위 순회 (Pre-order traversal)
-* 중위 순회 (In-order traversal)
-* 후위 순회 (Post-order traversal)
+### 전위 순회 (Pre-order traversal)
+
+1. 루트를 방문한다.
+2. 왼쪽 노드를 방문한다.
+3. 오른쪽 노드를 방문한다.
+
+> 루트 노드가 맨 처음 나온다.
+
+```java
+static void preOrder(Node n) {
+  if (n != null) {
+    System.out.println(n.getData() + " ");
+    preOrder(n.getLeft());
+    preOrder(n.getRight());
+  }
+}
+```
+
+### 중위 순회 (In-order traversal)
+
+1. 왼쪽 노드를 방문한다.
+2. 루트를 방문한다.
+3. 오른쪽 노드를 방문한다.
+
+```java
+static void inOrder(Node n) {
+  if (n != null) {
+    inOrder(n.getLeft());
+    System.out.println(n.getData() + " ");
+    inOrder(n.getRight());
+  }
+}
+```
+
+### 후위 순회 (Post-order traversal)
+
+1. 왼쪽 노드를 방문한다.
+2. 오른쪽 노드를 방문한다.
+3. 루트를 방문한다.
+
+```java
+static void postOrder(Node n) {
+  if (n != null) {
+    postOrder(n.getLeft());
+    postOrder(n.getRight());
+    System.out.println(n.getData() + " ");
+  }
+}
+```
+
+### 레벨 순회 (Level-order traversal)
+
+한 레벨의 모든 노드를 방문하고 다음 레벨 방문하는 방식으로  
+레벨은 왼쪽에서 오른쪽으로 방문한다.
+
+![레벨 순회 탐색](/img/A038.png)
+
+* 방문순서 : E > B > G > A > D > F > H > C
 
 > ### 참고자료
 > <https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html>

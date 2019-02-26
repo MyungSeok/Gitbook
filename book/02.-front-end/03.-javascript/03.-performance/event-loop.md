@@ -25,5 +25,23 @@ setTimeout(() => {
 
 ![이벤트 루프](/img/A033.gif)
 
+1. 콜스택, 콜백큐 등의 모든것이 비워져있다.
+2. `console.log('Hi')` 가 콜스택에 추가되었다.
+3. `console.log('Hi')` 가 실행된다.
+4. `console.log('Hi')` 가 콜 스택에서 제거되었다.
+5. `setTimeout(function cb1() {...})` 가 콜스택에 추가되었다.
+6. `setTimeout(function cb1() {...})` 이 실행되면서 브라우저가 웹 API 의 일환인 타이머를 생성한다.  
+이 타이머는 카운트 다운을 처리한다.
+7. `setTimeout(function cb1() {...})` 가 실행이 완료되고 콜스택에서 제거된다.
+8. `console.log('Bye')` 가 콜스택에 추가되었다.
+9. `console.log('Bye')` 이 실행되었다.
+10. `console.log('Bye')` 가 콜스택에서 제거되었다.
+11. 타이머가 완료되면 `cb1` 을 콜백큐에 밀어 넣는다.
+12. 이벤트 루프가 `cb1` 을 콜백큐에서 가져다 콜스택에 밀어 넣는다.
+13. `cb1` 이 실행되고 `console.log('cb1')` 이 콜스택에 추가된다.
+14. `console.log('cb1')` 이 실행된다.
+15. `console.log('cb1')` 이 콜 스택에서 제거된다.
+16. 'cb1` 이 콜스택에서 제거된다.
+
 > ### 참고자료
 > <https://engineering.huiseoul.com/자바스크립트는-어떻게-작동하는가-이벤트-루프와-비동기-프로그래밍의-부상-async-await을-이용한-코딩-팁-다섯-가지-df65ffb4e7e>

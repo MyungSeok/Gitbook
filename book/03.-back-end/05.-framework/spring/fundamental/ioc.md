@@ -50,4 +50,5 @@ public class Parent {
 스프링에서 실행할 때 생성했던 _**Bean**_ 을 주입시켜주는 과정을 _**DI**_ 라고 한다.
 
 > ### 참고자료
-> <http://isstory83.tistory.com/m/91>
+> <http://isstory83.tistory.com/m/91>  
+> <https://private.tistory.com/39>

@@ -51,4 +51,5 @@ for (var i = 0; i < 10; ++i) {
   * 제너레이터 함수에서 제너레이터 프로토콜을 통해 반환값을 정의 한다. (Default : undefined)
 
 > ### 참고자료
-> <http://hacks.mozilla.or.kr/2015/08/es6-in-depth-generators/>
+> <http://hacks.mozilla.or.kr/2015/08/es6-in-depth-generators/>  
+> <https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997>

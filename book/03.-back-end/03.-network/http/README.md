@@ -148,24 +148,40 @@ HTTP 프로토콜의 상태 유지를 하기 위해 Server 가 Client 를 식별
 
 ## HTTP METHOD
 
-### GET
+* GET
+  * URL로 파일 및 자원등을 가져올 수 있도록 요청
+* POST
+  * Request 로 전달된 데이터를 기반으로 서버에 요청  
+  * 수행의 목적이 강함
+* DELETE
+  * 데이터 삭제의 요청
+* PUT
+  * Request 로 전달되는 데이터를 기반으로 서버에 요청
+  * 기준 데이터가 없을때는 생성, 있을때는 수정
+* PATCH
+  * 변경된 데이터만 전달하여 업데이트를 요청함
 
-* URL로 파일 및 자원등을 가져올 수 있도록 요청
+## 네트워크 핸드 쉐이크
 
-### POST
+* ARC (Acknowledgement) : 송신된 메세지가 정상적으로 수신 되었음을 송신측으로 응답하는 것
+* SYN (Synchronize) : 연결시작 및 회선의 개선 용도로 사용
+* FIN (Finish) : 연결해제 및 회선 종결의 용도로 사용
 
-* Request 로 전달된 데이터를 기반으로 서버에 요청  
-* 수행의 목적이 강함
+### 연결
 
-### DELETE
+```mermaid
+  sequenceDiagram
+    Client ->> Server: SYN
+    Server -->> Client: ACK + SYN
+    Client ->> Server: ACK
+```
 
-* 데이터 삭제의 요청
+### 해제
 
-### PUT
-
-* Request 로 전달되는 데이터를 기반으로 서버에 요청
-* 기준 데이터가 없을때는 생성, 있을때는 수정
-
-### PATCH
-
-* 변경된 데이터만 전달하여 업데이트를 요청함
+```mermaid
+  sequenceDiagram
+    Client ->> Server: FIN
+    Server -->> Client: ACK
+    Server -->> Client: FIN
+    Client ->> Server: ACK
+```

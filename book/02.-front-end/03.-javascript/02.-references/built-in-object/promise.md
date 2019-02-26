@@ -26,6 +26,20 @@ async(1, function () {
 > IE 는 사용 불가하여 Polyfill 코드를 사용하여 구현해야 함  
 > Chrome, FF 는 _**Full Support**_
 
+아래는 HTML5Rocks 에서 보이고 있는 프로미스의 예제 이다.
+
+![프로미스 예시](/img/A039.png)
+
+```javascript
+asyncThing1()
+  .then( () => asyncThing2() )
+  .then( () => asyncThing3() )
+  .catch( error => asyncRecovery1() )
+    then( () => asyncThing4(), () => asyncRecovery2() )
+      .catch( error => console.log('Don\'t worry about it') )
+        then( () => console.log('All done') );
+```
+
 ## 사용
 
 ### Syntax

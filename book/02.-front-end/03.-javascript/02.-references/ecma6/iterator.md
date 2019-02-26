@@ -86,8 +86,3 @@ _**TC39**_ 에서 정의한 _**Iterator Interface**_ 정의를 따른 `Object` �
 > [ECMA-262 - Iterable Interface](http://www.ecma-international.org/ecma-262/6.0/#sec-iterable-interface)  
 > [GDG 2016 발표자료](http://www.bsidesoft.com/?p=2913)  
 > [GDG DevFest Seoul 2016 - Iterable & Iterator](https://youtu.be/CY_2mFxQwzc)
-
-## Generator
-
-> ### 참고자료
-> <https://gist.github.com/qodot/ecf8d90ce291196817f8cf6117036997>
