@@ -33,8 +33,24 @@ _**다이제스트 (Digest) 란 해시 함수라는 수학적인 연산을 통�
 
 ## OSI 7 Layer
 
+![OSI 7 계층](/img/A040.png)
+
+|계층|이름|설명|
+|--|--|--|
+|7계층|응용 계층 (Application)|사용자와 상호작용 하는 응용 프로그램 이다.<br>Chrome, FF, Safari 등과 같은 응용프로그램이 대표적이다.|
+|6계층|표현 계층 (Presentation)|데이터를 안전하게 보호하기 위하여 암호화 및 복호화를 하는 계층|
+|5계층|세션 계층 (Session)|세션을 만들고 설정하는 기능을 담당|
+|4계층|전송 계층 (Transport)|데이터의 전송을 조율하며 용량과 속도 및 목적지 등을 처리한다.<br>대표적으로는 전송 제어 프로토콜(TCP) 이 인터넷 프로토콜 (IP) 위에 구축이 되는데 이를 TCP/IP 라고 한다.|
+|3계층|네트워크 계층 (Network)|라우팅 기능을 제공하는 계층<br>IP가 여기서 작동한다.|
+|2계층|데이터 링크 계층 (Data Link)|매체 접근 제어 (MAC) 계층으로 대부분의 스위치가 이 계층에서 동작된다. |
+|1계층|물리 계층 (Physical)|시스템의 전기적, 물리적 표현을 나타내는 계층<br>케이블의 연결 혹은 플러그 상태를 점검 가능하다.|
+
+![네트워크 계층 동작](/img/A041.png)
+
 > ### 참고자료
-> <https://kimdongwook.tistory.com/entry/OSI-7계층>
+> <https://kimdongwook.tistory.com/entry/OSI-7계층>  
+> <http://www.ciokorea.com/news/36536>  
+> <http://blog.naver.com/PostView.nhn?blogId=hostinggodo&logNo=220708841767>
 
 ## 네트워크 스위치 (NetWork Switch)
 

@@ -90,5 +90,5 @@ static void postOrder(Node n) {
 * 방문순서 : E > B > G > A > D > F > H > C
 
 > ### 참고자료
-> <https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html>
+> <https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html>  
 > <https://secmem.tistory.com/204>
