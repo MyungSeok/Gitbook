@@ -51,7 +51,7 @@ xhr.send(null);
 > 예를 들면 `send` 를 호출하기 전에 아래와 같은 형태로 `send` 로 보낼 쿼리를 이용해야 한다.
 
 ```javascript
-xhr.setReqeustHeader('Content-Type', 'application/x-www-form-urlencoded');
+xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 ```
 
 ### 4. 응답 데이터 처리

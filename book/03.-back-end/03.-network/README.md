@@ -50,7 +50,8 @@ _**다이제스트 (Digest) 란 해시 함수라는 수학적인 연산을 통�
 > ### 참고자료
 > <https://kimdongwook.tistory.com/entry/OSI-7계층>  
 > <http://www.ciokorea.com/news/36536>  
-> <http://blog.naver.com/PostView.nhn?blogId=hostinggodo&logNo=220708841767>
+> <http://blog.naver.com/PostView.nhn?blogId=hostinggodo&logNo=220708841767>  
+> <http://blog.naver.com/PostView.nhn?blogId=demonicws&logNo=40117378644>
 
 ## 네트워크 스위치 (NetWork Switch)
 
