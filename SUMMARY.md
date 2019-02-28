@@ -107,6 +107,7 @@
         * [Installation](book/03.-back-end/02.-server/nginx/cli/installation.md)
   * [03. Network](book/03.-back-end/03.-network/README.md)
     * [HTTP](book/03.-back-end/03.-network/http/README.md)
+      * [REST](book/03.-back-end/03.-network/http/rest.md)
       * [Servlet](book/03.-back-end/03.-network/http/servlet.md)
       * [HTTP 2.0](book/03.-back-end/03.-network/http/http2.0.md)
   * [04. Database](book/03.-back-end/04.-rdbms/README.md)

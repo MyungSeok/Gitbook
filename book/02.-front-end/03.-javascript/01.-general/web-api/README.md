@@ -5,7 +5,7 @@
 서버와의 비동기 데이터 통신을 하기 위해서 `XMLHttpRequest` 객체를 할 수 있다.  
 기존의 자바스크립트의 `ajax` 을 사용하는 것과 동일하다.
 
-### 1. HTTP Request 생성 
+### 1. HTTP Request 생성
 
 모든 브라우저에서 사용 가능한 인스턴스를 생성한다.
 
@@ -139,3 +139,30 @@ xhr.send(null);
 
 모든 이벤트는 그에 대응하는 `XMLHttpRequest` 를 `target` 속성으로 가지고 있습니다.
 
+### CORS 관련 설정 이슈
+
+크로스 도메인간의 쿠키 설정은 되지 않기 때문에 정책 혹은 데이터 명세의 변경을 통해 해결한다.
+
+Request Header 혹은 Body 에 필요한 데이터를 추가하여 보내준다.
+
+```javascript
+$.ajax({
+    ...
+    beforeSend: function (xhr) {
+        xhr.setRequestHeader('param', $.cookie('value'));
+    },
+    ...
+})
+```
+
+jQuery Ajax 사용시에는 다음과 같이 사용
+
+```javascript
+$.ajax({
+    ...
+    xhrFields: { withCredentials: true },
+    ...
+})
+```
+
+[jQuery 1.5.1 에서 추가된 기능](http://api.jquery.com/jquery.ajax/) 으로 해당 하위 버전은 지원 불가
