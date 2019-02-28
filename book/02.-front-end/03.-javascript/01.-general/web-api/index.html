@@ -428,7 +428,39 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../../../../01.-general/ide.html">
+        <li class="chapter " data-level="1.2.4" data-path="../../../../01.-general/bi/">
+            
+                <a href="../../../../01.-general/bi/">
+            
+                    
+                    Business Intelligence
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../../../01.-general/bi/dw.html">
+            
+                <a href="../../../../01.-general/bi/dw.html">
+            
+                    
+                    Data Warehouse
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../../../01.-general/ide.html">
             
                 <a href="../../../../01.-general/ide.html">
             
@@ -1715,7 +1747,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.3.1.1" data-path="../../../../03.-back-end/03.-network/http/servlet.html">
+        <li class="chapter " data-level="1.4.3.1.1" data-path="../../../../03.-back-end/03.-network/http/rest.html">
+            
+                <a href="../../../../03.-back-end/03.-network/http/rest.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.1.2" data-path="../../../../03.-back-end/03.-network/http/servlet.html">
             
                 <a href="../../../../03.-back-end/03.-network/http/servlet.html">
             
@@ -1728,7 +1773,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.1.2" data-path="../../../../03.-back-end/03.-network/http/http2.0.html">
+        <li class="chapter " data-level="1.4.3.1.3" data-path="../../../../03.-back-end/03.-network/http/http2.0.html">
             
                 <a href="../../../../03.-back-end/03.-network/http/http2.0.html">
             
@@ -2276,6 +2321,25 @@ xhr.send(<span class="hljs-literal">null</span>);
 </code></pre>
 <p><code>onprogress</code> &#xC758; &#xC18D;&#xC131;&#xC778; <code>position</code> &#xACFC; <code>totalSize</code> &#xB294; &#xBC1B;&#xC740; &#xB370;&#xC774;&#xD130;&#xAC00; &#xBA87; &#xBC14;&#xC774;&#xD2B8;&#xC778;&#xC9C0;, &#xC804;&#xCCB4; &#xB370;&#xC774;&#xD130; &#xD06C;&#xAE30;&#xAC00; &#xBA87; &#xBC14;&#xC774;&#xD2B8;&#xC778;&#xC9C0; &#xAC01;&#xAC01; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</p>
 <p>&#xBAA8;&#xB4E0; &#xC774;&#xBCA4;&#xD2B8;&#xB294; &#xADF8;&#xC5D0; &#xB300;&#xC751;&#xD558;&#xB294; <code>XMLHttpRequest</code> &#xB97C; <code>target</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h3 id="cors-&#xAD00;&#xB828;-&#xC124;&#xC815;-&#xC774;&#xC288;">CORS &#xAD00;&#xB828; &#xC124;&#xC815; &#xC774;&#xC288;</h3>
+<p>&#xD06C;&#xB85C;&#xC2A4; &#xB3C4;&#xBA54;&#xC778;&#xAC04;&#xC758; &#xCFE0;&#xD0A4; &#xC124;&#xC815;&#xC740; &#xB418;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC815;&#xCC45; &#xD639;&#xC740; &#xB370;&#xC774;&#xD130; &#xBA85;&#xC138;&#xC758; &#xBCC0;&#xACBD;&#xC744; &#xD1B5;&#xD574; &#xD574;&#xACB0;&#xD55C;&#xB2E4;.</p>
+<p>Request Header &#xD639;&#xC740; Body &#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xC5EC; &#xBCF4;&#xB0B4;&#xC900;&#xB2E4;.</p>
+<pre><code class="lang-javascript">$.ajax({
+    ...
+    beforeSend: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">xhr</span>) </span>{
+        xhr.setRequestHeader(<span class="hljs-string">&apos;param&apos;</span>, $.cookie(<span class="hljs-string">&apos;value&apos;</span>));
+    },
+    ...
+})
+</code></pre>
+<p>jQuery Ajax &#xC0AC;&#xC6A9;&#xC2DC;&#xC5D0;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-javascript">$.ajax({
+    ...
+    xhrFields: { withCredentials: <span class="hljs-literal">true</span> },
+    ...
+})
+</code></pre>
+<p><a href="http://api.jquery.com/jquery.ajax/" target="_blank">jQuery 1.5.1 &#xC5D0;&#xC11C; &#xCD94;&#xAC00;&#xB41C; &#xAE30;&#xB2A5;</a> &#xC73C;&#xB85C; &#xD574;&#xB2F9; &#xD558;&#xC704; &#xBC84;&#xC804;&#xC740; &#xC9C0;&#xC6D0; &#xBD88;&#xAC00;</p>
 
                                 
                                 </section>
@@ -2335,7 +2399,7 @@ xhr.send(<span class="hljs-literal">null</span>);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web API","level":"1.3.3.1.2","depth":4,"next":{"title":"Window","level":"1.3.3.1.2.1","depth":5,"path":"book/02.-front-end/03.-javascript/01.-general/web-api/window.md","ref":"book/02.-front-end/03.-javascript/01.-general/web-api/window.md","articles":[]},"previous":{"title":"Design Pattern","level":"1.3.3.1.1","depth":4,"path":"book/02.-front-end/03.-javascript/01.-general/design-pattern.md","ref":"book/02.-front-end/03.-javascript/01.-general/design-pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/01.-general/web-api/README.md","mtime":"2019-02-27T09:59:35.955Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-28T05:41:26.964Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Web API","level":"1.3.3.1.2","depth":4,"next":{"title":"Window","level":"1.3.3.1.2.1","depth":5,"path":"book/02.-front-end/03.-javascript/01.-general/web-api/window.md","ref":"book/02.-front-end/03.-javascript/01.-general/web-api/window.md","articles":[]},"previous":{"title":"Design Pattern","level":"1.3.3.1.1","depth":4,"path":"book/02.-front-end/03.-javascript/01.-general/design-pattern.md","ref":"book/02.-front-end/03.-javascript/01.-general/design-pattern.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/01.-general/web-api/README.md","mtime":"2019-02-28T06:44:02.967Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-28T09:59:13.381Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
