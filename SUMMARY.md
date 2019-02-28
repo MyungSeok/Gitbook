@@ -22,6 +22,8 @@
       * [Insertion](book/01.-general/algorithm/sort/insertion.md)
       * [Selection](book/01.-general/algorithm/sort/selection.md)
       * [Bubble](book/01.-general/algorithm/sort/bubble.md)
+  * [Business Intelligence](book/01.-general/bi/README.md)
+    * [Data Warehouse](book/01.-general/bi/dw.md)
   * [IDE](book/01.-general/ide.md)
 * [02. Front End](book/02.-front-end/README.md)
   * [01. HTML](book/02.-front-end/01.-html/README.md)
