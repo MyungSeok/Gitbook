@@ -54,5 +54,5 @@ _**특정 사용자 집단에 대한 접근성과 가독성을 높이는데 초�
 * 일부에서는 데이터 디스커버리라는 용어로 서술하기도 한다 (ex. MicroStrategy)
 
 > ### 참고자료
-> <https://middleware.tistory.com/entry/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9B%A8%EC%96%B4%ED%95%98%EC%9A%B0%EC%8A%A4Data-Warehouse-%EB%B0%8F-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%A7%88%ED%8A%B8Data-Mart>  
+> <https://middleware.tistory.com/entry/데이터-웨어하우스Data-Warehouse-및-데이터-마트Data-Mart>  
 > <http://blog.daum.net/_blog/BlogTypeView.do?blogid=0J2W5&articleno=74&_bloghome_menu=recenttext>
