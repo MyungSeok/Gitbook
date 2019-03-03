@@ -44,7 +44,7 @@ function foo () {
 ## JSONP
 
 웹 브라우저는 _**SOP \(same origin policy: 동일출처정책\)**_ 에 따라 서로 다른 도메인간의 데이터 통신을 제한하고 있다  
-script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트를 로드할 수 있다는 것**_ 에서 착안   
+script 코드가 _**DOM 트리에 추가되어 실행되면 외부 스크립트를 로드할 수 있다는 것**_ 에서 착안  
 `<script>` 태그는 SOP 정책에 속하지 않기 때문에 jsonp \(json width padding\) 이 사용됨
 
 ![Ajax n JSONP](/img/A001.png)
@@ -306,7 +306,7 @@ const value = 'outer scope';
 > **TDZ \(Temporal Dead Zone\) ?**
 >
 > 초기화 \(선언\) 가 되지 않는 객체들을 참조 할 수 없다.  
-> \(호이스팅이 되지 않는것은 아님 - ES5 처럼 undefined 로 선 할당이 안됨\)
+> \(호이스팅이 되지 않는것은 아님 - ES5 처럼 `undefined` 로 선 할당이 안됨\)
 
 ## 함수의 선언과 표현식
 
