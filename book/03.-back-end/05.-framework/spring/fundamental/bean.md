@@ -18,7 +18,43 @@
 
 ## POJO (Plain Old Java Object)
 
-* ??????????
+Sun 의 Java Bean 이나 EJB 의 Bean 을 뜻하는 것이 아닌 순수하게 `getter`, `setter` 메서드로만 이루어진 Value Object 성의 Bean 을 의미한다.  
+예를 들면 다음과 같은 코드이다.
+
+```java
+public class SimpleBean {
+    private String name;
+    private String age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getAge() {
+        return this.age;
+    }
+}
+```
+
+스프링에서 POJO 가 중요한 특징인 이유는 다음과 같은 특성을 가지기 때문이다.
+
+* 클래스위 상속을 강제하지 않는다.
+* 인터페이스의 구현을 강제하지 않는다.
+* 어노테이션의 사용을 강제하지 않는다.
+
+때문에 사용자는 라이브러리나 컨테이너의 별도 기술에 종속적이지 않는 상태로 가장 일반적인 코드로 작성할 수 있다는 것이다.
+
+> ### 참고자료
+> <http://m.blog.naver.com/weekamp/186678831>  
+> <https://joonyon.tistory.com/18>
 
 ## Spring Bean Life Cycle
 
@@ -28,6 +64,11 @@
   B --> C["POJO 빈 준비 상태"]
   C --> D["POJO 빈 소멸 상태"]
 ```
+
+> ### 참고자료
+> <http://javaslave.tistory.com/48>
+> <https://gmlwjd9405.github.io/2018/11/10/spring-beans.html>  
+> <https://unabated.tistory.com/entry/Spring-Bean-초기화-및-생명주기>
 
 ### POJO (Plain Old Java Object) 초기화 과정
 
@@ -45,12 +86,31 @@
 
 ### 종료 Method 를 호출하는 과정
 
-1. 생성한 Bean 이 DisposableBean Instance 이면 distory() Method 를 호출한다.
-2. 생성한 Bean 설정파일에 distory-method 가 설정되어 있으면 destory-method 에 해당하는 메소드를 호출한다.
+1. 생성한 Bean 이 DisposableBean Instance 이면 `distory` Method 를 호출한다.
+2. 생성한 Bean 설정파일에 distory-method 가 설정되어 있으면 `destory` Method 에 해당하는 메소드를 호출한다.
 
-#### Bean Life Cycle 을 커스터마이징 하여 제어 할 수 있다.
+> Bean Life Cycle 을 커스터마이징 하여 제어 할 수 있다.
+
+### Bean 로드 순서를 결정짓는 방법
+
+Bean 내부적으로도 생성 순서에 따라 에러가 나올수 있기 때문에 해당 상황에서는 빈 생성 순서를 정해주는 것이 낫다
+
+* `@DependsOn`
+  * 의존성 고리를 스프링에게 알려준다.
+* `@PostConstruct`
+  * 해당 컴포넌트가 완전히 생성된 후 한번에 실행해야 할 일을 코딩한 메소드에 붙이는 것이다.
+* `@Order`
+  * 주입 순서를 정해 줌
 
 > ### 참고자료
-> <http://javaslave.tistory.com/48>
-> <https://gmlwjd9405.github.io/2018/11/10/spring-beans.html>  
-> <https://unabated.tistory.com/entry/Spring-Bean-초기화-및-생명주기>
+> <https://jeong-pro.tistory.com/167>
+
+### `@Bean` vs `@Component` 차이
+
+* `@Bean`
+  * 외부 라이브러리들의 사용을 Bean 으로 등록하고 싶은 경우
+* `@Component`
+  * 사용자가 직접 컨트롤이 가능한 Class 인 경우
+
+> ### 참고자료
+> <https://effectivesquid.tistory.com/entry/Bean-과-Component의-차이>
