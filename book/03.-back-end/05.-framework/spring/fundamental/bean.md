@@ -66,7 +66,7 @@ public class SimpleBean {
 ```
 
 > ### 참고자료
-> <http://javaslave.tistory.com/48>
+> <http://javaslave.tistory.com/48>  
 > <https://gmlwjd9405.github.io/2018/11/10/spring-beans.html>  
 > <https://unabated.tistory.com/entry/Spring-Bean-초기화-및-생명주기>
 
