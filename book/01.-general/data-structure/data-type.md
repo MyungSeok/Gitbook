@@ -12,6 +12,8 @@
 
 * char : 2 Byte
 
+> String 은 (byte[] bytes) 이다
+
 ## 정수형
 
 정수값을 저장하는데 사용되며 주로 `int` `long` 을 사용
