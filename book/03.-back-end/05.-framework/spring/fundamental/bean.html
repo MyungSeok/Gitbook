@@ -2200,9 +2200,39 @@
 <li>IoC &#xBC29;&#xC2DD;&#xC73C;&#xB85C; Bean &#xC744; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;&#xB294; &#xC758;&#xBBF8;&#xC5D0;&#xC11C; Bean Factory &#xB098; Application Context &#xB97C; &#xAC00;&#xB974;&#xD0A8;&#xB2E4;.</li>
 </ul>
 <h2 id="pojo-plain-old-java-object">POJO (Plain Old Java Object)</h2>
+<p>Sun &#xC758; Java Bean &#xC774;&#xB098; EJB &#xC758; Bean &#xC744; &#xB73B;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2CC; &#xC21C;&#xC218;&#xD558;&#xAC8C; <code>getter</code>, <code>setter</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C;&#xB9CC; &#xC774;&#xB8E8;&#xC5B4;&#xC9C4; Value Object &#xC131;&#xC758; Bean &#xC744; &#xC758;&#xBBF8;&#xD55C;&#xB2E4;.<br>&#xC608;&#xB97C; &#xB4E4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xC774;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleBean</span> </span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> String age;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setAge</span><span class="hljs-params">(String age)</span> </span>{
+        <span class="hljs-keyword">this</span>.age = age;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAge</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.age;
+    }
+}
+</code></pre>
+<p>&#xC2A4;&#xD504;&#xB9C1;&#xC5D0;&#xC11C; POJO &#xAC00; &#xC911;&#xC694;&#xD55C; &#xD2B9;&#xC9D5;&#xC778; &#xC774;&#xC720;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xD2B9;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.</p>
 <ul>
-<li>??????????</li>
+<li>&#xD074;&#xB798;&#xC2A4;&#xC704; &#xC0C1;&#xC18D;&#xC744; &#xAC15;&#xC81C;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC758; &#xAD6C;&#xD604;&#xC744; &#xAC15;&#xC81C;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li>&#xC5B4;&#xB178;&#xD14C;&#xC774;&#xC158;&#xC758; &#xC0AC;&#xC6A9;&#xC744; &#xAC15;&#xC81C;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
 </ul>
+<p>&#xB54C;&#xBB38;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB098; &#xCEE8;&#xD14C;&#xC774;&#xB108;&#xC758; &#xBCC4;&#xB3C4; &#xAE30;&#xC220;&#xC5D0; &#xC885;&#xC18D;&#xC801;&#xC774;&#xC9C0; &#xC54A;&#xB294; &#xC0C1;&#xD0DC;&#xB85C; &#xAC00;&#xC7A5; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xCF54;&#xB4DC;&#xB85C; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</p>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="http://m.blog.naver.com/weekamp/186678831" target="_blank">http://m.blog.naver.com/weekamp/186678831</a><br><a href="https://joonyon.tistory.com/18" target="_blank">https://joonyon.tistory.com/18</a></p>
+</blockquote>
 <h2 id="spring-bean-life-cycle">Spring Bean Life Cycle</h2>
 <div class="mermaid">
   graph TD;
@@ -2211,6 +2241,11 @@
   C --&gt; D[&quot;POJO &#xBE48; &#xC18C;&#xBA78; &#xC0C1;&#xD0DC;&quot;]
 </div>
 
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="http://javaslave.tistory.com/48" target="_blank">http://javaslave.tistory.com/48</a>
+<a href="https://gmlwjd9405.github.io/2018/11/10/spring-beans.html" target="_blank">https://gmlwjd9405.github.io/2018/11/10/spring-beans.html</a><br><a href="https://unabated.tistory.com/entry/Spring-Bean-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0DD;&#xBA85;&#xC8FC;&#xAE30;" target="_blank">https://unabated.tistory.com/entry/Spring-Bean-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0DD;&#xBA85;&#xC8FC;&#xAE30;</a></p>
+</blockquote>
 <h3 id="pojo-plain-old-java-object-&#xCD08;&#xAE30;&#xD654;-&#xACFC;&#xC815;">POJO (Plain Old Java Object) &#xCD08;&#xAE30;&#xD654; &#xACFC;&#xC815;</h3>
 <ol>
 <li>Spring Framework &#xB294; &#xBA3C;&#xC800; <code>Bean</code> &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC758; POJO &#xBE48;&#xC744; Instance &#xD654; &#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC0C1;&#xD0DC;&#xB85C; <code>Bean</code> &#xC124;&#xC815; &#xD30C;&#xC77C;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xCD08;&#xAE30;&#xD654; &#xD55C;&#xB2E4;.<ol>
@@ -2233,14 +2268,46 @@
 </ol>
 <h3 id="&#xC885;&#xB8CC;-method-&#xB97C;-&#xD638;&#xCD9C;&#xD558;&#xB294;-&#xACFC;&#xC815;">&#xC885;&#xB8CC; Method &#xB97C; &#xD638;&#xCD9C;&#xD558;&#xB294; &#xACFC;&#xC815;</h3>
 <ol>
-<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; DisposableBean Instance &#xC774;&#xBA74; distory() Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
-<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC5D0; distory-method &#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA74; destory-method &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC774; DisposableBean Instance &#xC774;&#xBA74; <code>distory</code> Method &#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0DD;&#xC131;&#xD55C; Bean &#xC124;&#xC815;&#xD30C;&#xC77C;&#xC5D0; distory-method &#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBA74; <code>destory</code> Method &#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;.</li>
 </ol>
-<h4 id="bean-life-cycle-&#xC744;-&#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5;-&#xD558;&#xC5EC;-&#xC81C;&#xC5B4;-&#xD560;-&#xC218;-&#xC788;&#xB2E4;">Bean Life Cycle &#xC744; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; &#xD558;&#xC5EC; &#xC81C;&#xC5B4; &#xD560; &#xC218; &#xC788;&#xB2E4;.</h4>
+<blockquote>
+<p>Bean Life Cycle &#xC744; &#xCEE4;&#xC2A4;&#xD130;&#xB9C8;&#xC774;&#xC9D5; &#xD558;&#xC5EC; &#xC81C;&#xC5B4; &#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+</blockquote>
+<h3 id="bean-&#xB85C;&#xB4DC;-&#xC21C;&#xC11C;&#xB97C;-&#xACB0;&#xC815;&#xC9D3;&#xB294;-&#xBC29;&#xBC95;">Bean &#xB85C;&#xB4DC; &#xC21C;&#xC11C;&#xB97C; &#xACB0;&#xC815;&#xC9D3;&#xB294; &#xBC29;&#xBC95;</h3>
+<p>Bean &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C;&#xB3C4; &#xC0DD;&#xC131; &#xC21C;&#xC11C;&#xC5D0; &#xB530;&#xB77C; &#xC5D0;&#xB7EC;&#xAC00; &#xB098;&#xC62C;&#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xD574;&#xB2F9; &#xC0C1;&#xD669;&#xC5D0;&#xC11C;&#xB294; &#xBE48; &#xC0DD;&#xC131; &#xC21C;&#xC11C;&#xB97C; &#xC815;&#xD574;&#xC8FC;&#xB294; &#xAC83;&#xC774; &#xB0AB;&#xB2E4;</p>
+<ul>
+<li><code>@DependsOn</code><ul>
+<li>&#xC758;&#xC874;&#xC131; &#xACE0;&#xB9AC;&#xB97C; &#xC2A4;&#xD504;&#xB9C1;&#xC5D0;&#xAC8C; &#xC54C;&#xB824;&#xC900;&#xB2E4;.</li>
+</ul>
+</li>
+<li><code>@PostConstruct</code><ul>
+<li>&#xD574;&#xB2F9; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xAC00; &#xC644;&#xC804;&#xD788; &#xC0DD;&#xC131;&#xB41C; &#xD6C4; &#xD55C;&#xBC88;&#xC5D0; &#xC2E4;&#xD589;&#xD574;&#xC57C; &#xD560; &#xC77C;&#xC744; &#xCF54;&#xB529;&#xD55C; &#xBA54;&#xC18C;&#xB4DC;&#xC5D0; &#xBD99;&#xC774;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+</ul>
+</li>
+<li><code>@Order</code><ul>
+<li>&#xC8FC;&#xC785; &#xC21C;&#xC11C;&#xB97C; &#xC815;&#xD574; &#xC90C;</li>
+</ul>
+</li>
+</ul>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
-<p><a href="http://javaslave.tistory.com/48" target="_blank">http://javaslave.tistory.com/48</a>
-<a href="https://gmlwjd9405.github.io/2018/11/10/spring-beans.html" target="_blank">https://gmlwjd9405.github.io/2018/11/10/spring-beans.html</a><br><a href="https://unabated.tistory.com/entry/Spring-Bean-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0DD;&#xBA85;&#xC8FC;&#xAE30;" target="_blank">https://unabated.tistory.com/entry/Spring-Bean-&#xCD08;&#xAE30;&#xD654;-&#xBC0F;-&#xC0DD;&#xBA85;&#xC8FC;&#xAE30;</a></p>
+<p><a href="https://jeong-pro.tistory.com/167" target="_blank">https://jeong-pro.tistory.com/167</a></p>
+</blockquote>
+<h3 id="bean-vs-component-&#xCC28;&#xC774;"><code>@Bean</code> vs <code>@Component</code> &#xCC28;&#xC774;</h3>
+<ul>
+<li><code>@Bean</code><ul>
+<li>&#xC678;&#xBD80; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB4E4;&#xC758; &#xC0AC;&#xC6A9;&#xC744; Bean &#xC73C;&#xB85C; &#xB4F1;&#xB85D;&#xD558;&#xACE0; &#xC2F6;&#xC740; &#xACBD;&#xC6B0;</li>
+</ul>
+</li>
+<li><code>@Component</code><ul>
+<li>&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xCEE8;&#xD2B8;&#xB864;&#xC774; &#xAC00;&#xB2A5;&#xD55C; Class &#xC778; &#xACBD;&#xC6B0;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="https://effectivesquid.tistory.com/entry/Bean-&#xACFC;-Component&#xC758;-&#xCC28;&#xC774;" target="_blank">https://effectivesquid.tistory.com/entry/Bean-&#xACFC;-Component&#xC758;-&#xCC28;&#xC774;</a></p>
 </blockquote>
 
                                 
@@ -2301,7 +2368,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"next":{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},"previous":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","mtime":"2019-03-03T13:49:11.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T13:49:30.015Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"next":{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},"previous":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","mtime":"2019-03-03T15:23:40.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-03T15:35:44.453Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
