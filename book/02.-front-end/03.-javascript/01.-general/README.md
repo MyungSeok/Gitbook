@@ -407,4 +407,4 @@ ECMA5 의 엄격모드는 다음과 같은 특징을 가집니다.
 * 향후 버전에서 정의될 문법들을 금지한다.
 
 > ### 참고자료
-> <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode>  
+> <https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Strict_mode>

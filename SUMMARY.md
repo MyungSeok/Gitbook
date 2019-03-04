@@ -54,6 +54,7 @@
         * [Iterator](book/02.-front-end/03.-javascript/02.-references/ecma6/iterator.md)
         * [Generator](book/02.-front-end/03.-javascript/02.-references/ecma6/generator.md)
     * [03. Performance](book/02.-front-end/03.-javascript/03.-performance/README.md)
+      * [Scope & Closure](book/02.-front-end/03.-javascript/03.-performance/scope-closure.md)
       * [Memory Leak](book/02.-front-end/03.-javascript/03.-performance/memory_leak.md)
       * [NetFunnel](book/02.-front-end/03.-javascript/03.-performance/netfunnel.md)
       * [Event Loop](book/02.-front-end/03.-javascript/03.-performance/event-loop.md)
