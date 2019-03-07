@@ -36,4 +36,5 @@ var baz = foo();
 > ### 참고자료
 > <https://hyunseob.github.io/2016/08/30/javascript-closure/>  
 > <https://meetup.toast.com/posts/86>  
-> <https://engineering.huiseoul.com/자바스크립트는-어떻게-작동하는가-메모리-관리-4가지-흔한-메모리-누수-대처법-5b0d217d788d>
+> <https://engineering.huiseoul.com/자바스크립트는-어떻게-작동하는가-메모리-관리-4가지-흔한-메모리-누수-대처법-5b0d217d788d>  
+> <http://www.nextree.co.kr/p7363/>
