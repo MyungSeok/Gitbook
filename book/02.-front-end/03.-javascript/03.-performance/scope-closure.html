@@ -2242,7 +2242,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#xC2A4;&#xCF54;&#xD504;-scope-&#xC640;-&#xD074;&#xB85C;&#xC800;-closure">&#xC2A4;&#xCF54;&#xD504; (scope) &#xC640; &#xD074;&#xB85C;&#xC800; (closure)</h1>
-<h2 id="&#xB809;&#xC2DC;&#xCEEC;-&#xC2A4;&#xCF54;&#xD504;-lexical-scoping">&#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504; (Lexical scoping)</h2>
+<h2 id="&#xB809;&#xC2DC;&#xCEEC;-&#xC2A4;&#xCF54;&#xD504;-lexical-scope">&#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504; (Lexical Scope)</h2>
 <p>&#xC2A4;&#xCF54;&#xD504;&#xB294; &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD560; &#xB54C;&#xAC00; &#xC544;&#xB2C8;&#xB77C; <em><strong>&#xC120;&#xC5B8;&#xD560; &#xB54C; &#xC0DD;&#xC131;</strong></em> &#xB41C;&#xB2E4;.<br>&#xC774;&#xAC83;&#xC740; &#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504;&#xC758; &#xD2B9;&#xC9D5;&#xC774;&#xBA70; &#xB3D9;&#xC801; &#xC2A4;&#xCF54;&#xD504;&#xC640; &#xBE44;&#xAD50;&#xB41C;&#xB2E4;.</p>
 <p>&#xC544;&#xB798; &#xC608;&#xC2DC;&#xC5D0;&#xC11C;&#xB294; &#xC120;&#xC5B8;&#xD560; &#xB54C; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xAC83;&#xC744; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> color = <span class="hljs-string">&apos;red&apos;</span>;
@@ -2256,14 +2256,40 @@
 }
 
 <span class="hljs-keyword">var</span> baz = foo();
+baz();
+</code></pre>
+<pre><code class="lang-javascript">blue
 </code></pre>
 <ul>
 <li>ES5&#xB294; &#xD568;&#xC218;&#xB808;&#xBCA8;&#xC758; &#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;.</li>
 <li>ES6&#xB294; &#xD568;&#xC218;&#xB808;&#xBCA8;&#xACFC; &#xBE14;&#xB85D;&#xB808;&#xBCA8;&#xC758; &#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;.</li>
 </ul>
-<blockquote>
-<h3 id="&#xB3D9;&#xC801;-&#xC2A4;&#xCF54;&#xD504;">&#xB3D9;&#xC801; &#xC2A4;&#xCF54;&#xD504;</h3>
+<h2 id="&#xB3D9;&#xC801;-&#xC2A4;&#xCF54;&#xD504;-dynamic-scope">&#xB3D9;&#xC801; &#xC2A4;&#xCF54;&#xD504; (Dynamic Scope)</h2>
 <p>&#xD568;&#xC218;&#xAC00; &#xC5B4;&#xB514;&#xC11C; &#xD638;&#xCD9C;&#xB418;&#xC5C8;&#xB294;&#xC9C0;&#xC5D0; &#xB530;&#xB77C; &#xC0C1;&#xC704; &#xC2A4;&#xCF54;&#xD504;&#xAC00; &#xACB0;&#xC815;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(x);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> x = <span class="hljs-number">15</span>;
+  foo();
+}
+
+<span class="hljs-keyword">var</span> x = <span class="hljs-number">10</span>;
+foo();
+bar();
+</code></pre>
+<h3 id="&#xAE30;&#xC874;-&#xB809;&#xC2DC;&#xCEEC;-&#xC2A4;&#xCF54;&#xD504;">&#xAE30;&#xC874; (&#xB809;&#xC2DC;&#xCEEC; &#xC2A4;&#xCF54;&#xD504;)</h3>
+<pre><code class="lang-javascript"><span class="hljs-number">10</span>
+<span class="hljs-number">10</span>
+</code></pre>
+<h3 id="&#xB3D9;&#xC801;-&#xC2A4;&#xCF54;&#xD504;-&#xAC00;&#xC815;-&#xC2DC;">&#xB3D9;&#xC801; &#xC2A4;&#xCF54;&#xD504; &#xAC00;&#xC815; &#xC2DC;</h3>
+<pre><code class="lang-javascript"><span class="hljs-number">10</span>
+<span class="hljs-number">15</span>
+</code></pre>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="https://bestalign.github.io/2015/07/12/Lexical-Scope-and-Dynamic-Scope/" target="_blank">https://bestalign.github.io/2015/07/12/Lexical-Scope-and-Dynamic-Scope/</a></p>
 </blockquote>
 <h2 id="&#xC21C;&#xD658;&#xCC38;&#xC870;">&#xC21C;&#xD658;&#xCC38;&#xC870;</h2>
 <p>&#xC774;&#xB294; &#xC798;&#xBABB;&#xB41C; &#xD074;&#xB85C;&#xC800; &#xC0AC;&#xC6A9;&#xC2DC; <em><strong>&#xC11C;&#xB85C;&#xAC00; &#xC11C;&#xB85C;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xB294; &#xC21C;&#xD658; &#xCC38;&#xC870; &#xD604;&#xC0C1;&#xC774; &#xBC1C;&#xC0DD;</strong></em> &#xB420; &#xC218; &#xC788;&#xB2E4;.</p>
@@ -2331,7 +2357,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scope & Closure","level":"1.3.3.3.1","depth":4,"next":{"title":"Memory Leak","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","ref":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","articles":[]},"previous":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"book/02.-front-end/03.-javascript/03.-performance/README.md","ref":"book/02.-front-end/03.-javascript/03.-performance/README.md","articles":[{"title":"Scope & Closure","level":"1.3.3.3.1","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","ref":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","articles":[]},{"title":"Memory Leak","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","ref":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","articles":[]},{"title":"NetFunnel","level":"1.3.3.3.3","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","ref":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","articles":[]},{"title":"Event Loop","level":"1.3.3.3.4","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","ref":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","mtime":"2019-03-07T03:58:54.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T03:59:19.122Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scope & Closure","level":"1.3.3.3.1","depth":4,"next":{"title":"Memory Leak","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","ref":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","articles":[]},"previous":{"title":"03. Performance","level":"1.3.3.3","depth":3,"path":"book/02.-front-end/03.-javascript/03.-performance/README.md","ref":"book/02.-front-end/03.-javascript/03.-performance/README.md","articles":[{"title":"Scope & Closure","level":"1.3.3.3.1","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","ref":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","articles":[]},{"title":"Memory Leak","level":"1.3.3.3.2","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","ref":"book/02.-front-end/03.-javascript/03.-performance/memory_leak.md","articles":[]},{"title":"NetFunnel","level":"1.3.3.3.3","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","ref":"book/02.-front-end/03.-javascript/03.-performance/netfunnel.md","articles":[]},{"title":"Event Loop","level":"1.3.3.3.4","depth":4,"path":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","ref":"book/02.-front-end/03.-javascript/03.-performance/event-loop.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/02.-front-end/03.-javascript/03.-performance/scope-closure.md","mtime":"2019-03-07T05:27:19.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-08T02:35:07.667Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
