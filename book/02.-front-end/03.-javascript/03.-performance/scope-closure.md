@@ -1,6 +1,6 @@
 # 스코프 (scope) 와 클로저 (closure)
 
-## 렉시컬 스코프 (Lexical scoping)
+## 렉시컬 스코프 (Lexical Scope)
 
 스코프는 함수를 호출할 때가 아니라 _**선언할 때 생성**_ 된다.  
 이것은 렉시컬 스코프의 특징이며 동적 스코프와 비교된다.
@@ -19,13 +19,51 @@ function foo() {
 }
 
 var baz = foo();
+baz();
+```
+
+```javascript
+blue
 ```
 
 * ES5는 함수레벨의 렉시컬 스코프를 가진다.
 * ES6는 함수레벨과 블록레벨의 렉시컬 스코프를 가진다.
 
-> ### 동적 스코프
-> 함수가 어디서 호출되었는지에 따라 상위 스코프가 결정
+## 동적 스코프 (Dynamic Scope)
+
+함수가 어디서 호출되었는지에 따라 상위 스코프가 결정
+
+```javascript
+function foo() {
+  console.log(x);
+}
+
+function bar() {
+  var x = 15;
+  foo();
+}
+
+var x = 10;
+foo();
+bar();
+```
+
+### 기존 (렉시컬 스코프)
+
+```javascript
+10
+10
+```
+
+### 동적 스코프 가정 시
+
+```javascript
+10
+15
+```
+
+> ### 참고자료
+> <https://bestalign.github.io/2015/07/12/Lexical-Scope-and-Dynamic-Scope/>
 
 ## 순환참조
 
