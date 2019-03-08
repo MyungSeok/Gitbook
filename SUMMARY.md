@@ -105,6 +105,7 @@
         * [Reflection](book/03.-back-end/01.-java/02.-references/method/reflection.md)
         * [정적 팩토리 메소드](book/03.-back-end/01.-java/02.-references/method/static-factory-method.md)
     * [03. Performance](book/03.-back-end/01.-java/03.-performance/README.md)
+      * [Garbege Collector](book/03.-back-end/01.-java/03.-performance/gc.md)
   * [02. Server](book/03.-back-end/02.-server/README.md)
     * [Linux](book/03.-back-end/02.-server/linux/README.md)
       * [Shell Script](book/03.-back-end/02.-server/linux/shell_script.md)
