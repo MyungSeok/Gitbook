@@ -2280,6 +2280,68 @@
 <p><code>Root Set</code> &#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD55C; &#xCC38;&#xC870; &#xC0AC;&#xC2AC;&#xC5D0; &#xC18D;&#xD55C; &#xAC1D;&#xCCB4;&#xB4E4;&#xC740; <code>reachable</code> &#xAC1D;&#xCCB4;&#xC774;&#xACE0; &#xC774;&#xC640; &#xBB34;&#xAD00;&#xD55C; &#xAC1D;&#xCCB4;&#xB4E4;&#xC744; <code>unreachable</code> &#xAC1D;&#xCCB4;&#xB85C; GC &#xB300;&#xC0C1;&#xC774;&#xB2E4;.</p>
 <p>&#xC624;&#xB978;&#xCABD; &#xC544;&#xB798; &#xAC1D;&#xCCB4;&#xCC98;&#xB7FC; <code>reachable</code> &#xAC1D;&#xCCB4;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xB354;&#xB77C;&#xB3C4;, &#xB2E4;&#xB978; reachable &#xAC1D;&#xCCB4;&#xAC00; &#xC774; &#xAC1D;&#xCCB4;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74; &#xC774; &#xAC1D;&#xCCB4;&#xB294; <code>unreachable</code> &#xAC1D;&#xCCB4;&#xC774;&#xB2E4;. (&#xC774; &#xADF8;&#xB9BC;&#xC5D0;&#xC11C; &#xCC38;&#xC870;&#xB294; &#xBAA8;&#xB450; java.lang.ref &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC740; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xCC38;&#xC870;&#xC774;&#xB2E4;.)</p>
 <p>&#xC704; &#xAD6C;&#xC131;&#xC744; <em><strong>strong reference</strong></em> &#xB77C; &#xBD80;&#xB978;&#xB2E4;.</p>
+<h3 id="reference-object">Reference Object</h3>
+<p><code>java.lang.ref</code> &#xB294; soft, weak, phantom reference &#xB97C; &#xD074;&#xB798;&#xC2A4; &#xD615;&#xD0DC;&#xB85C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<p><code>java.lang.ref.WeakReference</code> &#xD074;&#xB798;&#xC2A4;&#xB294; &#xCC38;&#xC870; &#xB300;&#xC0C1;&#xC778; &#xAC1D;&#xCCB4;&#xB97C; &#xCEA1;&#xC290;&#xD654;&#xD55C; WeakReference &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD55C;&#xB2E4;.<br>&#xC774;&#xB807;&#xAC8C; &#xC0DD;&#xC131;&#xD55C; &#xAC1D;&#xCCB4;&#xB294; Java GC &#xC758; &#xBCC4;&#xB3C4; &#xAD00;&#xB9AC; &#xB300;&#xC0C1;&#xC774; &#xB41C;&#xB2E4;. (&#xCEA1;&#xC290;&#xD654;&#xB41C; &#xB0B4;&#xBD80; &#xAC1D;&#xCCB4;&#xB294; weak reference &#xC5D0; &#xC758;&#xD574; &#xCC38;&#xC870;&#xB41C;&#xB2E4;.)</p>
+<pre><code class="lang-java">WeakReference&lt;Sample&gt; wr = <span class="hljs-keyword">new</span> WeakReference&lt;Sample&gt;(<span class="hljs-keyword">new</span> Sample());
+Sample ex = wr.get();
+</code></pre>
+<p><img src="../../../../img/A045.png" alt="Weak Reference1"></p>
+<p>&#xC704; &#xCF54;&#xB4DC;&#xC5D0;&#xC11C; <code>WeakReference</code> &#xD074;&#xB798;&#xC2A4;&#xC758; &#xAC1D;&#xCCB4;&#xB294; <code>new</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC0DD;&#xC131;&#xB41C; <code>Sample</code> &#xAC1D;&#xCCB4;&#xB97C; &#xCEA1;&#xC290;&#xD654;&#xD55C; &#xAC1D;&#xCCB4;&#xC774;&#xB2E4;.<br>&#xCC38;&#xC870;&#xB41C; <code>Sample</code> &#xAC1D;&#xCCB4;&#xB294; &#xB450;&#xBC88;&#xC9F8; &#xC904;&#xC5D0;&#xC11C; <code>get</code> &#xBA54;&#xC11C;&#xB4DC;&#xC5D0; &#xC758;&#xD574; &#xB2E4;&#xB978; &#xCC38;&#xC870;&#xC5D0; &#xB300;&#xC785;&#xB41C;&#xB2E4;.</p>
+<p>&#xC774; &#xC2DC;&#xC810;&#xC5D0;&#xC11C; <em><strong>WeakReference &#xAC1D;&#xCCB4; &#xB0B4;&#xC758; &#xCC38;&#xC870;&#xC640; ex &#xCC38;&#xC870;&#xAC00; Sample &#xAC1D;&#xCCB4;&#xB97C; &#xAC00;&#xB974;&#xD0A8;&#xB2E4;.</strong></em></p>
+<pre><code class="lang-java">ex = <span class="hljs-keyword">null</span>;
+</code></pre>
+<p><img src="../../../../img/A046.png" alt="Weak Reference2"></p>
+<p>&#xC704; &#xCF54;&#xB4DC;&#xC640; &#xAC19;&#xC774; ex &#xCC38;&#xC870;&#xC5D0; null &#xC744; &#xB300;&#xC785;&#xD558;&#xBA74; &#xCC98;&#xC74C; &#xC0DD;&#xC131;&#xD55C; Sample &#xAC1D;&#xCCB4;&#xB294; &#xC624;&#xC9C1; WeakReference &#xB0B4;&#xBD80;&#xC5D0;&#xC11C;&#xB9CC; &#xCC38;&#xC870;&#xB41C;&#xB2E4;.  </p>
+<p>&#xC774;&#xB97C; <em><strong>weakly reachable &#xC0C1;&#xD0DC; &#xAC1D;&#xCCB4;</strong></em> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+<blockquote>
+<h3 id="reference-object">Reference Object</h3>
+<p>Java &#xC2A4;&#xD329;&#xC5D0;&#xC11C; <code>SoftReference</code>, <code>WeakReference</code>, <code>PhantomReference</code> 3&#xAC00;&#xC9C0; &#xD074;&#xB798;&#xC2A4;&#xB85C; &#xC0DD;&#xC131;&#xB41C; &#xAC1D;&#xCCB4;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.
+Reference Object &#xC5D0; &#xC758;&#xD574; &#xCC38;&#xC870;&#xB41C; &#xAC1D;&#xCCB4;&#xB97C; <em><strong>referent</strong></em> &#xB77C;&#xACE0; &#xD55C;&#xB2E4;.</p>
+</blockquote>
+<h3 id="reference&#xC640;-reachability">Reference&#xC640; Reachability</h3>
+<p>&#xC704;&#xC5D0;&#xC11C; GC &#xB300;&#xC0C1;&#xC5EC;&#xBD80;&#xB97C; <code>reachable</code>, <code>unreachable</code> &#xB85C; &#xAD6C;&#xBD84;&#xD558;&#xC600;&#xC73C;&#xBA70;<br><code>java.lang.ref</code> &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; GC &#xB54C;&#xC758; &#xB3D9;&#xC791;&#xC744; &#xB2E4;&#xB974;&#xAC8C; &#xC9C0;&#xC815;&#xAC00;&#xB2A5;&#xD558;&#xAC8C;&#xB054; &#xAC1C;&#xC785; &#xD560; &#xC218; &#xC788;&#xB2E4;.<br>&#xC774;&#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xD45C;&#xD604; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</p>
+<p><img src="../../../../img/A047.png" alt="Weak Reference3"></p>
+<ul>
+<li>&#xD30C;&#xB791; : Strongly Reachable Object</li>
+<li>&#xB179;&#xC0C9; : Weakly Reachable Object (GC &#xB300;&#xC0C1;)</li>
+<li>&#xBE68;&#xAC15; : Unreachable Object (GC &#xB300;&#xC0C1;)</li>
+</ul>
+<p>&#xC704; &#xADF8;&#xB9BC;&#xC5D0;&#xC11C; <code>WeakReference</code> &#xAC1D;&#xCCB4; &#xC790;&#xCCB4;&#xB294; <code>weakly reachable</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2C8;&#xB77C; <code>strongly reachable</code> &#xAC1D;&#xCCB4;&#xC774;&#xB2E4;.<br>&#xB610;&#xD55C; <code>WeakReference</code> &#xC5D0; &#xC758;&#xD574; &#xCC38;&#xC870;&#xB418;&#xACE0; &#xC788;&#xC73C;&#xBA74;&#xC11C; &#xB3D9;&#xC2DC;&#xC5D0; root set &#xC5D0;&#xC11C; &#xC2DC;&#xC791;&#xD55C; &#xCC38;&#xC870;&#xC0AC;&#xC2AC;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xACBD;&#xC6B0; <code>weakly reachable</code> &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2C8;&#xB77C; <code>strongly reachable</code> &#xAC1D;&#xCCB4;&#xC774;&#xB2E4;.</p>
+<p>GC&#xAC00; &#xB3D9;&#xC791;&#xD558;&#xC5EC; &#xC5B4;&#xB5A4; &#xAC1D;&#xCCB4;&#xB97C; <code>weakly reachable</code> &#xAC1D;&#xCCB4;&#xB85C; &#xD310;&#xBA85;&#xD558;&#xBA74;,<br>GC&#xB294; <code>WeakReference</code> &#xAC1D;&#xCCB4;&#xC5D0; &#xC788;&#xB294; <code>weakly reachable</code> &#xAC1D;&#xCCB4;&#xC5D0; &#xB300;&#xD55C; &#xCC38;&#xC870;&#xB97C; <code>null</code> &#xB85C; &#xC124;&#xC815;&#xD55C;&#xB2E4;.</p>
+<p>&#xC774;&#xC5D0; &#xB530;&#xB77C; <code>weakly reachable</code> &#xAC1D;&#xCCB4;&#xB294; <code>unreachable</code> &#xAC1D;&#xCCB4;&#xC640; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0; &#xC0C1;&#xD0DC;&#xAC00; &#xB418;&#xACE0;,<br>&#xAC00;&#xBE44;&#xC9C0;&#xB85C; &#xD310;&#xBA85;&#xB41C; &#xB2E4;&#xB978; &#xAC1D;&#xCCB4;&#xB4E4;&#xACFC; &#xD568;&#xAED8; &#xBA54;&#xBAA8;&#xB9AC; &#xD68C;&#xC218; &#xB300;&#xC0C1;&#xC774; &#xB41C;&#xB2E4;.</p>
+<h3 id="strengths-of-reachability">Strengths of Reachability</h3>
+<p>Java GC &#xB294; &#xC704;&#xC5D0;&#xC11C; &#xB9D0;&#xD55C; &#xADFC;&#xAC70;&#xB97C; &#xBC14;&#xD0D5;&#xC73C;&#xB85C; &#xB2E4;&#xC74C; 5&#xAC00;&#xC9C0;&#xC758; Reachability &#xB97C; &#xACB0;&#xC815;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>Strongly Reachable<ul>
+<li>root set &#xC73C;&#xB85C; &#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD574;&#xC11C; &#xC5B4;&#xB5A4; reference object &#xB3C4; &#xC911;&#xAC04;&#xC5D0; &#xB07C;&#xC5B4; &#xC788;&#xC9C0; &#xC54A;&#xB294; &#xC0C1;&#xD0DC;</li>
+<li>&#xAC1D;&#xCCB4;&#xAE4C;&#xC9C0; &#xB3C4;&#xB2EC;&#xD558;&#xB294; &#xC5EC;&#xB7EC; &#xCC38;&#xC870;&#xC0AC;&#xC2AC;&#xC911;&#xC5D0; reference object &#xAC00; &#xD558;&#xB098;&#xB77C;&#xB3C4; &#xC5C6;&#xB294; &#xAC1D;&#xCCB4;</li>
+</ul>
+</li>
+<li>Softly Reachable<ul>
+<li>Strongly Reachable &#xAC1D;&#xCCB4;&#xAC00; &#xC544;&#xB2CC; &#xAC1D;&#xCCB4;&#xC911;&#xC5D0; weak reference, phantom reference &#xC5C6;&#xC774; sort reference &#xAC00; &#xD558;&#xB098;&#xB77C;&#xB3C4; &#xC788;&#xB294; &#xAC1D;&#xCCB4;</li>
+</ul>
+</li>
+<li>Weakly Reachable<ul>
+<li>Strongly Reachable &#xB098; Softly Reachable &#xAC1D;&#xCCB4;&#xB3C4; &#xC544;&#xB2CC; &#xAC1D;&#xCCB4;&#xC911;&#xC5D0;&#xC11C; phantom reference &#xC5C6;&#xC774; weak reference &#xB9CC; &#xD1B5;&#xACFC;&#xD558;&#xB294; &#xCC38;&#xC870; &#xC0AC;&#xC2AC;&#xC774; &#xD558;&#xB098;&#xB77C;&#xB3C4; &#xC788;&#xB294; &#xAC1D;&#xCCB4;</li>
+</ul>
+</li>
+<li>Phantomly Reachable<ul>
+<li>Strongly Reachable &#xB098; Softly Reachable, Weakly Reachable &#xAC1D;&#xCCB4; &#xBAA8;&#xB450; &#xD574;&#xB2F9;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xAC1D;&#xCCB4;</li>
+<li>finalize &#xB418;&#xC5C8;&#xC9C0;&#xB9CC; &#xC544;&#xC9C1; &#xBA54;&#xBAA8;&#xB9AC;&#xAC00; &#xD68C;&#xC218;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xC0C1;&#xD0DC;</li>
+</ul>
+</li>
+<li>Unreachable<ul>
+<li>root set &#xC73C;&#xB85C; &#xBD80;&#xD130; &#xC2DC;&#xC791;&#xB418;&#xB294; &#xCC38;&#xC870; &#xC0AC;&#xC2AC;&#xC774; &#xCC38;&#xC870;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xC0C1;&#xD0DC;</li>
+</ul>
+</li>
+</ul>
+<p>&#xC544;&#xB798; &#xC608;&#xC2DC;&#xC758; &#xAC1D;&#xCCB4; B &#xB294; Softly Reachable &#xC774;&#xB2E4;.</p>
+<p><img src="../../../../img/A048.png" alt="Softly Reachable"></p>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="https://d2.naver.com/helloworld/329631" target="_blank">https://d2.naver.com/helloworld/329631</a></p>
+</blockquote>
 <h2 id="&#xC601;&#xC5ED;-&#xAD6C;&#xC131;">&#xC601;&#xC5ED; &#xAD6C;&#xC131;</h2>
 <p>GC &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xAE30; &#xC704;&#xD574; <code>stop-the-world</code> &#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xBAA8;&#xB4E0; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xC791;&#xC5C5;&#xC744; &#xBA48;&#xCD98;&#xB2E4;.<br>&#xC774; <code>stop-the-world</code> &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xBA74; GC &#xB97C; &#xC2E4;&#xD589;&#xD558;&#xB294; <code>thread</code> &#xB97C; &#xC81C;&#xC678;&#xD55C; &#xB098;&#xBA38;&#xC9C0; <code>thread</code> &#xB294; &#xBAA8;&#xB450; &#xC791;&#xC5C5;&#xC744; &#xBA48;&#xCD98;&#xB2E4;.</p>
 <p>GC &#xC791;&#xC5C5;&#xC744; &#xC644;&#xB8CC;&#xD55C; &#xC774;&#xD6C4;&#xC5D0;&#xB294; &#xC911;&#xB2E8;&#xB42C;&#xB358; &#xC791;&#xC5C5;&#xC744; &#xB2E4;&#xC2DC; &#xC2DC;&#xC791;&#xD55C;&#xB2E4;.</p>
@@ -2367,7 +2429,7 @@
 </ul>
 <blockquote>
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
-<p><a href="https://d2.naver.com/helloworld/1329" target="_blank">https://d2.naver.com/helloworld/1329</a><br><a href="https://d2.naver.com/helloworld/329631" target="_blank">https://d2.naver.com/helloworld/329631</a></p>
+<p><a href="https://d2.naver.com/helloworld/1329" target="_blank">https://d2.naver.com/helloworld/1329</a></p>
 </blockquote>
 
                                 
@@ -2428,7 +2490,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"next":{"title":"02. Server","level":"1.4.2","depth":2,"path":"book/03.-back-end/02.-server/README.md","ref":"book/03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"book/03.-back-end/02.-server/linux/README.md","ref":"book/03.-back-end/02.-server/linux/README.md","articles":[{"title":"Shell Script","level":"1.4.2.1.1","depth":4,"path":"book/03.-back-end/02.-server/linux/shell_script.md","ref":"book/03.-back-end/02.-server/linux/shell_script.md","articles":[]}]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"book/03.-back-end/02.-server/nginx/README.md","ref":"book/03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"book/03.-back-end/02.-server/nginx/cli/README.md","ref":"book/03.-back-end/02.-server/nginx/cli/README.md","articles":[{"title":"Installation","level":"1.4.2.2.1.1","depth":5,"path":"book/03.-back-end/02.-server/nginx/cli/installation.md","ref":"book/03.-back-end/02.-server/nginx/cli/installation.md","articles":[]}]}]}]},"previous":{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"book/03.-back-end/01.-java/03.-performance/README.md","ref":"book/03.-back-end/01.-java/03.-performance/README.md","articles":[{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"path":"book/03.-back-end/01.-java/03.-performance/gc.md","ref":"book/03.-back-end/01.-java/03.-performance/gc.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/03.-performance/gc.md","mtime":"2019-03-11T04:00:35.498Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T04:01:17.203Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"next":{"title":"02. Server","level":"1.4.2","depth":2,"path":"book/03.-back-end/02.-server/README.md","ref":"book/03.-back-end/02.-server/README.md","articles":[{"title":"Linux","level":"1.4.2.1","depth":3,"path":"book/03.-back-end/02.-server/linux/README.md","ref":"book/03.-back-end/02.-server/linux/README.md","articles":[{"title":"Shell Script","level":"1.4.2.1.1","depth":4,"path":"book/03.-back-end/02.-server/linux/shell_script.md","ref":"book/03.-back-end/02.-server/linux/shell_script.md","articles":[]}]},{"title":"NGINX","level":"1.4.2.2","depth":3,"path":"book/03.-back-end/02.-server/nginx/README.md","ref":"book/03.-back-end/02.-server/nginx/README.md","articles":[{"title":"CLI","level":"1.4.2.2.1","depth":4,"path":"book/03.-back-end/02.-server/nginx/cli/README.md","ref":"book/03.-back-end/02.-server/nginx/cli/README.md","articles":[{"title":"Installation","level":"1.4.2.2.1.1","depth":5,"path":"book/03.-back-end/02.-server/nginx/cli/installation.md","ref":"book/03.-back-end/02.-server/nginx/cli/installation.md","articles":[]}]}]}]},"previous":{"title":"03. Performance","level":"1.4.1.3","depth":3,"path":"book/03.-back-end/01.-java/03.-performance/README.md","ref":"book/03.-back-end/01.-java/03.-performance/README.md","articles":[{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"path":"book/03.-back-end/01.-java/03.-performance/gc.md","ref":"book/03.-back-end/01.-java/03.-performance/gc.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/03.-performance/gc.md","mtime":"2019-03-11T06:23:04.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T08:35:01.973Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
