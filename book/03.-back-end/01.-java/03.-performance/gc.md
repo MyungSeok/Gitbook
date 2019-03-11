@@ -32,6 +32,84 @@ Heap 영역에 있는 객체들에 대한 참조는 다음 4가지중에 하나�
 
 위 구성을 _**strong reference**_ 라 부른다.
 
+### Reference Object
+
+`java.lang.ref` 는 soft, weak, phantom reference 를 클래스 형태로 제공한다.
+
+`java.lang.ref.WeakReference` 클래스는 참조 대상인 객체를 캡슐화한 WeakReference 객체를 생성한다.  
+이렇게 생성한 객체는 Java GC 의 별도 관리 대상이 된다. (캡슐화된 내부 객체는 weak reference 에 의해 참조된다.)
+
+```java
+WeakReference<Sample> wr = new WeakReference<Sample>(new Sample());
+Sample ex = wr.get();
+```
+
+![Weak Reference1](/img/A045.png)
+
+위 코드에서 `WeakReference` 클래스의 객체는 `new` 메서드로 생성된 `Sample` 객체를 캡슐화한 객체이다.  
+참조된 `Sample` 객체는 두번째 줄에서 `get` 메서드에 의해 다른 참조에 대입된다.
+
+이 시점에서 _**WeakReference 객체 내의 참조와 ex 참조가 Sample 객체를 가르킨다.**_
+
+```java
+ex = null;
+```
+
+![Weak Reference2](/img/A046.png)
+
+위 코드와 같이 ex 참조에 null 을 대입하면 처음 생성한 Sample 객체는 오직 WeakReference 내부에서만 참조된다.  
+
+이를 _**weakly reachable 상태 객체**_ 라고 한다.
+
+> ### Reference Object
+> Java 스팩에서 `SoftReference`, `WeakReference`, `PhantomReference` 3가지 클래스로 생성된 객체를 말한다.
+> Reference Object 에 의해 참조된 객체를 _**referent**_ 라고 한다.
+
+### Reference와 Reachability
+
+위에서 GC 대상여부를 `reachable`, `unreachable` 로 구분하였으며  
+`java.lang.ref` 패키지를 이용하여 GC 때의 동작을 다르게 지정가능하게끔 개입 할 수 있다.  
+이를 다음과 같이 표현 가능하다.
+
+![Weak Reference3](/img/A047.png)
+
+* 파랑 : Strongly Reachable Object
+* 녹색 : Weakly Reachable Object (GC 대상)
+* 빨강 : Unreachable Object (GC 대상)
+
+위 그림에서 `WeakReference` 객체 자체는 `weakly reachable` 객체가 아니라 `strongly reachable` 객체이다.  
+또한 `WeakReference` 에 의해 참조되고 있으면서 동시에 root set 에서 시작한 참조사슬에 포함되어 있는 경우 `weakly reachable` 객체가 아니라 `strongly reachable` 객체이다.
+
+GC가 동작하여 어떤 객체를 `weakly reachable` 객체로 판명하면,  
+GC는 `WeakReference` 객체에 있는 `weakly reachable` 객체에 대한 참조를 `null` 로 설정한다.
+
+이에 따라 `weakly reachable` 객체는 `unreachable` 객체와 마찬가지 상태가 되고,  
+가비지로 판명된 다른 객체들과 함께 메모리 회수 대상이 된다.
+
+### Strengths of Reachability
+
+Java GC 는 위에서 말한 근거를 바탕으로 다음 5가지의 Reachability 를 결정한다.
+
+* Strongly Reachable
+  * root set 으로 부터 시작해서 어떤 reference object 도 중간에 끼어 있지 않는 상태
+  * 객체까지 도달하는 여러 참조사슬중에 reference object 가 하나라도 없는 객체
+* Softly Reachable
+  * Strongly Reachable 객체가 아닌 객체중에 weak reference, phantom reference 없이 sort reference 가 하나라도 있는 객체
+* Weakly Reachable
+  * Strongly Reachable 나 Softly Reachable 객체도 아닌 객체중에서 phantom reference 없이 weak reference 만 통과하는 참조 사슬이 하나라도 있는 객체
+* Phantomly Reachable
+  * Strongly Reachable 나 Softly Reachable, Weakly Reachable 객체 모두 해당되지 않는 객체
+  * finalize 되었지만 아직 메모리가 회수되지 않는 상태
+* Unreachable
+  * root set 으로 부터 시작되는 참조 사슬이 참조되지 않는 상태
+
+아래 예시의 객체 B 는 Softly Reachable 이다.
+
+![Softly Reachable](/img/A048.png)
+
+> ### 참고자료
+> <https://d2.naver.com/helloworld/329631>
+
 ## 영역 구성
 
 GC 를 실행하기 위해 `stop-the-world` 을 이용하여 모든 애플리케이션 작업을 멈춘다.  
@@ -118,5 +196,4 @@ Old 영역은 데이터가 가득차면 GC 를 실행한다.
   * 가장 최신의 가장 성능이 좋은 GC (JDK 7 이상)
 
 > ### 참고자료
-> <https://d2.naver.com/helloworld/1329>  
-> <https://d2.naver.com/helloworld/329631>
+> <https://d2.naver.com/helloworld/1329>
