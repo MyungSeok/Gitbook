@@ -2386,6 +2386,61 @@
 <h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
 <p><a href="https://effectivesquid.tistory.com/entry/Bean-&#xACFC;-Component&#xC758;-&#xCC28;&#xC774;" target="_blank">https://effectivesquid.tistory.com/entry/Bean-&#xACFC;-Component&#xC758;-&#xCC28;&#xC774;</a></p>
 </blockquote>
+<h3 id="bean-scope">Bean Scope</h3>
+<p><em><strong>eGov</strong></em> &#xBC0F; <em><strong>Spring Reference (4.2.5)</strong></em> &#xC5D0;&#xC11C; &#xBC1C;&#xCDCC;&#xD55C; Bean Scope &#xC758; &#xC885;&#xB958;&#xC774;&#xB2E4;.</p>
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Description</th>
+<th>eGov</th>
+<th>Spring Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Session</td>
+<td>&#xD558;&#xB098;&#xC758; Bean &#xC815;&#xC758;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xD558;&#xB098;&#xC758; global HTTP Session&#xC758; &#xC0DD;&#xBA85;&#xC8FC;&#xAE30; &#xC548;&#xC5D0; &#xB2E8; &#xD558;&#xB098;&#xC758; &#xAC1D;&#xCCB4;&#xB9CC; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;. <br>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; portlet context &#xC548;&#xC5D0;&#xC11C; &#xC720;&#xD6A8;&#xD558;&#xB2E4;. Web-aware Spring ApplicationContext &#xC548;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xB2E4;.</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Prototype</td>
+<td>&#xD558;&#xB098;&#xC758; Bean &#xC815;&#xC758;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xB2E4;&#xC218;&#xC758; &#xAC1D;&#xCCB4;&#xAC00; &#xC874;&#xC7AC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>Request</td>
+<td>&#xD558;&#xB098;&#xC758; Bean &#xC815;&#xC758;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xD558;&#xB098;&#xC758; HTTP request&#xC758; &#xC0DD;&#xBA85;&#xC8FC;&#xAE30; &#xC548;&#xC5D0; &#xB2E8; &#xD558;&#xB098;&#xC758; &#xAC1D;&#xCCB4;&#xB9CC; &#xC874;&#xC7AC;&#xD55C;&#xB2E4; <br>&#xC989;, &#xAC01;&#xAC01;&#xC758; HTTP request&#xB294; &#xC790;&#xC2E0;&#xB9CC;&#xC758; &#xAC1D;&#xCCB4;&#xB97C; &#xAC00;&#xC9C4;&#xB2E4;. Web-aware Spring ApplicationContext &#xC548;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xB2E4;.</td>
+<td>O</td>
+<td>O</td>
+<td></td>
+</tr>
+<tr>
+<td>session</td>
+<td>&#xD558;&#xB098;&#xC758; Bean &#xC815;&#xC758;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xD558;&#xB098;&#xC758; HTTP Session&#xC758; &#xC0DD;&#xBA85;&#xC8FC;&#xAE30; &#xC548;&#xC5D0; &#xB2E8; &#xD558;&#xB098;&#xC758; &#xAC1D;&#xCCB4;&#xB9CC; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;. <br>Web-aware Spring ApplicationContext &#xC548;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xB2E4;.</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>singleton</td>
+<td>&#xD558;&#xB098;&#xC758; Bean &#xC815;&#xC758;&#xC5D0; &#xB300;&#xD574;&#xC11C; Spring IoC Container &#xB0B4;&#xC5D0; &#xB2E8; &#xD558;&#xB098;&#xC758; &#xAC1D;&#xCCB4;&#xB9CC; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;.</td>
+<td>O</td>
+<td>O</td>
+</tr>
+<tr>
+<td>application</td>
+<td>&#xC11C;&#xBE14;&#xB9BF; &#xCEE8;&#xD14D;&#xC2A4;&#xD2B8;&#xC758; &#xB77C;&#xC774;&#xD504;&#xC0AC;&#xC774;&#xD074;&#xC5D0; &#xC815;&#xC758;&#xB41C;&#xB2E4;. <br>Spring Application Context &#xB0B4;&#xC5D0;&#xC11C;&#xB9CC; &#xC720;&#xD6A8;&#xD558;&#xB2E4;.</td>
+<td>X</td>
+<td>O</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<h3 id="&#xCC38;&#xACE0;&#xC790;&#xB8CC;">&#xCC38;&#xACE0;&#xC790;&#xB8CC;</h3>
+<p><a href="https://www.slipp.net/wiki/pages/viewpage.action?pageId=25528177" target="_blank">https://www.slipp.net/wiki/pages/viewpage.action?pageId=25528177</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -2445,7 +2500,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"next":{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},"previous":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","mtime":"2019-03-11T04:02:14.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-11T08:35:01.973Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Bean","level":"1.4.5.1.1.3","depth":5,"next":{"title":"Dispatcher Servlet","level":"1.4.5.1.1.4","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/dispatcherServlet.md","articles":[]},"previous":{"title":"IoC","level":"1.4.5.1.1.2","depth":5,"path":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","ref":"book/03.-back-end/05.-framework/spring/fundamental/ioc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/05.-framework/spring/fundamental/bean.md","mtime":"2019-03-12T01:43:33.853Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T06:25:42.863Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
