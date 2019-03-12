@@ -116,3 +116,19 @@ Bean 내부적으로도 생성 순서에 따라 에러가 나올수 있기 때�
 
 > ### 참고자료
 > <https://effectivesquid.tistory.com/entry/Bean-과-Component의-차이>
+
+### Bean Scope
+
+_**eGov**_ 및 _**Spring Reference (4.2.5)**_ 에서 발췌한 Bean Scope 의 종류이다.
+
+| Scope | Description | eGov | Spring Reference |
+|--|--|--|--|
+| Global Session | 하나의 Bean 정의에 대해서 하나의 global HTTP Session의 생명주기 안에 단 하나의 객체만 존재한다. <br>일반적으로 portlet context 안에서 유효하다. Web-aware Spring ApplicationContext 안에서만 유효하다.| O | O |
+| Prototype |하나의 Bean 정의에 대해서 다수의 객체가 존재할 수 있다.| O | O |
+| Request | 하나의 Bean 정의에 대해서 하나의 HTTP request의 생명주기 안에 단 하나의 객체만 존재한다 <br>즉, 각각의 HTTP request는 자신만의 객체를 가진다. Web-aware Spring ApplicationContext 안에서만 유효하다.| O | O ||
+| session | 하나의 Bean 정의에 대해서 하나의 HTTP Session의 생명주기 안에 단 하나의 객체만 존재한다. <br>Web-aware Spring ApplicationContext 안에서만 유효하다.| O | O |
+| singleton | 하나의 Bean 정의에 대해서 Spring IoC Container 내에 단 하나의 객체만 존재한다.| O | O |
+| application | 서블릿 컨텍스트의 라이프사이클에 정의된다. <br>Spring Application Context 내에서만 유효하다.| X | O |
+
+> ### 참고자료
+> <https://www.slipp.net/wiki/pages/viewpage.action?pageId=25528177>
