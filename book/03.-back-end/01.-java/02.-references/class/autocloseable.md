@@ -20,3 +20,6 @@ try (MyResource res = new MyResource()){
   // use the code
 }
 ```
+
+> ### 참고자료
+> <https://hyoj.github.io/blog/java/basic/java7-autocloseable.html#method-summary>
