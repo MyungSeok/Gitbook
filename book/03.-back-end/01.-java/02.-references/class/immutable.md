@@ -1,4 +1,4 @@
-# Immutable
+# Immutable Class (불변 객체)
 
 생성후 변경 불가능한 객체로서 대표적으로 _`String`_, _`Boolean`_, _`Integer`_, _`Float`_, _`Long`_ 등등이 있다.
 
