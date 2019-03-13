@@ -33,7 +33,3 @@ try (MyResource res = new MyResource()){
 ```
 
 > `AutoCloseable` Class 는 별도의 문서를 참고하도록 한다.
-
-{% hint style='info' %}
-Important info: this note needs to be highlighted
-{% endhint %}
