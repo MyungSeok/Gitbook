@@ -30,6 +30,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -1568,7 +1572,52 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2.5" data-path="../02.-references/method/">
+        <li class="chapter " data-level="1.4.1.2.5" data-path="../02.-references/class/">
+            
+                <a href="../02.-references/class/">
+            
+                    
+                    Class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.2.5.1" data-path="../02.-references/class/immutable.html">
+            
+                <a href="../02.-references/class/immutable.html">
+            
+                    
+                    Immutable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.5.2" data-path="../02.-references/class/autocloseable.html">
+            
+                <a href="../02.-references/class/autocloseable.html">
+            
+                    
+                    AutoCloseable
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2.6" data-path="../02.-references/method/">
             
                 <a href="../02.-references/method/">
             
@@ -1582,7 +1631,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1.2.5.1" data-path="../02.-references/method/exception.html">
+        <li class="chapter " data-level="1.4.1.2.6.1" data-path="../02.-references/method/exception.html">
             
                 <a href="../02.-references/method/exception.html">
             
@@ -1595,7 +1644,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2.5.2" data-path="../02.-references/method/generic/">
+        <li class="chapter " data-level="1.4.1.2.6.2" data-path="../02.-references/method/generic/">
             
                 <a href="../02.-references/method/generic/">
             
@@ -1608,20 +1657,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2.5.3" data-path="../02.-references/method/immutable.html">
-            
-                <a href="../02.-references/method/immutable.html">
-            
-                    
-                    Immutable
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.1.2.5.4" data-path="../02.-references/method/reflection.html">
+        <li class="chapter " data-level="1.4.1.2.6.3" data-path="../02.-references/method/reflection.html">
             
                 <a href="../02.-references/method/reflection.html">
             
@@ -1634,7 +1670,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.2.5.5" data-path="../02.-references/method/static-factory-method.html">
+        <li class="chapter " data-level="1.4.1.2.6.4" data-path="../02.-references/method/static-factory-method.html">
             
                 <a href="../02.-references/method/static-factory-method.html">
             
@@ -1677,6 +1713,19 @@
             
                     
                     Garbege Collector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3.2" data-path="anti-pattern.html">
+            
+                <a href="anti-pattern.html">
+            
+                    
+                    Anti Pattern
             
                 </a>
             
@@ -2267,6 +2316,24 @@
 <p><code>stringBuffer</code> &#xB098; <code>stringBuilder</code> &#xB294; &#xAC12;&#xC744; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; append &#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; <a href="../02.-references/immutable.html">&#xD074;&#xB798;&#xC2A4;&#xB97C; &#xBCC4;&#xB3C4;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</a></p>
 <p><code>stringBuilder</code> &#xB294; &#xBCC0;&#xACBD; &#xAC00;&#xB2A5;&#xD55C; &#xBB38;&#xC790;&#xC5F4;&#xB85C; synchronization &#xC774; &#xC801;&#xC6A9;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
 <p><code>stringBuffer</code> &#xB294; <em><strong>&#xBA40;&#xD2F0;&#xC4F0;&#xB808;&#xB4DC; &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xC548;&#xC815;&#xC801;</strong></em> &#xC774;&#xB2E4;.</p>
+<h2 id="try-finally-&#xBCF4;&#xB2E4;&#xB294;-try-with-resources-&#xB97C;-&#xC0AC;&#xC6A9;-java-7">try-finally &#xBCF4;&#xB2E4;&#xB294; try-with-resources &#xB97C; &#xC0AC;&#xC6A9; (Java 7)</h2>
+<p>&#xD5A5;&#xC0F9;&#xB41C; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xBB38;&#xC73C;&#xB85C; &#xC785;&#xCD9C;&#xB825; &#xCC98;&#xB9AC;&#xC2DC; &#xC608;&#xC678;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xBA74; JVM &#xC774; &#xC790;&#xB3D9;&#xC73C;&#xB85C; <code>close</code> &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xC5EC; &#xC790;&#xC6D0;&#xC744; &#xBC18;&#xB0A9;&#xC2DC;&#xCF1C; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xB54C; <code>try()</code> &#xAD6C;&#xBB38;&#xC548;&#xC5D0;&#xB294; <code>AutoCloseable</code> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD55C; &#xAC1D;&#xCCB4;&#xC5EC;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyResource</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">AutoCloseable</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">close</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+    System.out.println(<span class="hljs-string">&quot;Closeing!&quot;</span>);
+  }
+}
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">try</span> (MyResource res = <span class="hljs-keyword">new</span> MyResource()){
+  <span class="hljs-comment">// use the code</span>
+}
+</code></pre>
+<blockquote>
+<p><code>AutoCloseable</code> Class &#xB294; &#xBCC4;&#xB3C4;&#xC758; &#xBB38;&#xC11C;&#xB97C; &#xCC38;&#xACE0;&#xD558;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;.</p>
+</blockquote>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p>Important info: this note needs to be highlighted</p>
+</div></div></p>
 
                                 
                                 </section>
@@ -2326,7 +2393,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"03. Performance","level":"1.4.1.3","depth":3,"next":{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"path":"book/03.-back-end/01.-java/03.-performance/gc.md","ref":"book/03.-back-end/01.-java/03.-performance/gc.md","articles":[]},"previous":{"title":"정적 팩토리 메소드","level":"1.4.1.2.5.5","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","ref":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/03.-performance/README.md","mtime":"2019-03-11T08:36:04.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-12T06:25:42.863Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03. Performance","level":"1.4.1.3","depth":3,"next":{"title":"Garbege Collector","level":"1.4.1.3.1","depth":4,"path":"book/03.-back-end/01.-java/03.-performance/gc.md","ref":"book/03.-back-end/01.-java/03.-performance/gc.md","articles":[]},"previous":{"title":"정적 팩토리 메소드","level":"1.4.1.2.6.4","depth":5,"path":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","ref":"book/03.-back-end/01.-java/02.-references/method/static-factory-method.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["mermaid-gb3","expandable-chapters-small","search-plus","hints"],"pluginsConfig":{"search":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"book/03.-back-end/01.-java/03.-performance/README.md","mtime":"2019-03-13T22:17:48.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T22:18:25.377Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
