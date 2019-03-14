@@ -42,7 +42,7 @@ void isCar(Car car) {
 }
 ```
 
-결과 
+결과
 
 ```java
 // Start Sedan
